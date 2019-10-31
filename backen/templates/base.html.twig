@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('CSS/Style.css') }}"
+                  rel="stylesheet">
+            <link rel="stylesheet"
+                  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+                  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+                  crossorigin="anonymous">
+
+        {% endblock %}
+
+    </head>
+    <nav class="Navbar" style="padding: 0">
+        <div class="Navbar">
+            <a href="{{ path('home')}}" class="Navbar left">Home</a>
+
+            <a href="{{path('month')}}" class="Navbar left">Month</a>
+
+            {% if app.user.username is defined %}
+            <a href="{{ path('profile') }}" class="Navbar right">{{ app.user.username }}</a>
+            <a href="{{ path('logout') }}" class="Navbar right">Logout</a>
+            {% else %}
+                    <a href="{{ path('login') }}" class="Navbar right">Login</a>
+            {% endif %}
+        </div>
+    </nav>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

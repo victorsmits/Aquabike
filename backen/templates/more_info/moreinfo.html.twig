@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="Table ListPerson">
+    <div class="divTableBody">
+        <div class="divTableRow">
+            <div class="cell">
+                {% if listPerson is defined %}
+                    <div class="Table ListPerson">
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+                                <div class="cell">Nom</div>
+                                <div class="cell">Prenom</div>
+                            </div>
+                            {% for Person in listPerson %}
+                                {% if  Person|length > 1 %}
+                                    <div class="divTableRow">
+                                        <div class = "cell Info"> {{ Person[0] }} </div>
+                                        <div class = "cell Info"> {{ Person[1] }} </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="cell">
+                <div class="Table">
+                    <div class="divTableBody">
+                        <div class="divTableRow">
+                            <div class="cell">Date</div>
+                            <div class="cell">{{ listSessionInfo[0] }}</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="cell">Time</div>
+                            <div class="cell">{{ listSessionInfo[1] }}</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="cell">Bike Free</div>
+                            <div class="cell">{{ listSessionInfo[2] }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

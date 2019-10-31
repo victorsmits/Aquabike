@@ -1,0 +1,9 @@
+{# templates/emails/registration.html.twig #}
+<h3>Session annulé !</h3>
+
+Bonjour {{ name.lastName name.firstName }}! La session du {{ session.date }} à {{ session.time }} est annulé!
+
+{# example, assuming you have a route named "login" #}
+Rendez-vous sur <a href="{{ path('month') }}">...</a> pour vous inscrire à une nouvelle session .
+
+Merci!
