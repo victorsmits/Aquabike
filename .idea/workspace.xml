@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="" />
+    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend" beforeDir="false" afterPath="$PROJECT_DIR$/backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +183,7 @@
       <workItem from="1572554124447" duration="16000" />
       <workItem from="1572554157047" duration="55000" />
       <workItem from="1572554595728" duration="687000" />
-      <workItem from="1572555429022" duration="183000" />
+      <workItem from="1572555429022" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -194,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572555470301</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add backend">
+      <created>1572555852375</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572555852375</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +221,8 @@
     </ignored-roots>
     <MESSAGE value="refractor folder" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="add backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="add backend" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1572554870379">
@@ -240,17 +253,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1572555815239" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1572555481674">
+    <state x="383" y="161" key="VCS.ChangeListViewerDialog" timestamp="1572556023028">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1572555481674" />
+    <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1572555861476">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1572555861476" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1572555213728">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/0.0.1440.900@0.0.1440.900" timestamp="1572555213728" />
-    <state x="412" y="321" key="git4idea.rebase.GitRebaseDialog" timestamp="1572555178807">
+    <state x="412" y="321" key="git4idea.rebase.GitRebaseDialog" timestamp="1572556024119">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="412" y="321" key="git4idea.rebase.GitRebaseDialog/0.0.1440.900@0.0.1440.900" timestamp="1572555178807" />
+    <state x="412" y="321" key="git4idea.rebase.GitRebaseDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556024119" />
+    <state x="482" y="186" key="git4idea.rebase.GitRebaseEditor" timestamp="1572556026672">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="482" y="186" key="git4idea.rebase.GitRebaseEditor/0.0.1440.900@0.0.1440.900" timestamp="1572556026672" />
   </component>
 </project>
