@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +183,7 @@
       <workItem from="1572554124447" duration="16000" />
       <workItem from="1572554157047" duration="55000" />
       <workItem from="1572554595728" duration="687000" />
-      <workItem from="1572555429022" duration="727000" />
+      <workItem from="1572555429022" duration="815000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -229,11 +227,29 @@
       <option name="project" value="LOCAL" />
       <updated>1572556338426</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="backend -&gt; backen">
+      <created>1572556442493</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572556442493</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -245,7 +261,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="add backend" />
     <MESSAGE value="up" />
-    <option name="LAST_COMMIT_MESSAGE" value="up" />
+    <MESSAGE value="backend -&gt; backen" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend -&gt; backen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1572554870379">
