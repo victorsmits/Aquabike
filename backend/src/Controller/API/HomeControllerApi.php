@@ -28,23 +28,24 @@ class HomeControllerApi extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $encoders = array(new JsonEncode());
-
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-//            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idSession'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['abonnement','day','id_Inscription',
+                'password','roles','role','email','aboType',
+                'plainpassword','plainPassword',
+                'username','salt','__cloner__','__initializer__','__isInitialized__'],
+            ObjectNormalizer::GROUPS => ["Home"],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
         ];
 
-        $normalizers = array(new ObjectNormalizer());
-
+        $encoders = array(new JsonEncode());
+        $normalizers = array(new DateTimeNormalizer(),new ObjectNormalizer());
         $serializer = new Serializer($normalizers,$encoders);
 
-        $today = new \DateTime('now');
         $listSession = $em->getRepository('App:Session')->getTodayIdSession();
 
         $jsonSessions = $serializer->serialize($listSession, 'json', $defaultContext);

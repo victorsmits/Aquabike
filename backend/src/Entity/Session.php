@@ -22,26 +22,31 @@ class Session
 
     /**
      * @ORM\Column(type="date")
+     * @Groups({"Home"})
      */
     private $Date;
 
     /**
      * @ORM\Column(type="time")
+     * @Groups({"Home"})
      */
     private $time;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"Home"})
      */
     private $bike;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Inscription", mappedBy="Id_Session")
+     * @Groups({"Home"})
      */
     private $Id_Inscription;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
+     * @Groups({"Home"})
      */
     private $Cancel;
 

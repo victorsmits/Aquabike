@@ -28,11 +28,13 @@ class Person implements \Serializable, UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("Home")
      */
     private $LastName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("Home")
      */
     private $FirstName;
 
@@ -48,7 +50,6 @@ class Person implements \Serializable, UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Inscription", mappedBy="Id_Person")
-     * @MaxDepth(1)
      */
     private $Id_Inscription;
 

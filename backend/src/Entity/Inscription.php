@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 /**
@@ -14,7 +15,6 @@ class Inscription
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @MaxDepth(1)
      */
     private $id;
 
@@ -22,7 +22,6 @@ class Inscription
      * @MaxDepth(1)
      * @ORM\ManyToOne(targetEntity="App\Entity\Session", inversedBy="Id_Inscription")
      * @ORM\JoinColumn(nullable=false)
-     *
      */
     private $Id_Session;
 
@@ -30,7 +29,7 @@ class Inscription
      * @MaxDepth(1)
      * @ORM\ManyToOne(targetEntity="App\Entity\Person", inversedBy="Id_Inscription")
      * @ORM\JoinColumn(nullable=false)
-     *
+     * @Groups({"Home"})
      */
     private $Id_Person;
 
