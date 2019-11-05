@@ -1,1 +1,38 @@
-<p>month works!</p>
+<mat-form-field>
+  <mat-select placeholder="Select Month" #matSelect [(ngModel)]="value">
+    <mat-option *ngFor="let month of months" [value]="month.num" >
+      {{month.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-table [dataSource]="data" class="mat-elevation-z8">
+
+  <!-- Date Column -->
+  <ng-container matColumnDef="Date">
+    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Date.split(' ')[0]}} </mat-cell>
+  </ng-container>
+
+  <!-- Time Column -->
+  <ng-container matColumnDef="Time">
+    <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.time.split(' ')[1]}} </mat-cell>
+  </ng-container>
+
+  <!-- Bike Column -->
+  <ng-container matColumnDef="Bike">
+    <mat-header-cell *matHeaderCellDef> Bike </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.bike}} </mat-cell>
+  </ng-container>
+
+  <!-- Status Column -->
+  <ng-container matColumnDef="Status">
+    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.cancel}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+

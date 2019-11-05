@@ -1,3 +1,21 @@
-<h1>home works!</h1>
 
-<p> {{ user | json }} </p>
+<div class="Position">
+  <div class="day"> {{ date }}</div>
+  <div class="Session">
+    <div class="top">
+      <div class="time"> {{ time[0] }}</div>
+      <div class="book">
+        <ul *ngFor="let Person of listUser[0]"> {{ Person.lastName }} {{ Person.firstName }}</ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="time"> {{ time[1] }} </div>
+      <div class="book">
+        <ul *ngFor="let Person of listUser[1]">{{ Person.lastName }} {{ Person.firstName }}</ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
