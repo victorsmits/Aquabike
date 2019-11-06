@@ -33,7 +33,10 @@ class MoreInfoControllerApi extends AbstractController
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-//            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idSession'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['abonnement','idSession','day','idInscription',
+                'password','roles','role','email','aboType',
+                'plainpassword','plainPassword',
+                'username','salt','__cloner__','__initializer__','__isInitialized__'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
         ];

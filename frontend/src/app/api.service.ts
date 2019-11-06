@@ -20,4 +20,10 @@ export class ApiService {
     url = url.concat(month);
     return this.http.get(url)
   }
+
+  getInfoJson(id){
+    let url = "https://127.0.0.1:8000/api/moreinfo/";
+    url = url.concat(id);
+    return this.http.get(url)
+  }
 }

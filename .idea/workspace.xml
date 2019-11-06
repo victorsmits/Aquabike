@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/HomeControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/HomeControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MoreInfoControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MoreInfoControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +163,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.21375" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
@@ -251,7 +243,9 @@
       <workItem from="1572695092954" duration="2976000" />
       <workItem from="1572715307067" duration="4301000" />
       <workItem from="1572810745951" duration="3195000" />
-      <workItem from="1572863073407" duration="8031000" />
+      <workItem from="1572863073407" duration="8300000" />
+      <workItem from="1573048615557" duration="5191000" />
+      <workItem from="1573055702970" duration="10186000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -309,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572720042170</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="page month with selector workin&#10;TODO button">
+      <created>1572948465465</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572948465465</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,44 +341,45 @@
     <MESSAGE value="up" />
     <MESSAGE value="backend -&gt; backen" />
     <MESSAGE value="start frontend:&#10;- learn get&#10;cleaning JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="start frontend:&#10;- learn get&#10;cleaning JSON" />
+    <MESSAGE value="page month with selector workin&#10;TODO button" />
+    <option name="LAST_COMMIT_MESSAGE" value="page month with selector workin&#10;TODO button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#Plugins" timestamp="1572694970837">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Plugins/0.0.1440.900@0.0.1440.900" timestamp="1572694970837" />
-    <state x="320" y="115" key="#Project_Structure" timestamp="1572720069487">
+    <state x="320" y="115" key="#Project_Structure" timestamp="1573069348689">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1572720069487" />
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1572554870379">
+    <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1573069348689" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573051495572">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1572554870379" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573051495572" />
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1572947219793">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1572947219793" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1572941402402">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1573056849687">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1572941402402" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573056849687" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1572769783749" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1572941402401">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1573056849685">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1572941402401" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573056849685" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1572769783747" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1572941402400">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1573056849684">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1572941402400" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573056849684" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1572769783746" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1572941402401">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1573056849686">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1572941402401" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573056849686" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1572769783748" />
     <state x="308" y="192" key="IDE.errors.dialog" timestamp="1572556105296">
       <screen x="0" y="0" width="1440" height="900" />
@@ -395,10 +397,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1572720046605">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1572948467571">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1572720046605" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1572948467571" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1572555213728">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -411,5 +413,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="186" key="git4idea.rebase.GitRebaseEditor/0.0.1440.900@0.0.1440.900" timestamp="1572556026672" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573069669455">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573069669455" />
   </component>
 </project>

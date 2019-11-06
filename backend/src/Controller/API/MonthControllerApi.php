@@ -46,7 +46,10 @@ class MonthControllerApi extends AbstractController
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idInscription'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['abonnement','day',
+                'password','roles','role','email','aboType', 'idSession',
+                'plainpassword','plainPassword',
+                'username','salt','__cloner__','__initializer__','__isInitialized__'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
         ];

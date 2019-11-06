@@ -14,13 +14,21 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatTableModule} from "@angular/material/table";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatRippleModule} from "@angular/material/core";
+import { ClkDetailRowDirective } from './clk-detail-row.directive';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MonthComponent,
-    LoginComponent
+    LoginComponent,
+    ClkDetailRowDirective
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatSelectModule,
     MatTableModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatRippleModule,
+    MatListModule
   ],
   providers: [AuthService,ApiService],
   bootstrap: [AppComponent]
