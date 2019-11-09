@@ -1,11 +1,16 @@
-import {Component, OnInit, ViewChild,AfterViewInit} from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core';
 import {ApiService} from "../api.service";
 import {MatSelect} from "@angular/material/select";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
 
 let viewChild: any;
 // @ts-ignore
 viewChild = ViewChild("matSelect");
+
+let viewChild2: any;
+// @ts-ignore
+viewChild2 = ViewChild("matSelect2");
 
 export interface Sessions {
   Date : string,
@@ -13,20 +18,45 @@ export interface Sessions {
   Bike : number,
   Cancel : boolean,
   Id : number,
-  Subs : JSON[]
+  // Subs : Person
 }
+
+export interface Person {
+  user : JSON;
+}
+
+@Component({
+  selector: 'list-person-detail',
+  templateUrl: './list-person-detail.component.html',
+})
+export class ListPersonDialog {
+  PersonCol: string[] = ['User'];
+  constructor(
+    public dialogRef: MatDialogRef<ListPersonDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: Person[]) {}
+
+    onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'MM/YYYY',
+  },
+  display: {
+    dateInput: 'MM/YYYY',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 
 @Component({
   selector: 'app-month',
   templateUrl: './month.component.html',
   styleUrls: ['./month.component.css'],
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0', display: 'none'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
 })
 
 
@@ -34,8 +64,10 @@ export class MonthComponent implements OnInit {
   private data: JSON[]=[];
   private value : number = null;
   private listSession : Sessions[]=[];
-  displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Button'];
-  displayedDetails: string[] = ['LastName', 'FirstName'];
+  private listPerson : Person[]=[];
+  private year: number;
+  displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
+
 
   months = [
     {name : "janvier", num : 1},
@@ -51,27 +83,38 @@ export class MonthComponent implements OnInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
+  private listYear: number[]=[];
 
-  constructor(private api: ApiService) { }
+
+  constructor(private api: ApiService, public dialog: MatDialog) { }
 
   @viewChild matSelect: MatSelect;
+  @viewChild2 matSelect2: MatSelect;
 
 
   ngOnInit() {
-
     let m = new Date();
     this.value = m.getMonth()+1;
-    this.api.getMonthJson(this.value).subscribe(urldata => {
+    this.year = m.getFullYear();
+    this.getYear();
+    this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
   }
 
   ngAfterViewInit(){
     this.matSelect.valueChange.subscribe(value => {
-
       this.value = value;
 
-      this.api.getMonthJson(value).subscribe(urldata => {
+      this.api.getMonthJson(value,this.year.toString()).subscribe(urldata => {
+        this.initSession(urldata);
+      });
+    });
+
+    this.matSelect2.valueChange.subscribe(value => {
+      this.year = value;
+      console.log(this.year);
+      this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
         this.initSession(urldata);
       });
     });
@@ -89,6 +132,11 @@ export class MonthComponent implements OnInit {
 
       this.listSession = [];
       let tempSess : Sessions;
+
+      this.listPerson = [];
+      let tempPers : Person;
+
+
       this.data = JSON.parse(JSON.stringify(urldata));
 
       for(let i = 0; i < this.data.length; i++){
@@ -98,14 +146,30 @@ export class MonthComponent implements OnInit {
           Bike:this.data[i]["bike"],
           Cancel:this.data[i]["Cancel"],
           Id:this.data[i]["id"],
-          Subs:this.data[i]["idInscription"]
         };
-        this.listSession.push(tempSess)
+
+        tempPers={
+          user : this.data[i]["idInscription"]
+        };
+
+        this.listSession.push(tempSess);
+        this.listPerson.push(tempPers);
       }
     console.log(this.listSession)
   }
 
-  toggleDetailsRow(row: any) {
+  openDialog(id): void {
+    console.log(this.listPerson[id]);
 
+    const dialogRef = this.dialog.open(ListPersonDialog, {
+      width: '250px',
+      data: this.listPerson[id].user
+    });
+  }
+
+  getYear(){
+    var today = new Date();
+    for(var i = (this.year); i <= (this.year+10); i++){
+      this.listYear.push(i);}
   }
 }

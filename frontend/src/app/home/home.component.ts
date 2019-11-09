@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.api.getHomeJson().subscribe(urldata => {
       this.data = JSON.parse(JSON.stringify(urldata));
-      this.date = this.data[0]["Date"].split(' ')[0];
+      let day = new Date();
+      this.date = day.getDate() + "/" + day.getMonth() + "/" + day.getFullYear();
 
       for (let j = 0; j < this.data.length; j++) {
         let hour = this.data[j]["time"].split(' ')[1];

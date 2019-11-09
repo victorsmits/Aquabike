@@ -2,23 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
-
   </head>
-  <nav class="Navbar" style="padding: 0">
-    <div class="Navbar">
-      <a [routerLink]="''" class="Navbar left">Home</a>
-
-      <a [routerLink]="'/month'" class="Navbar left">Month</a>
-      <a [routerLink]="'/login'" class="Navbar left">Login</a>
-
-    </div>
+  <nav>
+    <mat-toolbar class="Navbar" style="padding: 0" color="primary">
+      <div>
+        <a mat-button routerLink=".">
+          <mat-icon> home </mat-icon>
+          <span> Home</span>
+        </a>
+        <a mat-button routerLink="/month">
+          <mat-icon> date_range </mat-icon>
+          <span> Month</span>
+        </a>
+        <a mat-button>
+          <mat-icon> person </mat-icon>
+          <span> Login</span>
+        </a>
+      </div>
+    </mat-toolbar>
   </nav>
+
   <body>
     <router-outlet></router-outlet>
   </body>
+
 </html>
 

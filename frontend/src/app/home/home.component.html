@@ -1,21 +1,27 @@
+<div class="center">
+  <mat-card>
+    <mat-card-title>
+      {{date}}
+    </mat-card-title>
+  </mat-card>
 
-<div class="Position">
-  <div class="day"> {{ date }}</div>
-  <div class="Session">
-    <div class="top">
-      <div class="time"> {{ time[0] }}</div>
-      <div class="book">
-        <ul *ngFor="let Person of listUser[0]"> {{ Person.lastName }} {{ Person.firstName }}</ul>
-      </div>
-    </div>
-    <div class="bottom">
-      <div class="time"> {{ time[1] }} </div>
-      <div class="book">
-        <ul *ngFor="let Person of listUser[1]">{{ Person.lastName }} {{ Person.firstName }}</ul>
-      </div>
-    </div>
-  </div>
+  <mat-list *ngFor="let hour of time">
 
+    <mat-list-item></mat-list-item>
+    <mat-list-item>
+      <mat-card-subtitle>
+        {{hour}}
+      </mat-card-subtitle>
+    </mat-list-item>
+
+    <mat-list *ngFor="let user of listUser[0]">
+      <mat-list-item>
+        <mat-icon mat-list-icon>person</mat-icon>
+        {{user.lastName}} {{user.firstName}}
+      </mat-list-item>
+      <mat-divider ></mat-divider>
+
+    </mat-list>
+  </mat-list>
 </div>
-
 
