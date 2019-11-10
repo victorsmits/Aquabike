@@ -113,7 +113,6 @@ export class MonthComponent implements OnInit {
 
     this.matSelect2.valueChange.subscribe(value => {
       this.year = value;
-      console.log(this.year);
       this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
         this.initSession(urldata);
       });
@@ -155,12 +154,9 @@ export class MonthComponent implements OnInit {
         this.listSession.push(tempSess);
         this.listPerson.push(tempPers);
       }
-    console.log(this.listSession)
   }
 
   openDialog(id): void {
-    console.log(this.listPerson[id]);
-
     const dialogRef = this.dialog.open(ListPersonDialog, {
       width: '250px',
       data: this.listPerson[id].user

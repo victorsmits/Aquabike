@@ -1,0 +1,52 @@
+
+<mat-card>
+<!--  <mat-spinner *ngIf="isLoading"></mat-spinner>-->
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+
+    <mat-form-field>
+      <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+      <mat-error *ngIf="emailInput.invalid">please enter valid email</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name="username" ngModel type="text" placeholder="Username" #usernameInput="ngModel" required username>
+      <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name="Nom" ngModel type="text" placeholder="Nom" #usernameInput="ngModel" required>
+      <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name="Prenom" ngModel type="text" placeholder="Prenom" #usernameInput="ngModel" required>
+      <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name="Abonnement" ngModel type="number" placeholder="Abonnement" #usernameInput="ngModel" required>
+      <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Select Month" #daySelect>
+        <mat-option *ngFor="let day of days" [value]="day.code" >
+          {{day.nom}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name="password" ngModel type="password" placeholder="Password" #passwordInput="ngModel" required password>
+      <mat-error *ngIf="passwordInput.invalid">please enter valid password</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name="passwordConfirmation" ngModel type="password" placeholder="Repeat Password" #passwordInput="ngModel" required password>
+      <mat-error *ngIf="passwordInput.invalid">please enter valid password</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" *ngIf="!isLoading">Signup</button>
+
+  </form>
+</mat-card>
