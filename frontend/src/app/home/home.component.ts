@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit() {
+    let day = new Date();
+    this.date = day.getDate() + "/" + day.getMonth() + "/" + day.getFullYear();
     this.api.getHomeJson().subscribe(urldata => {
       this.data = JSON.parse(JSON.stringify(urldata));
-      let day = new Date();
-      this.date = day.getDate() + "/" + day.getMonth() + "/" + day.getFullYear();
 
       for (let j = 0; j < this.data.length; j++) {
         let hour = this.data[j]["time"].split(' ')[1];

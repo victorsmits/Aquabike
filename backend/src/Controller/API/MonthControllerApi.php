@@ -74,16 +74,17 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Inscription/{id}", name="api_Inscription")
+     * @Route("/Inscription/{id}/{user}", name="api_Inscription")
      * @param $id
+     * @param $user
      * @return RedirectResponse
      */
-    public function createInscription($id){
+    public function createInscription($id,$user){
         $entityManager = $this->getDoctrine()->getManager();
 
         $user = $entityManager
             ->getRepository('App:Person')
-            ->getPersonFromUsername($this->getUser()->getUsername());
+            ->getPersonFromId($user);
 
         $session = $entityManager
             ->getRepository('App:Session')
@@ -118,13 +119,17 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Desinscription/{id}", name="api_Unsub")
+     * @Route("/Desinscription/{id}/{user}", name="api_Unsub")
      * @param $id
+     * @param $user
      * @return RedirectResponse
      */
-    public function removeInscription($id){
+    public function removeInscription($id,$user){
         $entityManager = $this->getDoctrine()->getManager();
-        $user = $this->getUser();
+        $user = $entityManager
+            ->getRepository('App:Person')
+            ->getPersonFromId($user);
+
         $inscription = $entityManager->getRepository('App:Inscription')->findInscription($id,$user);
         $session = $entityManager->getRepository('App:Session')->getSessionFromId($id);
 

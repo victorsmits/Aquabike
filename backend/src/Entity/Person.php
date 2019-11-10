@@ -66,12 +66,12 @@ class Person implements \Serializable, UserInterface
     private $role = 'ROLE_USER';
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $Username;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $Email;
 

@@ -3,6 +3,7 @@
 namespace App\Controller\API;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -13,18 +14,11 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityControllerApi extends AbstractController
 {
     /**
-     * @Route("/login", name="api_login")
+     * @Route("/login", name="api_login", methods={"POST","OPTIONS","GET"})
      */
-    public function login(Request $request,AuthenticationUtils $utils)
+    public function login()
     {
-        $error = $utils->getLastAuthenticationError();
-
-        $lastUsername = $utils->getLastUsername();
-
-        return $this->render('security/login.html.twig', [
-            'error' => $error,
-            'last_username' => $lastUsername,
-        ]);
+        return new JsonResponse(['result' => true], 200);
     }
 
     /**
