@@ -4,6 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {MonthComponent} from "./month/month.component";
 import {LoginComponent} from "./login/login.component";
 import {SignupComponent} from "./signup/signup.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'signup',
     component : SignupComponent,
+  },
+  {
+    path:'profile',
+    component : ProfileComponent,
   },
 
 ];

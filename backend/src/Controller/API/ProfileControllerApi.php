@@ -17,11 +17,17 @@ use Symfony\Component\Serializer\Serializer;
 class ProfileControllerApi extends AbstractController
 {
     /**
-     * @Route("/profile", name="api_profile")
+     * @Route("/profile/{user}", name="api_profile")
+     * @param $user
+     * @return JsonResponse
      */
-    public function index()
+    public function index($user)
     {
-        $userInfo = $this->getUser();
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $userInfo = $entityManager
+            ->getRepository('App:Person')
+            ->getPersonFromUsername($user);
 
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
@@ -40,6 +46,7 @@ class ProfileControllerApi extends AbstractController
         $jsonUser = $serializer->serialize($userInfo, 'json', $defaultContext);
         $Profile = new JsonResponse();
         $Profile->setContent($jsonUser);
+
         return $Profile;
     }
 

@@ -28,4 +28,10 @@ export class ApiService {
     url = url.concat(id);
     return this.http.get(url)
   }
+
+  getProfileJson(username){
+    let url = "https://localhost:8000/api/profile/";
+    url = url.concat(username);
+    return this.http.get(url)
+  }
 }

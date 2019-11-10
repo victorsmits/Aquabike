@@ -28,6 +28,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     ListPersonDialog,
     SignupComponent,
+    ProfileComponent,
   ],
     imports: [
         BrowserModule,
@@ -62,7 +65,8 @@ import { SignupComponent } from './signup/signup.component';
         MatNativeDateModule,
         MatToolbarModule,
         MatCardModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatGridListModule
     ],
   entryComponents: [
     MonthComponent,

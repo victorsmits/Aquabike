@@ -38,6 +38,7 @@ export class AuthService {
       password: password,
       passwordConfirmation: passwordConfirmation,
     };
+
     return this.http.post('https://localhost:8000/api/register', authData)
       .subscribe(response => {
         // console.log(response["error"]["errors"]);
@@ -55,13 +56,14 @@ export class AuthService {
           this.authStatusListener.next(true); // telling everyone who is interested that the user is authenticated
           this.currentUser = authData.Username;
         }
-        this.router.navigateByUrl('');
+        this.router.navigate(['']);
+        console.log(this.getCurrentUser())
       });
   }
 
   logout() {
     this.isAuthenticated = false;
     this.authStatusListener.next(false);
-    this.router.navigateByUrl('');
+    this.router.navigate(['']);
   }
 }

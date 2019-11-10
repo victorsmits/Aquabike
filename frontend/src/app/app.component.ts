@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
+import {AuthService} from "./auth.service";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,8 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'Aquabike';
+  user = this.auth.getCurrentUser();
+
+  constructor(private auth : AuthService) {}
 }

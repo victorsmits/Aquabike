@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core';
 import {ApiService} from "../api.service";
 import {MatSelect} from "@angular/material/select";
-import {animate, state, style, transition, trigger} from "@angular/animations";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
 
 let viewChild: any;
@@ -18,7 +17,6 @@ export interface Sessions {
   Bike : number,
   Cancel : boolean,
   Id : number,
-  // Subs : Person
 }
 
 export interface Person {
@@ -41,18 +39,6 @@ export class ListPersonDialog {
 
 }
 
-export const MY_FORMATS = {
-  parse: {
-    dateInput: 'MM/YYYY',
-  },
-  display: {
-    dateInput: 'MM/YYYY',
-    monthYearLabel: 'MMM YYYY',
-    dateA11yLabel: 'LL',
-    monthYearA11yLabel: 'MMMM YYYY',
-  },
-};
-
 @Component({
   selector: 'app-month',
   templateUrl: './month.component.html',
@@ -60,11 +46,12 @@ export const MY_FORMATS = {
 })
 
 
-export class MonthComponent implements OnInit {
+export class MonthComponent implements OnInit, AfterViewInit {
   private data: JSON[]=[];
   private value : number = null;
   private listSession : Sessions[]=[];
   private listPerson : Person[]=[];
+  private listYear: number[]=[];
   private year: number;
   displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
@@ -83,7 +70,6 @@ export class MonthComponent implements OnInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
-  private listYear: number[]=[];
 
 
   constructor(private api: ApiService, public dialog: MatDialog) { }
