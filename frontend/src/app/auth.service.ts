@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
-import {AuthLoginData, AuthSignupData} from "./auth-data/auth-data.module";
+import {AuthLoginData, AuthSignupData} from "./Interface/Interface.module";
 
 
 @Injectable({ providedIn: 'root'})
@@ -42,9 +42,9 @@ export class AuthService {
     return this.http.post('https://localhost:8000/api/register', authData)
       .subscribe(response => {
         // console.log(response["error"]["errors"]);
+          this.router.navigate(['']);
       }
       );
-    // this.router.navigateByUrl('');
   }
 
   loginUser(username: string, password: string) {

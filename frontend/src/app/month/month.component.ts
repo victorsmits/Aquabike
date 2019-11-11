@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core
 import {ApiService} from "../api.service";
 import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
+import {Sessions} from "../Interface/Interface.module";
 
 let viewChild: any;
 // @ts-ignore
@@ -10,14 +11,6 @@ viewChild = ViewChild("matSelect");
 let viewChild2: any;
 // @ts-ignore
 viewChild2 = ViewChild("matSelect2");
-
-export interface Sessions {
-  Date : string,
-  Time : string,
-  Bike : number,
-  Cancel : boolean,
-  Id : number,
-}
 
 export interface Person {
   user : JSON;

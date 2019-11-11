@@ -30,6 +30,10 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import { AdminComponent } from './admin/admin.component';
+import { AdminSessionComponent } from './admin-session/admin-session.component';
+import { AdminAboComponent } from './admin-abo/admin-abo.component';
+import { AdminCreateSessionComponent } from './admin-create-session/admin-create-session.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import {MatGridListModule} from "@angular/material/grid-list";
     ListPersonDialog,
     SignupComponent,
     ProfileComponent,
+    AdminComponent,
+    AdminSessionComponent,
+    AdminAboComponent,
+    AdminCreateSessionComponent,
   ],
     imports: [
         BrowserModule,

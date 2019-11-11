@@ -1,0 +1,23 @@
+mat-table{
+  margin: 5% 20% ;
+  padding: 2%;
+  align-content: center;
+}
+
+mat-select{
+  margin-top: 5%;
+}
+
+mat-cell{
+  align-content: center;
+  font-size: small;
+}
+
+mat-header-cell{
+  font-size: medium;
+  align-content: center;
+}
+
+mat-form-field{
+  width: 110px;
+}

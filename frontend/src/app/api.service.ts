@@ -34,4 +34,14 @@ export class ApiService {
     url = url.concat(username);
     return this.http.get(url)
   }
+
+  getAboJson(){
+    return this.http.get('https://127.0.0.1:8000/api/admin/abonnement')
+  }
+
+  postAboRenew(id){
+    let url = "https://127.0.0.1:8000/api/admin/renew/";
+    url = url.concat(id);
+    return this.http.get(url)
+  }
 }

@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth-data/auth-data.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Interface/Interface.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
     </list>
@@ -316,7 +329,9 @@
       <workItem from="1573216957816" duration="2937000" />
       <workItem from="1573220992713" duration="6328000" />
       <workItem from="1573229225623" duration="243000" />
-      <workItem from="1573397959717" duration="12002000" />
+      <workItem from="1573397959717" duration="13138000" />
+      <workItem from="1573413533912" duration="5000" />
+      <workItem from="1573473334922" duration="3526000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -402,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573398598869</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add profile page">
+      <created>1573410094982</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573410094982</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,21 +459,23 @@
     <MESSAGE value="month page display list of subs" />
     <MESSAGE value="add directive" />
     <MESSAGE value="Last stable version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last stable version" />
+    <MESSAGE value="Add profile page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add profile page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="205" key="#Inspections" timestamp="1573409717852">
+    <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="205" key="#Inspections/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573409717852" />
+    <state x="560" y="205" key="#Inspections/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573475619446" />
     <state x="320" y="115" key="#Plugins" timestamp="1572694970837">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Plugins/0.0.1440.900@0.0.1440.900" timestamp="1572694970837" />
-    <state x="320" y="115" key="#Project_Structure" timestamp="1573069348689">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="427" y="138" key="#Project_Structure" timestamp="1573476530040">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1573069348689" />
+    <state x="427" y="138" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573476530040" />
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573217629261">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -461,10 +485,10 @@
     </state>
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1572947219793" />
     <state x="711" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573402617305" />
-    <state x="513" y="142" key="CommitChangelistDialog2" timestamp="1573410032132">
+    <state x="513" y="142" key="CommitChangelistDialog2" timestamp="1573410094604">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573410032132" />
+    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573410094604" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1573399241968">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -534,20 +558,21 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1572720017489" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1573209894044">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="667" height="534" key="SwitcherDM" timestamp="1573475568924">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1573209894044" />
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1572947722846" />
+    <state width="667" height="534" key="SwitcherDM/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573475568924" />
     <state x="383" y="161" key="VCS.ChangeListViewerDialog" timestamp="1572556023028">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573398612349">
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573410096754">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573069907186" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573398612349" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573410096754" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1573398480671">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -573,10 +598,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="609" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573409111753" />
-    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup" timestamp="1573409166037">
+    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup" timestamp="1573474975449">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573069669455" />
-    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573409166037" />
+    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573474975449" />
   </component>
 </project>

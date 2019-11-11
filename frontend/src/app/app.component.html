@@ -18,6 +18,13 @@
           <mat-icon> person </mat-icon>
           <span> Login</span>
         </a>
+
+        <button mat-button [matMenuTriggerFor]="menu">Admin</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="admin/Session">Sessions</button>
+          <button mat-menu-item routerLink="admin/Session/Create">Nouvelle Sessions</button>
+          <button mat-menu-item routerLink="admin/Abonnement">Abonnement</button>
+        </mat-menu>
       </div>
     </mat-toolbar>
   </nav>

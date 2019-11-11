@@ -30,7 +30,7 @@ class AbonnementControllerApi extends AbstractController
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-//            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idSession'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idInscription'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
         ];
@@ -47,7 +47,7 @@ class AbonnementControllerApi extends AbstractController
 
 
     /**
-     * @Route("/renew/{id}", name="renew")
+     * @Route("/renew/{id}", name="api_renew", methods={"GET","HEAD"})
      * @param $id
      * @return RedirectResponse
      */
