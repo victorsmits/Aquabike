@@ -4,7 +4,10 @@ namespace App\Controller\API;
 
 use App\Entity\Session;
 use App\Form\SessionType;
+use DateTime;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,25 +18,42 @@ use Symfony\Component\Routing\Annotation\Route;
 class CreateSessionControllerApi extends AbstractController
 {
     /**
-     * @Route("/admin/session", name="api_create_session")
+     * @Route("/admin/session", name="api_create_session", methods={"POST"})
      * @param Request $request
      * @return Response
+     * @throws \Exception
      */
     public function index(Request $request)
     {
         $session = new Session();
-        $form = $this->createForm(SessionType::class, $session);
+        $data = json_decode($request->getContent(), true);
 
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
+        $errors = [];
+        if(!$errors)
+        {
+            $session->setDate(new DateTime($data["Date"]));
+            $session->setTime(new DateTime($data["Time"]));
+            $session->setBike($data["Bike"]);
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($session);
-            $entityManager->flush();
-            
+            try
+            {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($session);
+                $entityManager->flush();
+                return $this->json(['session' => $session]);
+            }
+            catch(UniqueConstraintViolationException $e)
+            {
+                $errors = "The email or user provided already has an account!";
+            }
+            catch(\Exception $e)
+            {
+                $errors = "Unable to save new user at this time.";
+            }
         }
-        return $this->render('create_session/session.html.twig', [
-            'sessionForm' => $form->createView(),
-        ]);
+
+        return new JsonResponse([
+            'errors' => $errors
+        ], 400);
     }
 }

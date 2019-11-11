@@ -44,7 +44,7 @@ class SessionAdministrationControllerApi extends AbstractController
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
 //            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idSession'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
-            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
+            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
         ];
 
         $encoders = array(new JsonEncode());
@@ -61,40 +61,49 @@ class SessionAdministrationControllerApi extends AbstractController
     /**
      * @Route("/recreate/{id}", name="api_recreate")
      * @param $id
-     * @return RedirectResponse
+     * @return JsonResponse
      */
     public function recreateSession($id){
-        $entityManager = $this->getDoctrine()->getManager();
-        $session = $entityManager->getRepository('App:Session')->find($id);
-        $session->setCancel(false);
-        $session->setBike(9);
-        $entityManager->persist($session);
-        $entityManager->flush();
+        $errors = [];
+        try{
+            $entityManager = $this->getDoctrine()->getManager();
+            $session = $entityManager->getRepository('App:Session')->find($id);
+            $session->setCancel(false);
+            $session->setBike(9);
+            $entityManager->persist($session);
+            $entityManager->flush();
 
-        return $this->redirectToRoute('session_administration',[
-            'month' => date_format($session->getDate(), 'm')
-        ]);
+            return new JsonResponse(['result' => true], 200);
+        }
+        catch (\Exception $e){
+            $errors = $e;
+        }
+
+        return new JsonResponse([
+            'errors' => $errors
+        ], 400);
     }
 
     //todo email config
     /**
      * @Route("/Cancel/{id}", name="api_Cancel")
      * @param $id
-     * @return RedirectResponse
+     * @return JsonResponse
      */
     public function cancelSession($id, \Swift_Mailer $mailer){
+        $errors = [];
         $listInscription = $this->findInscription($id);
         $entityManager = $this->getDoctrine()->getManager();
         $session = $entityManager
             ->getRepository('App:Session')
             ->findOneBy(['id'=>$id]);
-
-        if(!empty($listInscription)){
-            foreach ($listInscription as $inscription) {
-                $userId = $inscription->getIdPerson();
-                $user = $entityManager
-                    ->getRepository('App:Person')
-                    ->findOneBy(['id'=>$userId]);
+        try{
+            if(!empty($listInscription)){
+                foreach ($listInscription as $inscription) {
+                    $userId = $inscription->getIdPerson();
+                    $user = $entityManager
+                        ->getRepository('App:Person')
+                        ->findOneBy(['id'=>$userId]);
 
 //                $message = (new \Swift_Message('Hello Email'))
 //                    ->setFrom('send@example.com')
@@ -112,37 +121,51 @@ class SessionAdministrationControllerApi extends AbstractController
 //
 //                $mailer->send($message);
 
-                $entityManager->remove($inscription);
-                $entityManager->flush();
+                    $entityManager->remove($inscription);
+                    $entityManager->flush();
+                }
             }
+
+            $session->setCancel(true);
+            $session->setBike(0);
+            $entityManager->persist($session);
+            $entityManager->flush();
+
+            return new JsonResponse(['result' => true], 200);
+        }
+        catch (\Exception $e){
+            $errors = $e;
         }
 
-        $session->setCancel(true);
-        $session->setBike(0);
-        $entityManager->persist($session);
-        $entityManager->flush();
 
-        return $this->redirectToRoute('session_administration',[
-            'month' => date_format($session->getDate(), 'm')
-        ]);
+        return new JsonResponse([
+            'errors' => $errors
+        ], 400);
     }
 
     /**
      * @Route("/Delete/{id}", name="api_Delete")
      * @param $id
-     * @return RedirectResponse
+     * @return JsonResponse
      */
     public function deleteSession($id){
+        $errors = [];
+        try{
+            $entityManager = $this->getDoctrine()->getManager();
+            $session = $entityManager->getRepository('App:Session')->find($id);
+            $date = $session->getDate();
+            $entityManager->remove($session);
+            $entityManager->flush();
 
-        $entityManager = $this->getDoctrine()->getManager();
-        $session = $entityManager->getRepository('App:Session')->find($id);
-        $date = $session->getDate();
-        $entityManager->remove($session);
-        $entityManager->flush();
+            return new JsonResponse(['result' => true], 200);
+        }
+        catch (\Exception $e){
+            $errors = $e;
+        }
 
-        return $this->redirectToRoute('session_administration',[
-            'month' => date_format($date, 'm')
-        ]);
+        return new JsonResponse([
+            'errors' => $errors
+        ], 400);
     }
 
     public function findInscription($Id_session){

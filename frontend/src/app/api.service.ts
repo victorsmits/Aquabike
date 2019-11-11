@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
+import {Sessions} from "./Interface/Interface.module";
 
 
 @Injectable({
@@ -61,5 +62,10 @@ export class ApiService {
     let url = "https://127.0.0.1:8000/api/admin/Delete/";
     url = url.concat(id);
     return this.http.get(url)
+  }
+
+  createNewSess(newSess:Sessions){
+    let url = "https://127.0.0.1:8000/api/admin/session";
+    return this.http.post(url,newSess)
   }
 }

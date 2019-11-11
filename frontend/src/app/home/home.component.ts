@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     let day = new Date();
-    this.date = day.getDate() + "/" + day.getMonth() + "/" + day.getFullYear();
+    this.date = day.toDateString();
     this.api.getHomeJson().subscribe(urldata => {
       this.data = JSON.parse(JSON.stringify(urldata));
 
