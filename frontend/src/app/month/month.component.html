@@ -63,15 +63,24 @@
       </mat-form-field>
     </mat-header-cell>
 
-    <mat-cell *matCellDef="let element">
-      <button mat-flat-button  color="primary" matTooltip="Inscription">
-        <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.id)">check</mat-icon>
-      </button>
+    <mat-cell *matCellDef="let element" >
+      <div *ngIf="!element.Cancel; else cancelBtn">
+        <button mat-flat-button  color="primary" matTooltip="Inscription">
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.id)">check</mat-icon>
+        </button>
+      </div>
+
+      <ng-template #cancelBtn>
+        <button mat-flat-button  color="primary" matTooltip="Inscription" disabled>
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.id)">check</mat-icon>
+        </button>
+      </ng-template>
 
 <!--      <button mat-menu-item (click)="unSubcribe(element.Id)">-->
 <!--        <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>-->
 <!--        <span>Désinscription</span>-->
 <!--      </button>-->
+
     </mat-cell>
   </ng-container>
 
@@ -80,3 +89,7 @@
   </mat-row>
 
 </mat-table>
+
+
+
+

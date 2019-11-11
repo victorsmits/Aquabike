@@ -44,4 +44,22 @@ export class ApiService {
     url = url.concat(id);
     return this.http.get(url)
   }
+
+  postCancelSess(id){
+    let url = "https://127.0.0.1:8000/api/admin/Cancel/";
+    url = url.concat(id);
+    return this.http.get(url)
+  }
+
+  postRenewSess(id){
+    let url = "https://127.0.0.1:8000/api/admin/recreate/";
+    url = url.concat(id);
+    return this.http.get(url)
+  }
+
+  postDeleteSess(id){
+    let url = "https://127.0.0.1:8000/api/admin/Delete/";
+    url = url.concat(id);
+    return this.http.get(url)
+  }
 }

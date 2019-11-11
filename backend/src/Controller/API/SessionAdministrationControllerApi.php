@@ -57,6 +57,7 @@ class SessionAdministrationControllerApi extends AbstractController
         return $Sessions;
 
     }
+
     /**
      * @Route("/recreate/{id}", name="api_recreate")
      * @param $id
