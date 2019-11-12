@@ -44,6 +44,7 @@ import { IgxTimePickerModule } from "igniteui-angular";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
 import {MAT_MOMENT_DATE_FORMATS} from "@angular/material-moment-adapter";
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -59,34 +60,35 @@ import {MAT_MOMENT_DATE_FORMATS} from "@angular/material-moment-adapter";
     AdminAboComponent,
     AdminCreateSessionComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatTableModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatRippleModule,
-    MatListModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    MatTooltipModule,
-    MatDatepickerModule,
-    MatInputModule,
-    MatNativeDateModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    MatGridListModule,
-    NgxMaterialTimepickerModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatTableModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatExpansionModule,
+        MatRippleModule,
+        MatListModule,
+        MatDialogModule,
+        BrowserAnimationsModule,
+        MatTooltipModule,
+        MatDatepickerModule,
+        MatInputModule,
+        MatNativeDateModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatProgressSpinnerModule,
+        MatGridListModule,
+        NgxMaterialTimepickerModule,
+        MatTabsModule
+    ],
   entryComponents: [
     MonthComponent,
     ListPersonDialog
@@ -95,9 +97,8 @@ import {MAT_MOMENT_DATE_FORMATS} from "@angular/material-moment-adapter";
     ApiService,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } },
     MatDatepickerModule,
-    // { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
-    // { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
-    // { provide: DateAdapter, useClass: MomentUtcDateAdapter },
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
+    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
   ],
   bootstrap: [AppComponent]
 })

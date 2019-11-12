@@ -1,0 +1,104 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+
+  <mat-grid-tile>
+
+    <mat-table [dataSource]="User.Session" class="mat-elevation-z8" *ngIf="User">
+
+      <!-- Date Column -->
+      <ng-container matColumnDef="Date" *ngIf="User">
+        <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+      </ng-container >
+
+      <!-- Time Column -->
+      <ng-container matColumnDef="Time" *ngIf="User">
+        <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
+      </ng-container>
+
+      <!-- Bike Column -->
+      <ng-container matColumnDef="Bike" *ngIf="User">
+        <mat-header-cell *matHeaderCellDef> Velo libre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Bike}} </mat-cell>
+      </ng-container>
+
+      <!-- Status Column -->
+      <ng-container matColumnDef="Status" *ngIf="User">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
+          <ng-template #cancel>
+            <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Button Column-->
+      <ng-container matColumnDef="Info" *ngIf="User">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element;let i = index" >
+          <button mat-flat-button  color="primary" matTooltip="Information">
+            <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
+          </button>
+        </mat-cell>
+
+      </ng-container>
+
+      <!-- Button 2 Column-->
+      <ng-container matColumnDef="Action" *ngIf="User">
+
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+
+        <mat-cell *matCellDef="let element">
+          <button mat-flat-button color="primary" matTooltip="Unsubscribe" >
+            <mat-icon [ngStyle]="{'color':'white'}" (click)="unSubscribe(element.Id)">cancel</mat-icon>
+          </button>
+        </mat-cell>
+
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+
+    </mat-table>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card *ngIf="User">
+      <mat-list-item>
+        <mat-card-title>
+          <mat-icon>person</mat-icon>
+          <span> {{User.lastName}} {{User.firstName}}</span>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+
+      <mat-card-content>
+        <mat-list-item>
+          <h4>Email</h4>
+          <p>{{User.Email}}</p>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+          <h4>Abonnement</h4>
+          <p>{{User.abonnement}}</p>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item>
+          <h4>Jour</h4>
+          <p>{{User.Day}}</p>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-card-content>
+
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
+
+

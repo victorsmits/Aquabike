@@ -4,6 +4,9 @@ import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
 import {Sessions} from "../Interface/Interface.module";
 import {ListPersonDialog} from "../month/month.component";
+import {NgForm} from "@angular/forms";
+import {NgxMaterialTimepickerTheme} from "ngx-material-timepicker";
+import {Router} from "@angular/router";
 
 let viewChild: any;
 // @ts-ignore
@@ -31,6 +34,20 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   private year: number;
   displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
+  darkTheme: NgxMaterialTimepickerTheme = {
+    container: {
+      bodyBackgroundColor: '#424242',
+      buttonColor: '#fff'
+    },
+    dial: {
+      dialBackgroundColor: '#555',
+    },
+    clockFace: {
+      clockFaceBackgroundColor: '#555',
+      clockHandColor: '#9fbd90',
+      clockFaceTimeInactiveColor: '#fff'
+    }
+  };
 
   months = [
     {name : "janvier", num : 1},
@@ -48,7 +65,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   ];
 
 
-  constructor(private api: ApiService, public dialog: MatDialog) { }
+  constructor(private api: ApiService, public dialog: MatDialog, private router: Router) { }
 
   @viewChild matSelect: MatSelect;
   @viewChild2 matSelect2: MatSelect;
@@ -151,5 +168,19 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
         console.log("Session "+id+ " Delete")
       }
     })
+  }
+
+  onCreate(form: NgForm) {
+    let newSess: Sessions;
+    let date = new Date(form.value.date);
+    newSess={
+      Date : date.toDateString(),
+      Time : form.value.time,
+      Bike : form.value.bike,
+      Cancel : false,
+      Id :0
+    };
+    console.log(newSess);
+    this.api.createNewSess(newSess);
   }
 }

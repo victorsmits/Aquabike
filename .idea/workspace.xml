@@ -3,17 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +317,8 @@
       <workItem from="1573229225623" duration="243000" />
       <workItem from="1573397959717" duration="13138000" />
       <workItem from="1573413533912" duration="5000" />
-      <workItem from="1573473334922" duration="15354000" />
+      <workItem from="1573473334922" duration="16169000" />
+      <workItem from="1573492636582" duration="1464000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -429,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573480798297</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add admin page for Create New Session">
+      <created>1573491371608</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573491371608</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +470,8 @@
     <MESSAGE value="Add profile page" />
     <MESSAGE value="add admin page for abonnement renew" />
     <MESSAGE value="add admin page for Session" />
-    <option name="LAST_COMMIT_MESSAGE" value="add admin page for Session" />
+    <MESSAGE value="add admin page for Create New Session" />
+    <option name="LAST_COMMIT_MESSAGE" value="add admin page for Create New Session" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
@@ -496,10 +500,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573487380436" />
-    <state x="513" y="142" key="CommitChangelistDialog2" timestamp="1573480798109">
+    <state x="513" y="142" key="CommitChangelistDialog2" timestamp="1573491371250">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573480798109" />
+    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573491371250" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1573399241968">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

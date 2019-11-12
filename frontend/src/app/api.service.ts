@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
 import {Sessions} from "./Interface/Interface.module";
+import {Router} from "@angular/router";
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import {Sessions} from "./Interface/Interface.module";
 
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   getHomeJson(){
     return this.http.get('https://127.0.0.1:8000/api')
@@ -66,6 +67,7 @@ export class ApiService {
 
   createNewSess(newSess:Sessions){
     let url = "https://127.0.0.1:8000/api/admin/session";
-    return this.http.post(url,newSess)
+    this.http.post(url,newSess);
+    return this.router.navigate(['admin/Session'])
   }
 }

@@ -119,7 +119,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
       for(let i = 0; i < this.data.length; i++){
         tempSess={
-          Date:this.data[i]["Date"].split(' ')[0],
+          Date: new Date(this.data[i]["Date"].split(' ')[0]).toDateString(),
           Time:this.data[i]["time"].split(' ')[1],
           Bike:this.data[i]["bike"],
           Cancel:this.data[i]["Cancel"],

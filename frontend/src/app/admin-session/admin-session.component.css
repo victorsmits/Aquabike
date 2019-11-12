@@ -2,3 +2,23 @@
   margin-left: 5%;
   width: 20px;
 }
+mat-tab{
+  width : 100%
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  width: 100%;
+}
+mat-card{
+  width: 20%;
+  margin: 5% auto;
+}
