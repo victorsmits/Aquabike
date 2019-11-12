@@ -3,6 +3,7 @@ import {ApiService} from "../api.service";
 import {MatDialog} from "@angular/material/dialog";
 import {MatSelect} from "@angular/material/select";
 import {Sessions,User} from "../Interface/Interface.module";
+import {AuthService} from "../auth.service";
 
 let viewChild: any;
 // @ts-ignore
@@ -41,7 +42,7 @@ export class ProfileComponent implements OnInit {
     {name : "decembre", num : 12},
   ];
 
-  constructor(private api: ApiService, public dialog: MatDialog){}
+  constructor(private api: ApiService, private auth:AuthService){}
 
   @viewChild matSelect: MatSelect;
 
@@ -51,7 +52,7 @@ export class ProfileComponent implements OnInit {
     this.year = m.getFullYear();
     this.getYear();
 
-    this.api.getProfileJson('victorsmits').subscribe(urldata=>{
+    this.api.getProfileJson(this.auth.getCurrentUser()).subscribe(urldata=>{
       this.initData(urldata);
       console.log(this.User)
     });

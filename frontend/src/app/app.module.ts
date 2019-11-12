@@ -40,11 +40,10 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminSessionComponent } from './admin-session/admin-session.component';
 import { AdminAboComponent } from './admin-abo/admin-abo.component';
 import { AdminCreateSessionComponent } from './admin-create-session/admin-create-session.component';
-import { IgxTimePickerModule } from "igniteui-angular";
-import {MDBBootstrapModule} from "angular-bootstrap-md";
 import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
 import {MAT_MOMENT_DATE_FORMATS} from "@angular/material-moment-adapter";
 import {MatTabsModule} from "@angular/material/tabs";
+import {CookieService} from "ngx-cookie-service";
 
 @NgModule({
   declarations: [
@@ -87,7 +86,7 @@ import {MatTabsModule} from "@angular/material/tabs";
         MatProgressSpinnerModule,
         MatGridListModule,
         NgxMaterialTimepickerModule,
-        MatTabsModule
+        MatTabsModule,
     ],
   entryComponents: [
     MonthComponent,
@@ -99,6 +98,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatDatepickerModule,
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
     { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

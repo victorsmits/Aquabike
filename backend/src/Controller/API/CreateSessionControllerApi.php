@@ -40,7 +40,7 @@ class CreateSessionControllerApi extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($session);
                 $entityManager->flush();
-                return $this->json(['session' => $session]);
+                return new JsonResponse(['result' => true,'session' => $session], 200);
             }
             catch(UniqueConstraintViolationException $e)
             {

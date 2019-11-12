@@ -3,6 +3,7 @@ import {ApiService} from "../api.service";
 import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
 import {Sessions} from "../Interface/Interface.module";
+import {AuthService} from "../auth.service";
 
 let viewChild: any;
 // @ts-ignore
@@ -65,7 +66,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   ];
 
 
-  constructor(private api: ApiService, public dialog: MatDialog) { }
+  constructor(private api: ApiService, public dialog: MatDialog,private auth:AuthService) { }
 
   @viewChild matSelect: MatSelect;
   @viewChild2 matSelect2: MatSelect;
@@ -79,6 +80,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
+    console.log(this.auth.getCurrentUser())
   }
 
   ngAfterViewInit(){

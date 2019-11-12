@@ -18,7 +18,7 @@ class SecurityControllerApi extends AbstractController
      */
     public function login()
     {
-        return new JsonResponse(['result' => true], 200);
+        return new JsonResponse(['result' => true,'user' => $this->getUser()], 200);
     }
 
     /**

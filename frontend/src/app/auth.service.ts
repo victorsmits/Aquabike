@@ -2,16 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
-import {AuthLoginData, AuthSignupData} from "./Interface/Interface.module";
+import {AuthLoginData, AuthSignupData, User} from "./Interface/Interface.module";
+import {CookieService} from "ngx-cookie-service";
 
 
 @Injectable({ providedIn: 'root'})
 export class AuthService {
   private isAuthenticated = false;
   private authStatusListener = new Subject<boolean>(); // just need to know if user is authenticated
-  private currentUser = null;
+  private currentUser: User;
+  cookieValue = 'UNKNOWN';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient,
+              private cookie : CookieService,
+              private router: Router,) {}
 
   getIsAuth() {
     return this.isAuthenticated;
@@ -22,12 +26,13 @@ export class AuthService {
   }
 
   getCurrentUser() {
-    return this.currentUser;
+    return this.cookie.get('user');
   }
 
   createUser(email: string, username: string, password: string,
              Nom: string, Prenom: string, Abonnement: string,
              Jour: string, passwordConfirmation: string) {
+
     const authData: AuthSignupData = {
       email: email,
       username: username,
@@ -54,14 +59,14 @@ export class AuthService {
         if (response.result === true) {
           this.isAuthenticated = true; // needed to update authentication status
           this.authStatusListener.next(true); // telling everyone who is interested that the user is authenticated
-          this.currentUser = authData.Username;
+          this.cookie.set('user',authData.Username)
         }
         this.router.navigate(['']);
-        console.log(this.getCurrentUser())
       });
   }
 
   logout() {
+    this.cookie.delete('user');
     this.isAuthenticated = false;
     this.authStatusListener.next(false);
     this.router.navigate(['']);

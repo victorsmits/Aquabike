@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../api.service";
+import {AuthService} from "../auth.service";
+import {CookieService} from "ngx-cookie-service";
 
 @Component({
   selector: 'app-home',
@@ -13,8 +15,11 @@ export class HomeComponent implements OnInit {
   private listUser: any[] = [];
   private date;
   private time : any[]= [];
+  private user : any;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,
+              private auth:AuthService,
+              private cookie: CookieService) { }
 
   ngOnInit() {
     let day = new Date();
@@ -35,9 +40,8 @@ export class HomeComponent implements OnInit {
         this.listUser.push(user)
       }
     });
-
-
-
+    this.user = this.auth.getCurrentUser();
+    console.log(this.cookie.get('username-localhost-8888'))
   }
 
 }

@@ -35,6 +35,7 @@
     "mdb-cli": "^1.1.20",
     "minireset.css": "~0.0.4",
     "moment": "latest",
+    "ngx-cookie-service": "^2.2.0",
     "ngx-material-timepicker": "^5.2.2",
     "resize-observer-polyfill": "^1.5.1",
     "rxjs": "~6.4.0",

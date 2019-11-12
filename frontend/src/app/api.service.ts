@@ -67,7 +67,10 @@ export class ApiService {
 
   createNewSess(newSess:Sessions){
     let url = "https://127.0.0.1:8000/api/admin/session";
-    this.http.post(url,newSess);
-    return this.router.navigate(['admin/Session'])
+    this.http.post(url,newSess).subscribe(urldata=>{
+      if(urldata['result']){
+        this.router.navigate(['admin/Session'])
+      }
+    });
   }
 }
