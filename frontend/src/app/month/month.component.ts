@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core
 import {ApiService} from "../api.service";
 import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
-import {Sessions} from "../Interface/Interface.module";
+import {Inscription, Sessions} from "../Interface/Interface.module";
 import {AuthService} from "../auth.service";
 
 let viewChild: any;
@@ -39,7 +39,6 @@ export class ListPersonDialog {
   styleUrls: ['./month.component.css'],
 })
 
-
 export class MonthComponent implements OnInit, AfterViewInit {
   private data: JSON[]=[];
   private value : number = null;
@@ -71,6 +70,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   @viewChild matSelect: MatSelect;
   @viewChild2 matSelect2: MatSelect;
 
+//todo block sub when no more abonnement left or when session is full
 
   ngOnInit() {
     let m = new Date();
@@ -100,12 +100,30 @@ export class MonthComponent implements OnInit, AfterViewInit {
     });
   }
 
-  subcribe(Id: any) {
-    console.log("SUB!" + Id);
+  subcribe(Id: number) {
+    let tempInscription : Inscription={
+      Username:this.auth.getCurrentUser(),
+      Id: Id
+    };
+
+    this.api.createInscription(tempInscription).subscribe(urldata=>{
+      if(urldata["result"]){
+        this.ngAfterViewInit();
+      }
+    });
   }
 
-  unSubcribe(id: any) {
-    console.log("UNSUB!" + id);
+  unSubcribe(id: number) {
+    let tempInscription : Inscription={
+      Username:this.auth.getCurrentUser(),
+      Id: id
+    };
+
+    this.api.deleteInscription(tempInscription).subscribe(urldata=>{
+      if(urldata["result"]){
+        this.ngAfterViewInit();
+      }
+    });
   }
 
   initSession(urldata){

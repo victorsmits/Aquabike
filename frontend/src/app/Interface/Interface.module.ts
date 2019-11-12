@@ -32,3 +32,8 @@ export interface Sessions{
   Cancel : boolean,
   Id : number,
 }
+
+export interface Inscription {
+  Username: string,
+  Id: number
+}

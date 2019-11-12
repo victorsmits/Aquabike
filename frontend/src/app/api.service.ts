@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
-import {Sessions} from "./Interface/Interface.module";
+import {Inscription, Sessions} from "./Interface/Interface.module";
 import {Router} from "@angular/router";
 
 
@@ -73,4 +73,15 @@ export class ApiService {
       }
     });
   }
+
+  createInscription(newInscription : Inscription){
+    let url = "https://127.0.0.1:8000/api/Inscription";
+    return this.http.post(url,newInscription)
+  }
+
+  deleteInscription(newInscription : Inscription){
+    let url = "https://127.0.0.1:8000/api/Inscription";
+    return this.http.post(url,newInscription)
+  }
+
 }

@@ -6,6 +6,7 @@ use App\Entity\Inscription;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncode;
@@ -74,87 +75,102 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Inscription/{id}/{user}", name="api_Inscription")
-     * @param $id
-     * @param $user
-     * @return RedirectResponse
+     * @Route("/Inscription", name="api_Inscription")
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function createInscription($id,$user){
+    public function createInscription($request){
         $entityManager = $this->getDoctrine()->getManager();
 
-        $user = $entityManager
-            ->getRepository('App:Person')
-            ->getPersonFromId($user);
+        $data = json_decode($request->getContent(), true);
+        $errors = [];
 
-        $session = $entityManager
-            ->getRepository('App:Session')
-            ->getSessionFromId($id);
+        try{
+            $user = $entityManager
+                ->getRepository('App:Person')
+                ->getPersonFromUsername($data["username"]);
+
+            $session = $entityManager
+                ->getRepository('App:Session')
+                ->getSessionFromId($data["id"]);
 
 
-        if ($session->getBike() >0 & $user->getAbonnement() > 0) {
-            $inscription = new Inscription();
+            if ($session->getBike() >0 & $user->getAbonnement() > 0) {
+                $inscription = new Inscription();
 
-            $inscription->setIdPerson($user);
-            $inscription->setIdSession($session);
+                $inscription->setIdPerson($user);
+                $inscription->setIdSession($session);
 
-            $entityManager->persist($inscription);
-            $entityManager->flush();
+                $entityManager->persist($inscription);
+                $entityManager->flush();
 
-            $session->setBike( $session->getbike()-1);
-            $entityManager->persist($session);
-            $entityManager->flush();
+                $session->setBike( $session->getbike()-1);
+                $entityManager->persist($session);
+                $entityManager->flush();
 
-            $user->setAbonnement( $user->getAbonnement()-1);
-            $entityManager->persist($user);
-            $entityManager->flush();
+                $user->setAbonnement( $user->getAbonnement()-1);
+                $entityManager->persist($user);
+                $entityManager->flush();
 
-            return $this->redirectToRoute('month',[
-                'month' => date_format($session->getDate(), 'm'),
-            ],307);
-        }else{
-            return $this->redirectToRoute('month', [
-                'error' => "Session complete ou plus d'abonnement disponible"
-            ]);
+                return $this->json(['user' => $user]);
+            }
+        }catch (\Exception $e){
+            $errors = $e;
         }
+
+        return new JsonResponse([
+            'errors' => $errors
+        ], 400);
     }
 
     /**
-     * @Route("/Desinscription/{id}/{user}", name="api_Unsub")
-     * @param $id
-     * @param $user
-     * @return RedirectResponse
+     * @Route("/Desinscription", name="api_Unsub")
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function removeInscription($id,$user){
+    public function removeInscription($request){
         $entityManager = $this->getDoctrine()->getManager();
-        $user = $entityManager
-            ->getRepository('App:Person')
-            ->getPersonFromId($user);
 
-        $inscription = $entityManager->getRepository('App:Inscription')->findInscription($id,$user);
-        $session = $entityManager->getRepository('App:Session')->getSessionFromId($id);
+        $data = json_decode($request->getContent(), true);
+        $errors = [];
 
-        if($session->getDate() != date('now')) {
-            $entityManager->remove($inscription);
-            $entityManager->flush();
+        try{
+            $user = $entityManager
+                ->getRepository('App:Person')
+                ->getPersonFromUsername($data["Username"]);
 
-            $session->setBike($session->getbike() + 1);
-            $entityManager->persist($session);
-            $entityManager->flush();
+            $inscription = $entityManager
+                ->getRepository('App:Inscription')
+                ->findInscription($data["Id"],$user);
 
-            $username = $this->getUser()->getUsername();
-            $user = $entityManager->getRepository('App:Person')->getPersonFromUsername($username);
-            $user->setAbonnement($user->getAbonnement() + 1);
-            $entityManager->persist($user);
-            $entityManager->flush();
+            $session = $entityManager
+                ->getRepository('App:Session')
+                ->getSessionFromId($data["data"]);
 
-            return $this->redirectToRoute('month', array(
-                'month' => date_format($session->getDate(), 'm')
-            ));
-        }else{
-            return $this->redirectToRoute('month', [
-                'error' => "impossible de se désinscrire de cette session aujourd'hui"
-            ]);
+            if($session->getDate() != date('now')) {
+                $entityManager->remove($inscription);
+                $entityManager->flush();
+
+                $session->setBike($session->getbike() + 1);
+                $entityManager->persist($session);
+                $entityManager->flush();
+
+                $username = $this->getUser()->getUsername();
+                $user = $entityManager->getRepository('App:Person')->getPersonFromUsername($username);
+                $user->setAbonnement($user->getAbonnement() + 1);
+                $entityManager->persist($user);
+                $entityManager->flush();
+
+                return $this->json(['user' => $user]);
+
+            }
+        }catch (\Exception $e){
+            $errors = $e;
         }
+
+        return new JsonResponse([
+            'errors' => $errors
+        ], 400);
     }
 
 

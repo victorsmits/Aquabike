@@ -7,13 +7,11 @@ use App\Form\RegistrationFormType;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Validator\Constraints\Json;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
  *@Route("/api")
@@ -24,7 +22,7 @@ class RegistrationControllerApi extends AbstractController
      * @Route("/register", name="api_user_registration", methods={"POST","OPTIONS","GET"})
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     * @return RedirectResponse|Response
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
