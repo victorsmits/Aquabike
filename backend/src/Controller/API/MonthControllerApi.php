@@ -3,9 +3,10 @@
 namespace App\Controller\API;
 
 use App\Entity\Inscription;
+use App\Entity\Person;
+use App\Entity\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,7 +22,7 @@ use Symfony\Component\Serializer\Serializer;
 class MonthControllerApi extends AbstractController
 {
     /**
-     * @Route("/month/{month?}/{year?}/{error?}", name="api_month")
+     * @Route("/month/{month?}/{year?}/{error?}", name="api_month", methods={"GET"})
      * @param $month
      * @param $year
      * @param $error
@@ -75,24 +76,29 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Inscription", name="api_Inscription")
+     * @Route("/Inscription", name="api_Inscription", methods={"POST","OPTIONS","GET"})
      * @param Request $request
      * @return JsonResponse
      */
-    public function createInscription($request){
+    public function createInscription(Request $request){
         $entityManager = $this->getDoctrine()->getManager();
 
         $data = json_decode($request->getContent(), true);
         $errors = [];
 
+        /**
+         * @var $user Person
+         * @var $session Session
+         */
+
         try{
             $user = $entityManager
                 ->getRepository('App:Person')
-                ->getPersonFromUsername($data["username"]);
+                ->getPersonFromUsername($data["Username"]);
 
             $session = $entityManager
                 ->getRepository('App:Session')
-                ->getSessionFromId($data["id"]);
+                ->getSessionFromId($data["Id"]);
 
 
             if ($session->getBike() >0 & $user->getAbonnement() > 0) {
@@ -112,7 +118,7 @@ class MonthControllerApi extends AbstractController
                 $entityManager->persist($user);
                 $entityManager->flush();
 
-                return $this->json(['user' => $user]);
+                return new JsonResponse(['result' => true,'user' => $user]);
             }
         }catch (\Exception $e){
             $errors = $e;
@@ -124,28 +130,33 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Desinscription", name="api_Unsub")
+     * @Route("/Desinscription", name="api_Unsub", methods={"POST","OPTIONS","GET","DELETE"})
      * @param Request $request
      * @return JsonResponse
      */
-    public function removeInscription($request){
+    public function removeInscription(Request $request){
         $entityManager = $this->getDoctrine()->getManager();
 
         $data = json_decode($request->getContent(), true);
         $errors = [];
+
+        /**
+         * @var $user Person
+         * @var $session Session
+         */
 
         try{
             $user = $entityManager
                 ->getRepository('App:Person')
                 ->getPersonFromUsername($data["Username"]);
 
-            $inscription = $entityManager
-                ->getRepository('App:Inscription')
-                ->findInscription($data["Id"],$user);
-
             $session = $entityManager
                 ->getRepository('App:Session')
-                ->getSessionFromId($data["data"]);
+                ->getSessionFromId($data["Id"]);
+
+            $inscription = $entityManager
+                ->getRepository('App:Inscription')
+                ->findInscription($session,$user);
 
             if($session->getDate() != date('now')) {
                 $entityManager->remove($inscription);
@@ -155,17 +166,15 @@ class MonthControllerApi extends AbstractController
                 $entityManager->persist($session);
                 $entityManager->flush();
 
-                $username = $this->getUser()->getUsername();
-                $user = $entityManager->getRepository('App:Person')->getPersonFromUsername($username);
                 $user->setAbonnement($user->getAbonnement() + 1);
                 $entityManager->persist($user);
                 $entityManager->flush();
 
-                return $this->json(['user' => $user]);
-
+                return new JsonResponse(['result' => true]);
             }
         }catch (\Exception $e){
             $errors = $e;
+
         }
 
         return new JsonResponse([

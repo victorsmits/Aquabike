@@ -14,28 +14,32 @@
           <mat-icon> date_range </mat-icon>
           <span> Month</span>
         </a>
-          <a mat-button routerLink="/login" *ngIf="!user; else profile">
-            <mat-icon> person </mat-icon>
-            <span> Login </span>
-          </a>
+
+        <a mat-button routerLink="/login" *ngIf="!user; else profile">
+          <mat-icon> person </mat-icon>
+          <span> Login </span>
+        </a>
 
         <ng-template #profile>
-          <a mat-button [matMenuTriggerFor]="menu" *ngIf="auth.getCurrentUser() == 'admin'">
+          <a mat-button [matMenuTriggerFor]="menu" *ngIf="user">
             <mat-icon> person </mat-icon>
-            <span> {{auth.getCurrentUser()}} </span>
+            <span> {{user.lastName}} </span>
           </a>
+
           <mat-menu #menu="matMenu">
             <a mat-menu-item routerLink="/profile">Profile</a>
             <a mat-menu-item (click)="logout()">Deconexion</a>
           </mat-menu>
+
+          <button mat-button [matMenuTriggerFor]="admin" *ngIf="user.Role[0] === 'ROLE_ADMIN'">Admin</button>
+          <mat-menu #admin="matMenu">
+            <button mat-menu-item routerLink="admin/Session">Sessions</button>
+            <button mat-menu-item routerLink="admin/Session/Create">Nouvelle Sessions</button>
+            <button mat-menu-item routerLink="admin/Abonnement">Abonnement</button>
+          </mat-menu>
+
         </ng-template>
 
-        <button mat-button [matMenuTriggerFor]="menu" *ngIf="user == 'admin'">Admin</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item routerLink="admin/Session">Sessions</button>
-          <button mat-menu-item routerLink="admin/Session/Create">Nouvelle Sessions</button>
-          <button mat-menu-item routerLink="admin/Abonnement">Abonnement</button>
-        </mat-menu>
 
       </div>
     </mat-toolbar>

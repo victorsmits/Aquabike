@@ -66,20 +66,23 @@
     <mat-cell *matCellDef="let element" >
       <div *ngIf="!element.Cancel; else cancelBtn">
         <button mat-flat-button  color="primary" matTooltip="Inscription">
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.id)">check</mat-icon>
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.Id)"
+          *ngIf="!listIdSession.includes(element.Id); else unsub">check</mat-icon>
         </button>
       </div>
 
       <ng-template #cancelBtn>
         <button mat-flat-button  color="primary" matTooltip="Inscription" disabled>
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.id)">check</mat-icon>
+          <mat-icon [ngStyle]="{'color':'white'}">check</mat-icon>
         </button>
       </ng-template>
 
-<!--      <button mat-menu-item (click)="unSubcribe(element.Id)">-->
-<!--        <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>-->
-<!--        <span>Désinscription</span>-->
-<!--      </button>-->
+      <ng-template #unsub>
+        <button mat-flat-button color="primary" matTooltip="Desinscription">
+          <mat-icon [ngStyle]="{'color':'red'}" (click)="unSubcribe(element.Id)">cancel</mat-icon>
+        </button>
+      </ng-template>
+
 
     </mat-cell>
   </ng-container>

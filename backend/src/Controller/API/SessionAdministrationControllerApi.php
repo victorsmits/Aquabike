@@ -86,7 +86,7 @@ class SessionAdministrationControllerApi extends AbstractController
 
     //todo email config
     /**
-     * @Route("/Cancel/{id}", name="api_Cancel")
+     * @Route("/Cancel/{id}", name="api_Cancel", methods={"GET"})
      * @param $id
      * @return JsonResponse
      */
@@ -105,6 +105,8 @@ class SessionAdministrationControllerApi extends AbstractController
                         ->getRepository('App:Person')
                         ->findOneBy(['id'=>$userId]);
 
+                    $user->setAbonnement( $user->getAbonnement()+1);
+
 //                $message = (new \Swift_Message('Hello Email'))
 //                    ->setFrom('send@example.com')
 //                    ->setTo($user->getEmail())
@@ -120,6 +122,8 @@ class SessionAdministrationControllerApi extends AbstractController
 //                ;
 //
 //                $mailer->send($message);
+                    $entityManager->persist($user);
+                    $entityManager->flush();
 
                     $entityManager->remove($inscription);
                     $entityManager->flush();

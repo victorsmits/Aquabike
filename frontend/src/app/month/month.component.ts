@@ -2,8 +2,9 @@ import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core
 import {ApiService} from "../api.service";
 import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
-import {Inscription, Sessions} from "../Interface/Interface.module";
+import {Inscription, Sessions, User} from "../Interface/Interface.module";
 import {AuthService} from "../auth.service";
+import {CookieService} from "ngx-cookie-service";
 
 let viewChild: any;
 // @ts-ignore
@@ -46,6 +47,8 @@ export class MonthComponent implements OnInit, AfterViewInit {
   private listPerson : Person[]=[];
   private listYear: number[]=[];
   private year: number;
+  private user: User;
+  private listIdSession: number[]=[];
   displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
 
@@ -65,7 +68,13 @@ export class MonthComponent implements OnInit, AfterViewInit {
   ];
 
 
-  constructor(private api: ApiService, public dialog: MatDialog,private auth:AuthService) { }
+  constructor(private api: ApiService,
+              public dialog: MatDialog,
+              private auth:AuthService,
+              private cookie: CookieService) {
+    this.user = this.auth.getCurrentUser();
+
+  }
 
   @viewChild matSelect: MatSelect;
   @viewChild2 matSelect2: MatSelect;
@@ -76,17 +85,17 @@ export class MonthComponent implements OnInit, AfterViewInit {
     let m = new Date();
     this.value = m.getMonth()+1;
     this.year = m.getFullYear();
+
     this.getYear();
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
-    console.log(this.auth.getCurrentUser())
   }
 
   ngAfterViewInit(){
+
     this.matSelect.valueChange.subscribe(value => {
       this.value = value;
-
       this.api.getMonthJson(value,this.year.toString()).subscribe(urldata => {
         this.initSession(urldata);
       });
@@ -98,11 +107,15 @@ export class MonthComponent implements OnInit, AfterViewInit {
         this.initSession(urldata);
       });
     });
+
+    this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
+      this.initSession(urldata);
+    });
   }
 
   subcribe(Id: number) {
     let tempInscription : Inscription={
-      Username:this.auth.getCurrentUser(),
+      Username:this.user.username,
       Id: Id
     };
 
@@ -115,7 +128,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   unSubcribe(id: number) {
     let tempInscription : Inscription={
-      Username:this.auth.getCurrentUser(),
+      Username:this.user.username,
       Id: id
     };
 
@@ -127,15 +140,24 @@ export class MonthComponent implements OnInit, AfterViewInit {
   }
 
   initSession(urldata){
+    this.api.getProfileJson(this.user.username).subscribe(data=>{
+      this.auth.initUser(data);
+      this.listIdSession = [];
 
-      this.listSession = [];
-      let tempSess : Sessions;
+      this.user = this.auth.getCurrentUser();
 
-      this.listPerson = [];
-      let tempPers : Person;
+      for(let i = 0; i < this.user.Session.length; i++){
+        this.listIdSession.push(this.user.Session[i].Id);
+      }
+    });
 
+    this.listSession = [];
+    let tempSess : Sessions;
 
-      this.data = JSON.parse(JSON.stringify(urldata));
+    this.listPerson = [];
+    let tempPers : Person;
+
+    this.data = JSON.parse(JSON.stringify(urldata));
 
       for(let i = 0; i < this.data.length; i++){
         tempSess={

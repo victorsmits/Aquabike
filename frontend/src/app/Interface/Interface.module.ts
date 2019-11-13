@@ -15,13 +15,14 @@ export interface AuthLoginData {
 }
 
 export interface User {
-  id:number,
+  id: number,
+  username: string,
   lastName: string,
   firstName: string,
   abonnement: number,
   Day: string,
   Email: string,
-  Session: any,
+  Session: Sessions[],
   Role: any
 }
 

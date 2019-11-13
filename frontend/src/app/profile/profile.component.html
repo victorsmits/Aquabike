@@ -2,28 +2,28 @@
 
   <mat-grid-tile>
 
-    <mat-table [dataSource]="User.Session" class="mat-elevation-z8" *ngIf="User">
+    <mat-table [dataSource]="User.Session" class="mat-elevation-z8">
 
       <!-- Date Column -->
-      <ng-container matColumnDef="Date" *ngIf="User">
+      <ng-container matColumnDef="Date" >
         <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
       </ng-container >
 
       <!-- Time Column -->
-      <ng-container matColumnDef="Time" *ngIf="User">
+      <ng-container matColumnDef="Time" >
         <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
       </ng-container>
 
       <!-- Bike Column -->
-      <ng-container matColumnDef="Bike" *ngIf="User">
+      <ng-container matColumnDef="Bike" >
         <mat-header-cell *matHeaderCellDef> Velo libre </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.Bike}} </mat-cell>
       </ng-container>
 
       <!-- Status Column -->
-      <ng-container matColumnDef="Status" *ngIf="User">
+      <ng-container matColumnDef="Status" >
         <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
         <mat-cell *matCellDef="let element">
           <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
@@ -34,7 +34,7 @@
       </ng-container>
 
       <!-- Button Column-->
-      <ng-container matColumnDef="Info" *ngIf="User">
+      <ng-container matColumnDef="Info">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let element;let i = index" >
           <button mat-flat-button  color="primary" matTooltip="Information">
@@ -45,7 +45,7 @@
       </ng-container>
 
       <!-- Button 2 Column-->
-      <ng-container matColumnDef="Action" *ngIf="User">
+      <ng-container matColumnDef="Action" >
 
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
 
@@ -65,7 +65,7 @@
   </mat-grid-tile>
 
   <mat-grid-tile>
-    <mat-card *ngIf="User">
+    <mat-card >
       <mat-list-item>
         <mat-card-title>
           <mat-icon>person</mat-icon>

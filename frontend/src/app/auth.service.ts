@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
-import {AuthLoginData, AuthSignupData, User} from "./Interface/Interface.module";
+import {AuthLoginData, AuthSignupData, Sessions, User} from "./Interface/Interface.module";
 import {CookieService} from "ngx-cookie-service";
+import {ApiService} from "./api.service";
 
 
 @Injectable({ providedIn: 'root'})
@@ -12,21 +13,30 @@ export class AuthService {
   private authStatusListener = new Subject<boolean>(); // just need to know if user is authenticated
   private currentUser: User;
   cookieValue = 'UNKNOWN';
+  private data: JSON[];
+  private listSession: Sessions[]=[];
+  private User: User;
 
   constructor(private http: HttpClient,
               private cookie : CookieService,
-              private router: Router,) {}
+              private router: Router,
+              private api: ApiService) {}
 
   getIsAuth() {
-    return this.isAuthenticated;
+    return this.cookie.get('connected');
   }
 
   getAuthStatusListener() {
     return this.authStatusListener.asObservable();
   }
 
-  getCurrentUser() {
-    return this.cookie.get('user');
+  getCurrentUser():User{
+    // this.updateUser();
+    return JSON.parse(this.cookie.get('user'));
+  }
+
+  getCurrentUserSession() {
+    return this.cookie.get('session');
   }
 
   createUser(email: string, username: string, password: string,
@@ -59,14 +69,69 @@ export class AuthService {
         if (response.result === true) {
           this.isAuthenticated = true; // needed to update authentication status
           this.authStatusListener.next(true); // telling everyone who is interested that the user is authenticated
-          this.cookie.set('user',authData.Username)
+          this.api.getProfileJson(username).subscribe(data=>{
+            this.initUser(data)
+          });
+
         }
         this.router.navigate(['']);
       });
   }
 
+  initUser(data){
+
+    this.listSession = [];
+    this.data = JSON.parse(JSON.stringify(data));
+
+    let j;
+    switch (this.data["Day"]) {
+      case 'Mon' : {j = 'Lundi'; break;}
+      case 'Tue' : {j = 'Mardi'; break;}
+      case 'Wed' : {j = 'Mercredi'; break;}
+      case 'Thu' : {j = 'Jeudi'; break;}
+      case 'Fry' : {j = 'Vendredi'; break;}
+      case 'Sat' : {j = 'Samedi'; break;}
+      case 'Sun' : {j = 'Dimanche'; break;}
+    }
+
+    this.User = {
+      id: this.data["id"],
+      username : this.data["Username"],
+      lastName: this.data["LastName"],
+      firstName: this.data["FirstName"],
+      abonnement: this.data["Abonnement"],
+      Day: j,
+      Email: this.data["Email"],
+      Session: [],
+      Role: this.data["roles"]
+    };
+
+    let inscription = this.data["idInscription"];
+
+    for(let i = 0; i < inscription.length; i++) {
+      let tempSess: Sessions;
+      let d = new Date(inscription[i]["idSession"]["date"].split(' ')[0]);
+
+      tempSess={
+        Date:  d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear(),
+        Time: inscription[i]["idSession"]["time"].split(' ')[1],
+        Bike: inscription[i]["idSession"]["bike"],
+        Cancel: inscription[i]["idSession"]["Cancel"],
+        Id: inscription[i]["idSession"]["id"]
+      };
+
+      this.listSession.push(tempSess);
+      this.User.Session.push(tempSess);
+    }
+    this.cookie.set('user',JSON.stringify(this.User));
+    this.cookie.set('session',JSON.stringify(this.listSession));
+
+  }
+
   logout() {
     this.cookie.delete('user');
+    this.cookie.delete('session');
+    this.cookie.delete('connected');
     this.isAuthenticated = false;
     this.authStatusListener.next(false);
     this.router.navigate(['']);

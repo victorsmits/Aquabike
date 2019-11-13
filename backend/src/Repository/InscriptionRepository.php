@@ -29,11 +29,12 @@ class InscriptionRepository extends ServiceEntityRepository
         return $this->findBy(array('Id_Person'=>$user));
     }
 
-    public function findInscription($Id_session,$user){
+    public function findInscription($session,$user){
         /**
         * @var $user Person
+        * @var $session Session
          */
-        return $this->findOneBy(array('Id_Session' => $Id_session,'Id_Person'=>$user->getId()));
+        return $this->findOneBy(array('Id_Session' => $session->getId(),'Id_Person'=>$user->getId()));
     }
 
     public function checkIfInscription($Id_session,$user){

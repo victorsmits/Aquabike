@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
         this.listUser.push(user)
       }
     });
-    this.user = this.auth.getCurrentUser();
+    this.user = JSON.parse(this.auth.getCurrentUser());
     console.log(this.cookie.get('username-localhost-8888'))
   }
 

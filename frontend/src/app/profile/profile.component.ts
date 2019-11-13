@@ -41,6 +41,7 @@ export class ProfileComponent implements OnInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
+  private cookieSession: Sessions[];
 
   constructor(private api: ApiService, private auth:AuthService){}
 
@@ -52,52 +53,29 @@ export class ProfileComponent implements OnInit {
     this.year = m.getFullYear();
     this.getYear();
 
-    this.api.getProfileJson(this.auth.getCurrentUser()).subscribe(urldata=>{
-      this.initData(urldata);
-      console.log(this.User)
-    });
-  }
-
-  initData(urldata){
-    this.data = JSON.parse(JSON.stringify(urldata));
-    let j;
-    switch (this.data["Day"]) {
-      case 'Mon' : {j = 'Lundi'; break;}
-      case 'Tue' : {j = 'Mardi'; break;}
-      case 'Wed' : {j = 'Mercredi'; break;}
-      case 'Thu' : {j = 'Jeudi'; break;}
-      case 'Fry' : {j = 'Vendredi'; break;}
-      case 'Sat' : {j = 'Samedi'; break;}
-      case 'Sun' : {j = 'Dimanche'; break;}
-    }
-    this.User={
-      id:this.data["id"],
-      lastName: this.data["LastName"],
-      firstName: this.data["FirstName"],
-      abonnement: this.data["Abonnement"],
-      Day: j,
-      Email: this.data["Email"],
-      Session: this.listSession,
-      Role: this.data["roles"]
-    };
-
-    let inscription = this.data["idInscription"];
+    this.User = JSON.parse(this.auth.getCurrentUser());
+    this.cookieSession = JSON.parse(this.auth.getCurrentUserSession());
+    console.log(this.cookieSession);
     let tempSess: Sessions;
+    console.log(this.User);
+    // this.User.Session = [];
 
-    for(let i = 0; i < inscription.length; i++) {
-      let d = new Date(inscription[i]["idSession"]["date"].split(' ')[0]);
+    for(let i = 0; i < this.cookieSession.length; i++) {
+      let d = new Date(this.cookieSession[i]["date"]);
       if(d.getFullYear() === this.year){
-        tempSess={
-          Date:  d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear(),
-          Time: inscription[i]["idSession"]["time"].split(' ')[1],
-          Bike: inscription[i]["idSession"]["bike"],
-          Cancel: inscription[i]["idSession"]["Cancel"],
-          Id: inscription[i]["idSession"]["id"]
+        tempSess ={
+          Date:  this.cookieSession[i]["date"],
+          Time: this.cookieSession[i]["time"],
+          Bike: this.cookieSession[i]["bike"],
+          Cancel: this.cookieSession[i]["Cancel"],
+          Id: this.cookieSession[i]["id"]
         };
+        this.User.Session.push(tempSess);
       }
-      this.listSession.push(tempSess);
     }
+    console.log(this.User);
   }
+
 
   openDialog(id): void {
     // const dialogRef = this.dialog.open(ListPersonDialog, {

@@ -80,7 +80,7 @@ export class ApiService {
   }
 
   deleteInscription(newInscription : Inscription){
-    let url = "https://127.0.0.1:8000/api/Inscription";
+    let url = "https://127.0.0.1:8000/api/Desinscription";
     return this.http.post(url,newInscription)
   }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AuthService} from "./auth.service";
 import {AfterViewInit} from "@mobiscroll/angular-lite/src/js/frameworks/angular";
+import {User} from "./Interface/Interface.module";
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,15 @@ import {AfterViewInit} from "@mobiscroll/angular-lite/src/js/frameworks/angular"
 })
 export class AppComponent implements AfterViewInit {
   title = 'Aquabike';
-  user;
+  user: User;
 
   constructor(private auth : AuthService) {}
 
   ngAfterViewInit(){
-    this.user = this.auth.getCurrentUser();
+    if(this.auth.getIsAuth()){
+      this.user = JSON.parse(this.auth.getCurrentUser());
+      console.log(this.user);
+    }
   }
 
   logout() {

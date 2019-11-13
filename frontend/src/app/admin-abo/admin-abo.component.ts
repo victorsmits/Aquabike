@@ -43,6 +43,7 @@ export class AdminAboComponent implements OnInit {
 
       this.listUser.push({
         id: this.data[i]["id"],
+        username: this.data[i]["Username"],
         lastName: this.data[i]["LastName"],
         firstName: this.data[i]["FirstName"],
         abonnement: this.data[i]["Abonnement"],
