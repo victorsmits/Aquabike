@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
+//todo display login error
+
 @Component({
   selector: 'app-login', // --> can be ommited because of the routes
   templateUrl: './login.component.html',

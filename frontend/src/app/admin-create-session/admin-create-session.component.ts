@@ -4,6 +4,8 @@ import {NgxMaterialTimepickerTheme} from "ngx-material-timepicker";
 import {Sessions} from "../Interface/Interface.module";
 import {ApiService} from "../api.service";
 
+//todo display create error
+
 @Component({
   selector: 'app-admin-create-session',
   templateUrl: './admin-create-session.component.html',

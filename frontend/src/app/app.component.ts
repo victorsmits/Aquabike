@@ -3,6 +3,9 @@ import {AuthService} from "./auth.service";
 import {AfterViewInit} from "@mobiscroll/angular-lite/src/js/frameworks/angular";
 import {User} from "./Interface/Interface.module";
 
+//todo auto update login btn
+//todo graphical responsivity for devices
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

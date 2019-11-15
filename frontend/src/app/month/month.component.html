@@ -1,5 +1,6 @@
 
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortActive="Date"
+           matSortDirection="asc">
 
   <!-- Date Column -->
   <ng-container matColumnDef="Date">
@@ -21,7 +22,7 @@
 
   <!-- Status Column -->
   <ng-container matColumnDef="Status">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
     <mat-cell *matCellDef="let element">
       <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
       <ng-template #cancel>

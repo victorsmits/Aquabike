@@ -10,7 +10,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-    //TODO demander pour l'appel de methode etant dans un autre controller
 
     /**
      * @Route("/", name="home")

@@ -38,6 +38,9 @@ export class ListPersonDialog {
 
 }
 
+//todo display month selection + year selection error
+//todo display sub + unsub error
+
 @Component({
   selector: 'app-month',
   templateUrl: './month.component.html',
@@ -86,7 +89,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
 
-//todo block sub when no more abonnement left or when session is full
+//todo: test block sub when no more abonnement left or when session is full
 
   ngOnInit() {
     let m = new Date();

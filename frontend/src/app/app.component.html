@@ -20,6 +20,11 @@
           <span> Login </span>
         </a>
 
+        <a mat-button routerLink="/signup" *ngIf="!isAuth;">
+          <mat-icon> person_add </mat-icon>
+          <span> Signup </span>
+        </a>
+
         <ng-template #profile>
           <a mat-button [matMenuTriggerFor]="menu" *ngIf="isAuth">
             <mat-icon> person </mat-icon>

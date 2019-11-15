@@ -19,7 +19,6 @@ use Symfony\Component\Serializer\Serializer;
  */
 class HomeControllerApi extends AbstractController
 {
-    //todo fi max depth
 
     /**
      * @Route("/", name="api_home", methods={"GET"})

@@ -20,6 +20,9 @@ export interface Person  {
   user : JSON;
 }
 
+//todo add counter for bike in stock
+//todo display cancel + delete + recreate error
+
 @Component({
   selector: 'app-admin-session',
   templateUrl: './admin-session.component.html',

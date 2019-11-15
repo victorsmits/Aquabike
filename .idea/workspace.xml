@@ -2,32 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/edit-abo-type.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/typings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Aquabike.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Aquabike.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Aquabike (Copie en conflit de victorsmitsMac.local 2019-11-15).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local (Copie en conflit de victorsmitsMac.local 2019-11-15).xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/Exception/CircularReferenceException (Copie en conflit de victorsmitsMac.local 2019-11-15).php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/vendor/nelmio/cors-bundle/.gitignore (Copie en conflit de victorsmitsMac.local 2019-11-14)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/auth-data/auth-data.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/SessionAdministrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/SessionAdministrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Interface/Interface.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Interface/Interface.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/HomeControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/HomeControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +52,18 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Tree: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Tree: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Aquabike: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -215,6 +206,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -229,7 +221,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.21375" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -343,6 +335,9 @@
       <workItem from="1573574694743" duration="1314000" />
       <workItem from="1573630562212" duration="4852000" />
       <workItem from="1573635772894" duration="10286000" />
+      <workItem from="1573832614161" duration="407000" />
+      <workItem from="1573833038333" duration="2800000" />
+      <workItem from="1573840458083" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -456,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573491371608</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="getting post renew abo workin">
+      <created>1573832802700</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1573832802700</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +497,9 @@
     <MESSAGE value="add admin page for abonnement renew" />
     <MESSAGE value="add admin page for Session" />
     <MESSAGE value="add admin page for Create New Session" />
-    <option name="LAST_COMMIT_MESSAGE" value="add admin page for Create New Session" />
+    <MESSAGE value="getting post renew abo workin" />
+    <MESSAGE value="todo list" />
+    <option name="LAST_COMMIT_MESSAGE" value="todo list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
@@ -511,10 +515,14 @@
     </state>
     <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1573069348689" />
     <state x="427" y="138" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573476530040" />
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573217629261">
+    <state x="425" y="115" key="#TODO" timestamp="1573841030262">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573217629261" />
+    <state x="425" y="115" key="#TODO/0.0.1440.900@0.0.1440.900" timestamp="1573841030262" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573836445270">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573836445270" />
     <state x="711" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1573402617305">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -526,9 +534,10 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573637560862" />
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573487380436" />
-    <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573832800808">
-      <screen x="0" y="23" width="1440" height="791" />
+    <state x="385" y="0" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573841050463">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="385" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573841050463" />
     <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573491371250" />
     <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1573827936533">
@@ -587,19 +596,19 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1573228739471" />
-    <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1573204518321">
+    <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1573836466550">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="234" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1573204518321" />
+    <state width="234" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1573836466549" />
     <state x="411" y="230" width="824" height="508" key="IDE.errors.dialog" timestamp="1573398713096">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="308" y="192" key="IDE.errors.dialog/0.0.1440.900@0.0.1440.900" timestamp="1573136882697" />
     <state x="411" y="230" width="824" height="508" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573398713096" />
-    <state x="229" y="63" key="SettingsEditor" timestamp="1572720017489">
+    <state x="229" y="63" key="SettingsEditor" timestamp="1573833232229">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1572720017489" />
+    <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1573833232229" />
     <state width="667" height="534" key="SwitcherDM" timestamp="1573475568924">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -610,10 +619,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573480799502">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1573832806292">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573069907186" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573832806292" />
     <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573480799502" />
     <state x="75" y="66" width="1290" height="750" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1573816591952">
       <screen x="0" y="23" width="1440" height="791" />
@@ -649,6 +658,10 @@
     </state>
     <state x="457" y="228" width="598" height="448" key="recent.locations.popup/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573641670513" />
     <state x="609" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573409111753" />
+    <state x="320" y="115" key="scopes" timestamp="1573833078972">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="scopes/0.0.1440.900@0.0.1440.900" timestamp="1573833078972" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573814410012">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

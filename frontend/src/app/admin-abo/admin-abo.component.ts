@@ -28,6 +28,8 @@ export class ShowEditAboType {
 
 }
 
+//todo display renew + edit error
+
 @Component({
   selector: 'app-admin-abo',
   templateUrl: './admin-abo.component.html',
@@ -84,6 +86,8 @@ export class AdminAboComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.listUser);
     this.dataSource.sort = this.sort;
   }
+
+  //todo fix post error
 
   reSubcribe(id: any) {
     this.api.postAboRenew(id).subscribe(urldata=>{

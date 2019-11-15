@@ -7,6 +7,8 @@ let viewChild: any;
 // @ts-ignore
 viewChild = ViewChild("daySelect");
 
+//todo display sign up error
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
