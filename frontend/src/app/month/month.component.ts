@@ -1,10 +1,14 @@
 import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core';
 import {ApiService} from "../api.service";
-import {MatSelect} from "@angular/material/select";
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
-import {Inscription, Sessions, User} from "../Interface/Interface.module";
 import {AuthService} from "../auth.service";
 import {CookieService} from "ngx-cookie-service";
+import {Inscription, Sessions, User} from "../Interface/Interface.module";
+
+import {MatSelect} from "@angular/material/select";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+
 
 let viewChild: any;
 // @ts-ignore
@@ -44,6 +48,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   private data: JSON[]=[];
   private value : number = null;
   private listSession : Sessions[]=[];
+  private dataSource: MatTableDataSource<Sessions>;
   private listPerson : Person[]=[];
   private listYear: number[]=[];
   private year: number;
@@ -78,6 +83,8 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   @viewChild matSelect: MatSelect;
   @viewChild2 matSelect2: MatSelect;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
+
 
 //todo block sub when no more abonnement left or when session is full
 
@@ -90,6 +97,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
+
   }
 
   ngAfterViewInit(){
@@ -175,6 +183,8 @@ export class MonthComponent implements OnInit, AfterViewInit {
         this.listSession.push(tempSess);
         this.listPerson.push(tempPers);
       }
+    this.dataSource = new MatTableDataSource(this.listSession);
+    this.dataSource.sort = this.sort;
   }
 
   openDialog(id): void {

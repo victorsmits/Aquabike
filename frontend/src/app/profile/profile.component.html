@@ -34,17 +34,6 @@
       </ng-container>
 
       <!-- Button Column-->
-      <ng-container matColumnDef="Info">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let element;let i = index" >
-          <button mat-flat-button  color="primary" matTooltip="Information">
-            <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
-          </button>
-        </mat-cell>
-
-      </ng-container>
-
-      <!-- Button 2 Column-->
       <ng-container matColumnDef="Action" >
 
         <mat-header-cell *matHeaderCellDef></mat-header-cell>

@@ -38,3 +38,10 @@ export interface Inscription {
   Username: string,
   Id: number
 }
+
+export interface editAbo {
+  FirstName: string,
+  LastName: string,
+  Id: number,
+  aboType: number
+}

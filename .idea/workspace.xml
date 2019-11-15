@@ -2,21 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/edit-abo-type.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/typings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Aquabike.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Aquabike.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Repository/InscriptionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/InscriptionRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/SessionAdministrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/SessionAdministrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Interface/Interface.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Interface/Interface.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -515,32 +526,33 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573637560862" />
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573487380436" />
-    <state x="513" y="142" key="CommitChangelistDialog2" timestamp="1573491371250">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573832800808">
+      <screen x="0" y="23" width="1440" height="791" />
     </state>
     <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573491371250" />
-    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1573399241968">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1573827936533">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573397730257" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1573827936533" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573399241968" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1572769783749" />
-    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1573399241967">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1573827936532">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573397730255" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1573827936532" />
     <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573399241967" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1572769783747" />
-    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1573399241967">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1573827936530">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573397730253" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1573827936530" />
     <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573399241967" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1572769783746" />
-    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1573399241968">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1573827936532">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573397730255" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1573827936532" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573399241968" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1572769783748" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1573228739470">
@@ -603,15 +615,18 @@
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573069907186" />
     <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573480799502" />
-    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1573398480671">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="75" y="66" width="1290" height="750" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1573816591952">
+      <screen x="0" y="23" width="1440" height="791" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573398436897" />
+    <state x="75" y="66" width="1290" height="750" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.791@0.23.1440.791" timestamp="1573816591952" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1920.1057/1920.23.1920.1057@0.23.1920.1057" timestamp="1573398480671" />
-    <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1573490440408">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1573816630762">
+      <screen x="0" y="23" width="1440" height="791" />
     </state>
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1573815609123" />
     <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573490440408" />
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.791@0.23.1440.791" timestamp="1573816630762" />
     <state x="100" y="79" width="1720" height="900" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.1057/1920.23.1920.1057@0.23.1920.1057" timestamp="1573490337081" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1572555213728">
       <screen x="0" y="0" width="1440" height="900" />
@@ -634,10 +649,10 @@
     </state>
     <state x="457" y="228" width="598" height="448" key="recent.locations.popup/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573641670513" />
     <state x="609" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573409111753" />
-    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup" timestamp="1573490544884">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573814410012">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573069669455" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573814410012" />
     <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573490544884" />
   </component>
 </project>

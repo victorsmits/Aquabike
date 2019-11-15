@@ -11,12 +11,14 @@ import {User} from "./Interface/Interface.module";
 export class AppComponent implements AfterViewInit {
   title = 'Aquabike';
   user: User;
+  private isAuth: boolean;
 
   constructor(private auth : AuthService) {}
 
   ngAfterViewInit(){
     if(this.auth.getIsAuth()){
-      this.user = JSON.parse(this.auth.getCurrentUser());
+      this.user = this.auth.getCurrentUser();
+      this.isAuth = this.auth.getIsAuth();
       console.log(this.user);
     }
   }

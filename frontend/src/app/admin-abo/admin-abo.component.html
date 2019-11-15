@@ -1,28 +1,34 @@
 
-<mat-table [dataSource]="listUser" class="mat-elevation-z8">
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <!-- LastName Column -->
   <ng-container matColumnDef="LastName">
-    <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Nom </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
   </ng-container>
 
   <!-- FirstName Column -->
   <ng-container matColumnDef="FirstName">
-    <mat-header-cell *matHeaderCellDef> Prenom </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Prenom </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.firstName}} </mat-cell>
   </ng-container>
 
   <!-- Abonnement Column -->
   <ng-container matColumnDef="Abonnement">
-    <mat-header-cell *matHeaderCellDef> Abonnement </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Abonnement </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.abonnement}} </mat-cell>
   </ng-container>
 
   <!-- Abonnement Type Column -->
   <ng-container matColumnDef="AboType">
-    <mat-header-cell *matHeaderCellDef> Type Abonnement</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Type Abonnement</mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.AboType}} </mat-cell>
+  </ng-container>
+
+  <!-- Day Column -->
+  <ng-container matColumnDef="Day">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Jour</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Day}} </mat-cell>
   </ng-container>
 
   <!-- ReSubscribe Column-->
@@ -34,7 +40,15 @@
       <button mat-flat-button  color="primary" matTooltip="Renew">
         <mat-icon [ngStyle]="{'color':'white'}" (click)="reSubcribe(element.id)">replay</mat-icon>
       </button>
+
+      <button mat-flat-button  color="primary" matTooltip="Renew" class="edit">
+        <mat-icon [ngStyle]="{'color':'white'}" (click)="openDialog(element.firstName,
+        element.lastName,element.id,element.AboType)">
+          edit
+        </mat-icon>
+      </button>
     </mat-cell>
+
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

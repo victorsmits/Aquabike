@@ -1,27 +1,27 @@
 
-<mat-table [dataSource]="listSession" class="mat-elevation-z8">
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <!-- Date Column -->
   <ng-container matColumnDef="Date">
-    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
   </ng-container>
 
   <!-- Time Column -->
   <ng-container matColumnDef="Time">
-    <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Time </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
   </ng-container>
 
   <!-- Bike Column -->
   <ng-container matColumnDef="Bike">
-    <mat-header-cell *matHeaderCellDef> Velo libre </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Velo libre </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.Bike}} </mat-cell>
   </ng-container>
 
   <!-- Status Column -->
   <ng-container matColumnDef="Status">
-    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
     <mat-cell *matCellDef="let element">
       <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
       <ng-template #cancel>
@@ -64,16 +64,20 @@
     </mat-header-cell>
 
     <mat-cell *matCellDef="let element" >
-      <div *ngIf="!element.Cancel; else cancelBtn">
-        <button mat-flat-button  color="primary" matTooltip="Inscription">
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.Id)"
-          *ngIf="!listIdSession.includes(element.Id); else unsub">check</mat-icon>
-        </button>
+      <div *ngIf="element.Cancel || element.Bike == 0 || (user.abonnement == 0 && !listIdSession.includes(element.Id));
+        then cancelBtn else Btn">
       </div>
 
       <ng-template #cancelBtn>
         <button mat-flat-button  color="primary" matTooltip="Inscription" disabled>
           <mat-icon [ngStyle]="{'color':'white'}">check</mat-icon>
+        </button>
+      </ng-template>
+
+      <ng-template #Btn>
+        <button mat-flat-button  color="primary" matTooltip="Inscription">
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.Id)"
+                    *ngIf="!listIdSession.includes(element.Id); else unsub">check</mat-icon>
         </button>
       </ng-template>
 

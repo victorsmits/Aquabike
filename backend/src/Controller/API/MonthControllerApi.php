@@ -76,7 +76,7 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Inscription", name="api_Inscription", methods={"POST","OPTIONS","GET"})
+     * @Route("/Inscription", name="api_Inscription", methods={"POST"})
      * @param Request $request
      * @return JsonResponse
      */
@@ -130,7 +130,7 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Desinscription", name="api_Unsub", methods={"POST","OPTIONS","GET","DELETE"})
+     * @Route("/Desinscription", name="api_Unsub", methods={"POST"})
      * @param Request $request
      * @return JsonResponse
      */

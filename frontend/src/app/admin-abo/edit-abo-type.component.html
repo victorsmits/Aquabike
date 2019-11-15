@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Changer le type d'abonnement de {{data.LastName}} {{data.FirstName}}</h1>
+<div mat-dialog-content>
+  <p>Quelle type d'abonnement</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.aboType">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.aboType" cdkFocusInitial>Ok</button>
+</div>

@@ -25,7 +25,7 @@ import {
   MatRippleModule
 } from "@angular/material/core";
 import { MatListModule } from "@angular/material/list";
-import { MatDialogModule } from '@angular/material';
+import {MatDialogModule, MatSortModule} from '@angular/material';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material/dialog";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatDatepickerModule } from "@angular/material/datepicker";
@@ -38,7 +38,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { AdminComponent } from './admin/admin.component';
 import { AdminSessionComponent } from './admin-session/admin-session.component';
-import { AdminAboComponent } from './admin-abo/admin-abo.component';
+import {AdminAboComponent, ShowEditAboType} from './admin-abo/admin-abo.component';
 import { AdminCreateSessionComponent } from './admin-create-session/admin-create-session.component';
 import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
 import {MAT_MOMENT_DATE_FORMATS} from "@angular/material-moment-adapter";
@@ -58,6 +58,7 @@ import {CookieService} from "ngx-cookie-service";
     AdminSessionComponent,
     AdminAboComponent,
     AdminCreateSessionComponent,
+    ShowEditAboType
   ],
     imports: [
         BrowserModule,
@@ -87,10 +88,12 @@ import {CookieService} from "ngx-cookie-service";
         MatGridListModule,
         NgxMaterialTimepickerModule,
         MatTabsModule,
+        MatSortModule,
     ],
   entryComponents: [
     MonthComponent,
-    ListPersonDialog
+    ListPersonDialog,
+    ShowEditAboType
   ],
   providers: [AuthService,
     ApiService,

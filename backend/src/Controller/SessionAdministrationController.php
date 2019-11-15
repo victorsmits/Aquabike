@@ -34,12 +34,13 @@ class SessionAdministrationController extends AbstractController
     }
 
     /**
-     * @Route("/admin/recreate/{id}", name="recreate")
+     * @Route("/admin/recreate", name="recreate", methods={"POST"})
      * @param $id
      * @return RedirectResponse
      */
     public function recreateSession($id){
         $entityManager = $this->getDoctrine()->getManager();
+
         $session = $entityManager->getRepository('App:Session')->find($id);
         $session->setCancel(false);
         $session->setBike(9);

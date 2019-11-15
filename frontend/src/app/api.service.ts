@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
-import {Inscription, Sessions} from "./Interface/Interface.module";
+import {editAbo, Inscription, Sessions} from './Interface/Interface.module';
 import {Router} from "@angular/router";
 
 
@@ -42,27 +42,23 @@ export class ApiService {
   }
 
   postAboRenew(id){
-    let url = "https://127.0.0.1:8000/api/admin/renew/";
-    url = url.concat(id);
-    return this.http.get(url)
+    let url = "https://127.0.0.1:8000/api/admin/renewAbo";
+    return this.http.post(url,{Id:id})
   }
 
   postCancelSess(id){
-    let url = "https://127.0.0.1:8000/api/admin/Cancel/";
-    url = url.concat(id);
-    return this.http.get(url)
+    let url = "https://127.0.0.1:8000/api/admin/Cancel";
+    return this.http.post(url,{Id:id})
   }
 
   postRenewSess(id){
-    let url = "https://127.0.0.1:8000/api/admin/recreate/";
-    url = url.concat(id);
-    return this.http.get(url)
+    let url = "https://127.0.0.1:8000/api/admin/recreate";
+    return this.http.post(url,{Id:id,Bike:9})
   }
 
   postDeleteSess(id){
-    let url = "https://127.0.0.1:8000/api/admin/Delete/";
-    url = url.concat(id);
-    return this.http.get(url)
+    let url = "https://127.0.0.1:8000/api/admin/Delete";
+    return this.http.post(url,{Id:id})
   }
 
   createNewSess(newSess:Sessions){
@@ -82,6 +78,11 @@ export class ApiService {
   deleteInscription(newInscription : Inscription){
     let url = "https://127.0.0.1:8000/api/Desinscription";
     return this.http.post(url,newInscription)
+  }
+
+  editAboType(newAboType: editAbo){
+    let url = "https://127.0.0.1:8000/api/admin/editAbo";
+    return this.http.post(url,newAboType)
   }
 
 }

@@ -2,8 +2,9 @@ import {AfterViewInit, Component, Inject, OnInit, ViewChild} from '@angular/core
 import {ApiService} from "../api.service";
 import {MatDialog} from "@angular/material/dialog";
 import {MatSelect} from "@angular/material/select";
-import {Sessions,User} from "../Interface/Interface.module";
+import {Inscription, Sessions, User} from "../Interface/Interface.module";
 import {AuthService} from "../auth.service";
+import {MonthComponent} from "../month/month.component";
 
 let viewChild: any;
 // @ts-ignore
@@ -18,7 +19,6 @@ viewChild = ViewChild("matSelect");
 })
 
 export class ProfileComponent implements OnInit {
-  private data: any;
   private User: User;
   private listSession : Sessions[]=[];
   private listYear: number[]=[];
@@ -41,47 +41,36 @@ export class ProfileComponent implements OnInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
-  private cookieSession: Sessions[];
-
-  constructor(private api: ApiService, private auth:AuthService){}
+  constructor(private api: ApiService,
+              private auth:AuthService){}
 
   @viewChild matSelect: MatSelect;
 
   ngOnInit() {
-    //todo get username from login
     let m = new Date();
     this.year = m.getFullYear();
     this.getYear();
+    this.User = this.auth.getCurrentUser();
 
-    this.User = JSON.parse(this.auth.getCurrentUser());
-    this.cookieSession = JSON.parse(this.auth.getCurrentUserSession());
-    console.log(this.cookieSession);
-    let tempSess: Sessions;
-    console.log(this.User);
-    // this.User.Session = [];
+    this.api.getProfileJson(this.User.username).subscribe(data=>{
+      this.auth.initUser(data);
+      this.User = this.auth.getCurrentUser();
 
-    for(let i = 0; i < this.cookieSession.length; i++) {
-      let d = new Date(this.cookieSession[i]["date"]);
-      if(d.getFullYear() === this.year){
-        tempSess ={
-          Date:  this.cookieSession[i]["date"],
-          Time: this.cookieSession[i]["time"],
-          Bike: this.cookieSession[i]["bike"],
-          Cancel: this.cookieSession[i]["Cancel"],
-          Id: this.cookieSession[i]["id"]
-        };
-        this.User.Session.push(tempSess);
+      for(let i = 0; i < this.User.Session.length; i++) {
+        let tempSess:Sessions;
+        let d = new Date(this.User.Session[i]["Date"]);
+        if(d.getFullYear() === this.year){
+          tempSess ={
+            Date:  this.User.Session[i]["Date"],
+            Time: this.User.Session[i]["Time"],
+            Bike: this.User.Session[i]["Bike"],
+            Cancel: this.User.Session[i]["Cancel"],
+            Id: this.User.Session[i]["Id"]
+          };
+          this.listSession.push(tempSess);
+        }
       }
-    }
-    console.log(this.User);
-  }
-
-
-  openDialog(id): void {
-    // const dialogRef = this.dialog.open(ListPersonDialog, {
-    //   width: '250px',
-    //   data: this.listPerson[id].user
-    // });
+    });
   }
 
   getYear(){
@@ -90,8 +79,16 @@ export class ProfileComponent implements OnInit {
       this.listYear.push(i);}
   }
 
-  unSubscribe(id){
+  unSubscribe(Id: number) {
+    let tempInscription : Inscription={
+      Username:this.User.username,
+      Id: Id
+    };
 
+    this.api.deleteInscription(tempInscription).subscribe(urldata=>{
+      if(urldata["result"]){
+        this.ngOnInit();
+      }
+    });
   }
-
 }

@@ -5,6 +5,8 @@ namespace App\Controller\API;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncode;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
@@ -13,7 +15,7 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
 /**
-*@Route("/api/admin")
+*@Route("/api/admin", methods={"POST","OPTIONS","GET"})
  */
 class AbonnementControllerApi extends AbstractController
 {
@@ -47,18 +49,40 @@ class AbonnementControllerApi extends AbstractController
 
 
     /**
-     * @Route("/renew/{id}", name="api_renew", methods={"GET","HEAD"})
-     * @param $id
-     * @return RedirectResponse
+     * @Route("/renewAbo", name="api_renew", methods={"POST","OPTIONS","GET"})
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function RenewAbo($id){
+    public function RenewAbo(Request $request){
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('App:Person')->findOneBy(["id"=>$id]);
+        $data = json_decode($request->getContent(), true);
+        $user = $em
+            ->getRepository('App:Person')
+            ->find($data["Id"]);
 
         $user->setAbonnement($user->getAboType());
         $em->persist($user);
         $em->flush();
 
-        return $this->redirectToRoute('abonnement');
+        return new JsonResponse(['result'=>true]);
+    }
+
+    /**
+     * @Route("/editAbo", name="api_renew", methods={"POST","HEAD"})
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function editAbo(Request $request){
+        $em = $this->getDoctrine()->getManager();
+        $data = json_decode($request->getContent(), true);
+        $user = $em
+            ->getRepository('App:Person')
+            ->find($data["Id"]);
+
+        $user->setAboType($data["aboType"]);
+        $em->persist($user);
+        $em->flush();
+
+        return new JsonResponse(['result'=>true]);
     }
 }

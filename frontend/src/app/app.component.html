@@ -15,13 +15,13 @@
           <span> Month</span>
         </a>
 
-        <a mat-button routerLink="/login" *ngIf="!user; else profile">
+        <a mat-button routerLink="/login" *ngIf="!isAuth; else profile">
           <mat-icon> person </mat-icon>
           <span> Login </span>
         </a>
 
         <ng-template #profile>
-          <a mat-button [matMenuTriggerFor]="menu" *ngIf="user">
+          <a mat-button [matMenuTriggerFor]="menu" *ngIf="isAuth">
             <mat-icon> person </mat-icon>
             <span> {{user.lastName}} </span>
           </a>

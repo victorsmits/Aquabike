@@ -23,7 +23,7 @@ export class AuthService {
               private api: ApiService) {}
 
   getIsAuth() {
-    return this.cookie.get('connected');
+    return Boolean(this.cookie.get('connected'));
   }
 
   getAuthStatusListener() {
@@ -125,6 +125,7 @@ export class AuthService {
     }
     this.cookie.set('user',JSON.stringify(this.User));
     this.cookie.set('session',JSON.stringify(this.listSession));
+    this.cookie.set('connected',"true");
 
   }
 

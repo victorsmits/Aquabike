@@ -5,7 +5,7 @@ namespace App\Controller\API;
 use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,12 +16,12 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
 /**
- *@Route("/api/admin")
+ *@Route("/api/admin", methods={"POST","OPTIONS","GET"})
  */
 class SessionAdministrationControllerApi extends AbstractController
 {
     /**
-     * @Route("/month/{month?}", name="api_session_administration")
+     * @Route("/month/{month?}", name="api_session_administration", methods={"POST","OPTIONS","GET"})
      * @param $month
      * @return Response
      */
@@ -59,17 +59,19 @@ class SessionAdministrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/recreate/{id}", name="api_recreate")
-     * @param $id
+     * @Route("/recreate", name="api_recreate", methods={"POST","OPTIONS","GET"})
+     * @param Request $request
      * @return JsonResponse
      */
-    public function recreateSession($id){
+    public function recreateSession(Request $request){
         $errors = [];
         try{
             $entityManager = $this->getDoctrine()->getManager();
-            $session = $entityManager->getRepository('App:Session')->find($id);
+            $data = json_decode($request->getContent(), true);
+
+            $session = $entityManager->getRepository('App:Session')->find($data["Id"]);
             $session->setCancel(false);
-            $session->setBike(9);
+            $session->setBike($data["Bike"]);
             $entityManager->persist($session);
             $entityManager->flush();
 
@@ -85,18 +87,23 @@ class SessionAdministrationControllerApi extends AbstractController
     }
 
     //todo email config
+
     /**
-     * @Route("/Cancel/{id}", name="api_Cancel", methods={"GET"})
-     * @param $id
+     * @Route("/Cancel", name="api_Cancel", methods={"POST","OPTIONS","GET"})
+     * @param Request $request
+     * @param \Swift_Mailer $mailer
      * @return JsonResponse
      */
-    public function cancelSession($id, \Swift_Mailer $mailer){
+    public function cancelSession(Request $request, \Swift_Mailer $mailer){
         $errors = [];
-        $listInscription = $this->findInscription($id);
+        $data = json_decode($request->getContent(), true);
+
+        $listInscription = $this->findInscription($data["Id"]);
+
         $entityManager = $this->getDoctrine()->getManager();
         $session = $entityManager
             ->getRepository('App:Session')
-            ->findOneBy(['id'=>$id]);
+            ->findOneBy(['id'=>$data["Id"]]);
         try{
             if(!empty($listInscription)){
                 foreach ($listInscription as $inscription) {
@@ -148,15 +155,17 @@ class SessionAdministrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Delete/{id}", name="api_Delete")
-     * @param $id
+     * @Route("/Delete", name="api_Delete", methods={"POST","OPTIONS","GET"})
+     * @param Request $request
      * @return JsonResponse
      */
-    public function deleteSession($id){
+    public function deleteSession(Request $request){
         $errors = [];
         try{
+            $data = json_decode($request->getContent(), true);
+
             $entityManager = $this->getDoctrine()->getManager();
-            $session = $entityManager->getRepository('App:Session')->find($id);
+            $session = $entityManager->getRepository('App:Session')->find($data["Id"]);
             $date = $session->getDate();
             $entityManager->remove($session);
             $entityManager->flush();

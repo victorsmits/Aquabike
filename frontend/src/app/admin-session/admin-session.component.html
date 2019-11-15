@@ -1,126 +1,91 @@
-<mat-tab-group>
-  <mat-tab label="List" >
-    <mat-table [dataSource]="listSession" class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
-    <!-- Date Column -->
-    <ng-container matColumnDef="Date">
-      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
-    </ng-container>
+  <!-- Date Column -->
+  <ng-container matColumnDef="Date">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+  </ng-container>
 
-    <!-- Time Column -->
-    <ng-container matColumnDef="Time">
-      <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
-    </ng-container>
+  <!-- Time Column -->
+  <ng-container matColumnDef="Time">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Time </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
+  </ng-container>
 
-    <!-- Bike Column -->
-    <ng-container matColumnDef="Bike">
-      <mat-header-cell *matHeaderCellDef> Velo libre </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.Bike}} </mat-cell>
-    </ng-container>
+  <!-- Bike Column -->
+  <ng-container matColumnDef="Bike">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Velo libre </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Bike}} </mat-cell>
+  </ng-container>
 
-    <!-- Status Column -->
-    <ng-container matColumnDef="Status">
-      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-        <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
-        <ng-template #cancel>
-          <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>
-        </ng-template>
-      </mat-cell>
-    </ng-container>
+  <!-- Status Column -->
+  <ng-container matColumnDef="Status">
+    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
+      <ng-template #cancel>
+        <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>
+      </ng-template>
+    </mat-cell>
+  </ng-container>
 
-    <!-- Button Column-->
-    <ng-container matColumnDef="Info">
-      <mat-header-cell *matHeaderCellDef>
-        <mat-form-field>
-          <mat-select placeholder="Select Month" #matSelect [(ngModel)]="value">
-            <mat-option *ngFor="let month of months" [value]="month.num" >
-              {{month.name}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+  <!-- Button Column-->
+  <ng-container matColumnDef="Info">
+    <mat-header-cell *matHeaderCellDef>
+      <mat-form-field>
+        <mat-select placeholder="Select Month" #matSelect [(ngModel)]="value">
+          <mat-option *ngFor="let month of months" [value]="month.num" >
+            {{month.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
 
-      </mat-header-cell>
+    </mat-header-cell>
 
-      <mat-cell *matCellDef="let element;let i = index" >
-        <button mat-flat-button  color="primary" matTooltip="Information">
-          <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
+    <mat-cell *matCellDef="let element;let i = index" >
+      <button mat-flat-button  color="primary" matTooltip="Information">
+        <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
+      </button>
+    </mat-cell>
+
+  </ng-container>
+
+  <!-- Button 2 Column-->
+  <ng-container matColumnDef="Action">
+
+    <mat-header-cell *matHeaderCellDef>
+      <mat-form-field>
+        <mat-select placeholder="Select Year" #matSelect2 [(ngModel)]="year">
+          <mat-option *ngFor="let y of listYear" [value]="y" >
+            {{y}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-header-cell>
+
+    <mat-cell *matCellDef="let element" >
+      <button mat-flat-button  color="primary" matTooltip="Inscription"
+              *ngIf="!element.Cancel; else replayBtn">
+        <mat-icon [ngStyle]="{'color':'white'}" (click)="Cancel(element.Id)">
+          cancel
+        </mat-icon>
+      </button>
+
+      <ng-template #replayBtn>
+        <button mat-flat-button  color="primary" matTooltip="Replay">
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="Replay(element.Id)">replay</mat-icon>
         </button>
-      </mat-cell>
 
-    </ng-container>
-
-    <!-- Button 2 Column-->
-    <ng-container matColumnDef="Action">
-
-      <mat-header-cell *matHeaderCellDef>
-        <mat-form-field>
-          <mat-select placeholder="Select Year" #matSelect2 [(ngModel)]="year">
-            <mat-option *ngFor="let y of listYear" [value]="y" >
-              {{y}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </mat-header-cell>
-
-      <mat-cell *matCellDef="let element" >
-        <button mat-flat-button  color="primary" matTooltip="Inscription"
-                *ngIf="!element.Cancel; else replayBtn">
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="Cancel(element.Id)">
-            cancel
-          </mat-icon>
+        <button mat-flat-button class="delete" color="primary" matTooltip="Delete">
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="Delete(element.Id)">delete</mat-icon>
         </button>
 
-        <ng-template #replayBtn>
-          <button mat-flat-button  color="primary" matTooltip="Replay">
-            <mat-icon [ngStyle]="{'color':'white'}" (click)="Replay(element.Id)">replay</mat-icon>
-          </button>
+      </ng-template>
 
-          <button mat-flat-button class="delete" color="primary" matTooltip="Delete">
-            <mat-icon [ngStyle]="{'color':'white'}" (click)="Delete(element.Id)">delete</mat-icon>
-          </button>
+    </mat-cell>
+  </ng-container>
 
-        </ng-template>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
-      </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-
-    </mat-table>
-  </mat-tab>
-
-  <mat-tab label="Create">
-    <mat-card>
-      <form (submit)="onCreate(signupForm)" #signupForm="ngForm">
-
-        <!-- Date Field -->
-        <mat-form-field>
-          <input matInput ngModel [matDatepicker]="picker" placeholder="Choose a date" name="date" required>
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-
-        <!-- Time Field -->
-        <mat-form-field>
-          <input matInput ngModel placeholder="Pick a time" aria-label="pick a time"
-                 [ngxTimepicker]="fullTime" [format]="24" name="time" required>
-          <ngx-material-timepicker #fullTime [theme]="darkTheme"></ngx-material-timepicker>
-        </mat-form-field>
-
-        <!-- Bike Field -->
-        <mat-form-field>
-          <input matInput ngModel name="bike" placeholder="Number of bike"
-                 aria-label="Number of bike" type="number" required>
-        </mat-form-field>
-
-        <button mat-raised-button color="primary" type="submit">Add</button>
-
-      </form>
-
-    </mat-card>
-  </mat-tab>
-</mat-tab-group>
+  </mat-table>
