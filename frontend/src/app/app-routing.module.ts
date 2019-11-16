@@ -9,16 +9,15 @@ import {AdminComponent} from "./admin/admin.component";
 import {AdminSessionComponent} from "./admin-session/admin-session.component";
 import {AdminAboComponent} from "./admin-abo/admin-abo.component";
 import {AdminCreateSessionComponent} from "./admin-create-session/admin-create-session.component";
+import {AuthGuard} from './auth.guard';
+import {AdminGuard} from './admin.guard';
 
 
 const routes: Routes = [
   {
     path:'',
-    component : HomeComponent
-  },
-  {
-    path:'month',
-    component : MonthComponent,
+    component : HomeComponent,
+    canActivate : [AuthGuard]
   },
   {
     path:'login',
@@ -29,24 +28,36 @@ const routes: Routes = [
     component : SignupComponent,
   },
   {
+    path:'month',
+    component : MonthComponent,
+    canActivate : [AuthGuard]
+  },
+  {
     path:'profile',
     component : ProfileComponent,
+    canActivate : [AuthGuard]
   },
   {
     path:'admin',
     component : AdminComponent,
+    canActivate : [AdminGuard]
   },
   {
     path:'admin/Session',
     component : AdminSessionComponent,
+    canActivate : [AdminGuard]
+
   },
   {
     path:'admin/Abonnement',
     component : AdminAboComponent,
+    canActivate : [AdminGuard]
+
   },
   {
     path:'admin/Session/Create',
     component : AdminCreateSessionComponent,
+    canActivate : [AdminGuard]
   },
 
 ];

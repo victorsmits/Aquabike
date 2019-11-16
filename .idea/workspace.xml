@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/auth.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +207,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.21375" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -521,10 +528,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="425" y="115" key="#TODO/0.0.1440.900@0.0.1440.900" timestamp="1573841030262" />
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573836445270">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="245" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573909532412">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573836445270" />
+    <state x="245" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573909532412" />
     <state x="711" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1573402617305">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -536,11 +544,11 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573637560862" />
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573487380436" />
-    <state x="385" y="0" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573845663563">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573910203664">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="385" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573845663563" />
-    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573491371250" />
+    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910203664" />
     <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1573827936533">
       <screen x="0" y="0" width="1440" height="900" />
@@ -607,10 +615,11 @@
     </state>
     <state x="308" y="192" key="IDE.errors.dialog/0.0.1440.900@0.0.1440.900" timestamp="1573136882697" />
     <state x="411" y="230" width="824" height="508" key="IDE.errors.dialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573398713096" />
-    <state x="245" y="111" key="SettingsEditor" timestamp="1573845777867">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="327" y="133" key="SettingsEditor" timestamp="1573910168919">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="245" y="111" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1573845777867" />
+    <state x="327" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910168919" />
     <state width="667" height="534" key="SwitcherDM" timestamp="1573475568924">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -621,11 +630,15 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1573845665593">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573910211004">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573845665593" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573480799502" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910211004" />
+    <state x="723" y="391" key="cloudConfig.SelfSettingsDialog" timestamp="1573910177933">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="723" y="391" key="cloudConfig.SelfSettingsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910177933" />
     <state x="75" y="66" width="1290" height="750" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1573816591952">
       <screen x="0" y="23" width="1440" height="791" />
     </state>
@@ -665,10 +678,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="scopes/0.0.1440.900@0.0.1440.900" timestamp="1573833078972" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1573814410012">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup" timestamp="1573909268103">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573814410012" />
-    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573490544884" />
+    <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573909268103" />
   </component>
 </project>

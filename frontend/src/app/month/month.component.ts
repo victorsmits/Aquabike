@@ -40,6 +40,7 @@ export class ListPersonDialog {
 
 //todo display month selection + year selection error
 //todo display sub + unsub error
+//todo block unsub if today
 
 @Component({
   selector: 'app-month',
@@ -57,6 +58,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   private year: number;
   private user: User;
   private listIdSession: number[]=[];
+  private today: Date;
   displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
 
@@ -92,9 +94,9 @@ export class MonthComponent implements OnInit, AfterViewInit {
 //todo: test block sub when no more abonnement left or when session is full
 
   ngOnInit() {
-    let m = new Date();
-    this.value = m.getMonth()+1;
-    this.year = m.getFullYear();
+    this.today = new Date();
+    this.value = this.today.getMonth()+1;
+    this.year = this.today.getFullYear();
 
     this.getYear();
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
@@ -201,5 +203,10 @@ export class MonthComponent implements OnInit, AfterViewInit {
     var today = new Date();
     for(var i = (this.year); i <= (this.year+10); i++){
       this.listYear.push(i);}
+  }
+
+  checkIfDisable(element){
+    return element.Cancel || element.Bike == 0 || (this.user.abonnement == 0 && !this.listIdSession.includes(element.Id))
+      || (element.Date.includes(this.today.toDateString()) && !this.listIdSession.includes(element.Id))
   }
 }

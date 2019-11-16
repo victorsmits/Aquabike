@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from "./auth.service";
 import {AfterViewInit} from "@mobiscroll/angular-lite/src/js/frameworks/angular";
 import {User} from "./Interface/Interface.module";
+import {Router} from '@angular/router';
 
 //TODO auto update login btn
 //TODO graphical responsivity for devices
@@ -11,22 +12,26 @@ import {User} from "./Interface/Interface.module";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'Aquabike';
   user: User;
   private isAuth: boolean;
 
-  constructor(private auth : AuthService) {}
+  constructor(private auth : AuthService,
+              private router : Router) {}
 
-  ngAfterViewInit(){
+  ngOnInit(){
     if(this.auth.getIsAuth()){
       this.user = this.auth.getCurrentUser();
       this.isAuth = this.auth.getIsAuth();
-      console.log(this.user);
     }
   }
 
+  ngAfterViewInit(){
+    this.ngOnInit()
+  }
+
   logout() {
-    this.auth.logout()
+    this.auth.logout();
   }
 }

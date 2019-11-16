@@ -65,8 +65,7 @@
     </mat-header-cell>
 
     <mat-cell *matCellDef="let element" >
-      <div *ngIf="element.Cancel || element.Bike == 0 || (user.abonnement == 0 && !listIdSession.includes(element.Id));
-        then cancelBtn else Btn">
+      <div *ngIf="checkIfDisable(element);then cancelBtn else Btn">
       </div>
 
       <ng-template #cancelBtn>
