@@ -39,7 +39,7 @@ class ProfileControllerApi extends AbstractController
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
 //            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idSession'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
-            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
+            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
         ];
 
         $encoders = array(new JsonEncode());

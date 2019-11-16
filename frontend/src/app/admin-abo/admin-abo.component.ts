@@ -36,10 +36,10 @@ export class ShowEditAboType {
   styleUrls: ['./admin-abo.component.css']
 })
 export class AdminAboComponent implements OnInit {
-  private data: JSON[]=[];
-  private listUser: Person[]=[];
+  public data: JSON[]=[];
+  public listUser: Person[]=[];
   displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','Day','ReSubscribe'];
-  private dataSource: MatTableDataSource<Person>;
+  public dataSource: MatTableDataSource<Person>;
 
   constructor(private api:ApiService,
               public dialog: MatDialog,) { }

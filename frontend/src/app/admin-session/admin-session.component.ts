@@ -8,14 +8,6 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
-let viewChild: any;
-// @ts-ignore
-viewChild = ViewChild("matSelect");
-
-let viewChild2: any;
-// @ts-ignore
-viewChild2 = ViewChild("matSelect2");
-
 export interface Person  {
   user : JSON;
 }
@@ -29,14 +21,18 @@ export interface Person  {
   styleUrls: ['./admin-session.component.css','../month/month.component.css']
 })
 export class AdminSessionComponent implements OnInit, AfterViewInit {
-  private data: JSON[]=[];
-  private value : number = null;
-  private listSession : Sessions[]=[];
-  private dataSource: MatTableDataSource<Sessions>;
-  private listPerson : Person[]=[];
-  private listYear: number[]=[];
-  private year: number;
-  displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
+  public data: JSON[]=[];
+  public value : number = null;
+  public listSession : Sessions[]=[];
+  public dataSource: MatTableDataSource<Sessions>;
+  public listPerson : Person[]=[];
+  public listYear: number[]=[];
+  public year: number;
+  public displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
+
+  @ViewChild('matSelect',{static:false})matSelect : MatSelect;
+  @ViewChild('matSelect2',{static:false})matSelect2 : MatSelect;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   months = [
     {name : "janvier", num : 1},
@@ -56,10 +52,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
 
   constructor(private api: ApiService,
               public dialog: MatDialog) { }
-
-  @viewChild matSelect: MatSelect;
-  @viewChild2 matSelect2: MatSelect;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   ngOnInit() {
     let m = new Date();

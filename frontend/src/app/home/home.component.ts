@@ -9,10 +9,10 @@ import {ApiService} from "../service/api.service";
 
 
 export class HomeComponent implements OnInit {
-  private data: JSON[]=[];
-  private listUser: any[] = [];
-  private date;
-  private time : any[]= [];
+  public data: JSON[]=[];
+  public listUser: any[] = [];
+  public date;
+  public time : any[]= [];
 
   constructor(private api: ApiService) { }
 

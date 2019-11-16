@@ -3,10 +3,6 @@ import { NgForm } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import {MatSelect} from "@angular/material/select";
 
-let viewChild: any;
-// @ts-ignore
-viewChild = ViewChild("daySelect");
-
 //todo display sign up error
 
 @Component({
@@ -18,7 +14,7 @@ export class SignupComponent {
   isLoading = false;
   error;
 
-  @viewChild daySelect: MatSelect;
+  @ViewChild('daySelect',{static:false}) daySelect: MatSelect;
 
   days=[
     {code:"Mon",nom:"Lundi"},

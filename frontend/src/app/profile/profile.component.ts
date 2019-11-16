@@ -1,14 +1,8 @@
 import {AfterViewInit, Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {ApiService} from "../service/api.service";
-import {MatDialog} from "@angular/material/dialog";
 import {MatSelect} from "@angular/material/select";
 import {Inscription, Sessions, User} from "../Interface/Interface.module";
 import {AuthService} from "../service/auth.service";
-import {MonthComponent} from "../month/month.component";
-
-let viewChild: any;
-// @ts-ignore
-viewChild = ViewChild("matSelect");
 
 //todo display unsub error
 
@@ -19,13 +13,15 @@ viewChild = ViewChild("matSelect");
 })
 
 export class ProfileComponent implements OnInit {
-  private User: User;
-  private listSession : Sessions[]=[];
-  private listYear: number[]=[];
-  private year: number;
-  value: any;
+  public User: User;
+  public listSession : Sessions[]=[];
+  public listYear: number[]=[];
+  public year: number;
+  public value: any;
+  public displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Action'];
+  private today: Date;
 
-  displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Action'];
+  @ViewChild('matSelect',{static:false})matSelect : MatSelect;
 
   months = [
     {name : "janvier", num : 1},
@@ -44,11 +40,11 @@ export class ProfileComponent implements OnInit {
   constructor(private api: ApiService,
               private auth:AuthService){}
 
-  @viewChild matSelect: MatSelect;
+
 
   ngOnInit() {
-    let m = new Date();
-    this.year = m.getFullYear();
+    this.today = new Date();
+    this.year = this.today.getFullYear();
     this.getYear();
     this.User = this.auth.getCurrentUser();
 
@@ -61,7 +57,7 @@ export class ProfileComponent implements OnInit {
         let d = new Date(this.User.Session[i]["Date"]);
         if(d.getFullYear() === this.year){
           tempSess ={
-            Date:  this.User.Session[i]["Date"],
+            Date:  new Date(this.User.Session[i]["Date"]).toDateString(),
             Time: this.User.Session[i]["Time"],
             Bike: this.User.Session[i]["Bike"],
             Cancel: this.User.Session[i]["Cancel"],
@@ -74,7 +70,6 @@ export class ProfileComponent implements OnInit {
   }
 
   getYear(){
-    var today = new Date();
     for(var i = (this.year); i <= (this.year+10); i++){
       this.listYear.push(i);}
   }
@@ -90,5 +85,9 @@ export class ProfileComponent implements OnInit {
         this.ngOnInit();
       }
     });
+  }
+
+  checkIfDisable(element) : boolean{
+    return (element.Date === this.today.toDateString())
   }
 }

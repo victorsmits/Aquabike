@@ -65,26 +65,27 @@
     </mat-header-cell>
 
     <mat-cell *matCellDef="let element" >
-      <div *ngIf="checkIfDisable(element);then cancelBtn else Btn">
+      <div *ngIf="checkIfDisable(element) ;then cancelBtn else Btn">
       </div>
 
       <ng-template #cancelBtn>
         <button mat-flat-button  color="primary" matTooltip="Inscription" disabled>
-          <mat-icon [ngStyle]="{'color':'white'}">check</mat-icon>
+          <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
 
       <ng-template #Btn>
         <button mat-flat-button  color="primary" matTooltip="Inscription">
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="subcribe(element.Id)"
-                    *ngIf="!listIdSession.includes(element.Id); else unsub">check</mat-icon>
+          <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
 
+      <ng-template #sub>
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="subscribe(element.Id)">check</mat-icon>
+      </ng-template>
+
       <ng-template #unsub>
-        <button mat-flat-button color="primary" matTooltip="Desinscription">
-          <mat-icon [ngStyle]="{'color':'red'}" (click)="unSubcribe(element.Id)">cancel</mat-icon>
-        </button>
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="unSubscribe(element.Id)">clear</mat-icon>
       </ng-template>
 
 

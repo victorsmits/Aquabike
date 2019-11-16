@@ -9,15 +9,6 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
-
-let viewChild: any;
-// @ts-ignore
-viewChild = ViewChild("matSelect");
-
-let viewChild2: any;
-// @ts-ignore
-viewChild2 = ViewChild("matSelect2");
-
 export interface Person {
   user : JSON;
 }
@@ -49,16 +40,21 @@ export class ListPersonDialog {
 })
 
 export class MonthComponent implements OnInit, AfterViewInit {
-  private data: JSON[]=[];
-  private value : number = null;
-  private listSession : Sessions[]=[];
-  private dataSource: MatTableDataSource<Sessions>;
-  private listPerson : Person[]=[];
-  private listYear: number[]=[];
-  private year: number;
-  private user: User;
-  private listIdSession: number[]=[];
-  private today: Date;
+  public data: JSON[]=[];
+  public value : number = null;
+  public listSession : Sessions[]=[];
+  public dataSource: MatTableDataSource<Sessions>;
+  public listPerson : Person[]=[];
+  public listYear: number[]=[];
+  public year: number;
+  public user: User;
+  public listIdSession: number[]=[];
+  public today: Date;
+
+  @ViewChild('matSelect',{static:false})matSelect : MatSelect;
+  @ViewChild('matSelect2',{static:false})matSelect2 : MatSelect;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
+
   displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
 
@@ -86,9 +82,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   }
 
-  @viewChild matSelect: MatSelect;
-  @viewChild2 matSelect2: MatSelect;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+
 
 
 //todo: test block sub when no more abonnement left or when session is full
@@ -126,7 +120,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
     });
   }
 
-  subcribe(Id: number) {
+  subscribe(Id: number) {
     let tempInscription : Inscription={
       Username:this.user.username,
       Id: Id
@@ -139,7 +133,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
     });
   }
 
-  unSubcribe(id: number) {
+  unSubscribe(id: number) {
     let tempInscription : Inscription={
       Username:this.user.username,
       Id: id
@@ -205,8 +199,12 @@ export class MonthComponent implements OnInit, AfterViewInit {
       this.listYear.push(i);}
   }
 
-  checkIfDisable(element){
-    return element.Cancel || element.Bike == 0 || (this.user.abonnement == 0 && !this.listIdSession.includes(element.Id))
-      || (element.Date.includes(this.today.toDateString()) && !this.listIdSession.includes(element.Id))
+  checkIfDisable(element) : boolean{
+    return element.Cancel || element.Bike == 0 || (this.user.abonnement == 0 && !this.checkIfSub(element))
+      || (element.Date === this.today.toDateString() && this.checkIfSub(element))
+  }
+
+  checkIfSub(element) : boolean{
+    return this.listIdSession.includes(element.Id)
   }
 }

@@ -15,7 +15,7 @@ import {Router} from '@angular/router';
 export class AppComponent implements OnInit,AfterViewInit {
   title = 'Aquabike';
   user: User;
-  private isAuth: boolean;
+  public isAuth: boolean;
 
   constructor(private auth : AuthService,
               private router : Router) {}

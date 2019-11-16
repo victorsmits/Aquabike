@@ -113,7 +113,7 @@ export class AuthService {
       let d = new Date(inscription[i]["idSession"]["date"].split(' ')[0]);
 
       tempSess={
-        Date:  d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear(),
+        Date:  d.toDateString(),
         Time: inscription[i]["idSession"]["time"].split(' ')[1],
         Bike: inscription[i]["idSession"]["bike"],
         Cancel: inscription[i]["idSession"]["Cancel"],
