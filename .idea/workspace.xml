@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -322,7 +319,7 @@
       <workItem from="1573833038333" duration="2800000" />
       <workItem from="1573840458083" duration="376000" />
       <workItem from="1573844533891" duration="639000" />
-      <workItem from="1573913064630" duration="2961000" />
+      <workItem from="1573913064630" duration="3202000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -471,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573916054725</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="smal fix">
+      <created>1573916508912</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573916508912</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +518,8 @@
     <MESSAGE value="todo list" />
     <MESSAGE value="test todo" />
     <MESSAGE value="LAST STABLE VERSION" />
-    <option name="LAST_COMMIT_MESSAGE" value="LAST STABLE VERSION" />
+    <MESSAGE value="smal fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="smal fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
@@ -550,11 +555,11 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573637560862" />
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573487380436" />
-    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573916054145">
+    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573916544776">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="385" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573845663563" />
-    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573916054145" />
+    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573916544776" />
     <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1573827936533">
       <screen x="0" y="0" width="1440" height="900" />
@@ -636,11 +641,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573916056711">
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573916515459">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573845665593" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573916056711" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573916515459" />
     <state x="723" y="391" key="cloudConfig.SelfSettingsDialog" timestamp="1573910177933">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
