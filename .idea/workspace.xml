@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin.guard.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/guard/admin.guard.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/guard/admin.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component (Copie en conflit de victorsmitsMac2 2019-11-16).ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.guard.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/guard/auth.guard.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/guard/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +322,7 @@
       <workItem from="1573833038333" duration="2800000" />
       <workItem from="1573840458083" duration="376000" />
       <workItem from="1573844533891" duration="639000" />
-      <workItem from="1573913064630" duration="2596000" />
+      <workItem from="1573913064630" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -488,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573845663861</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="LAST STABLE VERSION">
+      <created>1573916054725</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1573916054725</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +513,8 @@
     <MESSAGE value="getting post renew abo workin" />
     <MESSAGE value="todo list" />
     <MESSAGE value="test todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="test todo" />
+    <MESSAGE value="LAST STABLE VERSION" />
+    <option name="LAST_COMMIT_MESSAGE" value="LAST STABLE VERSION" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
@@ -566,11 +550,11 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573637560862" />
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573487380436" />
-    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573910203664">
+    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1573916054145">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="385" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1573845663563" />
-    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910203664" />
+    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573916054145" />
     <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1573827936533">
       <screen x="0" y="0" width="1440" height="900" />
@@ -652,11 +636,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573910211004">
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1573916056711">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1573845665593" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910211004" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573916056711" />
     <state x="723" y="391" key="cloudConfig.SelfSettingsDialog" timestamp="1573910177933">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

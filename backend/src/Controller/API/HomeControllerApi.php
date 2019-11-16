@@ -38,7 +38,7 @@ class HomeControllerApi extends AbstractController
                 'username','salt','__cloner__','__initializer__','__isInitialized__'],
 //            ObjectNormalizer::GROUPS => ["Home"],
 //            ObjectNormalizer::ENABLE_MAX_DEPTH => true,
-            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m' 
+            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
         ];
 
         $encoders = array(new JsonEncode());

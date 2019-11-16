@@ -18,11 +18,8 @@ export class ApiService {
   }
 
   getMonthJson(month,year){
-    let url = "https://127.0.0.1:8000/api/month/";
-    url = url.concat(month);
-    url = url.concat("/");
-    url = url.concat(year);
-    return this.http.get(url)
+    let url = "https://127.0.0.1:8000/api/month";
+    return this.http.post(url,{month:month,year:year})
   }
 
   getProfileJson(username){

@@ -22,34 +22,21 @@ use Symfony\Component\Serializer\Serializer;
 class MonthControllerApi extends AbstractController
 {
     /**
-     * @Route("/month/{month?}/{year?}/{error?}", name="api_month", methods={"GET"})
-     * @param $month
-     * @param $year
-     * @param $error
+     * @Route("/month/{month?}/{year?}/{error?}", name="api_month", methods={"POST"})
+     * @param Request $request
      * @return Response
      */
 
-    public function index($month,$year,$error)
+    public function index(Request $request)
     {
-        if(!empty($month)){
-            $m = $month;
-
-        }
-        else{
-            $m = date('m');
-        }
-
-        if(!empty($year)){
-            $y = $year;
-
-        }
-        else{
-            $y = date('Y');;
-        }
-
+        $data = json_decode($request->getContent(),true);
+        $month = $data["month"];
+        $year = $data["year"];
 
         $em = $this->getDoctrine()->getManager();
-        $listSession = $em->getRepository('App:Session')->getMonthSessionList($m, $y);
+        $listSession = $em
+            ->getRepository('App:Session')
+            ->getMonthSessionList($month, $year);
 
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {

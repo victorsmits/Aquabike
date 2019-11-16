@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
       this.data = JSON.parse(JSON.stringify(urldata));
 
       for (let j = 0; j < this.data.length; j++) {
-        let hour = this.data[j]["time"].split(' ')[1];
-        this.time.push(hour);
+        this.time.push(this.data[j]["time"].split(' ')[1]);
+
         let inscription = this.data[j]["idInscription"];
         let user: JSON[] = [];
         for (let i = 0; i < inscription.length; i++) {
