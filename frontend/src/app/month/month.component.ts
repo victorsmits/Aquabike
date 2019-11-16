@@ -165,10 +165,21 @@ export class MonthComponent implements OnInit, AfterViewInit {
     let tempPers : Person;
 
     this.data = JSON.parse(JSON.stringify(urldata));
-
       for(let i = 0; i < this.data.length; i++){
+        let d = new Date(this.data[i]["Date"].split(' ')[0]);
+        let j;
+        switch (d.getDay()) {
+          case 1:{j = "Lundi "; break}
+          case 2:{j = "Mardi "; break}
+          case 3:{j = "Mercredi "; break}
+          case 4:{j = "jeudi "; break}
+          case 5:{j = "Vendrdi "; break}
+          case 6:{j = "Samedi "; break}
+          case 7:{j = "Dimanche "; break}
+        }
+
         tempSess={
-          Date: new Date(this.data[i]["Date"].split(' ')[0]).toDateString(),
+          Date: j + d.getDate().toString(),
           Time:this.data[i]["time"].split(' ')[1],
           Bike:this.data[i]["bike"],
           Cancel:this.data[i]["Cancel"],

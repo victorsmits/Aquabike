@@ -1,7 +1,11 @@
 mat-table{
-  margin: 5% 20% ;
+  margin: 3% 2% ;
   padding: 2%;
   align-content: center;
+}
+
+.select{
+  margin-left: 10%;
 }
 
 mat-select{
