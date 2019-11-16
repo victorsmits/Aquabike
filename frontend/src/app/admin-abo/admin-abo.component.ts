@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit, ViewChild} from '@angular/core';
-import {ApiService} from "../api.service";
+import {ApiService} from "../service/api.service";
 import {editAbo, User} from '../Interface/Interface.module';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
@@ -86,8 +86,6 @@ export class AdminAboComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.listUser);
     this.dataSource.sort = this.sort;
   }
-
-  //todo fix post error
 
   reSubcribe(id: any) {
     this.api.postAboRenew(id).subscribe(urldata=>{

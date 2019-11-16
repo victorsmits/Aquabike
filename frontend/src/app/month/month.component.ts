@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core';
-import {ApiService} from "../api.service";
-import {AuthService} from "../auth.service";
+import {ApiService} from "../service/api.service";
+import {AuthService} from "../service/auth.service";
 import {CookieService} from "ngx-cookie-service";
 import {Inscription, Sessions, User} from "../Interface/Interface.module";
 

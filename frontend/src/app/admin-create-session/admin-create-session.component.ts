@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {NgxMaterialTimepickerTheme} from "ngx-material-timepicker";
 import {Sessions} from "../Interface/Interface.module";
-import {ApiService} from "../api.service";
+import {ApiService} from "../service/api.service";
 
 //todo display create error
 

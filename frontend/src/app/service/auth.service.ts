@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
-import {AuthLoginData, AuthSignupData, Sessions, User} from "./Interface/Interface.module";
+import {AuthLoginData, AuthSignupData, Sessions, User} from "../Interface/Interface.module";
 import {CookieService} from "ngx-cookie-service";
 import {ApiService} from "./api.service";
 
@@ -74,7 +74,7 @@ export class AuthService {
           });
 
         }
-        this.router.navigate(['']);
+        this.router.navigateByUrl('');
       });
   }
 

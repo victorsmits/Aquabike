@@ -1,9 +1,9 @@
 import {AfterViewInit, Component, Inject, OnInit, ViewChild} from '@angular/core';
-import {ApiService} from "../api.service";
+import {ApiService} from "../service/api.service";
 import {MatDialog} from "@angular/material/dialog";
 import {MatSelect} from "@angular/material/select";
 import {Inscription, Sessions, User} from "../Interface/Interface.module";
-import {AuthService} from "../auth.service";
+import {AuthService} from "../service/auth.service";
 import {MonthComponent} from "../month/month.component";
 
 let viewChild: any;

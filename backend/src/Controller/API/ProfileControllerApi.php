@@ -4,6 +4,7 @@ namespace App\Controller\API;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncode;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
@@ -17,17 +18,19 @@ use Symfony\Component\Serializer\Serializer;
 class ProfileControllerApi extends AbstractController
 {
     /**
-     * @Route("/profile/{user}", name="api_profile")
-     * @param $user
+     * @Route("/profile/", name="api_profile", methods={"POST"})
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index($user)
+    public function index(Request $request)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
+        $data = json_decode($request->getContent(),true);
+
         $userInfo = $entityManager
             ->getRepository('App:Person')
-            ->getPersonFromUsername($user);
+            ->getPersonFromUsername($data["Username"]);
 
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {

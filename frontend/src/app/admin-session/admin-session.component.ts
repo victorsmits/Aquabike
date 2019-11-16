@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
-import {ApiService} from "../api.service";
+import {ApiService} from "../service/api.service";
 import {Sessions} from "../Interface/Interface.module";
 import {ListPersonDialog} from "../month/month.component";
 
@@ -130,7 +130,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   }
 
   getYear(){
-    var today = new Date();
     for(var i = (this.year); i <= (this.year+10); i++){
       this.listYear.push(i);}
   }
@@ -139,7 +138,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.postRenewSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
-        console.log("Session "+id+ " Recreate")
       }
     })
   }
@@ -148,7 +146,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.postCancelSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
-        console.log("Session "+id+ " Cancel")
       }
     })
   }
@@ -157,7 +154,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.postDeleteSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
-        console.log("Session "+id+ " Delete")
       }
     })
   }

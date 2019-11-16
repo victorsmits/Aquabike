@@ -28,7 +28,7 @@ class AbonnementControllerApi extends AbstractController
         $listAbo = $em->getRepository('App:Person')->findAll();
 
         $defaultContext = [
-            AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
+            AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context){
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
@@ -54,35 +54,47 @@ class AbonnementControllerApi extends AbstractController
      * @return JsonResponse
      */
     public function RenewAbo(Request $request){
-        $em = $this->getDoctrine()->getManager();
-        $data = json_decode($request->getContent(), true);
-        $user = $em
-            ->getRepository('App:Person')
-            ->find($data["Id"]);
+        try{
+            $em = $this->getDoctrine()->getManager();
+            $data = json_decode($request->getContent(), true);
+            $user = $em
+                ->getRepository('App:Person')
+                ->find($data["Id"]);
 
-        $user->setAbonnement($user->getAboType());
-        $em->persist($user);
-        $em->flush();
+            $user->setAbonnement($user->getAboType());
+            $em->persist($user);
+            $em->flush();
 
-        return new JsonResponse(['result'=>true]);
+            return new JsonResponse(['result'=>true]);
+
+        }catch (\Exception $e){
+            $error = $e;
+        }
+        return new JsonResponse(['error'=>$error]);
     }
 
     /**
-     * @Route("/editAbo", name="api_renew", methods={"POST","HEAD"})
+     * @Route("/editAbo", name="api_editAbo", methods={"POST","HEAD"})
      * @param Request $request
      * @return JsonResponse
      */
     public function editAbo(Request $request){
-        $em = $this->getDoctrine()->getManager();
-        $data = json_decode($request->getContent(), true);
-        $user = $em
-            ->getRepository('App:Person')
-            ->find($data["Id"]);
+        try{
+            $em = $this->getDoctrine()->getManager();
+            $data = json_decode($request->getContent(), true);
+            $user = $em
+                ->getRepository('App:Person')
+                ->find($data["Id"]);
 
-        $user->setAboType($data["aboType"]);
-        $em->persist($user);
-        $em->flush();
+            $user->setAboType($data["aboType"]);
+            $em->persist($user);
+            $em->flush();
 
-        return new JsonResponse(['result'=>true]);
+            return new JsonResponse(['result'=>true]);
+
+        }catch (\Exception $e){
+            $error = $e;
+        }
+        return new JsonResponse(['error'=>$error]);
     }
 }

@@ -9,8 +9,8 @@ import {AdminComponent} from "./admin/admin.component";
 import {AdminSessionComponent} from "./admin-session/admin-session.component";
 import {AdminAboComponent} from "./admin-abo/admin-abo.component";
 import {AdminCreateSessionComponent} from "./admin-create-session/admin-create-session.component";
-import {AuthGuard} from './auth.guard';
-import {AdminGuard} from './admin.guard';
+import {AuthGuard} from './guard/auth.guard';
+import {AdminGuard} from './guard/admin.guard';
 
 
 const routes: Routes = [

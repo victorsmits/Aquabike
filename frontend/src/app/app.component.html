@@ -20,11 +20,6 @@
           <span> Login </span>
         </a>
 
-        <a mat-button routerLink="/signup" *ngIf="!isAuth;">
-          <mat-icon> person_add </mat-icon>
-          <span> Signup </span>
-        </a>
-
         <ng-template #profile>
           <a mat-button [matMenuTriggerFor]="menu" *ngIf="isAuth">
             <mat-icon> person </mat-icon>
@@ -36,7 +31,10 @@
             <a mat-menu-item (click)="logout()">Deconexion</a>
           </mat-menu>
 
-          <button mat-button [matMenuTriggerFor]="admin" *ngIf="user.Role[0] === 'ROLE_ADMIN'">Admin</button>
+          <a mat-button [matMenuTriggerFor]="admin" *ngIf="user.Role[0] === 'ROLE_ADMIN'">
+            <mat-icon>build</mat-icon>
+            <span> Admin</span>
+          </a>
           <mat-menu #admin="matMenu">
             <button mat-menu-item routerLink="admin/Session">Sessions</button>
             <button mat-menu-item routerLink="admin/Session/Create">Nouvelle Sessions</button>

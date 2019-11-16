@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../service/auth.service';
 import {MatSelect} from "@angular/material/select";
 
 let viewChild: any;

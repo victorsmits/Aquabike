@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
-import {editAbo, Inscription, Sessions} from './Interface/Interface.module';
+import {editAbo, Inscription, Sessions} from '../Interface/Interface.module';
 import {Router} from "@angular/router";
 
 
@@ -25,16 +25,9 @@ export class ApiService {
     return this.http.get(url)
   }
 
-  getInfoJson(id){
-    let url = "https://127.0.0.1:8000/api/moreinfo/";
-    url = url.concat(id);
-    return this.http.get(url)
-  }
-
   getProfileJson(username){
     let url = "https://localhost:8000/api/profile/";
-    url = url.concat(username);
-    return this.http.get(url)
+    return this.http.post(url,{Username:username})
   }
 
   getAboJson(){
