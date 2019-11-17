@@ -80,6 +80,21 @@ class Person implements \Serializable, UserInterface
      */
     private $AboType;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $Day2;
+
+    /**
+     * @ORM\Column(type="time")
+     */
+    private $Time;
+
+    /**
+     * @ORM\Column(type="time", nullable=true)
+     */
+    private $Time2;
+
     public function __construct()
     {
         $this->Id_Inscription = new ArrayCollection();
@@ -318,6 +333,42 @@ class Person implements \Serializable, UserInterface
     public function setAboType(int $AboType): self
     {
         $this->AboType = $AboType;
+
+        return $this;
+    }
+
+    public function getDay2(): ?\DateTimeInterface
+    {
+        return $this->Day2;
+    }
+
+    public function setDay2(?\DateTimeInterface $Day2): self
+    {
+        $this->Day2 = $Day2;
+
+        return $this;
+    }
+
+    public function getTime(): ?\DateTimeInterface
+    {
+        return $this->Time;
+    }
+
+    public function setTime(\DateTimeInterface $Time): self
+    {
+        $this->Time = $Time;
+
+        return $this;
+    }
+
+    public function getTime2(): ?\DateTimeInterface
+    {
+        return $this->Time2;
+    }
+
+    public function setTime2(?\DateTimeInterface $Time2): self
+    {
+        $this->Time2 = $Time2;
 
         return $this;
     }

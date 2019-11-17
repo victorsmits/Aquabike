@@ -5,6 +5,9 @@ export interface AuthSignupData {
   Prenom: string;
   Abonnement: number;
   Jour: string;
+  Time: string;
+  Jour2: string;
+  Time2: string;
   password: string;
   passwordConfirmation: string;
 }

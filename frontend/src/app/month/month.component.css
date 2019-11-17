@@ -1,21 +1,30 @@
 mat-table{
-  margin: 5% 20% ;
+  margin: 3% 2% ;
   padding: 2%;
   align-content: center;
+  justify-content: center;
+}
+
+.select{
+  margin-left: 10%;
 }
 
 mat-select{
   margin-top: 5%;
+  justify-content: center;
 }
 
 mat-cell{
   align-content: center;
-  font-size: small;
+  font-size: large;
+  justify-content: center;
 }
 
 mat-header-cell{
-  font-size: medium;
+  font-size: larger;
   align-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
 mat-form-field{

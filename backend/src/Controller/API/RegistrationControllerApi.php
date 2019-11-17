@@ -4,6 +4,7 @@ namespace App\Controller\API;
 
 use App\Entity\Person;
 use App\Form\RegistrationFormType;
+use DateTime;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -23,6 +24,7 @@ class RegistrationControllerApi extends AbstractController
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return RedirectResponse|Response
+     * @throws \Exception
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -51,6 +53,9 @@ class RegistrationControllerApi extends AbstractController
             $user->setAbonnement($data['Abonnement']);
             $user->setAboType($data['Abonnement']);
             $user->setDay($data['Jour']);
+            $user->setTime(new DateTime($data["Time"]));
+            $user->setDay2($data['Jour2']);
+            $user->setTime2(new DateTime($data["Time2"]));
             $user->setPassword($encodedPassword);
 
             try

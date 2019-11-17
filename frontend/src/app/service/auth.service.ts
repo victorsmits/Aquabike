@@ -39,24 +39,9 @@ export class AuthService {
     return this.cookie.get('session');
   }
 
-  createUser(email: string, username: string, password: string,
-             Nom: string, Prenom: string, Abonnement: string,
-             Jour: string, passwordConfirmation: string) {
-
-    const authData: AuthSignupData = {
-      email: email,
-      username: username,
-      Nom: Nom,
-      Prenom: Prenom,
-      Abonnement: Number(Abonnement),
-      Jour: Jour,
-      password: password,
-      passwordConfirmation: passwordConfirmation,
-    };
-
+  createUser(authData : AuthSignupData) {
     return this.http.post('https://localhost:8000/api/register', authData)
       .subscribe(response => {
-        // console.log(response["error"]["errors"]);
           this.router.navigate(['']);
       }
       );

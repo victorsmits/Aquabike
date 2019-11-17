@@ -36,7 +36,7 @@ export class ApiService {
     return this.http.post(url,{Id:id})
   }
 
-  editAboType(newAboType: editAbo){
+  editAboType(newAboType : editAbo){
     let url = "https://127.0.0.1:8000/api/admin/editAbo";
     return this.http.post(url,newAboType)
   }
@@ -56,7 +56,7 @@ export class ApiService {
     return this.http.post(url,{Id:id})
   }
 
-  createNewSess(newSess:Sessions){
+  createNewSess(newSess : Sessions){
     let url = "https://127.0.0.1:8000/api/admin/session";
     this.http.post(url,newSess).subscribe(urldata=>{
       if(urldata['result']){
