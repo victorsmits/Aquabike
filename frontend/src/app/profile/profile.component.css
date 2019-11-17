@@ -9,18 +9,31 @@ mat-table{
 
 mat-select{
   margin-top: 5%;
+  width: 100%
 }
 
 mat-cell{
-  align-content: center;
-  font-size: small;
+  justify-content: center;
+  font-size: large;
 }
 
 mat-header-cell{
-  font-size: medium;
-  align-content: center;
+  font-size: larger;
+  justify-content: center;
 }
 
 mat-form-field{
   width: 110px;
+}
+.mat-column-Date {
+  flex: 0 0 200px;
+}
+
+h3{
+  font-size: larger;
+}
+
+p{
+  font-size: large;
+
 }

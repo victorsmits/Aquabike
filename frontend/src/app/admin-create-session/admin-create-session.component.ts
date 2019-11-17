@@ -36,9 +36,8 @@ export class AdminCreateSessionComponent implements OnInit {
 
   onCreate(form: NgForm) {
     let newSess: Sessions;
-    let date = new Date(form.value.date);
     newSess={
-      Date : date.toDateString(),
+      Date : new Date(form.value.date),
       Time : form.value.time,
       Bike : form.value.bike,
       Cancel : false,

@@ -1,12 +1,6 @@
 mat-table{
   margin: 3% 2% ;
   padding: 2%;
-  align-content: center;
-  justify-content: center;
-}
-
-.select{
-  margin-left: 10%;
 }
 
 .select{
@@ -16,21 +10,24 @@ mat-table{
 mat-select{
   margin-top: 5%;
   justify-content: center;
+  font-size: larger;
 }
 
 mat-cell{
-  align-content: center;
   font-size: large;
   justify-content: center;
 }
 
 mat-header-cell{
   font-size: larger;
-  align-content: center;
-  text-align: center;
   justify-content: center;
 }
 
 mat-form-field{
-  width: 110px;
+  width: 115px;
+  text-align: center;
+}
+
+.mat-column-Date {
+  flex: 0 0 10%;
 }

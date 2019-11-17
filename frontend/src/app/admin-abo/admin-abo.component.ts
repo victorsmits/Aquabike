@@ -71,20 +71,38 @@ export class AdminAboComponent implements OnInit {
       }
 
       this.listUser.push({
-        id: this.data[i]["id"],
-        username: this.data[i]["Username"],
-        lastName: this.data[i]["LastName"],
-        firstName: this.data[i]["FirstName"],
-        abonnement: this.data[i]["Abonnement"],
-        Day: j,
-        Email: this.data[i]["Email"],
+        id: this.data["id"],
+        username : this.data["Username"],
+        lastName: this.data["LastName"],
+        firstName: this.data["FirstName"],
+        abonnement: this.data["Abonnement"],
+        Day: this.daySwith(this.data["Day"]),
+        Time: this.data["Time"].split(' ')[1],
+        Day2: this.daySwith(this.data["Day2"]),
+        Time2: this.data["Time"].split(' ')[1],
+        Email: this.data["Email"],
         Session: [],
-        Role: this.data[i]["roles"],
+        Role: this.data["roles"],
         AboType: this.data[i]["AboType"]
       });
     }
     this.dataSource = new MatTableDataSource(this.listUser);
     this.dataSource.sort = this.sort;
+  }
+
+  daySwith(day) : string{
+    let j;
+    switch (day) {
+      case 'Mon' : {j = 'Lundi'; break;}
+      case 'Tue' : {j = 'Mardi'; break;}
+      case 'Wed' : {j = 'Mercredi'; break;}
+      case 'Thu' : {j = 'Jeudi'; break;}
+      case 'Fry' : {j = 'Vendredi'; break;}
+      case 'Sat' : {j = 'Samedi'; break;}
+      case 'Sun' : {j = 'Dimanche'; break;}
+      case 'Null' : {j = 'Null'; break;}
+    }
+    return j
   }
 
   reSubcribe(id: any) {

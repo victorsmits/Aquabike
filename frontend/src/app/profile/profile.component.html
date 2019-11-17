@@ -7,12 +7,12 @@
       <!-- Date Column -->
       <ng-container matColumnDef="Date" >
         <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{switchDate(element.Date)}} </mat-cell>
       </ng-container >
 
       <!-- Time Column -->
       <ng-container matColumnDef="Time" >
-        <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Heure </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
       </ng-container>
 
@@ -76,20 +76,21 @@
 
       <mat-card-content>
         <mat-list-item>
-          <h4>Email</h4>
+          <h3>Email</h3>
           <p>{{User.Email}}</p>
           <mat-divider></mat-divider>
         </mat-list-item>
 
         <mat-list-item>
-          <h4>Abonnement</h4>
+          <h3>Abonnement</h3>
           <p>{{User.abonnement}}</p>
           <mat-divider></mat-divider>
         </mat-list-item>
 
         <mat-list-item>
-          <h4>Jour</h4>
-          <p>{{User.Day}}</p>
+          <h3>Jour</h3>
+          <p>{{User.Day}} {{User.Time}}</p>
+          <p *ngIf="User.Day2">{{User.Day2}} {{User.Time2}}</p>
           <mat-divider></mat-divider>
         </mat-list-item>
       </mat-card-content>

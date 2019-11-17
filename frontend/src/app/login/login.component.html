@@ -2,14 +2,14 @@
 <!--  <mat-spinner *ngIf="isLoading"></mat-spinner>-->
   <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading"><!-- don't forget the "!", thus not isLoading-->
     <mat-form-field>
-      <input matInput name="username" ngModel type="text" placeholder="UserName"  required>
+      <input matInput name="username" ngModel type="text" placeholder="Nom d'utilisateur"  required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput name="password" ngModel type="password" placeholder="Password"  required password>
+      <input matInput name="password" ngModel type="password" placeholder="Mot de passe"  required password>
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Login</button>
+    <button mat-raised-button color="primary" type="submit">Connection</button>
     <button mat-raised-button color="primary" class="btn" routerLink="/signup">
-      <span> Signup</span>
+      <span> Inscription</span>
     </button>
   </form>
 </mat-card>

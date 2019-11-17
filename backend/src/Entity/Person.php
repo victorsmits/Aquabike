@@ -181,8 +181,6 @@ class Person implements \Serializable, UserInterface
         $this->plainPassword = $plainPassword;
     }
 
-
-
     public function getRole(): ?string
     {
         return $this->role;
@@ -337,12 +335,12 @@ class Person implements \Serializable, UserInterface
         return $this;
     }
 
-    public function getDay2(): ?\DateTimeInterface
+    public function getDay2(): ?string
     {
         return $this->Day2;
     }
 
-    public function setDay2(?\DateTimeInterface $Day2): self
+    public function setDay2(?string $Day2): self
     {
         $this->Day2 = $Day2;
 

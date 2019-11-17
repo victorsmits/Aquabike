@@ -13,3 +13,6 @@ mat-card{
   width: 20%;
   margin: auto;
 }
+button{
+  font-size: large;
+}

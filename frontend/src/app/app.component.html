@@ -8,11 +8,11 @@
       <div>
         <a mat-button routerLink=".">
           <mat-icon> home </mat-icon>
-          <span> Home</span>
+          <span> Accueil </span>
         </a>
         <a mat-button routerLink="/month">
           <mat-icon> date_range </mat-icon>
-          <span> Month</span>
+          <span> Mois </span>
         </a>
 
         <a mat-button routerLink="/login" *ngIf="!isAuth; else profile">
@@ -23,7 +23,7 @@
         <ng-template #profile>
           <a mat-button [matMenuTriggerFor]="menu" *ngIf="isAuth">
             <mat-icon> person </mat-icon>
-            <span> {{user.lastName}} </span>
+            <span> {{user.lastName}} {{user.firstName}} </span>
           </a>
 
           <mat-menu #menu="matMenu">

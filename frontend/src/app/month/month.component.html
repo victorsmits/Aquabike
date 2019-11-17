@@ -1,9 +1,10 @@
 
 <mat-grid-list cols="4" rowHeight="100">
   <mat-grid-tile></mat-grid-tile>
+
   <mat-grid-tile colspan="1">
     <mat-form-field>
-      <mat-select placeholder="Select Month" #matSelect [(ngModel)]="value">
+      <mat-select placeholder="Sélectionné le mois" #matSelect [(ngModel)]="value">
         <mat-option *ngFor="let month of months" [value]="month.num" >
           {{month.name}}
         </mat-option>
@@ -13,36 +14,37 @@
 
   <mat-grid-tile colspan="1">
     <mat-form-field class="select">
-      <mat-select placeholder="Select Year" #matSelect2 [(ngModel)]="year">
+      <mat-select placeholder="Sélectionné l'année" #matSelect2 [(ngModel)]="year">
         <mat-option *ngFor="let y of listYear" [value]="y" >
           {{y}}
         </mat-option>
       </mat-select>
     </mat-form-field>
   </mat-grid-tile>
+
 </mat-grid-list>
+
 <mat-divider></mat-divider>
+
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortActive="Date"
-           matSortDirection="asc">
+           matSortDirection="desc">
 
   <!-- Date Column -->
   <ng-container matColumnDef="Date">
-    <mat-header-cell *matHeaderCellDef mat-sort-header class="mat-column-Date">
-      Date
-    </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.Date}}</mat-cell>
   </ng-container>
 
   <!-- Time Column -->
   <ng-container matColumnDef="Time" >
-    <mat-header-cell *matHeaderCellDef mat-sort-header class="colTime"> Heure </mat-header-cell>
-    <mat-cell *matCellDef="let element" class="colTime"> {{element.Time}} </mat-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Heure</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.Time}}</mat-cell>
   </ng-container>
 
   <!-- Bike Column -->
   <ng-container matColumnDef="Bike">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Velo(s) libre(s) </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.Bike}} </mat-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Velo(s) libre(s)</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.Bike}}</mat-cell>
   </ng-container>
 
   <!-- Status Column -->
@@ -51,9 +53,10 @@
       Cours confirmé
     </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
+      <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}"
+                matTooltip="Confirmé">check</mat-icon>
       <ng-template #cancel>
-        <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>
+        <mat-icon [ngStyle]="{'color':'red'}" matTooltip="Annuler">cancel</mat-icon>
       </ng-template>
     </mat-cell>
   </ng-container>
@@ -64,7 +67,7 @@
       List inscrit
     </mat-header-cell>
     <mat-cell *matCellDef="let element;let i = index" >
-        <button mat-flat-button  color="primary" matTooltip="Information">
+        <button mat-flat-button  color="primary" matTooltip="Liste Participant">
           <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
         </button>
     </mat-cell>
@@ -83,23 +86,25 @@
       </div>
 
       <ng-template #cancelBtn>
-        <button mat-flat-button  color="primary" matTooltip="Inscription" disabled>
+        <button mat-flat-button  color="primary" matTooltip="Annuler" disabled>
           <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
 
       <ng-template #Btn>
-        <button mat-flat-button  color="primary" matTooltip="Inscription">
+        <button mat-flat-button  color="primary">
           <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
 
       <ng-template #sub>
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="subscribe(element.Id)">check</mat-icon>
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="subscribe(element.Id)"
+                    matTooltip="Inscription">add</mat-icon>
       </ng-template>
 
       <ng-template #unsub>
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="unSubscribe(element.Id)">clear</mat-icon>
+          <mat-icon [ngStyle]="{'color':'white'}" (click)="unSubscribe(element.Id)"
+                    matTooltip="Desinscription">clear</mat-icon>
       </ng-template>
 
 

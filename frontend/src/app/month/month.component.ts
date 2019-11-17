@@ -82,9 +82,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   }
 
-
-
-
 //todo: test block sub when no more abonnement left or when session is full
 
   ngOnInit() {
@@ -167,23 +164,12 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.data = JSON.parse(JSON.stringify(urldata));
       for(let i = 0; i < this.data.length; i++){
         let d = new Date(this.data[i]["Date"].split(' ')[0]);
-        let j;
-        switch (d.getDay()) {
-          case 1:{j = "Lundi "; break}
-          case 2:{j = "Mardi "; break}
-          case 3:{j = "Mercredi "; break}
-          case 4:{j = "jeudi "; break}
-          case 5:{j = "Vendrdi "; break}
-          case 6:{j = "Samedi "; break}
-          case 7:{j = "Dimanche "; break}
-        }
-
         tempSess={
-          Date: j + d.getDate().toString(),
-          Time:this.data[i]["time"].split(' ')[1],
-          Bike:this.data[i]["bike"],
-          Cancel:this.data[i]["Cancel"],
-          Id:this.data[i]["id"],
+          Date: this.switchDate(d),
+          Time: this.data[i]["time"].split(' ')[1],
+          Bike: this.data[i]["bike"],
+          Cancel: this.data[i]["Cancel"],
+          Id: this.data[i]["id"],
         };
 
         tempPers={
@@ -195,6 +181,20 @@ export class MonthComponent implements OnInit, AfterViewInit {
       }
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
+  }
+
+  switchDate(d : Date) : Date{
+    let j;
+    switch (d.getDay()) {
+      case 1:{j = "Lundi "; break}
+      case 2:{j = "Mardi "; break}
+      case 3:{j = "Mercredi "; break}
+      case 4:{j = "jeudi "; break}
+      case 5:{j = "Vendrdi "; break}
+      case 6:{j = "Samedi "; break}
+      case 7:{j = "Dimanche "; break}
+    }
+    return j + d.getDate()
   }
 
   openDialog(id): void {

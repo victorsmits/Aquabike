@@ -39,9 +39,6 @@ export class ProfileComponent implements OnInit {
   ];
   constructor(private api: ApiService,
               private auth:AuthService){}
-
-
-
   ngOnInit() {
     this.today = new Date();
     this.year = this.today.getFullYear();
@@ -51,22 +48,23 @@ export class ProfileComponent implements OnInit {
     this.api.getProfileJson(this.User.username).subscribe(data=>{
       this.auth.initUser(data);
       this.User = this.auth.getCurrentUser();
-
-      for(let i = 0; i < this.User.Session.length; i++) {
-        let tempSess:Sessions;
-        let d = new Date(this.User.Session[i]["Date"]);
-        if(d.getFullYear() === this.year){
-          tempSess ={
-            Date:  new Date(this.User.Session[i]["Date"]).toDateString(),
-            Time: this.User.Session[i]["Time"],
-            Bike: this.User.Session[i]["Bike"],
-            Cancel: this.User.Session[i]["Cancel"],
-            Id: this.User.Session[i]["Id"]
-          };
-          this.listSession.push(tempSess);
-        }
-      }
     });
+  }
+
+  switchDate(d) : string{
+    d = new Date(d);
+    let j;
+    switch (d.getDay()) {
+      case 1:{j = "Lundi "; break}
+      case 2:{j = "Mardi "; break}
+      case 3:{j = "Mercredi "; break}
+      case 4:{j = "jeudi "; break}
+      case 5:{j = "Vendrdi "; break}
+      case 6:{j = "Samedi "; break}
+      case 7:{j = "Dimanche "; break}
+    }
+    let months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
+    return j + d.getDate() + " " +  months[d.getMonth()+1] + " " + d.getFullYear()
   }
 
   getYear(){

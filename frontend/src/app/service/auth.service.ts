@@ -63,13 +63,9 @@ export class AuthService {
       });
   }
 
-  initUser(data){
-
-    this.listSession = [];
-    this.data = JSON.parse(JSON.stringify(data));
-
+  daySwith(day) : string{
     let j;
-    switch (this.data["Day"]) {
+    switch (day) {
       case 'Mon' : {j = 'Lundi'; break;}
       case 'Tue' : {j = 'Mardi'; break;}
       case 'Wed' : {j = 'Mercredi'; break;}
@@ -77,7 +73,16 @@ export class AuthService {
       case 'Fry' : {j = 'Vendredi'; break;}
       case 'Sat' : {j = 'Samedi'; break;}
       case 'Sun' : {j = 'Dimanche'; break;}
+      case 'Null' : {j = 'Null'; break;}
     }
+    return j
+  }
+
+  initUser(data){
+
+    this.listSession = [];
+    this.data = JSON.parse(JSON.stringify(data));
+
 
     this.User = {
       id: this.data["id"],
@@ -85,7 +90,10 @@ export class AuthService {
       lastName: this.data["LastName"],
       firstName: this.data["FirstName"],
       abonnement: this.data["Abonnement"],
-      Day: j,
+      Day: this.daySwith(this.data["Day"]),
+      Time: this.data["Time"].split(' ')[1],
+      Day2: this.daySwith(this.data["Day2"]),
+      Time2: this.data["Time"].split(' ')[1],
       Email: this.data["Email"],
       Session: [],
       Role: this.data["roles"]
@@ -95,10 +103,8 @@ export class AuthService {
 
     for(let i = 0; i < inscription.length; i++) {
       let tempSess: Sessions;
-      let d = new Date(inscription[i]["idSession"]["date"].split(' ')[0]);
-
       tempSess={
-        Date:  d.toDateString(),
+        Date:  new Date(inscription[i]["idSession"]["date"].split(' ')[0]),
         Time: inscription[i]["idSession"]["time"].split(' ')[1],
         Bike: inscription[i]["idSession"]["bike"],
         Cancel: inscription[i]["idSession"]["Cancel"],

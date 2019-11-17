@@ -24,13 +24,16 @@ export interface User {
   firstName: string,
   abonnement: number,
   Day: string,
+  Time: number,
+  Day2: string,
+  Time2: number,
   Email: string,
   Session: Sessions[],
   Role: any
 }
 
 export interface Sessions{
-  Date : string,
+  Date : Date,
   Time : string,
   Bike : number,
   Cancel : boolean,
