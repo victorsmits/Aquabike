@@ -9,6 +9,10 @@ mat-table{
   margin-left: 10%;
 }
 
+.select{
+  margin-left: 10%;
+}
+
 mat-select{
   margin-top: 5%;
   justify-content: center;
