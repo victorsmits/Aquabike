@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Subject, Observable } from 'rxjs';
+import {Subject, Observable, throwError} from 'rxjs';
 import {AuthLoginData, AuthSignupData, Sessions, User} from "../Interface/Interface.module";
 import {CookieService} from "ngx-cookie-service";
 import {ApiService} from "./api.service";
+import {error} from 'util';
+import {catchError} from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root'})
 export class AuthService {
+
   private isAuthenticated = false;
   private authStatusListener = new Subject<boolean>(); // just need to know if user is authenticated
   private currentUser: User;
@@ -16,6 +19,7 @@ export class AuthService {
   private data: JSON[];
   private listSession: Sessions[]=[];
   private User: User;
+  private logError: any;
 
   constructor(private http: HttpClient,
               private cookie : CookieService,
@@ -24,6 +28,10 @@ export class AuthService {
 
   getIsAuth() {
     return Boolean(this.cookie.get('connected'));
+  }
+
+  getLogError(){
+    return this.logError;
   }
 
   getAuthStatusListener() {
@@ -48,17 +56,21 @@ export class AuthService {
   }
 
   loginUser(username: string, password: string) {
-    const authData: AuthLoginData = {Username:username,password:password};
-    this.http.post<{result: boolean}>('https://localhost:8000/api/login', authData)
-      .subscribe(response => {
+    let authData: AuthLoginData = {Username:username,password:password};
+    console.log(this.authStatusListener);
+    this.api.postLogin(authData).subscribe(
+      response => {
         if (response.result === true) {
-          this.isAuthenticated = true; // needed to update authentication status
-          this.api.getProfileJson(username).subscribe(data=>{
+          this.api.getProfileJson(username).subscribe(
+          data => {
+            this.isAuthenticated = true; // needed to update authentication status
             this.initUser(data);
-            this.router.navigate(['']);
-            this.authStatusListener.next(true); // telling everyone who is interested that the user is authenticated
+            this.authStatusListener.next(true);// telling everyone who is interested that the user is authenticated
           });
         }
+      },
+      error => {
+        return throwError(error)
       });
   }
 
@@ -78,10 +90,8 @@ export class AuthService {
   }
 
   initUser(data){
-
     this.listSession = [];
     this.data = JSON.parse(JSON.stringify(data));
-
 
     this.User = {
       id: this.data["id"],
@@ -125,6 +135,6 @@ export class AuthService {
     this.cookie.delete('user');
     this.cookie.delete('session');
     this.cookie.delete('connected');
-    this.router.navigate(['']);
+    this.router.navigate(['login']);
   }
 }

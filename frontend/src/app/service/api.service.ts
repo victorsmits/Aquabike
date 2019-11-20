@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
-import {editAbo, Inscription, Sessions} from '../Interface/Interface.module';
+import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from '@angular/common/http';
+import {AuthLoginData, editAbo, Inscription, Sessions} from '../Interface/Interface.module';
 import {Router} from "@angular/router";
+import {catchError} from 'rxjs/operators';
+import {Observable, throwError} from 'rxjs';
 
 
 @Injectable({
@@ -14,46 +16,55 @@ export class ApiService {
   constructor(private http: HttpClient, private router:Router) { }
 
   getHomeJson(){
-    return this.http.get('https://127.0.0.1:8000/api')
+    return this.http.get('https://127.0.0.1:8000/api').pipe(
+      catchError(this.handelError));
   }
 
   getMonthJson(month,year){
     let url = "https://127.0.0.1:8000/api/month";
-    return this.http.post(url,{month:month,year:year})
+    return this.http.post(url,{month:month,year:year}).pipe(
+      catchError(this.handelError));
   }
 
   getProfileJson(username){
     let url = "https://localhost:8000/api/profile/";
-    return this.http.post(url,{Username:username})
+    return this.http.post(url,{Username:username}).pipe(
+      catchError(this.handelError));
   }
 
   getAboJson(){
-    return this.http.get('https://127.0.0.1:8000/api/admin/abonnement')
+    return this.http.get('https://127.0.0.1:8000/api/admin/abonnement').pipe(
+      catchError(this.handelError));
   }
 
   postAboRenew(id){
     let url = "https://127.0.0.1:8000/api/admin/renewAbo";
-    return this.http.post(url,{Id:id})
+    return this.http.post(url,{Id:id}).pipe(
+      catchError(this.handelError));
   }
 
   editAboType(newAboType : editAbo){
     let url = "https://127.0.0.1:8000/api/admin/editAbo";
-    return this.http.post(url,newAboType)
+    return this.http.post(url,newAboType).pipe(
+      catchError(this.handelError));
   }
 
   postCancelSess(id){
     let url = "https://127.0.0.1:8000/api/admin/Cancel";
-    return this.http.post(url,{Id:id})
+    return this.http.post(url,{Id:id}).pipe(
+      catchError(this.handelError));
   }
 
   postRenewSess(id){
     let url = "https://127.0.0.1:8000/api/admin/recreate";
-    return this.http.post(url,{Id:id,Bike:9})
+    return this.http.post(url,{Id:id,Bike:9}).pipe(
+      catchError(this.handelError));
   }
 
   postDeleteSess(id){
     let url = "https://127.0.0.1:8000/api/admin/Delete";
-    return this.http.post(url,{Id:id})
+    return this.http.post(url,{Id:id}).pipe(
+      catchError(this.handelError));
   }
 
   createNewSess(newSess : Sessions){
@@ -62,17 +73,29 @@ export class ApiService {
       if(urldata['result']){
         this.router.navigate(['admin/Session'])
       }
-    });
+    },
+      error => (this.handelError(error)));
   }
 
   createInscription(newInscription : Inscription){
     let url = "https://127.0.0.1:8000/api/Inscription";
-    return this.http.post(url,newInscription)
+    return this.http.post(url,newInscription).pipe(
+      catchError(this.handelError));
   }
 
   deleteInscription(newInscription : Inscription){
     let url = "https://127.0.0.1:8000/api/Desinscription";
-    return this.http.post(url,newInscription)
+    return this.http.post(url,newInscription).pipe(
+      catchError(this.handelError));
+  }
+
+  postLogin(authData : AuthLoginData){
+   return this.http.post<{result: boolean}>('https://localhost:8000/api/login', authData).pipe(
+     catchError(this.handelError));
+  }
+
+  handelError(err: HttpErrorResponse){
+    return throwError(err.error.error);
   }
 
 }

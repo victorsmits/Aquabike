@@ -20,8 +20,10 @@ export class AppComponent implements OnInit,AfterViewInit {
               private router : Router) {}
 
   ngOnInit(){
-    this.auth.getAuthStatusListener().subscribe(auth=>{
-      if(auth){
+    this.auth.getAuthStatusListener().subscribe(
+    auth=>{
+      console.log(auth);
+      if(auth === true){
         this.isAuth = this.auth.getIsAuth();
         this.user = this.auth.getCurrentUser();
         this.router.navigate(['']);
@@ -30,8 +32,10 @@ export class AppComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit(){
-    this.auth.getAuthStatusListener().subscribe(auth=>{
-      if(auth){
+    this.auth.getAuthStatusListener().subscribe(
+    auth=>{
+      console.log(auth);
+      if(auth === true){
         this.isAuth = this.auth.getIsAuth();
         this.user = this.auth.getCurrentUser();
       }else{
