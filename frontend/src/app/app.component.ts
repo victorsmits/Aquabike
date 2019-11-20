@@ -4,7 +4,6 @@ import {AfterViewInit} from "@mobiscroll/angular-lite/src/js/frameworks/angular"
 import {User} from "./Interface/Interface.module";
 import {Router} from '@angular/router';
 
-//TODO auto update login btn
 //TODO graphical responsive for devices
 
 @Component({
@@ -21,23 +20,29 @@ export class AppComponent implements OnInit,AfterViewInit {
               private router : Router) {}
 
   ngOnInit(){
-    if(this.auth.getIsAuth()){
-      this.user = this.auth.getCurrentUser();
-      this.isAuth = this.auth.getIsAuth();
-    }
+    this.auth.getAuthStatusListener().subscribe(auth=>{
+      if(auth){
+        this.isAuth = this.auth.getIsAuth();
+        this.user = this.auth.getCurrentUser();
+        this.router.navigate(['']);
+      }
+    })
   }
 
   ngAfterViewInit(){
     this.auth.getAuthStatusListener().subscribe(auth=>{
-      this.isAuth = this.auth.getIsAuth();
-      if(this.isAuth){
+      if(auth){
+        this.isAuth = this.auth.getIsAuth();
         this.user = this.auth.getCurrentUser();
+      }else{
+        this.isAuth = false;
       }
+      this.router.navigate(['']);
     })
   }
 
   logout() {
     this.auth.logout();
-    this.router.navigateByUrl('')
+    this.router.navigate(['login']);
   }
 }

@@ -53,13 +53,12 @@ export class AuthService {
       .subscribe(response => {
         if (response.result === true) {
           this.isAuthenticated = true; // needed to update authentication status
-          this.authStatusListener.next(true); // telling everyone who is interested that the user is authenticated
           this.api.getProfileJson(username).subscribe(data=>{
-            this.initUser(data)
+            this.initUser(data);
+            this.router.navigate(['']);
+            this.authStatusListener.next(true); // telling everyone who is interested that the user is authenticated
           });
-
         }
-        this.router.navigateByUrl('');
       });
   }
 
@@ -121,11 +120,11 @@ export class AuthService {
   }
 
   logout() {
+    this.isAuthenticated = false;
+    this.authStatusListener.next(false);
     this.cookie.delete('user');
     this.cookie.delete('session');
     this.cookie.delete('connected');
-    this.isAuthenticated = false;
-    this.authStatusListener.next(false);
     this.router.navigate(['']);
   }
 }
