@@ -43,9 +43,22 @@ class LoginAuthenticator extends AbstractGuardAuthenticator
     // also if credentials are not correct
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
-        return new JsonResponse([
-            'error' => $exception->getMessageKey()
-        ], 400);
+        switch ($exception->getMessageKey()){
+            case "Username could not be found.":
+                return new JsonResponse([
+                    'error' => "Nom d'utilisateur incorrect"
+                ], 400);
+
+            case "Invalid credentials.":
+                return new JsonResponse([
+                    'error' => "Mot de passe incorrect"
+                ], 400);
+
+            default:
+                return new JsonResponse([
+                    'error' => $exception->getMessageKey()
+                ], 400);
+        }
     }
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
