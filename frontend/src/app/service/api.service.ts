@@ -94,8 +94,13 @@ export class ApiService {
      catchError(this.handelError));
   }
 
-  handelError(err: HttpErrorResponse){
-    return throwError(err.error.error);
+  handelError(err){
+    if(err instanceof HttpErrorResponse){
+      return throwError(err.error.error);
+    }else{
+      return throwError(err.message)
+    }
+
   }
 
 }

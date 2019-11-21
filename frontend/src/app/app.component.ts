@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 export class AppComponent implements OnInit,AfterViewInit {
   title = 'Aquabike';
-  user: User;
+  private user: User;
   public isAuth: boolean;
 
   constructor(private auth : AuthService,
@@ -23,30 +23,34 @@ export class AppComponent implements OnInit,AfterViewInit {
     this.auth.getAuthStatusListener().subscribe(
     auth=>{
       console.log(auth);
-      if(auth === true){
+      if(auth){
         this.isAuth = this.auth.getIsAuth();
         this.user = this.auth.getCurrentUser();
-        this.router.navigate(['']);
       }
-    })
+    });
+    if(this.auth.getIsAuth()){
+      this.isAuth = this.auth.getIsAuth();
+      this.user = this.auth.getCurrentUser();
+    }
   }
 
   ngAfterViewInit(){
     this.auth.getAuthStatusListener().subscribe(
     auth=>{
-      console.log(auth);
-      if(auth === true){
+      if(auth){
         this.isAuth = this.auth.getIsAuth();
         this.user = this.auth.getCurrentUser();
-      }else{
-        this.isAuth = false;
       }
-      this.router.navigate(['']);
-    })
+    });
+    if(this.auth.getIsAuth()){
+      this.isAuth = this.auth.getIsAuth();
+      this.user = this.auth.getCurrentUser();
+    }
   }
 
   logout() {
     this.auth.logout();
     this.router.navigate(['login']);
+    this.isAuth = false
   }
 }

@@ -2,6 +2,8 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import {Router} from '@angular/router';
+import {catchError} from 'rxjs/operators';
+import {HttpErrorResponse} from '@angular/common/http';
 
 //todo display login error
 
@@ -21,16 +23,19 @@ export class LoginComponent implements OnInit, AfterViewInit{
   ngOnInit(){}
 
   ngAfterViewInit(): void {
-    this.authService.getAuthStatusListener().subscribe(
+    this.authService.getAuthStatusListener()
+    .subscribe(
       auth => {
-        if(auth === true){
+        if(auth){
           this.router.navigate([''])
         }
-      },
-      error =>{
-        console.log(error);
-        this.Error = error;
-      });
+        this.authService.getErrorListener().subscribe(next=>{
+          this.Error = next;
+        },error => {
+          this.Error = error;
+        });
+      }
+    );
   }
 
   onLogin(form: NgForm) {
@@ -38,16 +43,7 @@ export class LoginComponent implements OnInit, AfterViewInit{
       return;
     }
     this.authService.loginUser(form.value.username, form.value.password);
-    this.authService.getAuthStatusListener().subscribe(
-      auth => {
-        if(auth === true){
-          this.router.navigate([''])
-        }
-      },
-      error =>{
-        console.log(error);
-        this.Error = error;
-      });
+    this.ngAfterViewInit();
   }
 
 }

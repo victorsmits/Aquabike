@@ -1,25 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
-import {Subject, Observable, throwError} from 'rxjs';
+import {Subject, Observable} from 'rxjs';
 import {AuthLoginData, AuthSignupData, Sessions, User} from "../Interface/Interface.module";
 import {CookieService} from "ngx-cookie-service";
 import {ApiService} from "./api.service";
-import {error} from 'util';
-import {catchError} from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root'})
 export class AuthService {
 
   private isAuthenticated = false;
-  private authStatusListener = new Subject<boolean>(); // just need to know if user is authenticated
-  private currentUser: User;
-  cookieValue = 'UNKNOWN';
+  private authStatusListener : Subject<boolean> = new Subject<boolean>(); // just need to know if user is authenticated
   private data: JSON[];
   private listSession: Sessions[]=[];
   private User: User;
-  private logError: any;
+  private errorListener : Subject<String> =  new Subject<String>();
 
   constructor(private http: HttpClient,
               private cookie : CookieService,
@@ -30,21 +26,17 @@ export class AuthService {
     return Boolean(this.cookie.get('connected'));
   }
 
-  getLogError(){
-    return this.logError;
+  getAuthStatusListener() : Observable<any> {
+    return this.authStatusListener.asObservable();
   }
 
-  getAuthStatusListener() {
-    return this.authStatusListener.asObservable();
+  getErrorListener() : Observable<any> {
+    return this.errorListener.asObservable();
   }
 
   getCurrentUser():User{
     // this.updateUser();
     return JSON.parse(this.cookie.get('user'));
-  }
-
-  getCurrentUserSession() {
-    return this.cookie.get('session');
   }
 
   createUser(authData : AuthSignupData) {
@@ -57,10 +49,11 @@ export class AuthService {
 
   loginUser(username: string, password: string) {
     let authData: AuthLoginData = {Username:username,password:password};
-    console.log(this.authStatusListener);
-    this.api.postLogin(authData).subscribe(
+
+    this.api.postLogin(authData)
+      .subscribe(
       response => {
-        if (response.result === true) {
+        if (response["result"] === true) {
           this.api.getProfileJson(username).subscribe(
           data => {
             this.isAuthenticated = true; // needed to update authentication status
@@ -68,9 +61,10 @@ export class AuthService {
             this.authStatusListener.next(true);// telling everyone who is interested that the user is authenticated
           });
         }
-      },
-      error => {
-        return throwError(error)
+      },error =>{
+        this.errorListener.error(error);
+        this.authStatusListener.next(false);
+        this.errorListener = new Subject<String>();
       });
   }
 
