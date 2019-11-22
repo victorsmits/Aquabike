@@ -6,6 +6,7 @@ import {AuthLoginData, AuthSignupData, Sessions, User} from "../Interface/Interf
 import {CookieService} from "ngx-cookie-service";
 import {ApiService} from "./api.service";
 import {catchError} from 'rxjs/operators';
+import {ToolService} from './tool.service';
 
 
 @Injectable({ providedIn: 'root'})
@@ -21,7 +22,8 @@ export class AuthService {
   constructor(private http: HttpClient,
               private cookie : CookieService,
               private router: Router,
-              private api: ApiService) {}
+              private api: ApiService,
+              private tool : ToolService) {}
 
   getIsAuth() {
     return Boolean(this.cookie.get('connected'));
@@ -75,21 +77,6 @@ export class AuthService {
       });
   }
 
-  daySwith(day) : string{
-    let j;
-    switch (day) {
-      case 'Mon' : {j = 'Lundi'; break;}
-      case 'Tue' : {j = 'Mardi'; break;}
-      case 'Wed' : {j = 'Mercredi'; break;}
-      case 'Thu' : {j = 'Jeudi'; break;}
-      case 'Fry' : {j = 'Vendredi'; break;}
-      case 'Sat' : {j = 'Samedi'; break;}
-      case 'Sun' : {j = 'Dimanche'; break;}
-      case 'Null' : {j = 'Null'; break;}
-    }
-    return j
-  }
-
   initUser(data){
     this.listSession = [];
     this.data = JSON.parse(JSON.stringify(data));
@@ -100,9 +87,9 @@ export class AuthService {
       lastName: this.data["LastName"],
       firstName: this.data["FirstName"],
       abonnement: this.data["Abonnement"],
-      Day: this.daySwith(this.data["Day"]),
+      Day: this.tool.daySwith(this.data["Day"]),
       Time: this.data["Time"].split(' ')[1],
-      Day2: this.daySwith(this.data["Day2"]),
+      Day2: this.tool.daySwith(this.data["Day2"]),
       Time2: this.data["Time"].split(' ')[1],
       Email: this.data["Email"],
       Session: [],

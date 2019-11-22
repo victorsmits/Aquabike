@@ -7,6 +7,7 @@ import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatInput} from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {ToolService} from '../service/tool.service';
 
 export interface Person  {
   user : JSON;
@@ -28,6 +29,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   public listYear: number[]=[];
   public year: number;
   private nbrDispBike: String = "9";
+  public error: String;
   public displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
   @ViewChild('matSelect',{static:false}) matSelect : MatSelect;
@@ -51,8 +53,10 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   ];
 
 
+
   constructor(private api: ApiService,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog,
+              private tool : ToolService) { }
 
   ngOnInit() {
     let m = new Date();
@@ -100,7 +104,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     for(let i = 0; i < this.data.length; i++){
       let d = new Date(this.data[i]["Date"].split(' ')[0]);
       tempSess={
-        Date: this.switchDate(d),
+        Date: this.tool.switchDate(d),
         Time: this.data[i]["time"].split(' ')[1],
         Bike: this.data[i]["bike"],
         Cancel: this.data[i]["Cancel"],
@@ -118,20 +122,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  switchDate(d : Date) : Date{
-    let j;
-    switch (d.getDay()) {
-      case 1:{j = "Lundi "; break}
-      case 2:{j = "Mardi "; break}
-      case 3:{j = "Mercredi "; break}
-      case 4:{j = "jeudi "; break}
-      case 5:{j = "Vendredi "; break}
-      case 6:{j = "Samedi "; break}
-      case 7:{j = "Dimanche "; break}
-    }
-    return j + d.getDate()
-  }
-
   openDialog(id): void {
     const dialogRef = this.dialog.open(ListPersonDialog, {
       width: '250px',
@@ -145,20 +135,21 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   }
 
   Replay(id: any) {
-    this.api.postRenewSess(id, this.nbrBike.value).subscribe(urldata=>{
+    this.api.postRenewSess(id, this.nbrBike.value).subscribe(
+      urldata=>{
       if(urldata["result"]){
         this.nbrDispBike = this.nbrBike.value;
         this.ngAfterViewInit();
       }
-    })
+    }, error1 => (this.handelError(error1)));
   }
 
   Cancel(id: any) {
-    this.api.postCancelSess(id).subscribe(urldata=>{
+    this.api.postCancelSess(120).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
       }
-    })
+    }, error1 => (this.handelError(error1)));
   }
 
   Delete(id: any) {
@@ -166,6 +157,10 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
       if(urldata["result"]){
         this.ngAfterViewInit();
       }
-    })
+    }, error1 => (this.handelError(error1)));
+  }
+
+  private handelError(error1: any) {
+    this.error = error1;
   }
 }

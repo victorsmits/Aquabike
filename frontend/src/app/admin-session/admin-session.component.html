@@ -84,7 +84,10 @@
   <!-- Cancel Session Column-->
   <ng-container matColumnDef="Action">
 
-    <mat-header-cell *matHeaderCellDef> Annulation / Suppression</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>
+      <mat-error *ngIf="error"> {{ error }}</mat-error>
+      Annulation / Suppression
+    </mat-header-cell>
 
     <mat-cell *matCellDef="let element" >
       <button mat-flat-button  color="primary" matTooltip="Annuler"

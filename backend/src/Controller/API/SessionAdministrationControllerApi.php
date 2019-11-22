@@ -3,6 +3,10 @@
 namespace App\Controller\API;
 
 use DateTime;
+use Doctrine\DBAL\DBALException;
+use Doctrine\ORM\ORMException;
+use Exception;
+use Swift_Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -77,7 +81,7 @@ class SessionAdministrationControllerApi extends AbstractController
 
             return new JsonResponse(['result' => true], 200);
         }
-        catch (\Exception $e){
+        catch (Exception $e){
             $errors = $e;
         }
 
@@ -91,20 +95,22 @@ class SessionAdministrationControllerApi extends AbstractController
     /**
      * @Route("/Cancel", name="api_Cancel", methods={"POST","OPTIONS","GET"})
      * @param Request $request
-     * @param \Swift_Mailer $mailer
+     * @param Swift_Mailer $mailer
      * @return JsonResponse
      */
-    public function cancelSession(Request $request, \Swift_Mailer $mailer){
-        $errors = [];
+    public function cancelSession(Request $request, Swift_Mailer $mailer){
+        $error = [];
         $data = json_decode($request->getContent(), true);
 
-        $listInscription = $this->findInscription($data["Id"]);
-
-        $entityManager = $this->getDoctrine()->getManager();
-        $session = $entityManager
-            ->getRepository('App:Session')
-            ->findOneBy(['id'=>$data["Id"]]);
         try{
+            $listInscription = $this->findInscription($data["Id"]);
+
+            $entityManager = $this->getDoctrine()->getManager();
+
+            $session = $entityManager
+                ->getRepository('App:Session')
+                ->find($data["Id"]);
+
             if(!empty($listInscription)){
                 foreach ($listInscription as $inscription) {
                     $userId = $inscription->getIdPerson();
@@ -114,21 +120,6 @@ class SessionAdministrationControllerApi extends AbstractController
 
                     $user->setAbonnement( $user->getAbonnement()+1);
 
-//                $message = (new \Swift_Message('Hello Email'))
-//                    ->setFrom('send@example.com')
-//                    ->setTo($user->getEmail())
-//                    ->setBody(
-//                        $this->renderView(
-//                        // templates/emails/registration.html.twig
-//                            'emails/email.html.twig',
-//                            ['name' => $user,
-//                                'session'=>$session]
-//                        ),
-//                        'text/html'
-//                    )
-//                ;
-//
-//                $mailer->send($message);
                     $entityManager->persist($user);
                     $entityManager->flush();
 
@@ -144,14 +135,13 @@ class SessionAdministrationControllerApi extends AbstractController
 
             return new JsonResponse(['result' => true], 200);
         }
-        catch (\Exception $e){
-            $errors = $e;
+        catch(ORMException $e){
+            $error = $e->getMessage();
         }
-
-
-        return new JsonResponse([
-            'errors' => $errors
-        ], 400);
+        catch(Exception $e) {
+            $error = $e->getMessage();
+        }
+            return new JsonResponse(['error' => $error], 400);
     }
 
     /**
@@ -166,13 +156,12 @@ class SessionAdministrationControllerApi extends AbstractController
 
             $entityManager = $this->getDoctrine()->getManager();
             $session = $entityManager->getRepository('App:Session')->find($data["Id"]);
-            $date = $session->getDate();
             $entityManager->remove($session);
             $entityManager->flush();
 
             return new JsonResponse(['result' => true], 200);
         }
-        catch (\Exception $e){
+        catch (Exception $e){
             $errors = $e;
         }
 

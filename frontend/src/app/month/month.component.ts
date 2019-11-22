@@ -8,6 +8,7 @@ import {MatSelect} from "@angular/material/select";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {ToolService} from '../service/tool.service';
 
 export interface Person {
   user : JSON;
@@ -77,7 +78,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   constructor(private api: ApiService,
               public dialog: MatDialog,
               private auth:AuthService,
-              private cookie: CookieService) {
+              private tool : ToolService) {
     this.user = this.auth.getCurrentUser();
 
   }
@@ -162,39 +163,27 @@ export class MonthComponent implements OnInit, AfterViewInit {
     let tempPers : Person;
 
     this.data = JSON.parse(JSON.stringify(urldata));
-      for(let i = 0; i < this.data.length; i++){
-        let d = new Date(this.data[i]["Date"].split(' ')[0]);
-        tempSess={
-          Date: this.switchDate(d),
-          Time: this.data[i]["time"].split(' ')[1],
-          Bike: this.data[i]["bike"],
-          Cancel: this.data[i]["Cancel"],
-          Id: this.data[i]["id"],
-        };
 
-        tempPers={
-          user : this.data[i]["idInscription"]
-        };
+    for(let i = 0; i < this.data.length; i++){
+      let d = new Date(this.data[i]["Date"].split(' ')[0]);
+      tempSess={
+        Date: this.tool.switchDate(d),
+        Time: this.data[i]["time"].split(' ')[1],
+        Bike: this.data[i]["bike"],
+        Cancel: this.data[i]["Cancel"],
+        Id: this.data[i]["id"],
+      };
 
-        this.listSession.push(tempSess);
-        this.listPerson.push(tempPers);
-      }
+      tempPers={
+        user : this.data[i]["idInscription"]
+      };
+
+      this.listSession.push(tempSess);
+      this.listPerson.push(tempPers);
+    }
+
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
-  }
-
-  switchDate(d : Date) : Date{
-    let j;
-    switch (d.getDay()) {
-      case 1:{j = "Lundi "; break}
-      case 2:{j = "Mardi "; break}
-      case 3:{j = "Mercredi "; break}
-      case 4:{j = "jeudi "; break}
-      case 5:{j = "Vendredi "; break}
-      case 6:{j = "Samedi "; break}
-      case 7:{j = "Dimanche "; break}
-    }
-    return j + d.getDate()
   }
 
   openDialog(id): void {
