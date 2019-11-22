@@ -1,5 +1,44 @@
-  <mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortActive="Date"
-             matSortDirection="asc">
+
+<mat-grid-list cols="5" rowHeight="100">
+  <mat-grid-tile></mat-grid-tile>
+
+  <mat-grid-tile colspan="1">
+    <mat-form-field>
+      <mat-select placeholder="Sélectionné le mois" #matSelect [(ngModel)]="value">
+        <mat-option *ngFor="let month of months" [value]="month.num" >
+          {{month.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1">
+    <mat-form-field class="select">
+      <mat-select placeholder="Sélectionné l'année" #matSelect2 [(ngModel)]="year">
+        <mat-option *ngFor="let y of listYear" [value]="y" >
+          {{y}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1">
+    <mat-form-field>
+      <label>
+        <input matInput type="number" placeholder="nombre de vélo disponible" #nbrBike
+               [value]="nbrDispBike" >
+      </label>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile></mat-grid-tile>
+
+</mat-grid-list>
+
+<mat-divider></mat-divider>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortActive="Date"
+             matSortDirection="desc">
 
   <!-- Date Column -->
   <ng-container matColumnDef="Date">
@@ -9,7 +48,7 @@
 
   <!-- Time Column -->
   <ng-container matColumnDef="Time">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Time </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Heure </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
   </ng-container>
 
@@ -21,51 +60,34 @@
 
   <!-- Status Column -->
   <ng-container matColumnDef="Status">
-    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Cours confirmé </mat-header-cell>
     <mat-cell *matCellDef="let element">
-      <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}">check</mat-icon>
+      <mat-icon *ngIf="!element.Cancel; else cancel" [ngStyle]="{'color':'green'}" matTooltip="Confirmé">check</mat-icon>
       <ng-template #cancel>
-        <mat-icon [ngStyle]="{'color':'red'}">cancel</mat-icon>
+        <mat-icon [ngStyle]="{'color':'red'}" matTooltip="Annulé">cancel</mat-icon>
       </ng-template>
     </mat-cell>
   </ng-container>
 
-  <!-- Button Column-->
+  <!-- List inscrit Column-->
   <ng-container matColumnDef="Info">
-    <mat-header-cell *matHeaderCellDef>
-      <mat-form-field>
-        <mat-select placeholder="Select Month" #matSelect [(ngModel)]="value">
-          <mat-option *ngFor="let month of months" [value]="month.num" >
-            {{month.name}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-
-    </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> List inscrit </mat-header-cell>
 
     <mat-cell *matCellDef="let element;let i = index" >
-      <button mat-flat-button  color="primary" matTooltip="Information">
+      <button mat-flat-button  color="primary" matTooltip="List inscrit">
         <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
       </button>
     </mat-cell>
 
   </ng-container>
 
-  <!-- Button 2 Column-->
+  <!-- Cancel Session Column-->
   <ng-container matColumnDef="Action">
 
-    <mat-header-cell *matHeaderCellDef>
-      <mat-form-field>
-        <mat-select placeholder="Select Year" #matSelect2 [(ngModel)]="year">
-          <mat-option *ngFor="let y of listYear" [value]="y" >
-            {{y}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Annulation / Suppression</mat-header-cell>
 
     <mat-cell *matCellDef="let element" >
-      <button mat-flat-button  color="primary" matTooltip="Inscription"
+      <button mat-flat-button  color="primary" matTooltip="Annuler"
               *ngIf="!element.Cancel; else replayBtn">
         <mat-icon [ngStyle]="{'color':'white'}" (click)="Cancel(element.Id)">
           cancel
@@ -73,11 +95,11 @@
       </button>
 
       <ng-template #replayBtn>
-        <button mat-flat-button  color="primary" matTooltip="Replay">
+        <button mat-flat-button  color="primary" matTooltip="Recréer">
           <mat-icon [ngStyle]="{'color':'white'}" (click)="Replay(element.Id)">replay</mat-icon>
         </button>
 
-        <button mat-flat-button class="delete" color="primary" matTooltip="Delete">
+        <button mat-flat-button class="delete" color="primary" matTooltip="Supprimer">
           <mat-icon [ngStyle]="{'color':'white'}" (click)="Delete(element.Id)">delete</mat-icon>
         </button>
 

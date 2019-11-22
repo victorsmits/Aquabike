@@ -2,14 +2,16 @@
   margin-left: 5%;
   width: 20px;
 }
+.select{
+  margin-left: 10%;
+}
+mat-select, input{
+  justify-content: center;
+  font-size: larger;
+}
 mat-tab{
   width : 100%
 }
-
-mat-form-field{
-  width: 100%;
-}
-
 form{
   display: flex;
   flex-direction: column;

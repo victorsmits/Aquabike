@@ -1,11 +1,11 @@
-import {Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import {MatSelect} from "@angular/material/select";
 import {AuthSignupData} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
+import {Router} from '@angular/router';
 
-//todo display sign up error
 //todo auto subscribe to session in function of his subscription
 
 @Component({
@@ -13,7 +13,7 @@ import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent {
+export class SignupComponent implements AfterViewInit, OnInit{
   isLoading = false;
   error;
 
@@ -47,7 +47,8 @@ export class SignupComponent {
     }
   };
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService,
+              private router : Router) { }
 
   onSignup(form: NgForm) {
     if (form.invalid) {
@@ -68,13 +69,19 @@ export class SignupComponent {
       passwordConfirmation: form.value.passwordConfirmation,
     };
 
-    console.log(authData);
+    this.authService.createUser(authData).subscribe((next)=>{
+      if(next["result"]){
+        this.router.navigate(['']);
+      }
+    },error1 => {
+      this.error = error1;
+    });
+  }
 
-    this.error = this.authService.createUser(authData);
+  ngAfterViewInit(): void {
+  }
 
-    console.log(this.error);
-
-    this.isLoading = true;
+  ngOnInit(): void {
   }
 
 }

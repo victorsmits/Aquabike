@@ -6,6 +6,7 @@ use App\Entity\Person;
 use App\Form\RegistrationFormType;
 use DateTime;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,7 +25,7 @@ class RegistrationControllerApi extends AbstractController
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return RedirectResponse|Response
-     * @throws \Exception
+     * @throws Exception
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -37,11 +38,11 @@ class RegistrationControllerApi extends AbstractController
         $errors = [];
         if($password != $passwordConfirmation)
         {
-            $errors[] = "Password does not match the password confirmation.";
+            $errors[] = "Le mot de passe et le mot de passe de confirmation ne correspondent pas.";
         }
-        if(strlen($password) < 2)
+        if(strlen($password) < 6)
         {
-            $errors[] = "Password should be at least 6 characters.";
+            $errors[] = "Le mot de passe doit être de minimum 6 caractères.";
         }
         if(!$errors)
         {
@@ -63,15 +64,15 @@ class RegistrationControllerApi extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($user);
                 $entityManager->flush();
-                return $this->json(['user' => $user]);
+                return new JsonResponse(['result' => true,'user' => $user]);
             }
             catch(UniqueConstraintViolationException $e)
             {
-                $errors = "The email or user provided already has an account!";
+                $errors[] = "Cette email ou nom d'utilisateur est déjà utilisé!";
             }
-            catch(\Exception $e)
+            catch(Exception $e)
             {
-                $errors = "Unable to save new user at this time.";
+                $errors[] = "Impossible de s'enregistrer actuellement!";
             }
         }
         return new JsonResponse([

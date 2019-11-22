@@ -4,7 +4,7 @@ import {Sessions} from "../Interface/Interface.module";
 import {ListPersonDialog} from "../month/month.component";
 
 import {MatSelect} from "@angular/material/select";
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatInput} from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -12,7 +12,6 @@ export interface Person  {
   user : JSON;
 }
 
-//todo add counter for bike in stock
 //todo display cancel + delete + recreate error
 
 @Component({
@@ -28,10 +27,12 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   public listPerson : Person[]=[];
   public listYear: number[]=[];
   public year: number;
+  private nbrDispBike: String = "9";
   public displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
-  @ViewChild('matSelect',{static:false})matSelect : MatSelect;
-  @ViewChild('matSelect2',{static:false})matSelect2 : MatSelect;
+  @ViewChild('matSelect',{static:false}) matSelect : MatSelect;
+  @ViewChild(MatInput,{static:false}) nbrBike : MatInput;
+  @ViewChild('matSelect2',{static:false}) matSelect2 : MatSelect;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   months = [
@@ -81,6 +82,8 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
+
+
   }
 
   initSession(urldata){
@@ -95,8 +98,9 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
+      let d = new Date(this.data[i]["Date"].split(' ')[0]);
       tempSess={
-        Date: this.data[i]["Date"].split(' ')[0],
+        Date: this.switchDate(d),
         Time: this.data[i]["time"].split(' ')[1],
         Bike: this.data[i]["bike"],
         Cancel: this.data[i]["Cancel"],
@@ -114,6 +118,20 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
+  switchDate(d : Date) : Date{
+    let j;
+    switch (d.getDay()) {
+      case 1:{j = "Lundi "; break}
+      case 2:{j = "Mardi "; break}
+      case 3:{j = "Mercredi "; break}
+      case 4:{j = "jeudi "; break}
+      case 5:{j = "Vendredi "; break}
+      case 6:{j = "Samedi "; break}
+      case 7:{j = "Dimanche "; break}
+    }
+    return j + d.getDate()
+  }
+
   openDialog(id): void {
     const dialogRef = this.dialog.open(ListPersonDialog, {
       width: '250px',
@@ -127,8 +145,9 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   }
 
   Replay(id: any) {
-    this.api.postRenewSess(id).subscribe(urldata=>{
+    this.api.postRenewSess(id, this.nbrBike.value).subscribe(urldata=>{
       if(urldata["result"]){
+        this.nbrDispBike = this.nbrBike.value;
         this.ngAfterViewInit();
       }
     })
@@ -149,5 +168,4 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
       }
     })
   }
-
 }

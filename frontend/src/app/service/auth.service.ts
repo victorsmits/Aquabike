@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Router } from '@angular/router';
-import {Subject, Observable} from 'rxjs';
+import {Subject, Observable, throwError} from 'rxjs';
 import {AuthLoginData, AuthSignupData, Sessions, User} from "../Interface/Interface.module";
 import {CookieService} from "ngx-cookie-service";
 import {ApiService} from "./api.service";
+import {catchError} from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root'})
@@ -40,11 +41,17 @@ export class AuthService {
   }
 
   createUser(authData : AuthSignupData) {
-    return this.http.post('https://localhost:8000/api/register', authData)
-      .subscribe(response => {
-          this.router.navigate(['']);
-      }
-      );
+    return this.http.post('https://localhost:8000/api/register', authData).pipe(
+      catchError(
+        (err : any) => {
+          if(err instanceof HttpErrorResponse){
+            return throwError(err.error.errors);
+          }else{
+            return throwError(err.message)
+          }
+        }
+      )
+    );
   }
 
   loginUser(username: string, password: string) {

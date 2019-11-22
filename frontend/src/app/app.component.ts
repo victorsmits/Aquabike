@@ -22,7 +22,6 @@ export class AppComponent implements OnInit,AfterViewInit {
   ngOnInit(){
     this.auth.getAuthStatusListener().subscribe(
     auth=>{
-      console.log(auth);
       if(auth){
         this.isAuth = this.auth.getIsAuth();
         this.user = this.auth.getCurrentUser();
@@ -35,17 +34,7 @@ export class AppComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit(){
-    this.auth.getAuthStatusListener().subscribe(
-    auth=>{
-      if(auth){
-        this.isAuth = this.auth.getIsAuth();
-        this.user = this.auth.getCurrentUser();
-      }
-    });
-    if(this.auth.getIsAuth()){
-      this.isAuth = this.auth.getIsAuth();
-      this.user = this.auth.getCurrentUser();
-    }
+    this.ngOnInit();
   }
 
   logout() {

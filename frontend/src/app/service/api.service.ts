@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from '@angular/common/http';
-import {AuthLoginData, editAbo, Inscription, Sessions} from '../Interface/Interface.module';
+import {AuthLoginData, AuthSignupData, editAbo, Inscription, Sessions} from '../Interface/Interface.module';
 import {Router} from "@angular/router";
 import {catchError} from 'rxjs/operators';
-import {Observable, throwError} from 'rxjs';
+import {Observable, Subject, throwError} from 'rxjs';
 
 
 @Injectable({
@@ -55,9 +55,9 @@ export class ApiService {
       catchError(this.handelError));
   }
 
-  postRenewSess(id){
+  postRenewSess(id,bike){
     let url = "https://127.0.0.1:8000/api/admin/recreate";
-    return this.http.post(url,{Id:id,Bike:9}).pipe(
+    return this.http.post(url,{Id:id,Bike:bike}).pipe(
       catchError(this.handelError));
   }
 
