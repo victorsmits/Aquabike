@@ -33,7 +33,7 @@ export interface User {
 }
 
 export interface Sessions{
-  Date : Date,
+  Date : string,
   Time : string,
   Bike : number,
   Cancel : boolean,
@@ -50,4 +50,16 @@ export interface editAbo {
   LastName: string,
   Id: number,
   aboType: number
+}
+
+export interface editProfileInterface {
+  id : number,
+  lastName: string,
+  firstName: string,
+  Email : string,
+  password : string,
+  Day: string,
+  Time: number,
+  Day2: string,
+  Time2: number,
 }

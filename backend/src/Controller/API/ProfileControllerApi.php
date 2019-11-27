@@ -1,17 +1,18 @@
 <?php
 
 namespace App\Controller\API;
+use App\Entity\Person;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Serializer\Encoder\JsonEncode;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
-
+use DateTime;
 /**
  *@Route("/api")
  */
@@ -53,21 +54,47 @@ class ProfileControllerApi extends AbstractController
         return $Profile;
     }
 
+
     /**
-     * @Route("/ProfileUnsub/{id}", name="api_ProfileUnsub")
-     * @param $id
-     * @return RedirectResponse
+     * @Route("/editProfile", name="api_edit_profile", methods={"POST"})
+     * @param Request $request
+     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @return JsonResponse
      */
-    public function removeInscription($id){
-        $entityManager = $this->getDoctrine()->getManager();
+    public function editProfile(Request $request, UserPasswordEncoderInterface $passwordEncoder){
+        try{
+            $entityManager = $this->getDoctrine()->getManager();
 
-        $inscription = $entityManager
-            ->getRepository('App:Inscription')
-            ->getInscriptionFromSessionId($id);
+            $data = json_decode($request->getContent(),true);
 
-        $entityManager->remove($inscription);
-        $entityManager->flush();
-        return $this->redirectToRoute('profile');
+            /**
+             * @var $userInfo Person
+             */
+            $userInfo = $entityManager
+                ->getRepository('App:Person')
+                ->find($data["id"]);
+
+            $userInfo->setEmail($data["Email"]);
+            $userInfo->setFirstName($data["firstName"]);
+            $userInfo->setLastName($data["lastName"]);
+            $userInfo->setDay($data['Day']);
+            $userInfo->setTime(new DateTime($data["Time"]));
+            $userInfo->setDay2($data['Day2']);
+            $userInfo->setTime2(new DateTime($data["Time2"]));
+
+            if($data["password"] != null){
+                $encodedPassword = $passwordEncoder->encodePassword($userInfo, $data['password']);
+                $userInfo->setLastName($encodedPassword);
+            }
+
+            $entityManager->persist($userInfo);
+            $entityManager->flush();
+            return new JsonResponse(["result"=> true], 200);
+
+        }catch (\Exception $e){
+            return new JsonResponse(["error"=> $e->getMessage()], 400);
+        }
+
     }
 
 

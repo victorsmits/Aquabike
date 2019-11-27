@@ -24,7 +24,7 @@ class RegistrationControllerApi extends AbstractController
      * @Route("/register", name="api_user_registration", methods={"POST","OPTIONS","GET"})
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
-     * @return RedirectResponse|Response
+     * @return Response
      * @throws Exception
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
@@ -75,8 +75,6 @@ class RegistrationControllerApi extends AbstractController
                 $errors[] = "Impossible de s'enregistrer actuellement!";
             }
         }
-        return new JsonResponse([
-            'errors' => $errors
-        ], 400);
+        return new JsonResponse(['errors' => $errors], 400);
     }
 }

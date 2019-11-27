@@ -83,7 +83,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   }
 
-//todo: test block sub when no more abonnement left or when session is full
 
   ngOnInit() {
     this.today = new Date();
@@ -157,29 +156,16 @@ export class MonthComponent implements OnInit, AfterViewInit {
     });
 
     this.listSession = [];
-    let tempSess : Sessions;
 
     this.listPerson = [];
-    let tempPers : Person;
 
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
-      let d = new Date(this.data[i]["Date"].split(' ')[0]);
-      tempSess={
-        Date: this.tool.switchDate(d),
-        Time: this.data[i]["time"].split(' ')[1],
-        Bike: this.data[i]["bike"],
-        Cancel: this.data[i]["Cancel"],
-        Id: this.data[i]["id"],
-      };
-
-      tempPers={
+      this.listSession.push( this.tool.initTempSess(this.data[i]));
+      this.listPerson.push({
         user : this.data[i]["idInscription"]
-      };
-
-      this.listSession.push(tempSess);
-      this.listPerson.push(tempPers);
+      });
     }
 
     this.dataSource = new MatTableDataSource(this.listSession);

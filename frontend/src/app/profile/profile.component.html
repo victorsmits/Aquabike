@@ -70,6 +70,9 @@
         <mat-card-title>
           <mat-icon>person</mat-icon>
           <span> {{User.lastName}} {{User.firstName}}</span>
+          <button mat-flat-button color="primary" matTooltip="Liste Participant" style="float : right">
+            <mat-icon (click)="openDialog()">edit</mat-icon>
+          </button>
         </mat-card-title>
         <mat-divider></mat-divider>
       </mat-list-item>

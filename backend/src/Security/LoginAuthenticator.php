@@ -51,19 +51,13 @@ class LoginAuthenticator extends AbstractGuardAuthenticator
     {
         switch ($exception->getMessageKey()){
             case "Username could not be found.":
-                return new JsonResponse([
-                    'error' => "Nom d'utilisateur incorrect"
-                ], 400);
+                return new JsonResponse(['error' => "Nom d'utilisateur incorrect"], 400);
 
             case "Invalid credentials.":
-                return new JsonResponse([
-                    'error' => "Mot de passe incorrect"
-                ], 400);
+                return new JsonResponse(['error' => "Mot de passe incorrect"], 400);
 
             default:
-                return new JsonResponse([
-                    'error' => $exception->getMessageKey()
-                ], 400);
+                return new JsonResponse(['error' => $exception->getMessageKey()], 400);
         }
     }
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
@@ -76,13 +70,11 @@ class LoginAuthenticator extends AbstractGuardAuthenticator
     // method gets called whenever an endpoint is hit that requires authentication
     public function start(Request $request, AuthenticationException $authException = null)
     {
-        return new JsonResponse([
-            'error' => 'Accès refusé'
-        ]);
+        return new JsonResponse(['error' => 'Accès refusé']);
     }
 
     public function supportsRememberMe()
     {
-        return false; // set to true if you want to use this method
+        return false;
     }
 }

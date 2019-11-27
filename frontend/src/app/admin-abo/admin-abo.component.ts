@@ -82,7 +82,6 @@ export class AdminAboComponent implements OnInit {
   }
 
 
-
   reSubcribe(id: any) {
     this.api.postAboRenew(id).subscribe(urldata=>{
       if(urldata["result"]){

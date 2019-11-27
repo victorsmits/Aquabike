@@ -1,11 +1,10 @@
 .edit{
-  margin-left: 5%;
   width: 20px;
 }
 mat-table{
-  margin: 5% 20% ;
+  margin : auto 5%;
   padding: 2%;
-  align-content: center;
+  justify-content: center;
 }
 
 mat-select{
@@ -13,15 +12,15 @@ mat-select{
 }
 
 mat-cell{
-  align-content: center;
-  font-size: small;
+  justify-content: space-between;
+  font-size: large;
 }
 
 mat-header-cell{
-  font-size: medium;
-  align-content: center;
+  font-size: larger;
+  justify-content: left;
 }
 
-mat-form-field{
-  width: 110px;
+.mat-column-ReSubscribe{
+  flex: 0 0 10%;
 }

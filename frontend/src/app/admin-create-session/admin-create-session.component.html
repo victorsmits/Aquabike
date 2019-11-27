@@ -1,6 +1,6 @@
 <mat-card>
-  <form (submit)="onCreate(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
-
+  <form (submit)="onCreate(signupForm)" #signupForm="ngForm">
+    <mat-error *ngIf="error">{{error}}</mat-error>
     <mat-form-field>
       <input matInput ngModel [matDatepicker]="picker" placeholder="Choose a date" name="date" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -18,7 +18,7 @@
              aria-label="Number of bike" type="number" required>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit" *ngIf="!isLoading">Add</button>
+    <button mat-raised-button color="primary" type="submit">Add</button>
 
   </form>
 

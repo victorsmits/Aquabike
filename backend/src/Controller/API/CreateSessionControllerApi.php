@@ -3,10 +3,9 @@
 namespace App\Controller\API;
 
 use App\Entity\Session;
-use App\Form\SessionType;
 use DateTime;
-use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,42 +17,48 @@ use Symfony\Component\Routing\Annotation\Route;
 class CreateSessionControllerApi extends AbstractController
 {
     /**
-     * @Route("/admin/session", name="api_create_session", methods={"POST"})
+     * @Route("/admin/session", name="api_create_session", methods={"POST","GET"})
      * @param Request $request
      * @return Response
-     * @throws \Exception
+     * @throws Exception
      */
     public function index(Request $request)
     {
         $session = new Session();
         $data = json_decode($request->getContent(), true);
+        $entityManager = $this->getDoctrine()->getManager();
 
-        $errors = [];
-        if(!$errors)
+        $date = new DateTime($data["Date"]);
+        dump($date->format("Y/m/d"));
+
+        $session->setDate(new DateTime($date->format("Y/m/d")));
+        $session->setTime(new DateTime($data["Time"]));
+        $session->setBike($data["Bike"]);
+
+        dump($session);
+
+        $listSessions = $entityManager
+            ->getRepository('App:Session')
+            ->findOneBy([
+                "Date" => new DateTime($date->format("Y/m/d")),
+                "time" => new DateTime($data["Time"])
+            ]);
+
+        try
         {
-            $session->setDate(new DateTime($data["Date"]));
-            $session->setTime(new DateTime($data["Time"]));
-            $session->setBike($data["Bike"]);
+            if(!empty($listSessions)){
+                throw new Exception("La session existe déjà");
+            }
 
-            try
-            {
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($session);
-                $entityManager->flush();
-                return new JsonResponse(['result' => true,'session' => $session], 200);
-            }
-            catch(UniqueConstraintViolationException $e)
-            {
-                $errors = "The email or user provided already has an account!";
-            }
-            catch(\Exception $e)
-            {
-                $errors = "Unable to save new user at this time.";
-            }
+            $entityManager->persist($session);
+            $entityManager->flush();
+            return new JsonResponse(['result' => true,'session' => $session], 200);
+        }
+        catch(Exception $e)
+        {
+            $error = $e->getMessage();
         }
 
-        return new JsonResponse([
-            'errors' => $errors
-        ], 400);
+        return new JsonResponse(['error' => $error], 400);
     }
 }

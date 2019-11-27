@@ -1,10 +1,68 @@
-import {AfterViewInit, Component, Inject, OnInit, ViewChild} from '@angular/core';
+import { Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {ApiService} from "../service/api.service";
 import {MatSelect} from "@angular/material/select";
-import {Inscription, Sessions, User} from "../Interface/Interface.module";
+import {editProfileInterface, Inscription, Sessions, User} from '../Interface/Interface.module';
 import {AuthService} from "../service/auth.service";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {NgForm} from '@angular/forms';
+import {ToolService} from '../service/tool.service';
 
 //todo display unsub error
+
+@Component({
+  selector: 'edit-profile',
+  templateUrl: './edit-profile.component.html',
+})
+export class EditProfileComponent implements OnInit{
+  days = this.tool.days;
+  day;
+  day2;
+  time2;
+
+  constructor(
+    public dialogRef: MatDialogRef<EditProfileComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: User,
+    private api : ApiService,
+    private tool : ToolService) {
+  }
+
+  @ViewChild('daySelect',{static:false}) daySelect: MatSelect;
+  @ViewChild('daySelect2',{static:false}) daySelect2: MatSelect;
+  @ViewChild('timeSelect',{static:false}) timeSelect: MatSelect;
+  @ViewChild('timeSelect2',{static:false}) timeSelect2: MatSelect;
+
+  ngOnInit(): void {
+    this.days.push({code:null,nom:null});
+    this.day = this.tool.invDaySwitch(this.data.Day);
+    this.day2 = this.tool.invDaySwitch(this.data.Day2);
+    this.time2 = this.data.Day2 == "00:00" ? null : this.data.Day2;
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  EditProfile(form : NgForm) {
+    let editProfile : editProfileInterface = {
+      id : this.data.id,
+      lastName : form.value.lastName,
+      firstName : form.value.firstName,
+      Email : form.value.Email,
+      password : form.value.password ? form.value.password : null,
+      Day: this.daySelect.value,
+      Time: form.value.time,
+      Day2: this.daySelect2.value ? this.daySelect2.value : null ,
+      Time2: form.value.sTime ? form.value.sTime : "00:00",
+    };
+
+    this.api.postEditProfile(editProfile).subscribe(result =>{
+      if(result){
+        this.dialogRef.close();
+      }
+    })
+  }
+
+}
 
 @Component({
   selector: 'app-profile',
@@ -38,7 +96,9 @@ export class ProfileComponent implements OnInit {
     {name : "decembre", num : 12},
   ];
   constructor(private api: ApiService,
-              private auth:AuthService){}
+              private auth:AuthService,
+              public dialog: MatDialog,){}
+
   ngOnInit() {
     this.today = new Date();
     this.year = this.today.getFullYear();
@@ -87,5 +147,16 @@ export class ProfileComponent implements OnInit {
 
   checkIfDisable(element) : boolean{
     return (element.Date === this.today.toDateString())
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(EditProfileComponent, {
+      width: '250px',
+      data: this.User
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit()
+    });
   }
 }

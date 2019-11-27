@@ -2,6 +2,8 @@
 
 namespace App\Controller\API;
 
+use App\Entity\Inscription;
+use App\Entity\Person;
 use DateTime;
 use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\ORMException;
@@ -39,7 +41,9 @@ class SessionAdministrationControllerApi extends AbstractController
         }
         $year = date('Y');
 
-        $listSession = $this->getSessionList($m,$year);
+        $em = $this->getDoctrine()->getManager();
+
+        $listSession = $em->getRepository('App:Session')->getMonthSessionList($month, $year);
 
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
@@ -100,12 +104,17 @@ class SessionAdministrationControllerApi extends AbstractController
      */
     public function cancelSession(Request $request, Swift_Mailer $mailer){
         $error = [];
-        $data = json_decode($request->getContent(), true);
-
+        /**
+         * @var $inscription Inscription
+         */
         try{
-            $listInscription = $this->findInscription($data["Id"]);
+            $data = json_decode($request->getContent(), true);
 
             $entityManager = $this->getDoctrine()->getManager();
+
+            $listInscription = $entityManager
+                ->getRepository('App:Inscription')
+                ->getInscriptionFromSessionId($data["Id"]);
 
             $session = $entityManager
                 ->getRepository('App:Session')
@@ -114,6 +123,7 @@ class SessionAdministrationControllerApi extends AbstractController
             if(!empty($listInscription)){
                 foreach ($listInscription as $inscription) {
                     $userId = $inscription->getIdPerson();
+
                     $user = $entityManager
                         ->getRepository('App:Person')
                         ->findOneBy(['id'=>$userId]);
@@ -141,7 +151,7 @@ class SessionAdministrationControllerApi extends AbstractController
         catch(Exception $e) {
             $error = $e->getMessage();
         }
-            return new JsonResponse(['error' => $error], 400);
+        return new JsonResponse(['error' => $error], 400);
     }
 
     /**
@@ -165,38 +175,7 @@ class SessionAdministrationControllerApi extends AbstractController
             $errors = $e;
         }
 
-        return new JsonResponse([
-            'errors' => $errors
-        ], 400);
+        return new JsonResponse(['error' => $errors], 400);
     }
-
-    public function findInscription($Id_session){
-        $inscription = $this->getDoctrine()
-            ->getRepository('App:Inscription')
-            ->findBy(array('Id_Session' => $Id_session));
-        return $inscription;
-    }
-
-    public function getSessionList($month, $year){
-        $em = $this->getDoctrine()->getManager();
-        // Create two times at the start of this month and next month
-        $startDate = DateTime::createFromFormat('d-n-Y', "01-".$month."-".$year);
-        $startDate->setTime(0, 0 ,0);
-
-        $endDate = DateTime::createFromFormat('d-n-Y', "01-".($month+1)."-".$year);
-        $endDate->setTime(0, 0, 0);
-
-        $notes = $em
-            ->getRepository('App:Session')
-            ->createQueryBuilder('n')
-            ->where('n.Date BETWEEN :start AND :end')
-            ->setParameter('start', $startDate)
-            ->setParameter('end', $endDate)
-            ->getQuery()
-            ->getResult();
-
-        return $notes;
-    }
-
 
 }

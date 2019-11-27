@@ -20,7 +20,7 @@ use Symfony\Component\Serializer\Serializer;
 class AbonnementControllerApi extends AbstractController
 {
     /**
-     * @Route("/abonnement", name="api_abonnement", methods={"GET","HEAD"})
+     * @Route("/abonnement", name="api_abonnement", methods={"GET ","HEAD"})
      */
     public function index()
     {
@@ -49,7 +49,7 @@ class AbonnementControllerApi extends AbstractController
 
 
     /**
-     * @Route("/renewAbo", name="api_renew", methods={"POST","OPTIONS","GET"})
+     * @Route("/renewAbo", name="api_renew", methods={"POST","HEAD","OPTIONS","GET"})
      * @param Request $request
      * @return JsonResponse
      */

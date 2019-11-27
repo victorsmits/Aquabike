@@ -5,6 +5,7 @@ import {MatSelect} from "@angular/material/select";
 import {AuthSignupData} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 import {Router} from '@angular/router';
+import {ToolService} from '../service/tool.service';
 
 //todo auto subscribe to session in function of his subscription
 
@@ -15,6 +16,8 @@ import {Router} from '@angular/router';
 })
 export class SignupComponent implements AfterViewInit, OnInit{
   isLoading = false;
+  darkTheme = this.tool.darkTheme;
+  days = this.tool.days;
   error;
 
   @ViewChild('daySelect',{static:false}) daySelect: MatSelect;
@@ -22,33 +25,10 @@ export class SignupComponent implements AfterViewInit, OnInit{
   @ViewChild('timeSelect',{static:false}) timeSelect: MatSelect;
   @ViewChild('timeSelect2',{static:false}) timeSelect2: MatSelect;
 
-  days=[
-    {code:"Mon",nom:"Lundi"},
-    {code:"Tue",nom:"Mardi"},
-    {code:"Wed",nom:"Mercredi"},
-    {code:"Thu",nom:"Jeudi"},
-    {code:"Fry",nom:"Vendredi"},
-    {code:"Sat",nom:"Samedi"},
-    {code:"Sun",nom:"Dimanche"},
-  ];
-
-  darkTheme: NgxMaterialTimepickerTheme = {
-    container: {
-      bodyBackgroundColor: '#424242',
-      buttonColor: '#fff'
-    },
-    dial: {
-      dialBackgroundColor: '#555',
-    },
-    clockFace: {
-      clockFaceBackgroundColor: '#555',
-      clockHandColor: '#9fbd90',
-      clockFaceTimeInactiveColor: '#fff'
-    }
-  };
 
   constructor(public authService: AuthService,
-              private router : Router) { }
+              private router : Router,
+              private tool : ToolService) { }
 
   onSignup(form: NgForm) {
     if (form.invalid) {

@@ -86,38 +86,27 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
-
-
   }
 
   initSession(urldata){
 
     this.listSession = [];
-    let tempSess : Sessions;
 
     this.listPerson = [];
-    let tempPers : Person;
 
 
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
-      let d = new Date(this.data[i]["Date"].split(' ')[0]);
-      tempSess={
-        Date: this.tool.switchDate(d),
-        Time: this.data[i]["time"].split(' ')[1],
-        Bike: this.data[i]["bike"],
-        Cancel: this.data[i]["Cancel"],
-        Id: this.data[i]["id"],
-      };
+      this.listSession.push(this.tool.initTempSess(this.data[i]));
 
-      tempPers={
+      this.listPerson.push({
         user : this.data[i]["idInscription"]
-      };
-
-      this.listSession.push(tempSess);
-      this.listPerson.push(tempPers);
+      });
     }
+
+    console.log(this.data);
+
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
   }
@@ -145,7 +134,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   }
 
   Cancel(id: any) {
-    this.api.postCancelSess(120).subscribe(urldata=>{
+    this.api.postCancelSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
       }

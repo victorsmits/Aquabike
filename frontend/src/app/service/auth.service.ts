@@ -90,7 +90,7 @@ export class AuthService {
       Day: this.tool.daySwith(this.data["Day"]),
       Time: this.data["Time"].split(' ')[1],
       Day2: this.tool.daySwith(this.data["Day2"]),
-      Time2: this.data["Time"].split(' ')[1],
+      Time2: this.data["Time2"].split(' ')[1],
       Email: this.data["Email"],
       Session: [],
       Role: this.data["roles"]
@@ -99,17 +99,9 @@ export class AuthService {
     let inscription = this.data["idInscription"];
 
     for(let i = 0; i < inscription.length; i++) {
-      let tempSess: Sessions;
-      tempSess={
-        Date:  new Date(inscription[i]["idSession"]["date"].split(' ')[0]),
-        Time: inscription[i]["idSession"]["time"].split(' ')[1],
-        Bike: inscription[i]["idSession"]["bike"],
-        Cancel: inscription[i]["idSession"]["Cancel"],
-        Id: inscription[i]["idSession"]["id"]
-      };
 
-      this.listSession.push(tempSess);
-      this.User.Session.push(tempSess);
+      this.listSession.push(this.tool.initTempSess(inscription[i]["idSession"]));
+      this.User.Session.push(this.tool.initTempSess(inscription[i]["idSession"]));
     }
     this.cookie.set('user',JSON.stringify(this.User));
     this.cookie.set('session',JSON.stringify(this.listSession));

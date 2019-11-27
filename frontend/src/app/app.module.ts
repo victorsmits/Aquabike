@@ -34,14 +34,13 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCardModule } from "@angular/material/card";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { SignupComponent } from './signup/signup.component';
-import { ProfileComponent } from './profile/profile.component';
+import {EditProfileComponent, ProfileComponent} from './profile/profile.component';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { AdminComponent } from './admin/admin.component';
 import { AdminSessionComponent } from './admin-session/admin-session.component';
 import {AdminAboComponent, ShowEditAboType} from './admin-abo/admin-abo.component';
 import { AdminCreateSessionComponent } from './admin-create-session/admin-create-session.component';
 import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
-import {MAT_MOMENT_DATE_FORMATS} from "@angular/material-moment-adapter";
 import {MatTabsModule} from "@angular/material/tabs";
 import {CookieService} from "ngx-cookie-service";
 
@@ -58,7 +57,8 @@ import {CookieService} from "ngx-cookie-service";
     AdminSessionComponent,
     AdminAboComponent,
     AdminCreateSessionComponent,
-    ShowEditAboType
+    ShowEditAboType,
+    EditProfileComponent
   ],
     imports: [
         BrowserModule,
@@ -93,14 +93,15 @@ import {CookieService} from "ngx-cookie-service";
   entryComponents: [
     MonthComponent,
     ListPersonDialog,
-    ShowEditAboType
+    ShowEditAboType,
+    EditProfileComponent
   ],
-  providers: [AuthService,
+  providers: [
+    AuthService,
     ApiService,
+    MatDialogModule,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } },
     MatDatepickerModule,
-    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
-    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
     CookieService
   ],
   bootstrap: [AppComponent]

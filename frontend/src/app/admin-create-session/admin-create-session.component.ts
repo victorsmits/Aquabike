@@ -3,6 +3,7 @@ import {NgForm} from "@angular/forms";
 import {NgxMaterialTimepickerTheme} from "ngx-material-timepicker";
 import {Sessions} from "../Interface/Interface.module";
 import {ApiService} from "../service/api.service";
+import {Router} from '@angular/router';
 
 //todo display create error
 
@@ -12,7 +13,7 @@ import {ApiService} from "../service/api.service";
   styleUrls: ['./admin-create-session.component.css']
 })
 export class AdminCreateSessionComponent implements OnInit {
-  isLoading: any;
+  private error: any;
 
   darkTheme: NgxMaterialTimepickerTheme = {
     container: {
@@ -29,21 +30,29 @@ export class AdminCreateSessionComponent implements OnInit {
     }
   };
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,
+              private router : Router) { }
 
   ngOnInit() {
   }
 
   onCreate(form: NgForm) {
     let newSess: Sessions;
+    let d = new Date(form.value.date);
     newSess={
-      Date : new Date(form.value.date),
+      Date : d.toDateString(),
       Time : form.value.time,
       Bike : form.value.bike,
       Cancel : false,
-      Id :0
+      Id : 0
     };
-    console.log(newSess);
-    this.api.createNewSess(newSess);
+
+    this.api.createNewSess(newSess).subscribe(urldata=>{
+      if(urldata['result']){
+        this.router.navigate(['admin/Session'])
+      }
+    },error =>{
+      this.error = error
+    } );
   }
 }

@@ -1,0 +1,45 @@
+<form (ngSubmit)="EditProfile(editForm)" #editForm="ngForm">
+  <mat-form-field>
+    <input matInput placeholder="Email" type="text" [(ngModel)]="data.Email"  name="Email" >
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="Nom" type="text" [(ngModel)]="data.lastName" name="lastName" >
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="Prenom" type="text" [(ngModel)]="data.firstName"  name="firstName" >
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput ngModel #passwordInput="ngModel" placeholder="Mot de passe" type="password" password name="password" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [(value)]="day" placeholder="Choisi le Jour" #daySelect>
+      <mat-option *ngFor="let day of days" [value]="day.code" >
+        {{day.nom}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.Time" ngModel placeholder="Choisit l'heure" name="time">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [(value)]="day2" placeholder="Choisi le second Jour" #daySelect2>
+      <mat-option *ngFor="let day of days" [value]="day.code" >
+        {{day.nom}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="time2" ngModel placeholder="Choisit l'heure" name="sTime">
+  </mat-form-field>
+
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button type="submit">Ok</button>
+
+</form>
