@@ -82,7 +82,7 @@ export class ToolService {
       case 1 : {j = "Lundi "; break}
       case 2 : {j = "Mardi "; break}
       case 3 : {j = "Mercredi "; break}
-      case 4 : {j = "jeudi "; break}
+      case 4 : {j = "Jeudi "; break}
       case 5 : {j = "Vendredi "; break}
       case 6 : {j = "Samedi "; break}
       case 0 : {j = "Dimanche "; break}

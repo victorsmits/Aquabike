@@ -14,10 +14,11 @@ import {ToolService} from '../service/tool.service';
   templateUrl: './edit-profile.component.html',
 })
 export class EditProfileComponent implements OnInit{
-  days = this.tool.days;
-  day;
-  day2;
-  time2;
+  private days = this.tool.days;
+  private day;
+  private day2;
+  private time2;
+  private error : string;
 
   constructor(
     public dialogRef: MatDialogRef<EditProfileComponent>,
@@ -59,9 +60,10 @@ export class EditProfileComponent implements OnInit{
       if(result){
         this.dialogRef.close();
       }
+    },error => {
+      this.error = error;
     })
   }
-
 }
 
 @Component({

@@ -4,6 +4,7 @@ import {NgxMaterialTimepickerTheme} from "ngx-material-timepicker";
 import {Sessions} from "../Interface/Interface.module";
 import {ApiService} from "../service/api.service";
 import {Router} from '@angular/router';
+import {delay} from 'rxjs/operators';
 
 //todo display create error
 
@@ -34,12 +35,12 @@ export class AdminCreateSessionComponent implements OnInit {
               private router : Router) { }
 
   ngOnInit() {
+    // this.generateSession(5);
   }
 
   onCreate(form: NgForm) {
-    let newSess: Sessions;
     let d = new Date(form.value.date);
-    newSess={
+    let newSess : Sessions ={
       Date : d.toDateString(),
       Time : form.value.time,
       Bike : form.value.bike,
@@ -49,10 +50,21 @@ export class AdminCreateSessionComponent implements OnInit {
 
     this.api.createNewSess(newSess).subscribe(urldata=>{
       if(urldata['result']){
-        this.router.navigate(['admin/Session'])
+        this.router.navigate(['admin/session'])
       }
     },error =>{
       this.error = error
     } );
   }
+
+  generateSession(year : number){
+    this.api.postGenerateSessionAuto(year,9).subscribe(urldata=>{
+      if(urldata['result']){
+        this.router.navigate(['admin/session'])
+      }
+    },error =>{
+      this.error = error
+    } );
+  }
+
 }

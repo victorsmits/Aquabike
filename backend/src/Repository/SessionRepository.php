@@ -37,6 +37,7 @@ class SessionRepository extends ServiceEntityRepository
             ->where('n.Date BETWEEN :start AND :end')
             ->setParameter('start', $startDate)
             ->setParameter('end', $endDate)
+            ->orderBy('n.Date','ASC')
             ->getQuery()
             ->getResult();
     }

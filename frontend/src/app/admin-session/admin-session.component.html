@@ -37,8 +37,13 @@
 
 <mat-divider></mat-divider>
 
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort matSortActive="Date"
-             matSortDirection="desc">
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+  <!-- Date Column -->
+  <ng-container matColumnDef="Id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Id}} </mat-cell>
+  </ng-container>
 
   <!-- Date Column -->
   <ng-container matColumnDef="Date">

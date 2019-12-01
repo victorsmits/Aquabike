@@ -1,4 +1,5 @@
 <form (ngSubmit)="EditProfile(editForm)" #editForm="ngForm">
+  <mat-select *ngIf="error"> {{error}}</mat-select>
   <mat-form-field>
     <input matInput placeholder="Email" type="text" [(ngModel)]="data.Email"  name="Email" >
   </mat-form-field>

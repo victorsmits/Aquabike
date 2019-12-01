@@ -90,7 +90,14 @@ export class ApiService {
   }
 
   postEditProfile(editProfile){
-    return this.http.post<{result : boolean}>('https://localhost:8000/api/editProfile', editProfile)
+    return this.http.post<{result : boolean}>('https://localhost:8000/api/editProfile', editProfile).pipe(
+      catchError(this.handelError));
+  }
+
+  postGenerateSessionAuto(year,bike){
+    let url = "https://127.0.0.1:8000/api/admin/createsession";
+    return this.http.post(url,{year:year,bike:bike}).pipe(
+      catchError(this.handelError));
   }
 
   handelError(err){
