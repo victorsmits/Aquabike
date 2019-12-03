@@ -23,13 +23,16 @@ export interface User {
   lastName: string,
   firstName: string,
   abonnement: number,
-  Day: string,
-  Time: number,
-  Day2: string,
-  Time2: number,
+  typeSessions : TypeSession[]
   Email: string,
   Session: Sessions[],
   Role: any
+}
+
+export interface TypeSession {
+  Id : number,
+  Day : string,
+  Time : string,
 }
 
 export interface Sessions{

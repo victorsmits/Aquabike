@@ -57,6 +57,8 @@ export class AdminCreateSessionComponent implements OnInit {
     } );
   }
 
+  //todo pop up to confirm 5 years generation
+  //todo generation en fonction du type de session
   generateSession(year : number){
     this.api.postGenerateSessionAuto(year,9).subscribe(urldata=>{
       if(urldata['result']){

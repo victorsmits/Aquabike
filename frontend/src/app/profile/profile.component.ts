@@ -8,6 +8,7 @@ import {NgForm} from '@angular/forms';
 import {ToolService} from '../service/tool.service';
 
 //todo display unsub error
+//todo display type abo
 
 @Component({
   selector: 'edit-profile',
@@ -33,10 +34,6 @@ export class EditProfileComponent implements OnInit{
   @ViewChild('timeSelect2',{static:false}) timeSelect2: MatSelect;
 
   ngOnInit(): void {
-    this.days.push({code:null,nom:null});
-    this.day = this.tool.invDaySwitch(this.data.Day);
-    this.day2 = this.tool.invDaySwitch(this.data.Day2);
-    this.time2 = this.data.Day2 == "00:00" ? null : this.data.Day2;
   }
 
   onNoClick(): void {

@@ -80,17 +80,13 @@ export class AuthService {
   initUser(data){
     this.listSession = [];
     this.data = JSON.parse(JSON.stringify(data));
-
     this.User = {
       id: this.data["id"],
       username : this.data["Username"],
       lastName: this.data["LastName"],
       firstName: this.data["FirstName"],
       abonnement: this.data["Abonnement"],
-      Day: this.tool.daySwith(this.data["Day"]),
-      Time: this.data["Time"].split(' ')[1],
-      Day2: this.tool.daySwith(this.data["Day2"]),
-      Time2: this.data["Time2"].split(' ')[1],
+      typeSessions : this.tool.initTypeSession(this.data["IdTypeSession"]),
       Email: this.data["Email"],
       Session: [],
       Role: this.data["roles"]
@@ -99,10 +95,10 @@ export class AuthService {
     let inscription = this.data["idInscription"];
 
     for(let i = 0; i < inscription.length; i++) {
-
       this.listSession.push(this.tool.initTempSess(inscription[i]["idSession"]));
       this.User.Session.push(this.tool.initTempSess(inscription[i]["idSession"]));
     }
+    console.log(this.User);
     this.cookie.set('user',JSON.stringify(this.User));
     this.cookie.set('session',JSON.stringify(this.listSession));
     this.cookie.set('connected',"true");

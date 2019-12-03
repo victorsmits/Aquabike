@@ -44,11 +44,6 @@ class Person implements \Serializable, UserInterface
     private $Abonnement;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Day;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Inscription", mappedBy="Id_Person")
      */
     private $Id_Inscription;
@@ -81,23 +76,14 @@ class Person implements \Serializable, UserInterface
     private $AboType;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\LienPersonTypeSession", mappedBy="IdPerson")
      */
-    private $Day2;
-
-    /**
-     * @ORM\Column(type="time")
-     */
-    private $Time;
-
-    /**
-     * @ORM\Column(type="time", nullable=true)
-     */
-    private $Time2;
+    private $IdTypeSession;
 
     public function __construct()
     {
         $this->Id_Inscription = new ArrayCollection();
+        $this->IdPerson = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -137,18 +123,6 @@ class Person implements \Serializable, UserInterface
     public function setAbonnement(int $Abonnement): self
     {
         $this->Abonnement = $Abonnement;
-
-        return $this;
-    }
-
-    public function getDay(): ?string
-    {
-        return $this->Day;
-    }
-
-    public function setDay(string $Day): self
-    {
-        $this->Day = $Day;
 
         return $this;
     }
@@ -335,38 +309,33 @@ class Person implements \Serializable, UserInterface
         return $this;
     }
 
-    public function getDay2(): ?string
+    /**
+     * @return Collection|LienPersonTypeSession[]
+     */
+    public function getIdTypeSession(): Collection
     {
-        return $this->Day2;
+        return $this->IdTypeSession;
     }
 
-    public function setDay2(?string $Day2): self
+    public function addIdTypeSession(LienPersonTypeSession $idPerson): self
     {
-        $this->Day2 = $Day2;
+        if (!$this->IdTypeSession->contains($idPerson)) {
+            $this->IdTypeSession[] = $idPerson;
+            $idPerson->setIdPerson($this);
+        }
 
         return $this;
     }
 
-    public function getTime(): ?\DateTimeInterface
+    public function removeIdTypeSession(LienPersonTypeSession $idPerson): self
     {
-        return $this->Time;
-    }
-
-    public function setTime(\DateTimeInterface $Time): self
-    {
-        $this->Time = $Time;
-
-        return $this;
-    }
-
-    public function getTime2(): ?\DateTimeInterface
-    {
-        return $this->Time2;
-    }
-
-    public function setTime2(?\DateTimeInterface $Time2): self
-    {
-        $this->Time2 = $Time2;
+        if ($this->IdTypeSession->contains($idPerson)) {
+            $this->IdTypeSession->removeElement($idPerson);
+            // set the owning side to null (unless already changed)
+            if ($idPerson->getIdPerson() === $this) {
+                $idPerson->setIdPerson(null);
+            }
+        }
 
         return $this;
     }

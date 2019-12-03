@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Sessions} from '../Interface/Interface.module';
+import {Sessions, TypeSession} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 
 export interface Days {
@@ -99,6 +99,21 @@ export class ToolService {
       Cancel: data["Cancel"],
       Id: data["id"],
     };
+  }
+
+  initTypeSession(data : JSON[]) : TypeSession[]{
+    let typeSession : TypeSession[] = [];
+    let tempTypeSess : TypeSession;
+    console.log(data);
+    for(let i = 0; i< data.length;i++){
+      tempTypeSess = {
+        Id : data[i]["IdTypeSession"]["id"],
+        Day : data[i]["IdTypeSession"]["day"],
+        Time : data[i]["IdTypeSession"]["time"].split(' ')[1]
+      };
+      typeSession.push(tempTypeSess);
+    }
+    return typeSession;
   }
 
 

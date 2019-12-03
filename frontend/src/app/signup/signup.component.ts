@@ -2,12 +2,15 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import {MatSelect} from "@angular/material/select";
-import {AuthSignupData} from '../Interface/Interface.module';
+import {AuthSignupData, Sessions, User} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 import {Router} from '@angular/router';
 import {ToolService} from '../service/tool.service';
+import {ApiService} from '../service/api.service';
+import {Person} from '../month/month.component';
 
 //todo auto subscribe to session in function of his subscription
+//todo modification base de donnée pour liaison entre type de session et utilisateur
 
 @Component({
   selector: 'app-signup',
@@ -17,6 +20,7 @@ import {ToolService} from '../service/tool.service';
 export class SignupComponent implements AfterViewInit, OnInit{
   isLoading = false;
   darkTheme = this.tool.darkTheme;
+  public user: User;
   days = this.tool.days;
   error;
 
@@ -28,7 +32,9 @@ export class SignupComponent implements AfterViewInit, OnInit{
 
   constructor(public authService: AuthService,
               private router : Router,
-              private tool : ToolService) { }
+              private tool : ToolService,
+              private api : ApiService,
+              private auth : AuthService) { }
 
   onSignup(form: NgForm) {
     if (form.invalid) {
@@ -63,5 +69,31 @@ export class SignupComponent implements AfterViewInit, OnInit{
 
   ngOnInit(): void {
   }
+
+  // autoInscription(urldata){
+  //   this.api.getHomeJson().subscribe(urldata =>{
+  //     let data = JSON.parse(JSON.stringify(urldata));
+  //     let listSession : Sessions[] = [];
+  //     let listPerson : Person[] = [];
+  //
+  //     for(let i = 0; i < data.length; i++){
+  //       listSession.push( this.tool.initTempSess(data[i]));
+  //       listPerson.push({
+  //         user : data[i]["idInscription"]
+  //       });
+  //     }
+  //
+  //     for(let session : Sessions in listSession){
+  //       this.api.getProfileJson(this.user.username).subscribe(data=>{
+  //         this.auth.initUser(data);
+  //         this.user = this.auth.getCurrentUser();
+  //
+  //         if((this.user.Day == session.Date))
+  //
+  //       });
+  //     }
+  //   })
+  //
+  // }
 
 }
