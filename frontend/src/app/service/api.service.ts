@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from '@angular/common/http';
-import {AuthLoginData, AuthSignupData, editAbo, Inscription, Sessions} from '../Interface/Interface.module';
+import {AuthLoginData, AuthSignupData, editAbo, Inscription, Sessions, TypeSession} from '../Interface/Interface.module';
 import {Router} from "@angular/router";
 import {catchError} from 'rxjs/operators';
 import {Observable, Subject, throwError} from 'rxjs';
@@ -97,6 +97,30 @@ export class ApiService {
   postGenerateSessionAuto(year,bike){
     let url = "https://127.0.0.1:8000/api/admin/createsession";
     return this.http.post(url,{year:year,bike:bike}).pipe(
+      catchError(this.handelError));
+  }
+
+  getTypeSession(){
+    let url = "https://127.0.0.1:8000/api/TypeSession/get";
+    return this.http.get(url).pipe(
+      catchError(this.handelError));
+  }
+
+  delTypeSession(Id : number){
+    let url = "https://127.0.0.1:8000/api/TypeSession/del";
+    return this.http.post(url,{Id : Id}).pipe(
+      catchError(this.handelError));
+  }
+
+  addTypeSession(typeSession : TypeSession){
+    let url = "https://127.0.0.1:8000/api/TypeSession/add";
+    return this.http.post(url,typeSession).pipe(
+      catchError(this.handelError));
+  }
+
+  editTypeSession(typeSession : TypeSession){
+    let url = "https://127.0.0.1:8000/api/TypeSession/edit";
+    return this.http.post(url,typeSession).pipe(
       catchError(this.handelError));
   }
 

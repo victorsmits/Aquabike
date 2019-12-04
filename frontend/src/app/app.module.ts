@@ -25,7 +25,7 @@ import {
   MatRippleModule
 } from "@angular/material/core";
 import { MatListModule } from "@angular/material/list";
-import {MatDialogModule, MatSortModule} from '@angular/material';
+import {MatCheckboxModule, MatDialogModule, MatSortModule} from '@angular/material';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material/dialog";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatDatepickerModule } from "@angular/material/datepicker";
@@ -43,6 +43,7 @@ import { AdminCreateSessionComponent } from './admin-create-session/admin-create
 import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
 import {MatTabsModule} from "@angular/material/tabs";
 import {CookieService} from "ngx-cookie-service";
+import {AddTypeSessionComponent, TypeSessionComponent} from './type-session/type-session.component';
 
 @NgModule({
   declarations: [
@@ -58,43 +59,48 @@ import {CookieService} from "ngx-cookie-service";
     AdminAboComponent,
     AdminCreateSessionComponent,
     ShowEditAboType,
-    EditProfileComponent
+    EditProfileComponent,
+    TypeSessionComponent,
+    AddTypeSessionComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatTableModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatRippleModule,
-    MatListModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    MatTooltipModule,
-    MatDatepickerModule,
-    MatInputModule,
-    MatNativeDateModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    MatGridListModule,
-    NgxMaterialTimepickerModule,
-    MatTabsModule,
-    MatSortModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatTableModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatExpansionModule,
+        MatRippleModule,
+        MatListModule,
+        MatDialogModule,
+        BrowserAnimationsModule,
+        MatTooltipModule,
+        MatDatepickerModule,
+        MatInputModule,
+        MatNativeDateModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatProgressSpinnerModule,
+        MatGridListModule,
+        NgxMaterialTimepickerModule,
+        MatTabsModule,
+        MatSortModule,
+        MatCheckboxModule,
+
+    ],
   entryComponents: [
     MonthComponent,
     ListPersonDialog,
     ShowEditAboType,
-    EditProfileComponent
+    EditProfileComponent,
+    AddTypeSessionComponent
   ],
   providers: [
     AuthService,

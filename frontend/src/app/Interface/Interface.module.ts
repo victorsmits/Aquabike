@@ -4,10 +4,7 @@ export interface AuthSignupData {
   Nom: string;
   Prenom: string;
   Abonnement: number;
-  Jour: string;
-  Time: string;
-  Jour2: string;
-  Time2: string;
+  typeSessions : TypeSession[]
   password: string;
   passwordConfirmation: string;
 }

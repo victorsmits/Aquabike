@@ -103,15 +103,12 @@ export class ToolService {
 
   initTypeSession(data : JSON[]) : TypeSession[]{
     let typeSession : TypeSession[] = [];
-    let tempTypeSess : TypeSession;
-    console.log(data);
-    for(let i = 0; i< data.length;i++){
-      tempTypeSess = {
-        Id : data[i]["IdTypeSession"]["id"],
-        Day : data[i]["IdTypeSession"]["day"],
-        Time : data[i]["IdTypeSession"]["time"].split(' ')[1]
-      };
-      typeSession.push(tempTypeSess);
+    for(let i = 0; i < data.length;i++){
+      typeSession.push({
+        Id : data[i]["id"],
+        Day : this.daySwith(data[i]["Day"]),
+        Time : data[i]["Time"].split(' ')[1]
+      });
     }
     return typeSession;
   }

@@ -11,6 +11,7 @@ import {AdminAboComponent} from "./admin-abo/admin-abo.component";
 import {AdminCreateSessionComponent} from "./admin-create-session/admin-create-session.component";
 import {AuthGuard} from './guard/auth.guard';
 import {AdminGuard} from './guard/admin.guard';
+import {TypeSessionComponent} from './type-session/type-session.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,11 @@ const routes: Routes = [
   {
     path:'admin/Session/Create',
     component : AdminCreateSessionComponent,
+    canActivate : [AdminGuard]
+  },
+  {
+    path:'admin/Session/Type',
+    component : TypeSessionComponent,
     canActivate : [AdminGuard]
   },
 

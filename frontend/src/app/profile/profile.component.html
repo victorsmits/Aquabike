@@ -92,8 +92,7 @@
 
         <mat-list-item>
           <h3>Jour</h3>
-          <p>{{User.Day}} {{User.Time}}</p>
-          <p *ngIf="User.Day2">{{User.Day2}} {{User.Time2}}</p>
+            <p *ngFor="let sess of User.typeSessions">{{sess.Day}} {{sess.Time}}</p>
           <mat-divider></mat-divider>
         </mat-list-item>
       </mat-card-content>

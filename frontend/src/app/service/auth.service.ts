@@ -86,13 +86,20 @@ export class AuthService {
       lastName: this.data["LastName"],
       firstName: this.data["FirstName"],
       abonnement: this.data["Abonnement"],
-      typeSessions : this.tool.initTypeSession(this.data["IdTypeSession"]),
+      typeSessions : [],
       Email: this.data["Email"],
       Session: [],
       Role: this.data["roles"]
     };
 
     let inscription = this.data["idInscription"];
+    for(let typeSess of this.data["IdTypeSession"]){
+     this.User.typeSessions.push({
+        Id : typeSess["IdTypeSession"]["id"],
+        Day : this.tool.daySwith(typeSess["IdTypeSession"]["day"]),
+        Time : typeSess["IdTypeSession"]["time"].split(' ')[1]
+      });
+    }
 
     for(let i = 0; i < inscription.length; i++) {
       this.listSession.push(this.tool.initTempSess(inscription[i]["idSession"]));

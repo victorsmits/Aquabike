@@ -31,11 +31,11 @@ class TypeSession
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\LienPersonTypeSession", mappedBy="IdTypeSession")
      */
-    private $IdTypeSession;
+    private $IdLienTypeSession;
 
     public function __construct()
     {
-        $this->IdTypeSession = new ArrayCollection();
+        $this->IdLienTypeSession = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -72,13 +72,13 @@ class TypeSession
      */
     public function getIdTypeSession(): Collection
     {
-        return $this->IdTypeSession;
+        return $this->IdLienTypeSession;
     }
 
     public function addIdTypeSession(LienPersonTypeSession $idTypeSession): self
     {
-        if (!$this->IdTypeSession->contains($idTypeSession)) {
-            $this->IdTypeSession[] = $idTypeSession;
+        if (!$this->IdLienTypeSession->contains($idTypeSession)) {
+            $this->IdLienTypeSession[] = $idTypeSession;
             $idTypeSession->setIdTypeSession($this);
         }
 
@@ -87,8 +87,8 @@ class TypeSession
 
     public function removeIdTypeSession(LienPersonTypeSession $idTypeSession): self
     {
-        if ($this->IdTypeSession->contains($idTypeSession)) {
-            $this->IdTypeSession->removeElement($idTypeSession);
+        if ($this->IdLienTypeSession->contains($idTypeSession)) {
+            $this->IdLienTypeSession->removeElement($idTypeSession);
             // set the owning side to null (unless already changed)
             if ($idTypeSession->getIdTypeSession() === $this) {
                 $idTypeSession->setIdTypeSession(null);
