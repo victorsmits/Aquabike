@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Person;
+use App\Entity\TypeSession;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -25,4 +26,5 @@ class PersonRepository extends ServiceEntityRepository
     public function getPersonFromId($idPerson){
         return $this->findOneBy(array('id' => $idPerson));
     }
+
 }

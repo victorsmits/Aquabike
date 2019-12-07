@@ -19,22 +19,19 @@ class TypeSessionRepository extends ServiceEntityRepository
         parent::__construct($registry, TypeSession::class);
     }
 
-    // /**
-    //  * @return TypeSession[] Returns an array of TypeSession objects
-    //  */
-    /*
-    public function findByExampleField($value)
+     /**
+      * @return TypeSession[] Returns an array of TypeSession objects
+      */
+    public function getIdTypeSessionList()
     {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
+        return $this
+            ->createQueryBuilder('t')
+            ->select('t.id')
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?TypeSession

@@ -111,9 +111,9 @@ export class ProfileComponent implements OnInit {
   }
 
   switchDate(d) : string{
-    d = new Date(d);
+    let date = new Date(d);
     let j;
-    switch (d.getDay()) {
+    switch (date.getDay()) {
       case 1:{j = "Lundi "; break}
       case 2:{j = "Mardi "; break}
       case 3:{j = "Mercredi "; break}
@@ -123,7 +123,7 @@ export class ProfileComponent implements OnInit {
       case 7:{j = "Dimanche "; break}
     }
     let months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
-    return j + d.getDate() + " " +  months[d.getMonth()+1] + " " + d.getFullYear()
+    return j + date.getDate() + " " +  months[date.getMonth()+1] + " " + date.getFullYear()
   }
 
   getYear(){
@@ -132,7 +132,7 @@ export class ProfileComponent implements OnInit {
   }
 
   unSubscribe(Id: number) {
-    let tempInscription : Inscription={
+    let tempInscription : Inscription = {
       Username:this.User.username,
       Id: Id
     };

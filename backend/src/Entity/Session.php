@@ -50,6 +50,12 @@ class Session
      */
     private $Cancel;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\TypeSession", inversedBy="Sessions")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $IdTypeSession;
+
     public function __construct()
     {
         $this->Id_Inscription = new ArrayCollection();
@@ -135,6 +141,18 @@ class Session
     public function setCancel(?bool $Cancel): self
     {
         $this->Cancel = $Cancel;
+
+        return $this;
+    }
+
+    public function getIdTypeSession(): ?TypeSession
+    {
+        return $this->IdTypeSession;
+    }
+
+    public function setIdTypeSession(?TypeSession $IdTypeSession): self
+    {
+        $this->IdTypeSession = $IdTypeSession;
 
         return $this;
     }

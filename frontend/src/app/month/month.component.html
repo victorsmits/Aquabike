@@ -31,7 +31,7 @@
   <!-- Date Column -->
   <ng-container matColumnDef="Date">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{element.Date}}</mat-cell>
+    <mat-cell *matCellDef="let element">{{tool.daySwith(element.Date)}}</mat-cell>
   </ng-container>
 
   <!-- Time Column -->

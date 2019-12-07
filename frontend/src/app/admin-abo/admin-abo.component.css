@@ -12,13 +12,13 @@ mat-select{
 }
 
 mat-cell{
-  justify-content: space-between;
+  justify-content: center;
   font-size: large;
 }
 
 mat-header-cell{
   font-size: larger;
-  justify-content: left;
+  justify-content: center;
 }
 
 .mat-column-ReSubscribe{

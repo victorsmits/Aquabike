@@ -1,0 +1,51 @@
+<mat-table [dataSource]="listTypeSession" class="mat-elevation-z8">
+
+  <!-- Date Column -->
+  <ng-container matColumnDef="Day">
+    <mat-header-cell *matHeaderCellDef> Jour </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Day}} </mat-cell>
+  </ng-container>
+
+  <!-- Time Column -->
+  <ng-container matColumnDef="Time">
+    <mat-header-cell *matHeaderCellDef> Heure </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Time}} </mat-cell>
+  </ng-container>
+
+  <!-- Cancel Session Column-->
+  <ng-container matColumnDef="Action">
+
+    <mat-header-cell *matHeaderCellDef>
+      <mat-error *ngIf="error"> {{ error }}</mat-error>
+      Modification / Suppression
+    </mat-header-cell>
+
+    <mat-cell *matCellDef="let element: let i = index" >
+      <button mat-flat-button  color="primary" matTooltip="Modification">
+        <mat-icon [ngStyle]="{'color':'white'}" (click)="openEditDialog(i)">edit</mat-icon>
+      </button>
+
+      <button mat-flat-button class="delete" color="primary" matTooltip="Suppression">
+        <mat-icon [ngStyle]="{'color':'white'}" (click)="Delete(element.Id)">delete</mat-icon>
+      </button>
+
+    </mat-cell>
+  </ng-container>
+
+  <!-- Cancel Session Column-->
+  <ng-container matColumnDef="Add">
+
+    <mat-header-cell *matHeaderCellDef>
+      <button mat-flat-button class="delete" color="primary" matTooltip="Ajout" (click)="openDialog()">
+        <span>Ajout d'une session </span>
+        <mat-icon [ngStyle]="{'color':'white'}" >add</mat-icon>
+      </button>
+    </mat-header-cell>
+
+    <mat-cell *matCellDef="let element" ></mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>

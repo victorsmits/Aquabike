@@ -2,10 +2,14 @@
 
 namespace App\Repository;
 
+use App\Entity\Inscription;
+use App\Entity\Person;
 use App\Entity\Session;
 use DateTime;
+use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @method Session|null find($id, $lockMode = null, $lockVersion = null)
@@ -42,8 +46,21 @@ class SessionRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function getALlSessionListFromToday($today){
+
+        return $this
+            ->createQueryBuilder('n')
+            ->where('n.Date >= :start')
+            ->setParameter('start', $today)
+            ->orderBy('n.Date','ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
     public function getTodayIdSession(){
         $today = new \DateTime('now');
         return $this->findBy(array('Date' => $today));
     }
+
+
 }

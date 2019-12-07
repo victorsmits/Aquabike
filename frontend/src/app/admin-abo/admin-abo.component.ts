@@ -39,7 +39,7 @@ export class ShowEditAboType {
 export class AdminAboComponent implements OnInit {
   public data: JSON[]=[];
   public listUser: Person[]=[];
-  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','Day','ReSubscribe'];
+  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','ReSubscribe'];
   public dataSource: MatTableDataSource<Person>;
 
   constructor(private api:ApiService,
@@ -66,7 +66,7 @@ export class AdminAboComponent implements OnInit {
         lastName: this.data[i]["LastName"],
         firstName: this.data[i]["FirstName"],
         abonnement: this.data[i]["Abonnement"],
-        typeSessions : this.tool.initTypeSession(this.data["IdTypeSession"]),
+        typeSessions : this.data[i]["IdTypeSession"].length > 0 ? this.tool.initTypeSession(this.data[i]["IdTypeSession"]): [],
         Email: this.data[i]["Email"],
         Session: [],
         Role: this.data[i]["roles"],

@@ -55,11 +55,13 @@ export class SignupComponent implements AfterViewInit, OnInit{
       passwordConfirmation: form.value.passwordConfirmation,
     };
 
+
     for(let session of this.listTypeSession){
-      if(this.listTypeSessionId.findIndex(session.Id.toString)){
+      if(this.listTypeSessionId.indexOf(session.Id) != -1){
         authData.typeSessions.push(session);
       }
     }
+    console.log(authData);
 
     this.authService.createUser(authData).subscribe((next)=>{
       if(next["result"]){
@@ -80,37 +82,12 @@ export class SignupComponent implements AfterViewInit, OnInit{
     })
   }
 
-  // autoInscription(urldata){
-  //   this.api.getHomeJson().subscribe(urldata =>{
-  //     let data = JSON.parse(JSON.stringify(urldata));
-  //     let listSession : Sessions[] = [];
-  //     let listPerson : Person[] = [];
-  //
-  //     for(let i = 0; i < data.length; i++){
-  //       listSession.push( this.tool.initTempSess(data[i]));
-  //       listPerson.push({
-  //         user : data[i]["idInscription"]
-  //       });
-  //     }
-  //
-  //     for(let session : Sessions in listSession){
-  //       this.api.getProfileJson(this.user.username).subscribe(data=>{
-  //         this.auth.initUser(data);
-  //         this.user = this.auth.getCurrentUser();
-  //
-  //         if((this.user.Day == session.Date))
-  //
-  //       });
-  //     }
-  //   })
-  //
-  // }
-
   addTypeSession(Id: number) {
-    if (this.listTypeSessionId.indexOf(Id) != null){
+    if (this.listTypeSessionId.indexOf(Id) != -1){
       this.listTypeSessionId.splice(this.listTypeSessionId.indexOf(Id),1);
     }else{
       this.listTypeSessionId.push(Id);
     }
+    console.log(this.listTypeSessionId);
   }
 }

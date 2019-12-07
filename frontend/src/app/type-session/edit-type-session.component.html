@@ -1,0 +1,16 @@
+<form #form="ngForm">
+  <mat-form-field>
+    <mat-select placeholder="Choisi le Jour" #daySelect [(value)]="selectDay">
+      <mat-option *ngFor="let day of days" [value]="day.code" >
+        {{day.nom}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="stime" [(ngModel)]="data.Time" placeholder="Choisit l'heure">
+  </mat-form-field>
+
+  <button mat-button (click)=Edit(form)>Ok</button>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+</form>

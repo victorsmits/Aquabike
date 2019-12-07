@@ -76,7 +76,7 @@ export class ToolService {
     return j
   }
 
-  switchDate(d : Date){
+  switchDate(d : Date) : string{
     let j : string;
     switch (d.getDay()) {
       case 1 : {j = "Lundi "; break}
@@ -87,13 +87,13 @@ export class ToolService {
       case 6 : {j = "Samedi "; break}
       case 0 : {j = "Dimanche "; break}
     }
-    return j
+    return j + d.getDate()
   }
 
   initTempSess(data : JSON) : Sessions{
     let d = new Date(data["Date"]);
     return {
-      Date: this.switchDate(d) + d.getDate().toString(),
+      Date: d.toISOString(),
       Time: data["time"].split(' ')[1],
       Bike: data["bike"],
       Cancel: data["Cancel"],

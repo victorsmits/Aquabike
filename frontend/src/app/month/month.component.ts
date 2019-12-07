@@ -83,7 +83,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   }
 
-
   ngOnInit() {
     this.today = new Date();
     this.value = this.today.getMonth()+1;
@@ -110,10 +109,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
       this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
         this.initSession(urldata);
       });
-    });
-
-    this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
-      this.initSession(urldata);
     });
   }
 
@@ -162,7 +157,8 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
-      this.listSession.push( this.tool.initTempSess(this.data[i]));
+      console.log(this.data[i]);
+      this.listSession.push(this.tool.initTempSess(this.data[i]));
       this.listPerson.push({
         user : this.data[i]["idInscription"]
       });

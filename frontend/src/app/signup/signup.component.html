@@ -31,9 +31,11 @@
       </mat-form-field>
 
       <ng-container>
-        <mat-checkbox *ngFor="let session of listTypeSession" (change)="addTypeSession(session.Id)">
-          {{session.Day}} {{session.Time}}
-        </mat-checkbox>
+        <ul *ngFor="let session of listTypeSession" >
+          <mat-checkbox (change)="addTypeSession(session.Id)">
+            {{session.Day}} {{session.Time}}
+          </mat-checkbox>
+        </ul>
       </ng-container>
 
       <mat-form-field>

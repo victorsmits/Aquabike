@@ -33,9 +33,15 @@ class TypeSession
      */
     private $IdLienTypeSession;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="IdTypeSession")
+     */
+    private $Sessions;
+
     public function __construct()
     {
         $this->IdLienTypeSession = new ArrayCollection();
+        $this->Sessions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -92,6 +98,37 @@ class TypeSession
             // set the owning side to null (unless already changed)
             if ($idTypeSession->getIdTypeSession() === $this) {
                 $idTypeSession->setIdTypeSession(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Session[]
+     */
+    public function getSessions(): Collection
+    {
+        return $this->Sessions;
+    }
+
+    public function addSession(Session $session): self
+    {
+        if (!$this->Sessions->contains($session)) {
+            $this->Sessions[] = $session;
+            $session->setIdTypeSession($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSession(Session $session): self
+    {
+        if ($this->Sessions->contains($session)) {
+            $this->Sessions->removeElement($session);
+            // set the owning side to null (unless already changed)
+            if ($session->getIdTypeSession() === $this) {
+                $session->setIdTypeSession(null);
             }
         }
 

@@ -32,7 +32,8 @@ class AbonnementControllerApi extends AbstractController
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idInscription'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idInscription',
+                'plainPassword','Password','salt'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
         ];

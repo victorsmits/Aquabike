@@ -39,11 +39,13 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { AdminComponent } from './admin/admin.component';
 import { AdminSessionComponent } from './admin-session/admin-session.component';
 import {AdminAboComponent, ShowEditAboType} from './admin-abo/admin-abo.component';
-import { AdminCreateSessionComponent } from './admin-create-session/admin-create-session.component';
+import {AdminCreateSessionComponent, ConfimGenerationComponent} from './admin-create-session/admin-create-session.component';
 import {NgxMaterialTimepickerModule} from "ngx-material-timepicker";
 import {MatTabsModule} from "@angular/material/tabs";
 import {CookieService} from "ngx-cookie-service";
-import {AddTypeSessionComponent, TypeSessionComponent} from './type-session/type-session.component';
+import {TypeSessionComponent} from './type-session/type-session.component';
+import {AddTypeSessionComponent} from './type-session/add-type-session.component';
+import {EditTypeSessionComponent} from './type-session/edit-type-session.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import {AddTypeSessionComponent, TypeSessionComponent} from './type-session/type
     ShowEditAboType,
     EditProfileComponent,
     TypeSessionComponent,
-    AddTypeSessionComponent
+    AddTypeSessionComponent,
+    ConfimGenerationComponent,
+    EditTypeSessionComponent
   ],
     imports: [
         BrowserModule,
@@ -100,7 +104,9 @@ import {AddTypeSessionComponent, TypeSessionComponent} from './type-session/type
     ListPersonDialog,
     ShowEditAboType,
     EditProfileComponent,
-    AddTypeSessionComponent
+    AddTypeSessionComponent,
+    ConfimGenerationComponent,
+    EditTypeSessionComponent
   ],
   providers: [
     AuthService,

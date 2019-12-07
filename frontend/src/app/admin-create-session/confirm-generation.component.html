@@ -1,0 +1,18 @@
+<div *ngIf="!isLoading ; else loading">
+  <h3>Génération automatique de sessions</h3>
+  <form #form="ngForm">
+    <mat-form-field>
+      <label>
+        <input matInput placeholder="nombre d'année" type="number" ngModel value="5" name="year">
+      </label>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="generateSession(form)"> je confirme la génération </button>
+    <button mat-raised-button color="primary" style="margin-top: 10px" (click)="onNoClick()"> annuler </button>
+  </form>
+</div>
+
+<ng-template #loading>
+  <div style="justify-content: center">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

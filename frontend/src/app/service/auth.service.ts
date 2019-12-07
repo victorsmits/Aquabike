@@ -15,7 +15,6 @@ export class AuthService {
   private isAuthenticated = false;
   private authStatusListener : Subject<boolean> = new Subject<boolean>(); // just need to know if user is authenticated
   private data: JSON[];
-  private listSession: Sessions[]=[];
   private User: User;
   private errorListener : Subject<String> =  new Subject<String>();
 
@@ -78,7 +77,6 @@ export class AuthService {
   }
 
   initUser(data){
-    this.listSession = [];
     this.data = JSON.parse(JSON.stringify(data));
     this.User = {
       id: this.data["id"],
@@ -96,18 +94,16 @@ export class AuthService {
     for(let typeSess of this.data["IdTypeSession"]){
      this.User.typeSessions.push({
         Id : typeSess["IdTypeSession"]["id"],
-        Day : this.tool.daySwith(typeSess["IdTypeSession"]["day"]),
+        Day : this.tool.daySwith(typeSess["day"]),
         Time : typeSess["IdTypeSession"]["time"].split(' ')[1]
       });
     }
 
     for(let i = 0; i < inscription.length; i++) {
-      this.listSession.push(this.tool.initTempSess(inscription[i]["idSession"]));
       this.User.Session.push(this.tool.initTempSess(inscription[i]["idSession"]));
     }
     console.log(this.User);
     this.cookie.set('user',JSON.stringify(this.User));
-    this.cookie.set('session',JSON.stringify(this.listSession));
     this.cookie.set('connected',"true");
 
   }

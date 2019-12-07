@@ -2,8 +2,10 @@
 
 namespace App\Controller\API;
 
+use App\Entity\Inscription;
 use App\Entity\LienPersonTypeSession;
 use App\Entity\Person;
+use App\Entity\Session;
 use App\Entity\TypeSession;
 use App\Form\RegistrationFormType;
 use DateTime;
@@ -75,9 +77,10 @@ class RegistrationControllerApi extends AbstractController
                 $user = $entityManager
                     ->getRepository('App:Person')
                     ->getPersonFromUsername($data['username']);
+                $IdTypeSessions[] = [];
                 for ($i = 0; $i < count($data["typeSessions"]); $i++){
+                    array_push($IdTypeSessions,$data["typeSessions"][$i]["Id"]);
                     $ltp =  new LienPersonTypeSession();
-                    echo($i);
 
                     $typeSession = $entityManager->getRepository('App:TypeSession')
                         ->find($data["typeSessions"][$i]["Id"]);
@@ -88,6 +91,38 @@ class RegistrationControllerApi extends AbstractController
                     $entityManager->persist($ltp);
                     $entityManager->flush();
                 }
+                $today = new DateTime();
+
+                $Sessions = $entityManager
+                    ->getRepository('App:Session')
+                    ->getALlSessionListFromToday($today);
+
+                /**
+                 * @var $session Session
+                 */
+                foreach($Sessions as $session){
+
+                    if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions)){
+
+                        if ($session->getBike() >0 & $user->getAbonnement() > 0) {
+                            $inscription = new Inscription();
+
+                            $inscription->setIdPerson($user);
+                            $inscription->setIdSession($session);
+
+                            $entityManager->persist($inscription);
+                            $entityManager->flush();
+
+                            $session->setBike($session->getbike() - 1);
+                            $entityManager->persist($session);
+                            $entityManager->flush();
+
+                            $user->setAbonnement($user->getAbonnement() - 1);
+                        }
+                    }
+                }
+                $entityManager->persist($user);
+                $entityManager->flush();
 
                 return new JsonResponse(['result' => true,'user' => $user]);
             }
@@ -95,10 +130,10 @@ class RegistrationControllerApi extends AbstractController
             {
                 $errors[] = "Cette email ou nom d'utilisateur est déjà utilisé!";
             }
-            catch(Exception $e)
-            {
-                $errors[] = "Impossible de s'enregistrer actuellement!";
-            }
+//            catch(Exception $e)
+//            {
+//                $errors[] = "Impossible de s'enregistrer actuellement!";
+//            }
         }
         return new JsonResponse(['errors' => $errors], 400);
     }
@@ -119,7 +154,7 @@ class RegistrationControllerApi extends AbstractController
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-            AbstractNormalizer::IGNORED_ATTRIBUTES =>['IdTypeSession'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idTypeSession','Sessions'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
         ];
@@ -165,13 +200,12 @@ class RegistrationControllerApi extends AbstractController
      */
     public function editTypeSession(Request $request){
         $data = json_decode($request->getContent(),true);
-
         $em = $this->getDoctrine()->getManager();
         try{
-            $typeSession = $em->getRepository('App:TypeSession')->find($data['id']);
+            $typeSession = $em->getRepository('App:TypeSession')->find($data['Id']);
 
-            $typeSession->setDay($data['day']);
-            $typeSession->setTime(new DateTime($data['time']));
+            $typeSession->setDay($data['Day']);
+            $typeSession->setTime(new DateTime($data['Time']));
 
             $em->persist($typeSession);
             $em->flush();

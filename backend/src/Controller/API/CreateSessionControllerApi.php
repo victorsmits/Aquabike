@@ -3,6 +3,7 @@
 namespace App\Controller\API;
 
 use App\Entity\Session;
+use App\Entity\TypeSession;
 use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Exception;
@@ -35,16 +36,9 @@ class CreateSessionControllerApi extends AbstractController
         $session->setTime(new DateTime($data["Time"]));
         $session->setBike($data["Bike"]);
 
-        $listSessions = $entityManager
-            ->getRepository('App:Session')
-            ->findOneBy([
-                "Date" => new DateTime($date->format("Y/m/d")),
-                "time" => new DateTime($data["Time"])
-            ]);
-
         try
         {
-            if(!empty($listSessions)){
+            if($this->checkIfExist($session)){
                 throw new Exception("La session existe déjà");
             }
 
@@ -60,7 +54,6 @@ class CreateSessionControllerApi extends AbstractController
         return new JsonResponse(['error' => $error], 400);
     }
 
-
     /**
      * @Route("/admin/createsession", name="api_create_session", methods={"POST","GET"})
      * @param Request $request
@@ -70,33 +63,44 @@ class CreateSessionControllerApi extends AbstractController
     public function createSession(Request $request){
         $data = json_decode($request->getContent(), true);
         $year = $data["year"];
+        $entityManager = $this->getDoctrine()->getManager();
 
         $date = new DateTime();
         $end = new DateTime();
         date_add($end, date_interval_create_from_date_string($year . "years"));
+
         try
         {
             while ($date < $end){
                 if ($date->format('m') != "7" && $date->format('m') != "8" ){
-                    echo($date->format('D') . "  ");
-                    switch ($date->format('D')){
-                        case "Mon" : {
-                            $this->addSession($date,"19:00",$data["bike"]);
-                            $this->addSession($date,"21:10",$data["bike"]);
-                            break;
-                        }
-                        case "Wed" : {
-                            $this->addSession($date,"9:00",$data["bike"]);
-                            $this->addSession($date,"10:10",$data["bike"]);
-                            break;
-                        }
-                        case "Thu" : {
-                            $this->addSession($date,"17:30",$data["bike"]);
-                            $this->addSession($date,"18:45",$data["bike"]);
-                            $this->addSession($date,"19:50",$data["bike"]);
-                            break;
+                    $typeSession = $entityManager
+                        ->getRepository('App:TypeSession')
+                        ->findAll();
+
+                    /**
+                     * @var $type TypeSession
+                     * @var $session Session
+                     */
+                    foreach($typeSession as $type){
+                        if($type->getDay() == $date->format("D") ){
+                            echo($date->format('D') . "  ");
+                            $session = new Session();
+
+                            $session->setDate(new DateTime($date->format("Y/m/d")));
+                            $session->setTime($type->getTime());
+                            $session->setBike($data["bike"]);
+                            $session->setIdTypeSession($type);
+
+                            if($this->checkIfExist($session)){
+                                $entityManager->persist($session);
+                                $entityManager->flush();
+                            }else{
+                                throw new Exception('Session generation fail');
+                            }
+
                         }
                     }
+
                 }
                 date_add($date, date_interval_create_from_date_string("1 day"));
             }
@@ -108,15 +112,21 @@ class CreateSessionControllerApi extends AbstractController
         return new JsonResponse(['error' => $error], 400);
     }
 
-    private function addSession(DateTime $date, $Time, $bike ){
-        $session = new Session();
+    public function checkIfExist(Session $session){
         $entityManager = $this->getDoctrine()->getManager();
 
-        $session->setDate(new DateTime($date->format("Y/m/d")));
-        $session->setTime(new DateTime($Time));
-        $session->setBike($bike);
+        $listSessions = $entityManager
+            ->getRepository('App:Session')
+            ->findOneBy([
+                "Date" => $session->getDate(),
+                "time" => $session->getTime()
+            ]);
 
-        $entityManager->persist($session);
-        $entityManager->flush();
+        if(empty($listSessions)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
