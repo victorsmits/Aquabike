@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/Version20191207105122.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-create-session/confirm-generation.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/add-type-session.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/edit-type-session.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/edit-type-session.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Entity/TypeSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/TypeSession.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Repository/PersonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/PersonRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Repository/SessionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/SessionRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Repository/TypeSessionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/TypeSessionRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-create-session/admin-create-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,7 +383,7 @@
       <workItem from="1575444372467" duration="14286000" />
       <workItem from="1575473343465" duration="820000" />
       <workItem from="1575531167684" duration="14000" />
-      <workItem from="1575714792240" duration="19475000" />
+      <workItem from="1575714792240" duration="20136000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -654,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575458982939</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="auto generation with session type -&gt; ok&#10;auto subscription -&gt; ok">
+      <created>1575745659838</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1575745659838</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +655,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$/backend" />
     </ignored-roots>
-    <MESSAGE value="page month with selector workin&#10;TODO button" />
     <MESSAGE value="month page display list of subs" />
     <MESSAGE value="add directive" />
     <MESSAGE value="Last stable version" />
@@ -704,7 +679,8 @@
     <MESSAGE value="session auto generation for 5 years" />
     <MESSAGE value="modification in database for typeSession" />
     <MESSAGE value="working on Type session page&#10;todo -&gt; edit type session" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on Type session page&#10;todo -&gt; edit type session" />
+    <MESSAGE value="auto generation with session type -&gt; ok&#10;auto subscription -&gt; ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="auto generation with session type -&gt; ok&#10;auto subscription -&gt; ok" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
@@ -748,12 +724,12 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575731061455" />
     <state x="699" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1575727057515" />
-    <state x="385" y="105" width="880" height="791" key="CommitChangelistDialog2" timestamp="1575458982236">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1575745656259">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="385" y="105" key="CommitChangelistDialog2/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575458982236" />
     <state x="385" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575374487606" />
-    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575210924698" />
+    <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575745656259" />
     <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1574429114893" />
     <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
     <state width="1294" height="304" key="GridCell.Tab.0.bottom" timestamp="1575732103044">
@@ -833,22 +809,22 @@
     <state x="245" y="111" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1574590482971" />
     <state x="327" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573910168919" />
     <state x="245" y="63" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1575195162915" />
-    <state width="667" height="534" key="SwitcherDM" timestamp="1575735479407">
+    <state width="667" height="534" key="SwitcherDM" timestamp="1575750403166">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575458164744" />
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1572947722846" />
-    <state width="667" height="534" key="SwitcherDM/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575735479407" />
+    <state width="667" height="534" key="SwitcherDM/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575750403166" />
     <state x="383" y="161" key="VCS.ChangeListViewerDialog" timestamp="1572556023028">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1575458984902">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1575745661426">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575458984902" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575374495401" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575210929833" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575745661426" />
     <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1574429120396" />
     <state x="723" y="391" key="cloudConfig.SelfSettingsDialog" timestamp="1573910177933">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -886,12 +862,12 @@
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1572555213728">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1574508674808">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="749" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575750480748">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1574238327831" />
     <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1574508674808" />
-    <state x="749" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1574002136339" />
+    <state x="749" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575750480748" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/0.0.1440.900@0.0.1440.900" timestamp="1572555213728" />
     <state x="470" y="252" width="778" height="476" key="find.popup" timestamp="1574599442644">
       <screen x="0" y="0" width="1440" height="900" />
