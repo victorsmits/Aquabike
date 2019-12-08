@@ -43,9 +43,9 @@ export class ListPersonDialog {
 export class MonthComponent implements OnInit, AfterViewInit {
   public data: JSON[]=[];
   public value : number = null;
-  public listSession : Sessions[]=[];
+  public listSession : Sessions[];
   public dataSource: MatTableDataSource<Sessions>;
-  public listPerson : Person[]=[];
+  public listPerson : Person[];
   public listYear: number[]=[];
   public year: number;
   public user: User;
@@ -157,8 +157,9 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
-      console.log(this.data[i]);
-      this.listSession.push(this.tool.initTempSess(this.data[i]));
+      let tempSess = this.tool.initTempSess(this.data[i],this.data[i]["Date"]);
+      tempSess.Date = this.tool.switchDate(new Date(tempSess.Date));
+      this.listSession.push(tempSess);
       this.listPerson.push({
         user : this.data[i]["idInscription"]
       });

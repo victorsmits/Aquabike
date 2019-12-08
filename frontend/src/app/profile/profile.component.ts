@@ -107,6 +107,7 @@ export class ProfileComponent implements OnInit {
     this.api.getProfileJson(this.User.username).subscribe(data=>{
       this.auth.initUser(data);
       this.User = this.auth.getCurrentUser();
+      console.log(this.User.typeSessions)
     });
   }
 

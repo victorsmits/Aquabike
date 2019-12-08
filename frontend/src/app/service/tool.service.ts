@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Sessions, TypeSession} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 
@@ -90,15 +90,15 @@ export class ToolService {
     return j + d.getDate()
   }
 
-  initTempSess(data : JSON) : Sessions{
-    let d = new Date(data["Date"]);
+  initTempSess(data : JSON, date) : Sessions{
+    let d = new Date(date);
     return {
       Date: d.toISOString(),
       Time: data["time"].split(' ')[1],
       Bike: data["bike"],
       Cancel: data["Cancel"],
       Id: data["id"],
-    };
+    }
   }
 
   initTypeSession(data : JSON[]) : TypeSession[]{

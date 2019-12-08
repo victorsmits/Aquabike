@@ -38,7 +38,8 @@ class ProfileControllerApi extends AbstractController
                 return $object->getId();
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-//            AbstractNormalizer::IGNORED_ATTRIBUTES =>['idSession'],
+            AbstractNormalizer::IGNORED_ATTRIBUTES =>['Password','plainPassword','idTypeSession',
+                'sessions'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
             DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
         ];

@@ -90,19 +90,20 @@ export class AuthService {
       Role: this.data["roles"]
     };
 
-    let inscription = this.data["idInscription"];
     for(let typeSess of this.data["IdTypeSession"]){
+      console.log(typeSess);
      this.User.typeSessions.push({
         Id : typeSess["IdTypeSession"]["id"],
-        Day : this.tool.daySwith(typeSess["day"]),
+        Day : this.tool.daySwith(typeSess["IdTypeSession"]["day"]),
         Time : typeSess["IdTypeSession"]["time"].split(' ')[1]
       });
     }
 
+    let inscription = this.data["idInscription"];
+
     for(let i = 0; i < inscription.length; i++) {
-      this.User.Session.push(this.tool.initTempSess(inscription[i]["idSession"]));
+      this.User.Session.push(this.tool.initTempSess(inscription[i]["idSession"],inscription[i]["idSession"]["date"]));
     }
-    console.log(this.User);
     this.cookie.set('user',JSON.stringify(this.User));
     this.cookie.set('connected',"true");
 
