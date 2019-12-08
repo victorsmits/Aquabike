@@ -11,22 +11,22 @@ security:
             algorithm: auto
 
     providers:
-        my_provider:
+        User_provider:
             entity:
                 class: App\Entity\Person
-                property: Username
+                property: Email
 
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
+        api:
             anonymous: true
 
             form_login:
                 login_path: api_login
                 check_path: api_login
-                provider: my_provider
+                provider: User_provider
 
             logout:
                 path: api_logout

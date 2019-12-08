@@ -23,6 +23,10 @@ class PersonRepository extends ServiceEntityRepository
         return $this->findOneBy(array('Username' => $Username));
     }
 
+    public function getPersonFromEmail($Email){
+        return $this->findOneBy(array('Email' => $Email));
+    }
+
     public function getPersonFromId($idPerson){
         return $this->findOneBy(array('id' => $idPerson));
     }

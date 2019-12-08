@@ -62,6 +62,7 @@ export class AuthService {
       .subscribe(
       response => {
         if (response["result"] === true) {
+          console.log(response["user"] );
           this.api.getProfileJson(username).subscribe(
           data => {
             this.isAuthenticated = true; // needed to update authentication status
@@ -78,6 +79,7 @@ export class AuthService {
 
   initUser(data){
     this.data = JSON.parse(JSON.stringify(data));
+    console.log(this.data);
     this.User = {
       id: this.data["id"],
       username : this.data["Username"],

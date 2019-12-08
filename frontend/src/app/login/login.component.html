@@ -1,9 +1,9 @@
 <mat-card>
-<!--  <mat-spinner *ngIf="isLoading"></mat-spinner>-->
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
   <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading"><!-- don't forget the "!", thus not isLoading-->
     <span *ngIf="Error" class="mat-error"> {{Error}} </span>
     <mat-form-field>
-      <input matInput name="username" ngModel type="text" placeholder="Nom d'utilisateur"  required>
+      <input matInput name="username" ngModel type="text" placeholder="Email"  required>
     </mat-form-field>
     <mat-form-field>
       <input matInput name="password" ngModel type="password" placeholder="Mot de passe"  required password>

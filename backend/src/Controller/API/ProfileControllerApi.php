@@ -31,9 +31,15 @@ class ProfileControllerApi extends AbstractController
 
         $data = json_decode($request->getContent(),true);
 
-        $userInfo = $entityManager
-            ->getRepository('App:Person')
-            ->getPersonFromUsername($data["Username"]);
+        if(filter_var($data["Username"], FILTER_VALIDATE_EMAIL)){
+            $userInfo = $entityManager
+                ->getRepository('App:Person')
+                ->getPersonFromEmail($data["Username"]);
+        }else{
+            $userInfo = $entityManager
+                ->getRepository('App:Person')
+                ->getPersonFromUsername($data["Username"]);
+        }
 
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {

@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/del-abo.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/del-abo.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SecurityControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SecurityControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Repository/PersonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/PersonRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -276,11 +270,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@Aquabike" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@Aquabike" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@36082727" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -381,7 +370,7 @@
       <workItem from="1575473343465" duration="820000" />
       <workItem from="1575531167684" duration="14000" />
       <workItem from="1575714792240" duration="20136000" />
-      <workItem from="1575797458833" duration="13662000" />
+      <workItem from="1575797458833" duration="17350000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>

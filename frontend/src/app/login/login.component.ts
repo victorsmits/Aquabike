@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit, AfterViewInit{
   }
 
   onLogin(form: NgForm) {
+    this.isLoading = true;
     if (form.invalid) {
       return;
     }

@@ -19,7 +19,6 @@ import {Person} from '../month/month.component';
 })
 export class SignupComponent implements AfterViewInit, OnInit{
   isLoading = false;
-  darkTheme = this.tool.darkTheme;
   public user: User;
   days = this.tool.days;
   private listTypeSession: TypeSession[];
@@ -35,9 +34,7 @@ export class SignupComponent implements AfterViewInit, OnInit{
   constructor(public authService: AuthService,
               private router : Router,
               private tool : ToolService,
-              private api : ApiService,
-              private auth : AuthService,
-              private formBuilder: FormBuilder) { }
+              private api : ApiService) { }
 
   onSignup(form: NgForm) {
     if (form.invalid) {
