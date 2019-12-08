@@ -77,6 +77,7 @@ class RegistrationControllerApi extends AbstractController
                 $user = $entityManager
                     ->getRepository('App:Person')
                     ->getPersonFromUsername($data['username']);
+
                 $IdTypeSessions[] = [];
                 for ($i = 0; $i < count($data["typeSessions"]); $i++){
                     array_push($IdTypeSessions,$data["typeSessions"][$i]["Id"]);
@@ -91,6 +92,7 @@ class RegistrationControllerApi extends AbstractController
                     $entityManager->persist($ltp);
                     $entityManager->flush();
                 }
+
                 $today = new DateTime();
 
                 $Sessions = $entityManager

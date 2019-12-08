@@ -91,7 +91,6 @@ export class AuthService {
     };
 
     for(let typeSess of this.data["IdTypeSession"]){
-      console.log(typeSess);
      this.User.typeSessions.push({
         Id : typeSess["IdTypeSession"]["id"],
         Day : this.tool.daySwith(typeSess["IdTypeSession"]["day"]),

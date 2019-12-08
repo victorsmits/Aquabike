@@ -80,15 +80,13 @@ export class MonthComponent implements OnInit, AfterViewInit {
               private auth:AuthService,
               private tool : ToolService) {
     this.user = this.auth.getCurrentUser();
-
-  }
-
-  ngOnInit() {
     this.today = new Date();
     this.value = this.today.getMonth()+1;
     this.year = this.today.getFullYear();
-
     this.getYear();
+  }
+
+  ngOnInit() {
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
@@ -120,7 +118,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
     this.api.createInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
-        this.ngAfterViewInit();
+        this.ngOnInit();
       }
     });
   }
@@ -133,7 +131,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
     this.api.deleteInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
-        this.ngAfterViewInit();
+        this.ngOnInit();
       }
     });
   }

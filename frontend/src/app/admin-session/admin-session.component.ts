@@ -98,15 +98,14 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
-      this.listSession.push(this.tool.initTempSess(this.data[i]));
-
+      let tempSess = this.tool.initTempSess(this.data[i],this.data[i]["Date"]);
+      tempSess.Date = this.tool.switchDate(new Date(tempSess.Date));
+      this.listSession.push(tempSess);
       this.listPerson.push({
         user : this.data[i]["idInscription"]
       });
     }
-
-    console.log(this.data);
-
+    
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
   }

@@ -85,13 +85,13 @@
       </div>
 
       <ng-template #cancelBtn>
-        <button mat-flat-button  color="primary" matTooltip="Annuler" disabled>
+        <button mat-flat-button matTooltip="Annuler" disabled>
           <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
 
       <ng-template #Btn>
-        <button mat-flat-button  color="primary">
+        <button mat-flat-button color="primary">
           <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
@@ -102,7 +102,7 @@
       </ng-template>
 
       <ng-template #unsub>
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="unSubscribe(element.Id)"
+          <mat-icon color="warn" (click)="unSubscribe(element.Id)"
                     matTooltip="Desinscription">clear</mat-icon>
       </ng-template>
 

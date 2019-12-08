@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {ApiService} from "../service/api.service";
 import {MatSelect} from "@angular/material/select";
-import {editProfileInterface, Inscription, Sessions, User} from '../Interface/Interface.module';
+import {editProfileInterface, Inscription, Sessions, TypeSession, User} from '../Interface/Interface.module';
 import {AuthService} from "../service/auth.service";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {NgForm} from '@angular/forms';
@@ -20,6 +20,8 @@ export class EditProfileComponent implements OnInit{
   private day2;
   private time2;
   private error : string;
+  private listTypeSessionId: number[] = [];
+  private listTypeSession: TypeSession[];
 
   constructor(
     public dialogRef: MatDialogRef<EditProfileComponent>,
@@ -34,6 +36,10 @@ export class EditProfileComponent implements OnInit{
   @ViewChild('timeSelect2',{static:false}) timeSelect2: MatSelect;
 
   ngOnInit(): void {
+    this.api.getTypeSession().subscribe(urldata=>{
+      let data = JSON.parse(JSON.stringify(urldata));
+      this.listTypeSession = this.tool.initTypeSession(data);
+    })
   }
 
   onNoClick(): void {
@@ -47,11 +53,10 @@ export class EditProfileComponent implements OnInit{
       firstName : form.value.firstName,
       Email : form.value.Email,
       password : form.value.password ? form.value.password : null,
-      Day: this.daySelect.value,
-      Time: form.value.time,
-      Day2: this.daySelect2.value ? this.daySelect2.value : null ,
-      Time2: form.value.sTime ? form.value.sTime : "00:00",
+      typeSessions : this.data.typeSessions
     };
+
+    console.log(editProfile);
 
     this.api.postEditProfile(editProfile).subscribe(result =>{
       if(result){
@@ -61,6 +66,28 @@ export class EditProfileComponent implements OnInit{
       this.error = error;
     })
   }
+
+  EditTypeSession(type : TypeSession) {
+    if(this.checkSession(type) == null){
+      console.log('add '+ type);
+      this.data.typeSessions.push(type);
+    }else{
+      console.log('del '+ type);
+
+      this.data.typeSessions.splice(this.checkSession(type),1)
+    }
+  }
+
+  checkSession(session: TypeSession) {
+    let state;
+    let i =0;
+    for(let type of this.data.typeSessions){
+      i ++;
+      session.Id == type.Id ? state = i : state = null;
+    }
+    return state
+  }
+
 }
 
 @Component({
@@ -107,7 +134,6 @@ export class ProfileComponent implements OnInit {
     this.api.getProfileJson(this.User.username).subscribe(data=>{
       this.auth.initUser(data);
       this.User = this.auth.getCurrentUser();
-      console.log(this.User.typeSessions)
     });
   }
 
@@ -159,4 +185,5 @@ export class ProfileComponent implements OnInit {
       this.ngOnInit()
     });
   }
+
 }

@@ -31,3 +31,6 @@ mat-form-field{
 .mat-column-Date {
   flex: 0 0 10%;
 }
+.action-btn{
+  background-color: #006186;
+}

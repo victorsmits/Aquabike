@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Controller\API;
+use App\Entity\LienPersonTypeSession;
 use App\Entity\Person;
+use App\Entity\TypeSession;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -70,6 +72,8 @@ class ProfileControllerApi extends AbstractController
 
             /**
              * @var $userInfo Person
+             * @var TypeSession $typeSession
+             * @var TypeSession $type
              */
             $userInfo = $entityManager
                 ->getRepository('App:Person')
@@ -78,14 +82,34 @@ class ProfileControllerApi extends AbstractController
             $userInfo->setEmail($data["Email"]);
             $userInfo->setFirstName($data["firstName"]);
             $userInfo->setLastName($data["lastName"]);
-            $userInfo->setDay($data['Day']);
-            $userInfo->setTime(new DateTime($data["Time"]));
-            $userInfo->setDay2($data['Day2']);
-            $userInfo->setTime2(new DateTime($data["Time2"]));
 
             if($data["password"] != null){
                 $encodedPassword = $passwordEncoder->encodePassword($userInfo, $data['password']);
                 $userInfo->setLastName($encodedPassword);
+            }
+            $ltps = $entityManager
+                ->getRepository('App:LienPersonTypeSession')
+                ->findby([
+                    "IdPerson"=>$userInfo->getId()
+                ]);
+
+            foreach ($ltps as $ltp) {
+                $entityManager->remove($ltp);
+                $entityManager->flush();
+            }
+
+            foreach($data["typeSessions"] as $type ){
+                $ltp =  new LienPersonTypeSession();
+
+                $typeSession = $entityManager
+                    ->getRepository('App:TypeSession')
+                    ->find($type["Id"]);
+
+                $ltp->setIdTypeSession($typeSession);
+                $ltp->setIdPerson($userInfo);
+
+                $entityManager->persist($ltp);
+                $entityManager->flush();
             }
 
             $entityManager->persist($userInfo);

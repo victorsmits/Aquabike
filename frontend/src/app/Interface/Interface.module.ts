@@ -58,8 +58,5 @@ export interface editProfileInterface {
   firstName: string,
   Email : string,
   password : string,
-  Day: string,
-  Time: number,
-  Day2: string,
-  Time2: number,
+  typeSessions : TypeSession[]
 }
