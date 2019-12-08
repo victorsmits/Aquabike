@@ -105,7 +105,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
         user : this.data[i]["idInscription"]
       });
     }
-    
+
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
   }

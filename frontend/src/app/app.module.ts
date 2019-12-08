@@ -46,6 +46,7 @@ import {CookieService} from "ngx-cookie-service";
 import {TypeSessionComponent} from './type-session/type-session.component';
 import {AddTypeSessionComponent} from './type-session/add-type-session.component';
 import {EditTypeSessionComponent} from './type-session/edit-type-session.component';
+import {DelAboComponent} from './admin-abo/del-abo.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import {EditTypeSessionComponent} from './type-session/edit-type-session.compone
     TypeSessionComponent,
     AddTypeSessionComponent,
     ConfimGenerationComponent,
-    EditTypeSessionComponent
+    EditTypeSessionComponent,
+    DelAboComponent
   ],
     imports: [
         BrowserModule,
@@ -106,7 +108,8 @@ import {EditTypeSessionComponent} from './type-session/edit-type-session.compone
     EditProfileComponent,
     AddTypeSessionComponent,
     ConfimGenerationComponent,
-    EditTypeSessionComponent
+    EditTypeSessionComponent,
+    DelAboComponent
   ],
   providers: [
     AuthService,

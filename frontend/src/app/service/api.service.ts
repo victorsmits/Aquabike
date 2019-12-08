@@ -124,6 +124,12 @@ export class ApiService {
       catchError(this.handelError));
   }
 
+  postDelUser(Id:number){
+    let url = "https://127.0.0.1:8000/api/admin/delAbo";
+    return this.http.post(url,{id:Id}).pipe(
+      catchError(this.handelError));
+  }
+
   handelError(err){
     if(err instanceof HttpErrorResponse){
       return throwError(err.error.error);

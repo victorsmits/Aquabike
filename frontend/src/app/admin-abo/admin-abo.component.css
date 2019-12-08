@@ -21,6 +21,11 @@ mat-header-cell{
   justify-content: center;
 }
 
-.mat-column-ReSubscribe{
-  flex: 0 0 10%;
+.mat-column-Action{
+  flex: 0 0 20%;
+}
+
+.del-button {
+  font-size: large;
+  align-content: center;
 }

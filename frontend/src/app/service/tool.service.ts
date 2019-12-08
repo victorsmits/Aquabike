@@ -105,9 +105,9 @@ export class ToolService {
     let typeSession : TypeSession[] = [];
     for(let i = 0; i < data.length;i++){
       typeSession.push({
-        Id : data[i]["id"],
-        Day : this.daySwith(data[i]["Day"]),
-        Time : data[i]["Time"].split(' ')[1]
+        Id : data[i]["IdTypeSession"]["id"],
+        Day : this.daySwith(data[i]["IdTypeSession"]["day"]),
+        Time : data[i]["IdTypeSession"]["time"].split(' ')[1]
       });
     }
     return typeSession;

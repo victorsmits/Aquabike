@@ -5,6 +5,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {ToolService} from '../service/tool.service';
+import {DelAboComponent} from './del-abo.component';
 
 interface Person extends User {
   AboType : number;
@@ -37,9 +38,10 @@ export class ShowEditAboType {
   styleUrls: ['./admin-abo.component.css']
 })
 export class AdminAboComponent implements OnInit {
+  public Error : string;
   public data: JSON[]=[];
   public listUser: Person[]=[];
-  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','ReSubscribe'];
+  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','Action'];
   public dataSource: MatTableDataSource<Person>;
 
   constructor(private api:ApiService,
@@ -107,6 +109,17 @@ export class AdminAboComponent implements OnInit {
           this.ngOnInit();
         }
       });
+    });
+  }
+
+  openDeleteDialog(user : User) {
+    const dialogRef = this.dialog.open(DelAboComponent, {
+      width: '550px',
+      data: user
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit()
     });
   }
 }

@@ -32,7 +32,7 @@
   </ng-container>
 
   <!-- ReSubscribe Column-->
-  <ng-container matColumnDef="ReSubscribe">
+  <ng-container matColumnDef="Action">
 
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
 
@@ -47,9 +47,16 @@
           edit
         </mat-icon>
       </button>
+
+      <button mat-flat-button  color="primary" matTooltip="Delete" style="margin-left: 10%">
+        <mat-icon [ngStyle]="{'color':'white'}" (click)="openDeleteDialog(element)">
+          delete
+        </mat-icon>
+      </button>
     </mat-cell>
 
   </ng-container>
+
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;">

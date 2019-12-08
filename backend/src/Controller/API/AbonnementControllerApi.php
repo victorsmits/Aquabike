@@ -2,6 +2,11 @@
 
 namespace App\Controller\API;
 
+use App\Entity\Inscription;
+use App\Entity\LienPersonTypeSession;
+use App\Entity\Person;
+use App\Entity\Session;
+use Doctrine\ORM\ORMException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -97,5 +102,49 @@ class AbonnementControllerApi extends AbstractController
             $error = $e;
         }
         return new JsonResponse(['error'=>$error]);
+    }
+
+    /**
+     * @Route("/delAbo", name="api_delAbo", methods={"POST","HEAD"})
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function delAbo(Request $request){
+        try{
+
+            /**
+             * @var $user Person
+             * @var $inscription Inscription
+             * @var $session Session
+             */
+            $em = $this->getDoctrine()->getManager();
+            $data = json_decode($request->getContent(), true);
+            $user = $em->getRepository('App:Person')->find($data["id"]);
+
+            $Inscriptions = $user->getIdInscription()->toArray();
+
+            foreach ($Inscriptions as $inscription){
+                $session = $inscription->getIdSession();
+
+                $session->setBike($session->getBike()+1);
+
+                $em->remove($inscription);
+                $em->flush();
+            }
+
+            $Ltps = $user->getIdTypeSession()->toArray();
+
+            foreach ($Ltps as $ltp){
+                $em->remove($ltp);
+                $em->flush();
+            }
+
+            $em->remove($user);
+            $em->flush();
+
+            return new JsonResponse(['result'=>true]);
+        }catch (ORMException $e){
+            return new JsonResponse(['error'=>$e->getMessage()]);
+        }
     }
 }

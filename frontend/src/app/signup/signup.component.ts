@@ -44,6 +44,7 @@ export class SignupComponent implements AfterViewInit, OnInit{
       return;
     }
 
+    this.isLoading = true;
     const authData: AuthSignupData = {
       email: form.value.email,
       username: form.value.username,
@@ -61,7 +62,6 @@ export class SignupComponent implements AfterViewInit, OnInit{
         authData.typeSessions.push(session);
       }
     }
-    console.log(authData);
 
     this.authService.createUser(authData).subscribe((next)=>{
       if(next["result"]){
@@ -78,7 +78,15 @@ export class SignupComponent implements AfterViewInit, OnInit{
   ngOnInit(): void {
     this.api.getTypeSession().subscribe(urldata=>{
       let data = JSON.parse(JSON.stringify(urldata));
-      this.listTypeSession = this.tool.initTypeSession(data);
+      console.log(data);
+      this.listTypeSession = [];
+      for(let type of data){
+        this.listTypeSession .push({
+          Id : type["id"],
+          Day : this.tool.daySwith(type["Day"]),
+          Time : type["Time"].split(' ')[1]
+        });
+      }
     })
   }
 
