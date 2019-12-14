@@ -2,7 +2,7 @@
   <mat-table [dataSource]="data" class="mat-elevation-z8">
     <ng-container matColumnDef="User">
       <mat-header-cell *matHeaderCellDef> Inscription </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.idPerson.lastName}} {{element.idPerson.firstName}}</mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.lastName}} {{element.firstName}}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="PersonCol"></mat-header-row>

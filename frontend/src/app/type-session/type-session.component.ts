@@ -5,6 +5,7 @@ import { TypeSession} from '../Interface/Interface.module';
 import { MatDialog} from '@angular/material';
 import {AddTypeSessionComponent} from './add-type-session.component';
 import {EditTypeSessionComponent} from './edit-type-session.component';
+import {listAboSession} from './list-abo-session.component';
 
 
 @Component({
@@ -43,7 +44,6 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log("close");
       this.ngOnInit();
     });
   }
@@ -55,13 +55,15 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log("close");
       this.ngOnInit();
     });
   }
 
-  Edit(Id: any) {
-
+  openListDialog(Id: any) {
+    const dialogRef = this.dialog.open(listAboSession, {
+      width : '250px',
+      data : this.listTypeSession[Id].Person
+    });
   }
 
   Delete(Id: any) {

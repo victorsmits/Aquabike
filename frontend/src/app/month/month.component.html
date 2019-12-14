@@ -65,9 +65,9 @@
     <mat-header-cell *matHeaderCellDef>
       List inscrit
     </mat-header-cell>
-    <mat-cell *matCellDef="let element;let i = index" >
+    <mat-cell *matCellDef="let element" >
         <button mat-flat-button  color="primary" matTooltip="Liste Participant">
-          <mat-icon (click)="openDialog(i)" [ngStyle]="{'color':'white'}">info</mat-icon>
+          <mat-icon (click)="openDialog(element)" [ngStyle]="{'color':'white'}">info</mat-icon>
         </button>
     </mat-cell>
 

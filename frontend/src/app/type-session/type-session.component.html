@@ -42,7 +42,11 @@
       </button>
     </mat-header-cell>
 
-    <mat-cell *matCellDef="let element" ></mat-cell>
+    <mat-cell *matCellDef="let element: let i = index" >
+      <button mat-flat-button  color="primary" matTooltip="Modification">
+        <mat-icon [ngStyle]="{'color':'white'}" (click)="openListDialog(i)">information</mat-icon>
+      </button>
+    </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

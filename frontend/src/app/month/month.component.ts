@@ -10,10 +10,6 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {ToolService} from '../service/tool.service';
 
-export interface Person {
-  user : JSON;
-}
-
 @Component({
   selector: 'list-person-detail',
   templateUrl: './list-person-detail.component.html',
@@ -22,7 +18,7 @@ export class ListPersonDialog {
   PersonCol: string[] = ['User'];
   constructor(
     public dialogRef: MatDialogRef<ListPersonDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: Person[]) {}
+    @Inject(MAT_DIALOG_DATA) public data: User[]) {}
 
     onNoClick(): void {
     this.dialogRef.close();
@@ -45,7 +41,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   public value : number = null;
   public listSession : Sessions[];
   public dataSource: MatTableDataSource<Sessions>;
-  public listPerson : Person[];
+  public listPerson : User[];
   public listYear: number[]=[];
   public year: number;
   public user: User;
@@ -157,20 +153,18 @@ export class MonthComponent implements OnInit, AfterViewInit {
     for(let i = 0; i < this.data.length; i++){
       let tempSess = this.tool.initTempSess(this.data[i],this.data[i]["Date"]);
       tempSess.Date = this.tool.switchDate(new Date(tempSess.Date));
+      tempSess.Person = this.tool.initListPersDetail(this.data[i]["idInscription"]);
       this.listSession.push(tempSess);
-      this.listPerson.push({
-        user : this.data[i]["idInscription"]
-      });
     }
 
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
   }
 
-  openDialog(id): void {
+  openDialog(Session : Sessions): void {
     const dialogRef = this.dialog.open(ListPersonDialog, {
       width: '250px',
-      data: this.listPerson[id].user
+      data: Session.Person
     });
   }
 

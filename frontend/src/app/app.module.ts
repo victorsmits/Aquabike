@@ -47,6 +47,7 @@ import {TypeSessionComponent} from './type-session/type-session.component';
 import {AddTypeSessionComponent} from './type-session/add-type-session.component';
 import {EditTypeSessionComponent} from './type-session/edit-type-session.component';
 import {DelAboComponent} from './admin-abo/del-abo.component';
+import {listAboSession} from './type-session/list-abo-session.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {DelAboComponent} from './admin-abo/del-abo.component';
     AddTypeSessionComponent,
     ConfimGenerationComponent,
     EditTypeSessionComponent,
-    DelAboComponent
+    DelAboComponent,
+    listAboSession
   ],
     imports: [
         BrowserModule,
@@ -109,7 +111,8 @@ import {DelAboComponent} from './admin-abo/del-abo.component';
     AddTypeSessionComponent,
     ConfimGenerationComponent,
     EditTypeSessionComponent,
-    DelAboComponent
+    DelAboComponent,
+    listAboSession
   ],
   providers: [
     AuthService,
