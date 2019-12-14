@@ -1,3 +1,4 @@
+
 export interface AuthSignupData {
   email: string;
   username: string;
@@ -15,21 +16,22 @@ export interface AuthLoginData {
 }
 
 export interface User {
-  id: number,
-  username: string,
-  lastName: string,
-  firstName: string,
-  abonnement: number,
-  typeSessions : TypeSession[]
-  Email: string,
-  Session: Sessions[],
-  Role: any
+  id?: number,
+  username?: string,
+  lastName?: string,
+  firstName?: string,
+  abonnement?: number,
+  typeSessions? : TypeSession[]
+  Email?: string,
+  Session?: Sessions[],
+  Role?: any
 }
 
 export interface TypeSession {
   Id : number,
   Day : string,
   Time : string,
+  Person? : User[]
 }
 
 export interface Sessions{
@@ -38,6 +40,7 @@ export interface Sessions{
   Bike : number,
   Cancel : boolean,
   Id : number,
+  Person? : User[]
 }
 
 export interface Inscription {
