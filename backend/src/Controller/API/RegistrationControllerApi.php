@@ -65,6 +65,7 @@ class RegistrationControllerApi extends AbstractController
             $user->setAboType($data['Abonnement']);
             $user->setPassword($encodedPassword);
 
+
             try
             {
                 $entityManager->persist($user);
@@ -89,40 +90,14 @@ class RegistrationControllerApi extends AbstractController
                     $ltp->setIdTypeSession($typeSession);
                     $ltp->setIdPerson($user);
 
+                    $this->autoSub($IdTypeSessions,$user);
+
                     $entityManager->persist($ltp);
                     $entityManager->flush();
+
                 }
 
-                $today = new DateTime();
 
-                $Sessions = $entityManager
-                    ->getRepository('App:Session')
-                    ->getALlSessionListFromToday($today);
-
-                /**
-                 * @var $session Session
-                 */
-                foreach($Sessions as $session){
-
-                    if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions)){
-
-                        if ($session->getBike() >0 & $user->getAbonnement() > 0) {
-                            $inscription = new Inscription();
-
-                            $inscription->setIdPerson($user);
-                            $inscription->setIdSession($session);
-
-                            $entityManager->persist($inscription);
-                            $entityManager->flush();
-
-                            $session->setBike($session->getbike() - 1);
-                            $entityManager->persist($session);
-                            $entityManager->flush();
-
-                            $user->setAbonnement($user->getAbonnement() - 1);
-                        }
-                    }
-                }
                 $entityManager->persist($user);
                 $entityManager->flush();
 
@@ -245,6 +220,54 @@ class RegistrationControllerApi extends AbstractController
             return new JsonResponse(['result'=>true]);
         }catch(\Exception $e){
             return new JsonResponse(['error'=>$e->getMessage()]);
+        }
+    }
+
+    public function autoSub($IdTypeSessions,Person $user){
+        /**
+         * @var $inscription Inscription
+         */
+        $today = new DateTime();
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $Sessions = $entityManager
+            ->getRepository('App:Session')
+            ->getALlSessionListFromToday($today);
+
+        $lisInscription = $entityManager
+            ->getRepository('App:Inscription')
+            ->findBy(['Id_Person'=>$user]);
+
+        $listIdSession = [];
+
+        foreach ($lisInscription as $inscription){
+            array_push($listIdSession,$inscription->getIdSession()->getId());
+        }
+
+        /**
+         * @var $session Session
+         */
+        foreach($Sessions as $session){
+
+            if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions) &
+                !in_array($session->getId(),$listIdSession)){
+
+                if ($session->getBike() >0 & $user->getAbonnement() > 0) {
+                    $inscription = new Inscription();
+
+                    $inscription->setIdPerson($user);
+                    $inscription->setIdSession($session);
+
+                    $entityManager->persist($inscription);
+                    $entityManager->flush();
+
+                    $session->setBike($session->getbike() - 1);
+                    $entityManager->persist($session);
+                    $entityManager->flush();
+
+                    $user->setAbonnement($user->getAbonnement() - 1);
+                }
+            }
         }
     }
 }

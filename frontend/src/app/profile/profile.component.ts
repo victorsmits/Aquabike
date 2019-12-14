@@ -150,7 +150,7 @@ export class ProfileComponent implements OnInit {
       case 7:{j = "Dimanche "; break}
     }
     let months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
-    return j + date.getDate() + " " +  months[date.getMonth()+1] + " " + date.getFullYear()
+    return j + date.getDate() + " " +  months[date.getMonth()] + " " + date.getFullYear()
   }
 
   getYear(){

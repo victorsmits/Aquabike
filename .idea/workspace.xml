@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/type-session/list-abo-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/list-person-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/list-person-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +199,7 @@
     <property name="TODO_SCOPE" value="Recently Viewed Files" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/app/type-session" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -851,12 +850,13 @@
     <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576318185438" />
     <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.791@0.23.1440.791" timestamp="1573816630762" />
     <state x="100" y="79" width="1720" height="900" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.1057/1920.23.1920.1057@0.23.1920.1057" timestamp="1573490337081" />
-    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1575803511675">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1576322326246">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="75" y="83" width="1290" height="734" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575448334640" />
-    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575803511675" />
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576320351202" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1575206525325" />
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.23.1920.1057/1920.23.1920.1057@0.23.1920.1057" timestamp="1576322326246" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1572555213728">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

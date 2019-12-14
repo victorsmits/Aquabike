@@ -7,7 +7,6 @@ import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 import {Router} from '@angular/router';
 import {ToolService} from '../service/tool.service';
 import {ApiService} from '../service/api.service';
-import {Person} from '../month/month.component';
 
 //todo auto subscribe to session in function of his subscription
 //todo modification base de donnée pour liaison entre type de session et utilisateur

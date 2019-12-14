@@ -121,13 +121,21 @@ export class ToolService {
   initTypeSession(data : JSON[]) : TypeSession[]{
     let typeSession : TypeSession[] = [];
     for(let type of data){
-
-      typeSession.push({
-        Id : type["id"],
-        Day : this.daySwith(type["Day"]),
-        Time : type["Time"].split(' ')[1],
-        Person : this.initListPersDetail(type["idTypeSession"])
-      });
+      let TypeSess;
+      if(type["IdTypeSession"]){
+        TypeSess = type["IdTypeSession"]
+      }else{
+        TypeSess = type["idTypeSession"]
+      }
+      let tempType : TypeSession = {
+        Id : TypeSess["id"],
+        Day : this.daySwith(TypeSess["Day"]),
+        Time : TypeSess["Time"].split(' ')[1],
+      };
+      if(type["idTypeSession"]){
+        tempType.Person = this.initListPersDetail(TypeSess["idTypeSession"])
+      }
+      typeSession.push(tempType)
     }
     return typeSession;
   }

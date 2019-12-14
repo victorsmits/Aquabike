@@ -7,11 +7,8 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {ToolService} from '../service/tool.service';
 import {DelAboComponent} from './del-abo.component';
 
-interface Person extends User {
+export interface Person extends User {
   AboType : number;
-}
-
-class DialogData {
 }
 
 @Component({
@@ -38,37 +35,41 @@ export class ShowEditAboType {
   styleUrls: ['./admin-abo.component.css']
 })
 export class AdminAboComponent implements OnInit {
-  public Error : string;
-  public data: JSON[]=[];
-  public listUser: Person[]=[];
-  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','Action'];
+  public Error: string;
+  public data: JSON[] = [];
+  public listUser: Person[] = [];
+  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType', 'Action'];
   public dataSource: MatTableDataSource<Person>;
 
-  constructor(private api:ApiService,
+  constructor(private api: ApiService,
               public dialog: MatDialog,
-              private tool : ToolService) { }
+              private tool: ToolService) {
+  }
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   ngOnInit() {
-    this.api.getAboJson().subscribe(urldata=>{
+    this.api.getAboJson().subscribe(urldata => {
       this.initData(urldata)
     })
   }
 
   initData(urldata: Object) {
-    this.data = JSON.parse(JSON.stringify(urldata));
+    let str = JSON.stringify(urldata);
+    str = str.replace(/"day"/gi, "\"Day\"");
+    str = str.replace(/"time"/gi, "\"Time\"");
+    this.data = JSON.parse(str);
 
     this.listUser = [];
 
-    for(let i = 0; i < this.data.length; i++){
+    for (let i = 0; i < this.data.length; i++) {
       this.listUser.push({
         id: this.data[i]["id"],
-        username : this.data[i]["Username"],
+        username: this.data[i]["Username"],
         lastName: this.data[i]["LastName"],
         firstName: this.data[i]["FirstName"],
         abonnement: this.data[i]["Abonnement"],
-        typeSessions : this.data[i]["IdTypeSession"].length > 0 ? this.tool.initTypeSession(this.data[i]["IdTypeSession"]): [],
+        typeSessions: this.data[i]["IdTypeSession"].length > 0 ? this.tool.initTypeSession(this.data[i]["IdTypeSession"]) : [],
         Email: this.data[i]["Email"],
         Session: [],
         Role: this.data[i]["roles"],
@@ -82,19 +83,19 @@ export class AdminAboComponent implements OnInit {
 
 
   reSubcribe(id: any) {
-    this.api.postAboRenew(id).subscribe(urldata=>{
-      if(urldata["result"]){
+    this.api.postAboRenew(id).subscribe(urldata => {
+      if (urldata["result"]) {
         this.ngOnInit();
       }
     });
   }
 
-  openDialog(fname,lname,id,aboType): void {
-    let newAboType: editAbo={
+  openDialog(fname, lname, id, aboType): void {
+    let newAboType: editAbo = {
       FirstName: fname,
       LastName: lname,
-      Id:id,
-      aboType:aboType,
+      Id: id,
+      aboType: aboType,
     };
 
     const dialogRef = this.dialog.open(ShowEditAboType, {
@@ -104,15 +105,15 @@ export class AdminAboComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       newAboType.aboType = result;
-      this.api.editAboType(newAboType).subscribe(urldata=>{
-        if(urldata["result"]){
+      this.api.editAboType(newAboType).subscribe(urldata => {
+        if (urldata["result"]) {
           this.ngOnInit();
         }
       });
     });
   }
 
-  openDeleteDialog(user : User) {
+  openDeleteDialog(user: User) {
     const dialogRef = this.dialog.open(DelAboComponent, {
       width: '550px',
       data: user

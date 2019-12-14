@@ -6,6 +6,7 @@ use App\Entity\Inscription;
 use App\Entity\LienPersonTypeSession;
 use App\Entity\Person;
 use App\Entity\Session;
+use DateTime;
 use Doctrine\ORM\ORMException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -38,9 +39,10 @@ class AbonnementControllerApi extends AbstractController
             },
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
             AbstractNormalizer::IGNORED_ATTRIBUTES =>['idInscription',
-                'plainPassword','Password','salt'],
+                'plainPassword','Password','salt','sessions','idTypeSession','__cloner__',
+                '__initializer__','__isInitialized__'],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
-            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:m'
+            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
         ];
 
         $encoders = array(new JsonEncode());
@@ -57,9 +59,15 @@ class AbonnementControllerApi extends AbstractController
     /**
      * @Route("/renewAbo", name="api_renew", methods={"POST","HEAD","OPTIONS","GET"})
      * @param Request $request
+     * @param RegistrationControllerApi $sub
      * @return JsonResponse
      */
-    public function RenewAbo(Request $request){
+    public function RenewAbo(Request $request,RegistrationControllerApi $sub){
+
+        /**
+         * @var $user Person
+         * @var $type LienPersonTypeSession
+         */
         try{
             $em = $this->getDoctrine()->getManager();
             $data = json_decode($request->getContent(), true);
@@ -67,9 +75,25 @@ class AbonnementControllerApi extends AbstractController
                 ->getRepository('App:Person')
                 ->find($data["Id"]);
 
+
+            $types = $em->getRepository('App:LienPersonTypeSession')
+                ->findBy(['IdPerson'=>$user]);
+
             $user->setAbonnement($user->getAboType());
             $em->persist($user);
             $em->flush();
+
+            $Sessions = $em
+                ->getRepository('App:Session')
+                ->getALlSessionListFromToday(new DateTime());
+
+            $listIdType = [];
+
+            foreach ($types as $type){
+                array_push($listIdType,$type->getIdTypeSession()->getId());
+            }
+
+            $sub->autoSub($listIdType,$user);
 
             return new JsonResponse(['result'=>true]);
 
