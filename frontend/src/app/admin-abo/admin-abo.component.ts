@@ -47,6 +47,7 @@ export class AdminAboComponent implements OnInit {
   }
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  isLoading: boolean = true;
 
   ngOnInit() {
     this.api.getAboJson().subscribe(urldata => {
@@ -79,6 +80,7 @@ export class AdminAboComponent implements OnInit {
 
     this.dataSource = new MatTableDataSource(this.listUser);
     this.dataSource.sort = this.sort;
+    this.isLoading = false
   }
 
 

@@ -11,11 +11,11 @@ import {TypeSession, User} from '../Interface/Interface.module';
   templateUrl: './del-abo.component.html',
 })
 export class DelAboComponent implements OnInit{
-  private error : string;
+  public error : string;
 
   constructor(
     public dialogRef: MatDialogRef<DelAboComponent>,
-    private api : ApiService,
+    public api : ApiService,
     @Inject(MAT_DIALOG_DATA) public data: User,) {
   }
 

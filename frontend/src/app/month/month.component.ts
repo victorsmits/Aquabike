@@ -47,6 +47,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
   public user: User;
   public listIdSession: number[]=[];
   public today: Date;
+  public isLoading: boolean = true;
 
   @ViewChild('matSelect',{static:false})matSelect : MatSelect;
   @ViewChild('matSelect2',{static:false})matSelect2 : MatSelect;
@@ -69,6 +70,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
+
 
 
   constructor(private api: ApiService,
@@ -136,7 +138,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.api.getProfileJson(this.user.username).subscribe(data=>{
       this.auth.initUser(data);
       this.listIdSession = [];
-
       this.user = this.auth.getCurrentUser();
 
       for(let i = 0; i < this.user.Session.length; i++){
@@ -159,6 +160,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
+    this.isLoading = false;
   }
 
   openDialog(Session : Sessions): void {

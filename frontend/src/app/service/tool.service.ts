@@ -124,16 +124,22 @@ export class ToolService {
       let TypeSess;
       if(type["IdTypeSession"]){
         TypeSess = type["IdTypeSession"]
-      }else{
+      }else if(type["idTypeSession"]){
         TypeSess = type["idTypeSession"]
+      }else{
+        TypeSess = type
       }
+
       let tempType : TypeSession = {
         Id : TypeSess["id"],
         Day : this.daySwith(TypeSess["Day"]),
         Time : TypeSess["Time"].split(' ')[1],
       };
+
       if(type["idTypeSession"]){
         tempType.Person = this.initListPersDetail(TypeSess["idTypeSession"])
+      }else if(type["idPerson"]){
+        tempType.Person = this.initListPersDetail(TypeSess["idPerson"])
       }
       typeSession.push(tempType)
     }

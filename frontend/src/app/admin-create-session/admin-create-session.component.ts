@@ -17,14 +17,14 @@ import {ToolService} from '../service/tool.service';
   templateUrl: './confirm-generation.component.html',
 })
 export class ConfimGenerationComponent implements OnInit{
-  private error : string;
-  private isLoading: boolean = false;
+  public error : string;
+  public isLoading: boolean = false;
 
   constructor(
     public dialogRef: MatDialogRef<ConfimGenerationComponent>,
-    private api : ApiService,
-    private tool : ToolService,
-    private router : Router) {
+    public api : ApiService,
+    public tool : ToolService,
+    public router : Router) {
   }
 
   ngOnInit(): void {
@@ -52,7 +52,7 @@ export class ConfimGenerationComponent implements OnInit{
   styleUrls: ['./admin-create-session.component.css']
 })
 export class AdminCreateSessionComponent implements OnInit {
-  private error: any;
+  public error: any;
 
   darkTheme: NgxMaterialTimepickerTheme = {
     container: {

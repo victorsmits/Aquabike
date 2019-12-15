@@ -15,10 +15,10 @@ import {HttpErrorResponse} from '@angular/common/http';
 export class LoginComponent implements OnInit, AfterViewInit{
 
   isLoading = false;
-  private Error: any;
+  public Error: any;
 
   constructor(public authService: AuthService,
-              private router : Router) { }
+              public router : Router) { }
 
   ngOnInit(){}
 

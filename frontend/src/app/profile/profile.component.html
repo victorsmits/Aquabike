@@ -2,7 +2,11 @@
 
   <mat-grid-tile colspan="1">
 
-    <mat-table [dataSource]="User.Session" class="mat-elevation-z8">
+    <mat-card *ngIf="isLoading" style="margin: auto">
+      <mat-spinner style="margin: auto"></mat-spinner>
+    </mat-card>
+
+    <mat-table *ngIf="!isLoading" [dataSource]="User.Session" class="mat-elevation-z8">
 
       <!-- Date Column -->
       <ng-container matColumnDef="Date" >

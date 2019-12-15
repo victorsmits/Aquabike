@@ -14,9 +14,10 @@ import {listAboSession} from './list-abo-session.component';
   styleUrls: ['./type-session.component.css']
 })
 export class TypeSessionComponent implements OnInit, AfterViewInit {
-  private listTypeSession: TypeSession[] = [];
+  public listTypeSession: TypeSession[] = [];
   displayedColumns: string[] = ['Day','Time','Action','Add'];
   error: any;
+  isLoading: boolean = true;
 
   constructor(private api : ApiService,
               private tool : ToolService,
@@ -25,16 +26,29 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.listTypeSession = [];
     this.api.getTypeSession().subscribe(urldata=>{
-      let data = JSON.parse(JSON.stringify(urldata));
+      let str = JSON.stringify(urldata);
+      str = str.replace(/"day"/gi, "\"Day\"");
+      str = str.replace(/"time"/gi, "\"Time\"");
+      str = str.replace(/"idTypeSession"/gi, "\"idPerson\"");
+      let data = JSON.parse(str);
+
       this.listTypeSession = this.tool.initTypeSession(data);
+      this.isLoading = false
     })
   }
 
   ngAfterViewInit(){
     this.listTypeSession = [];
     this.api.getTypeSession().subscribe(urldata=>{
-      let data = JSON.parse(JSON.stringify(urldata));
+
+      let str = JSON.stringify(urldata);
+      str = str.replace(/"day"/gi, "\"Day\"");
+      str = str.replace(/"time"/gi, "\"Time\"");
+      str = str.replace(/"idTypeSession"/gi, "\"idPerson\"");
+      let data = JSON.parse(str);
+
       this.listTypeSession = this.tool.initTypeSession(data);
+      this.isLoading = false
     })
   }
 

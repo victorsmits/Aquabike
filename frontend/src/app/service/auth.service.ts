@@ -12,11 +12,12 @@ import {ToolService} from './tool.service';
 @Injectable({ providedIn: 'root'})
 export class AuthService {
 
-  private isAuthenticated = false;
-  private authStatusListener : Subject<boolean> = new Subject<boolean>(); // just need to know if user is authenticated
-  private data: JSON[];
-  private User: User;
-  private errorListener : Subject<String> =  new Subject<String>();
+  public isAuthenticated = false;
+  public authStatusListener : Subject<boolean> = new Subject<boolean>(); // just need to know if user is authenticated
+  public data: JSON[];
+  public User: User;
+  public errorListener : Subject<String> =  new Subject<String>();
+  public ip = "http://51.178.29.162:3000";
 
   constructor(private http: HttpClient,
               private cookie : CookieService,
@@ -42,7 +43,7 @@ export class AuthService {
   }
 
   createUser(authData : AuthSignupData) {
-    return this.http.post('https://localhost:8000/api/register', authData).pipe(
+    return this.http.post(this.ip + '/api/register', authData).pipe(
       catchError(
         (err : any) => {
           if(err instanceof HttpErrorResponse){
@@ -79,7 +80,6 @@ export class AuthService {
 
   initUser(data){
     this.data = JSON.parse(JSON.stringify(data));
-    console.log(this.data);
     this.User = {
       id: this.data["id"],
       username : this.data["Username"],

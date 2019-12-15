@@ -1,5 +1,8 @@
+<mat-card *ngIf="isLoading" style="margin: auto">
+  <mat-spinner style="margin: auto"></mat-spinner>
+</mat-card>
 
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+<mat-table *ngIf="!isLoading" [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <!-- LastName Column -->
   <ng-container matColumnDef="LastName">

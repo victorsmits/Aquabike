@@ -11,8 +11,8 @@ import {TypeSession} from '../Interface/Interface.module';
   templateUrl: './add-type-session.component.html',
 })
 export class AddTypeSessionComponent implements OnInit{
-  private days = this.tool.days;
-  private error : string;
+  public days = this.tool.days;
+  public error : string;
 
   @ViewChild('daySelect',{static:false}) daySelect: MatSelect;
 

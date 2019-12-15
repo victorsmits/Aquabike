@@ -1,9 +1,8 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, NgForm} from '@angular/forms';
+import {NgForm} from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import {MatSelect} from "@angular/material/select";
 import {AuthSignupData, Sessions, TypeSession, User} from '../Interface/Interface.module';
-import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 import {Router} from '@angular/router';
 import {ToolService} from '../service/tool.service';
 import {ApiService} from '../service/api.service';
@@ -20,7 +19,7 @@ export class SignupComponent implements AfterViewInit, OnInit{
   isLoading = false;
   public user: User;
   days = this.tool.days;
-  private listTypeSession: TypeSession[];
+  public listTypeSession: TypeSession[];
   error;
 
   @ViewChild('daySelect',{static:false}) daySelect: MatSelect;
@@ -74,7 +73,6 @@ export class SignupComponent implements AfterViewInit, OnInit{
   ngOnInit(): void {
     this.api.getTypeSession().subscribe(urldata=>{
       let data = JSON.parse(JSON.stringify(urldata));
-      console.log(data);
       this.listTypeSession = [];
       for(let type of data){
         this.listTypeSession .push({
@@ -92,6 +90,5 @@ export class SignupComponent implements AfterViewInit, OnInit{
     }else{
       this.listTypeSessionId.push(Id);
     }
-    console.log(this.listTypeSessionId);
   }
 }

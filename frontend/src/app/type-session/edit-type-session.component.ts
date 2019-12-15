@@ -11,16 +11,16 @@ import {TypeSession, User} from '../Interface/Interface.module';
   templateUrl: './edit-type-session.component.html',
 })
 export class EditTypeSessionComponent implements OnInit{
-  private days = this.tool.days;
-  private error : string;
+  public days = this.tool.days;
+  public error : string;
 
   @ViewChild('daySelect',{static:false}) daySelect: MatSelect;
-  private selectDay: any;
+  public selectDay: any;
 
   constructor(
     public dialogRef: MatDialogRef<EditTypeSessionComponent>,
-    private api : ApiService,
-    private tool : ToolService,
+    public api : ApiService,
+    public tool : ToolService,
     @Inject(MAT_DIALOG_DATA) public data: TypeSession,) {
   }
 

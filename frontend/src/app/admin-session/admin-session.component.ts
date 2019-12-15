@@ -28,7 +28,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   public listPerson : Person[]=[];
   public listYear: number[]=[];
   public year: number;
-  private nbrDispBike: String = "9";
+  public nbrDispBike: String = "9";
   public error: String;
   public displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
 
@@ -51,12 +51,13 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
+  isLoading: boolean = true;
 
 
 
-  constructor(private api: ApiService,
+  constructor(public api: ApiService,
               public dialog: MatDialog,
-              private tool : ToolService) { }
+              public tool : ToolService) { }
 
   ngOnInit() {
     let m = new Date();
@@ -108,6 +109,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
 
     this.dataSource = new MatTableDataSource(this.listSession);
     this.dataSource.sort = this.sort;
+    this.isLoading = false;
   }
 
   openDialog(id): void {

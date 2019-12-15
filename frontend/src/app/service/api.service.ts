@@ -13,119 +13,121 @@ import {Observable, Subject, throwError} from 'rxjs';
 
 export class ApiService {
 
+  public ip = "http://51.178.29.162:3000";
+
   constructor(private http: HttpClient, private router:Router) { }
 
   getHomeJson(){
-    return this.http.get('https://127.0.0.1:8000/api').pipe(
+    return this.http.get(this.ip + '/api').pipe(
       catchError(this.handelError));
   }
 
   getMonthJson(month,year){
-    let url = "https://127.0.0.1:8000/api/month";
+    let url = this.ip + "/api/month";
     return this.http.post(url,{month:month,year:year}).pipe(
       catchError(this.handelError));
   }
 
   getProfileJson(username){
-    let url = "https://localhost:8000/api/profile/";
+    let url = this.ip + "/api/profile/";
     return this.http.post(url,{Username:username}).pipe(
       catchError(this.handelError));
   }
 
   getAboJson(){
-    return this.http.get('https://127.0.0.1:8000/api/admin/abonnement').pipe(
+    return this.http.get(this.ip + '/api/admin/abonnement').pipe(
       catchError(this.handelError));
   }
 
   postAboRenew(id){
-    let url = "https://127.0.0.1:8000/api/admin/renewAbo";
+    let url = this.ip + "/api/admin/renewAbo";
     return this.http.post(url,{Id:id}).pipe(
       catchError(this.handelError));
   }
 
   editAboType(newAboType : editAbo){
-    let url = "https://127.0.0.1:8000/api/admin/editAbo";
+    let url = this.ip + "/api/admin/editAbo";
     return this.http.post(url,newAboType).pipe(
       catchError(this.handelError));
   }
 
   postCancelSess(id){
-    let url = "https://127.0.0.1:8000/api/admin/Cancel";
+    let url = this.ip + "/api/admin/Cancel";
     return this.http.post(url,{Id:id}).pipe(
       catchError(this.handelError));
   }
 
   postRenewSess(id,bike){
-    let url = "https://127.0.0.1:8000/api/admin/recreate";
+    let url = this.ip + "/api/admin/recreate";
     return this.http.post(url,{Id:id,Bike:bike}).pipe(
       catchError(this.handelError));
   }
 
   postDeleteSess(id){
-    let url = "https://127.0.0.1:8000/api/admin/Delete";
+    let url = this.ip + "/api/admin/Delete";
     return this.http.post(url,{Id:id}).pipe(
       catchError(this.handelError));
   }
 
   createNewSess(newSess : Sessions){
-    let url = "https://127.0.0.1:8000/api/admin/session";
+    let url = this.ip + "/api/admin/session";
     return this.http.post(url,newSess).pipe(catchError(this.handelError));
   }
 
   createInscription(newInscription : Inscription){
-    let url = "https://127.0.0.1:8000/api/Inscription";
+    let url = this.ip + "/api/Inscription";
     return this.http.post(url,newInscription).pipe(
       catchError(this.handelError));
   }
 
   deleteInscription(newInscription : Inscription){
-    let url = "https://127.0.0.1:8000/api/Desinscription";
+    let url = this.ip + "/api/Desinscription";
     return this.http.post(url,newInscription).pipe(
       catchError(this.handelError));
   }
 
   postLogin(authData : AuthLoginData){
-   return this.http.post<{result: boolean}>('https://localhost:8000/api/login', authData).pipe(
+   return this.http.post<{result: boolean}>(this.ip +'/api/login', authData).pipe(
      catchError(this.handelError));
   }
 
   postEditProfile(editProfile){
-    return this.http.post<{result : boolean}>('https://localhost:8000/api/editProfile', editProfile).pipe(
+    return this.http.post<{result : boolean}>(this.ip + '/api/editProfile', editProfile).pipe(
       catchError(this.handelError));
   }
 
   postGenerateSessionAuto(year,bike){
-    let url = "https://127.0.0.1:8000/api/admin/createsession";
+    let url = this.ip + "/api/admin/createsession";
     return this.http.post(url,{year:year,bike:bike}).pipe(
       catchError(this.handelError));
   }
 
   getTypeSession(){
-    let url = "https://127.0.0.1:8000/api/TypeSession/get";
+    let url = this.ip + "/api/TypeSession/get";
     return this.http.get(url).pipe(
       catchError(this.handelError));
   }
 
   delTypeSession(Id : number){
-    let url = "https://127.0.0.1:8000/api/TypeSession/del";
+    let url = this.ip + "/api/TypeSession/del";
     return this.http.post(url,{Id : Id}).pipe(
       catchError(this.handelError));
   }
 
   addTypeSession(typeSession : TypeSession){
-    let url = "https://127.0.0.1:8000/api/TypeSession/add";
+    let url = this.ip + "/api/TypeSession/add";
     return this.http.post(url,typeSession).pipe(
       catchError(this.handelError));
   }
 
   editTypeSession(typeSession : TypeSession){
-    let url = "https://127.0.0.1:8000/api/TypeSession/edit";
+    let url = this.ip + "/api/TypeSession/edit";
     return this.http.post(url,typeSession).pipe(
       catchError(this.handelError));
   }
 
   postDelUser(Id:number){
-    let url = "https://127.0.0.1:8000/api/admin/delAbo";
+    let url = this.ip + "/api/admin/delAbo";
     return this.http.post(url,{id:Id}).pipe(
       catchError(this.handelError));
   }

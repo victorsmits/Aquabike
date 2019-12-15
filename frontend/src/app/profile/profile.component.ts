@@ -15,13 +15,10 @@ import {ToolService} from '../service/tool.service';
   templateUrl: './edit-profile.component.html',
 })
 export class EditProfileComponent implements OnInit{
-  private days = this.tool.days;
-  private day;
-  private day2;
-  private time2;
-  private error : string;
-  private listTypeSessionId: number[] = [];
-  private listTypeSession: TypeSession[];
+  public days = this.tool.days;
+  public day;
+  public error : string;
+  public listTypeSession: TypeSession[];
 
   constructor(
     public dialogRef: MatDialogRef<EditProfileComponent>,
@@ -103,7 +100,7 @@ export class ProfileComponent implements OnInit {
   public year: number;
   public value: any;
   public displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Action'];
-  private today: Date;
+  public today: Date;
 
   @ViewChild('matSelect',{static:false})matSelect : MatSelect;
 
@@ -121,6 +118,8 @@ export class ProfileComponent implements OnInit {
     {name : "novembre", num : 11},
     {name : "decembre", num : 12},
   ];
+  isLoading: boolean = true;
+
   constructor(private api: ApiService,
               private auth:AuthService,
               public dialog: MatDialog,){}
@@ -134,6 +133,7 @@ export class ProfileComponent implements OnInit {
     this.api.getProfileJson(this.User.username).subscribe(data=>{
       this.auth.initUser(data);
       this.User = this.auth.getCurrentUser();
+      this.isLoading = false
     });
   }
 
