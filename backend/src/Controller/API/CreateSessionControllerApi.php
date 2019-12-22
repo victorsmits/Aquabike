@@ -5,6 +5,8 @@ namespace App\Controller\API;
 use App\Entity\Session;
 use App\Entity\TypeSession;
 use DateTime;
+use Doctrine\DBAL\Driver\PDOException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -55,7 +57,7 @@ class CreateSessionControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/admin/createsession", name="api_create_session", methods={"POST","GET"})
+     * @Route("/admin/createsession", name="api_auto_create_session", methods={"POST","GET"})
      * @param Request $request
      * @return JsonResponse
      * @throws Exception
@@ -122,7 +124,7 @@ class CreateSessionControllerApi extends AbstractController
                 "time" => $session->getTime()
             ]);
 
-        if(empty($listSessions)){
+        if(!empty($listSessions)){
             return true;
         }
         else{

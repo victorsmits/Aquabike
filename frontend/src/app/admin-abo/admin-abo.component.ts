@@ -3,7 +3,7 @@ import {ApiService} from "../service/api.service";
 import {editAbo, User} from '../Interface/Interface.module';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatSnackBar} from '@angular/material';
 import {ToolService} from '../service/tool.service';
 import {DelAboComponent} from './del-abo.component';
 
@@ -43,7 +43,8 @@ export class AdminAboComponent implements OnInit {
 
   constructor(private api: ApiService,
               public dialog: MatDialog,
-              private tool: ToolService) {
+              private tool: ToolService,
+              private _snackBar: MatSnackBar) {
   }
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -70,7 +71,7 @@ export class AdminAboComponent implements OnInit {
         lastName: this.data[i]["LastName"],
         firstName: this.data[i]["FirstName"],
         abonnement: this.data[i]["Abonnement"],
-        typeSessions: this.data[i]["IdTypeSession"].length > 0 ? this.tool.initTypeSession(this.data[i]["IdTypeSession"]) : [],
+        typeSessions: this.data[i]["IdTypeSession"].length > 0 ? this.tool.initTypeSession(JSON.stringify(this.data[i]["IdTypeSession"])) : [],
         Email: this.data[i]["Email"],
         Session: [],
         Role: this.data[i]["roles"],
@@ -84,10 +85,12 @@ export class AdminAboComponent implements OnInit {
   }
 
 
-  reSubcribe(id: any) {
-    this.api.postAboRenew(id).subscribe(urldata => {
+  reSubcribe(user : User) {
+    this.api.postAboRenew(user.id).subscribe(urldata => {
       if (urldata["result"]) {
         this.ngOnInit();
+        let action = user.firstName + " " + user.lastName;
+        this.openSnackBar("Abonnement actualiser pour", action)
       }
     });
   }
@@ -123,6 +126,12 @@ export class AdminAboComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       this.ngOnInit()
+    });
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
     });
   }
 }

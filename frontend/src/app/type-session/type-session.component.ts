@@ -27,12 +27,9 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
     this.listTypeSession = [];
     this.api.getTypeSession().subscribe(urldata=>{
       let str = JSON.stringify(urldata);
-      str = str.replace(/"day"/gi, "\"Day\"");
-      str = str.replace(/"time"/gi, "\"Time\"");
       str = str.replace(/"idTypeSession"/gi, "\"idPerson\"");
-      let data = JSON.parse(str);
 
-      this.listTypeSession = this.tool.initTypeSession(data);
+      this.listTypeSession = this.tool.initTypeSession(str);
       this.isLoading = false
     })
   }
@@ -40,14 +37,10 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(){
     this.listTypeSession = [];
     this.api.getTypeSession().subscribe(urldata=>{
-
       let str = JSON.stringify(urldata);
-      str = str.replace(/"day"/gi, "\"Day\"");
-      str = str.replace(/"time"/gi, "\"Time\"");
       str = str.replace(/"idTypeSession"/gi, "\"idPerson\"");
-      let data = JSON.parse(str);
 
-      this.listTypeSession = this.tool.initTypeSession(data);
+      this.listTypeSession = this.tool.initTypeSession(str);
       this.isLoading = false
     })
   }

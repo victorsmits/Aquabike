@@ -3,55 +3,99 @@
   <head>
     <meta charset="UTF-8">
   </head>
-  <nav>
-    <mat-toolbar class="Navbar" style="padding: 0" color="primary">
-      <div>
-        <a mat-button routerLink=".">
-          <mat-icon> home </mat-icon>
-          <span> Accueil </span>
-        </a>
-        <a mat-button routerLink="/month">
-          <mat-icon> date_range </mat-icon>
-          <span> Mois </span>
-        </a>
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav"
+                   fixedInViewport="flase"
+                   [ngClass]="{hidden : !(isHandset$ | async)}"
+                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                   [mode]="(isHandset$ | async) ? 'over' : 'side'"
+                   [opened]="(isHandset$ | async) === false">
+        <div *ngTemplateOutlet="menutemplate"></div>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar color="primary" *ngIf="(isHandset$ | async); else desktopNav">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </mat-toolbar>
 
-        <a mat-button routerLink="/login" *ngIf="!isAuth; else profile">
-          <mat-icon> person </mat-icon>
-          <span> Login </span>
-        </a>
+        <ng-container>
+          <body>
+          <router-outlet></router-outlet>
+          </body>
+        </ng-container>
 
-        <ng-template #profile>
-          <a mat-button [matMenuTriggerFor]="menu" *ngIf="isAuth">
-            <mat-icon> person </mat-icon>
-            <span> {{user.lastName}} {{user.firstName}} </span>
-          </a>
-
-          <mat-menu #menu="matMenu">
-            <a mat-menu-item routerLink="/profile">Profile</a>
-            <a mat-menu-item (click)="logout()">Deconexion</a>
-          </mat-menu>
-
-          <a mat-button [matMenuTriggerFor]="admin" *ngIf="user.Role[0] === 'ROLE_ADMIN'">
-            <mat-icon>build</mat-icon>
-            <span> Admin</span>
-          </a>
-          <mat-menu #admin="matMenu">
-            <button mat-menu-item routerLink="admin/Session">Sessions</button>
-            <button mat-menu-item routerLink="admin/Session/Create">Nouvelle Sessions</button>
-            <button mat-menu-item routerLink="admin/Abonnement">Abonnement</button>
-            <button mat-menu-item routerLink="admin/Session/Type">Type Sessions</button>
-          </mat-menu>
-
-        </ng-template>
-
-
-      </div>
-    </mat-toolbar>
-  </nav>
-
-  <body>
-    <router-outlet></router-outlet>
-  </body>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 
 </html>
 
+<ng-template #desktopNav >
+  <mat-toolbar class="Navbar" color="primary">
+    <a mat-button routerLink="." >
+      <mat-icon> home </mat-icon>
+      <span> Accueil </span>
+    </a>
+
+    <a mat-button routerLink="/month">
+      <mat-icon> date_range </mat-icon>
+      <span> Mois </span>
+    </a>
+
+    <a mat-button routerLink="/login" *ngIf="!isAuth ; else profile">
+      <mat-icon> person </mat-icon>
+      <span> Login </span>
+    </a>
+  </mat-toolbar>
+</ng-template>
+
+<ng-template #menutemplate>
+  <mat-nav-list>
+    <a mat-list-item routerLink=".">
+      <mat-icon> home </mat-icon>
+      <span> Accueil </span>
+    </a>
+
+    <a mat-list-item routerLink="/month">
+      <mat-icon> date_range </mat-icon>
+      <span> Mois </span>
+    </a>
+
+    <a mat-list-item routerLink="/login" *ngIf="!isAuth; else profile">
+      <mat-icon> person </mat-icon>
+      <span> Login </span>
+    </a>
+
+  </mat-nav-list>
+</ng-template>
+
+<ng-template #profile>
+  <a mat-list-item [matMenuTriggerFor]="menu" *ngIf="isAuth">
+    <mat-icon> person </mat-icon>
+    <span> {{user.lastName}} {{user.firstName}} </span>
+  </a>
+
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item routerLink="/profile">Profil</a>
+    <a mat-menu-item (click)="logout()">Déconnexion</a>
+  </mat-menu>
+
+  <a mat-list-item [matMenuTriggerFor]="admin" *ngIf="user.Role[0] === 'ROLE_ADMIN'">
+    <mat-icon>build</mat-icon>
+    <span> Admin</span>
+  </a>
+</ng-template>
+
+<mat-menu #admin="matMenu">
+  <mat-nav-list>
+    <a mat-list-item routerLink="admin/Session">Sessions</a>
+    <a mat-list-item routerLink="admin/Session/Create">Nouvelle Sessions</a>
+    <a mat-list-item routerLink="admin/Abonnement">Abonnement</a>
+    <a mat-list-item routerLink="admin/Session/Type">Type Sessions</a>
+  </mat-nav-list>
+</mat-menu>

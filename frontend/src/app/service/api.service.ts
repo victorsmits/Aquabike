@@ -14,6 +14,7 @@ import {Observable, Subject, throwError} from 'rxjs';
 export class ApiService {
 
   public ip = "http://51.178.29.162:3000";
+  // public ip = "https://127.0.0.1:8000";
 
   constructor(private http: HttpClient, private router:Router) { }
 

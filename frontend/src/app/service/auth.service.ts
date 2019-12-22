@@ -18,6 +18,7 @@ export class AuthService {
   public User: User;
   public errorListener : Subject<String> =  new Subject<String>();
   public ip = "http://51.178.29.162:3000";
+  // public ip = "https://127.0.0.1:8000";
 
   constructor(private http: HttpClient,
               private cookie : CookieService,

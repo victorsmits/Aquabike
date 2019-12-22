@@ -4,7 +4,7 @@
 
   <mat-grid-tile colspan="1">
     <mat-form-field>
-      <mat-select placeholder="Sélectionné le mois" #matSelect [(ngModel)]="value">
+      <mat-select placeholder="Mois" #matSelect [(ngModel)]="value">
         <mat-option *ngFor="let month of months" [value]="month.num" >
           {{month.name}}
         </mat-option>
@@ -14,7 +14,7 @@
 
   <mat-grid-tile colspan="1">
     <mat-form-field class="select">
-      <mat-select placeholder="Sélectionné l'année" #matSelect2 [(ngModel)]="year">
+      <mat-select placeholder="Année" #matSelect2 [(ngModel)]="year">
         <mat-option *ngFor="let y of listYear" [value]="y" >
           {{y}}
         </mat-option>
@@ -51,7 +51,7 @@
   </ng-container>
 
   <!-- Status Column -->
-  <ng-container matColumnDef="Status">
+  <ng-container matColumnDef="Status" >
     <mat-header-cell *matHeaderCellDef>
       Cours confirmé
     </mat-header-cell>
@@ -65,12 +65,12 @@
   </ng-container>
 
   <!-- Button Column-->
-  <ng-container matColumnDef="Info">
+  <ng-container matColumnDef="Info" >
     <mat-header-cell *matHeaderCellDef>
-      List inscrit
+      Liste Participant(e)s
     </mat-header-cell>
-    <mat-cell *matCellDef="let element" >
-        <button mat-flat-button  color="primary" matTooltip="Liste Participant">
+    <mat-cell *matCellDef="let element">
+        <button mat-flat-button  color="primary" matTooltip="Liste Participant(e)s">
           <mat-icon (click)="openDialog(element)" [ngStyle]="{'color':'white'}">info</mat-icon>
         </button>
     </mat-cell>
@@ -89,25 +89,30 @@
       </div>
 
       <ng-template #cancelBtn>
-        <button mat-flat-button matTooltip="Annuler" disabled>
+        <button mat-flat-button matTooltip="Annuler" disabled >
           <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
 
       <ng-template #Btn>
-        <button mat-flat-button color="primary">
-          <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
+        <button mat-flat-button color="primary" >
+          <mat-icon *ngIf="checkIfSub(element);then unsub2 else sub"></mat-icon>
         </button>
       </ng-template>
 
       <ng-template #sub>
-          <mat-icon [ngStyle]="{'color':'white'}" (click)="subscribe(element.Id)"
-                    matTooltip="Inscription">add</mat-icon>
+          <mat-icon color="white" matTooltip="Inscription"
+                    (click)="subscribe(element.Id)">add</mat-icon>
       </ng-template>
 
       <ng-template #unsub>
-          <mat-icon color="warn" (click)="unSubscribe(element.Id)"
-                    matTooltip="Desinscription">clear</mat-icon>
+          <mat-icon color="white" matTooltip="Désinscription"
+                    (click)="unSubscribe(element.Id)">check</mat-icon>
+      </ng-template>
+
+      <ng-template #unsub2>
+          <mat-icon [ngStyle]="{color : '#44c344'}" matTooltip="Désinscription"
+                    (click)="unSubscribe(element.Id)">check</mat-icon>
       </ng-template>
 
 

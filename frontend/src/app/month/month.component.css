@@ -28,9 +28,20 @@ mat-form-field{
   text-align: center;
 }
 
+
 .mat-column-Date {
   flex: 0 0 10%;
 }
+
 .action-btn{
   background-color: #006186;
+}
+
+@media (max-width: 960px) {
+  .mat-column-Action {
+    flex: 0 0 30%;
+  }
+  .mat-column-Date {
+    flex: 0 0 30%;
+  }
 }

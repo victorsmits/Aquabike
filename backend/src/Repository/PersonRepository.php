@@ -28,7 +28,7 @@ class PersonRepository extends ServiceEntityRepository
     }
 
     public function getPersonFromId($idPerson){
-        return $this->findOneBy(array('id' => $idPerson));
+        return $this->findOneBy(array('id' => $idPerson),["date"]);
     }
 
 }

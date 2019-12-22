@@ -25,7 +25,15 @@ import {
   MatRippleModule
 } from "@angular/material/core";
 import { MatListModule } from "@angular/material/list";
-import {MatCheckboxModule, MatDialogModule, MatSortModule} from '@angular/material';
+import {
+  MatCheckboxModule,
+  MatDialogModule,
+  MatPaginatorModule,
+  MatSnackBar,
+  MatSnackBarContainer,
+  MatSnackBarModule,
+  MatSortModule
+} from '@angular/material';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from "@angular/material/dialog";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatDatepickerModule } from "@angular/material/datepicker";
@@ -48,6 +56,10 @@ import {AddTypeSessionComponent} from './type-session/add-type-session.component
 import {EditTypeSessionComponent} from './type-session/edit-type-session.component';
 import {DelAboComponent} from './admin-abo/del-abo.component';
 import {listAboSession} from './type-session/list-abo-session.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { MenuComponent } from './menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -69,40 +81,45 @@ import {listAboSession} from './type-session/list-abo-session.component';
     ConfimGenerationComponent,
     EditTypeSessionComponent,
     DelAboComponent,
-    listAboSession
+    listAboSession,
+    MenuComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatTableModule,
-        ReactiveFormsModule,
-        FormsModule,
-        MatMenuModule,
-        MatIconModule,
-        MatButtonModule,
-        MatExpansionModule,
-        MatRippleModule,
-        MatListModule,
-        MatDialogModule,
-        BrowserAnimationsModule,
-        MatTooltipModule,
-        MatDatepickerModule,
-        MatInputModule,
-        MatNativeDateModule,
-        MatToolbarModule,
-        MatCardModule,
-        MatProgressSpinnerModule,
-        MatGridListModule,
-        NgxMaterialTimepickerModule,
-        MatTabsModule,
-        MatSortModule,
-        MatCheckboxModule,
-
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatRippleModule,
+    MatListModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatGridListModule,
+    NgxMaterialTimepickerModule,
+    MatTabsModule,
+    MatSortModule,
+    MatCheckboxModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    FlexLayoutModule,
+    LayoutModule,
+    MatSidenavModule
+  ],
   entryComponents: [
     MonthComponent,
     ListPersonDialog,
@@ -120,7 +137,8 @@ import {listAboSession} from './type-session/list-abo-session.component';
     MatDialogModule,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } },
     MatDatepickerModule,
-    CookieService
+    CookieService,
+    MatSnackBar
   ],
   bootstrap: [AppComponent]
 })

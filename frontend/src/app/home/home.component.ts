@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../service/api.service";
+import {ToolService} from '../service/tool.service';
+import {Observable} from 'rxjs';
+import {Breakpoints} from '@angular/cdk/layout';
+import {map, shareReplay} from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +17,14 @@ export class HomeComponent implements OnInit {
   public listUser: any[] = [];
   public date;
   public time : any[]= [];
+  public isHandset$ = this.tool.isHandset$;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,
+              private tool : ToolService) { }
 
   ngOnInit() {
     let day = new Date();
-    this.date = day.toDateString();
+    this.date = this.tool.switchProfileDate(day.toISOString());
     this.api.getHomeJson().subscribe(urldata => {
       this.data = JSON.parse(JSON.stringify(urldata));
 
@@ -35,9 +41,6 @@ export class HomeComponent implements OnInit {
         this.listUser.push(user)
       }
     });
-
-
-
   }
 
 }

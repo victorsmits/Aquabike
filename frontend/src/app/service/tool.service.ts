@@ -1,6 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Sessions, TypeSession, User} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {map, shareReplay} from 'rxjs/operators';
 
 export interface Days {
   code : string,
@@ -12,6 +15,18 @@ export interface Days {
 })
 
 export class ToolService {
+  get isHandset$(): Observable<boolean> {
+    return this._isHandset$;
+  }
+  private _isHandset$: Observable<boolean> = this.breakpointObserver.observe([
+    Breakpoints.HandsetLandscape,
+    Breakpoints.HandsetPortrait,
+    Breakpoints.TabletLandscape,
+    Breakpoints.TabletPortrait])
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
   get days(): Days[] {
     return this._days;
   }
@@ -43,7 +58,7 @@ export class ToolService {
     {code:"Sun",nom:"Dimanche"},
   ];
 
-  constructor() { }
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   daySwith(day){
 
@@ -101,6 +116,28 @@ export class ToolService {
     }
   }
 
+  checkIfBeforeToday(date){
+    let d = new Date();
+    d.setDate(d.getDate()-1);
+    return new Date(date) >= d
+  }
+
+  switchProfileDate(d) : string{
+    let date = new Date(d);
+    let j;
+    switch (date.getDay()) {
+      case 1:{j = "Lundi "; break}
+      case 2:{j = "Mardi "; break}
+      case 3:{j = "Mercredi "; break}
+      case 4:{j = "jeudi "; break}
+      case 5:{j = "Vendrdi "; break}
+      case 6:{j = "Samedi "; break}
+      case 0:{j = "Dimanche "; break}
+    }
+    let months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
+    return j + date.getDate() + " " +  months[date.getMonth()] + " " + date.getFullYear()
+  }
+
   initListPersDetail(listPers): User[]{
     let tempPers : User[] = [];
     for(let pers of listPers){
@@ -118,7 +155,11 @@ export class ToolService {
     return tempPers;
   }
 
-  initTypeSession(data : JSON[]) : TypeSession[]{
+  initTypeSession(str : string) : TypeSession[]{
+    str = str.replace(/"day"/gi, "\"Day\"");
+    str = str.replace(/"time"/gi, "\"Time\"");
+    let data = JSON.parse(str);
+
     let typeSession : TypeSession[] = [];
     for(let type of data){
       let TypeSess;
@@ -129,7 +170,6 @@ export class ToolService {
       }else{
         TypeSess = type
       }
-
       let tempType : TypeSession = {
         Id : TypeSess["id"],
         Day : this.daySwith(TypeSess["Day"]),

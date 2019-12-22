@@ -3,7 +3,7 @@ import {ApiService} from "../service/api.service";
 import {MatSelect} from "@angular/material/select";
 import {editProfileInterface, Inscription, Sessions, TypeSession, User} from '../Interface/Interface.module';
 import {AuthService} from "../service/auth.service";
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatPaginator, MatTableDataSource} from '@angular/material';
 import {NgForm} from '@angular/forms';
 import {ToolService} from '../service/tool.service';
 
@@ -34,7 +34,7 @@ export class EditProfileComponent implements OnInit{
 
   ngOnInit(): void {
     this.api.getTypeSession().subscribe(urldata=>{
-      let data = JSON.parse(JSON.stringify(urldata));
+      let data = JSON.stringify(urldata);
       this.listTypeSession = this.tool.initTypeSession(data);
     })
   }
@@ -103,6 +103,7 @@ export class ProfileComponent implements OnInit {
   public today: Date;
 
   @ViewChild('matSelect',{static:false})matSelect : MatSelect;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   months = [
     {name : "janvier", num : 1},
@@ -119,10 +120,13 @@ export class ProfileComponent implements OnInit {
     {name : "decembre", num : 12},
   ];
   isLoading: boolean = true;
+  public dataSource: MatTableDataSource<Sessions>;
+
 
   constructor(private api: ApiService,
               private auth:AuthService,
-              public dialog: MatDialog,){}
+              public dialog: MatDialog,
+              private tool: ToolService){}
 
   ngOnInit() {
     this.today = new Date();
@@ -133,24 +137,16 @@ export class ProfileComponent implements OnInit {
     this.api.getProfileJson(this.User.username).subscribe(data=>{
       this.auth.initUser(data);
       this.User = this.auth.getCurrentUser();
-      this.isLoading = false
+      let sess : Sessions[] = this.User.Session;
+      for(let i = 0;i < this.User.Session.length;i++){
+        if(this.tool.checkIfBeforeToday(sess[i].Date)){
+          this.listSession.push(sess[i])
+        }
+      }
+      this.dataSource = new MatTableDataSource(this.listSession);
+      this.dataSource.paginator = this.paginator;
+      this['isLoading'] = false
     });
-  }
-
-  switchDate(d) : string{
-    let date = new Date(d);
-    let j;
-    switch (date.getDay()) {
-      case 1:{j = "Lundi "; break}
-      case 2:{j = "Mardi "; break}
-      case 3:{j = "Mercredi "; break}
-      case 4:{j = "jeudi "; break}
-      case 5:{j = "Vendrdi "; break}
-      case 6:{j = "Samedi "; break}
-      case 7:{j = "Dimanche "; break}
-    }
-    let months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
-    return j + date.getDate() + " " +  months[date.getMonth()] + " " + date.getFullYear()
   }
 
   getYear(){
@@ -172,7 +168,7 @@ export class ProfileComponent implements OnInit {
   }
 
   checkIfDisable(element) : boolean{
-    return (element.Date === this.today.toDateString())
+    return (element.Date === this.tool.switchProfileDate(this.today))
   }
 
   openDialog() {
@@ -186,4 +182,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  switchDate(Date) {
+    return this.tool.switchProfileDate(Date)
+  }
 }

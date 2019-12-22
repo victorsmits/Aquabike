@@ -31,6 +31,7 @@ server {
 
 	server_name backend.Aquabike.be;
 
+
 	location / {
 		# try to serve file directly, fallback to index.php
 	        try_files $uri /index.php$is_args$args;
@@ -42,6 +43,12 @@ server {
 	        fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
         	fastcgi_split_path_info ^(.+\.php)(/.*)$;
         	include fastcgi_params;
+
+            fastcgi_param APP_ENV prod;
+            fastcgi_param APP_SECRET "ea73cb34c14b2d7dfa5f056119ca53b8";
+            fastcgi_param APP_DEBUG 0;
+            fastcgi_param DATABASE_URL "mysql://VictorSmits:Smivic1997@sv50712-002.dbaas.ovh.net:35805/Aquabike";
+            fastcgi_param MAILER_URL "null://localhost";
 
         	# optionally set the value of the environment variables used in the application fastcgi_param APP_ENV prod; fastcgi_param APP_SECRET <app-secret-id>; fastcgi_param DATABASE_URL "mysql://db_user:db_pass@host:3306/db_name";
 
@@ -58,8 +65,9 @@ server {
 	location ~ \.php$ {
 		return 404;
 	}
-    error_log /var/log/nginx/project_error.log;
-    access_log /var/log/nginx/project_access.log;
+    error_log /var/log/nginx/backend_error.log;
+    access_log /var/log/nginx/backend_access.log;
+
 }
 
 
@@ -70,7 +78,7 @@ server {
 # to sites-enabled/ to enable it.
 #
 
-#FRONTEND
+#FRONTEND SSL
 server {
 	# SSL configuration
 	#
@@ -91,12 +99,15 @@ server {
 	listen 80;
 	listen [::]:80;
 
-	server_name Aquabike.be;
+	server_name Aquabike.victorsmits.be;
 
 	root /var/www/frontend;
 	index index.html index.php index.htm index.nginx-debian.html;
 
 	location / {
 		try_files $uri $uri/ /index.html;
+
+		error_log /var/log/nginx/frontend_error.log;
+    		access_log /var/log/nginx/frontend_access.log;
 	}
 }

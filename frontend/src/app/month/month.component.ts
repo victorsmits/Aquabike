@@ -1,10 +1,9 @@
-import {Component, OnInit, ViewChild, AfterViewInit, Inject} from '@angular/core';
-import {ApiService} from "../service/api.service";
-import {AuthService} from "../service/auth.service";
-import {CookieService} from "ngx-cookie-service";
-import {Inscription, Sessions, User} from "../Interface/Interface.module";
+import {AfterViewInit, Component, Inject, OnInit, ViewChild} from '@angular/core';
+import {ApiService} from '../service/api.service';
+import {AuthService} from '../service/auth.service';
+import {Inscription, Sessions, User} from '../Interface/Interface.module';
 
-import {MatSelect} from "@angular/material/select";
+import {MatSelect} from '@angular/material/select';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
@@ -46,29 +45,30 @@ export class MonthComponent implements OnInit, AfterViewInit {
   public year: number;
   public user: User;
   public listIdSession: number[]=[];
-  public today: Date;
+  public today: Date = new Date();
   public isLoading: boolean = true;
+  public isHandset$ = this.tool.isHandset$;
 
   @ViewChild('matSelect',{static:false})matSelect : MatSelect;
   @ViewChild('matSelect2',{static:false})matSelect2 : MatSelect;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  displayedColumns: string[] = ['Date', 'Time', 'Bike', 'Status','Info','Action'];
+  displayedColumns: string[] ;
 
 
   months = [
     {name : "janvier", num : 1},
-    {name : "fevrirer", num : 2},
+    {name : "février", num : 2},
     {name : "mars", num : 3},
     {name : "avril", num : 4},
     {name : "mai", num : 5},
     {name : "juin", num : 6},
     {name : "juillet", num : 7},
-    {name : "aout", num : 8},
+    {name : "août", num : 8},
     {name : "septembre", num : 9},
     {name : "octobre", num : 10},
     {name : "novembre", num : 11},
-    {name : "decembre", num : 12},
+    {name : "décembre", num : 12},
   ];
 
 
@@ -85,6 +85,8 @@ export class MonthComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.isHandset$.subscribe(value1 =>
+      !value1 ? this.displayedColumns = ['Date', 'Time', 'Bike', 'Status','Info','Action'] : this.displayedColumns = ['Date', 'Time','Action'] ) ;
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
     });
@@ -152,10 +154,14 @@ export class MonthComponent implements OnInit, AfterViewInit {
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
-      let tempSess = this.tool.initTempSess(this.data[i],this.data[i]["Date"]);
-      tempSess.Date = this.tool.switchDate(new Date(tempSess.Date));
-      tempSess.Person = this.tool.initListPersDetail(this.data[i]["idInscription"]);
-      this.listSession.push(tempSess);
+      if(this.tool.checkIfBeforeToday(this.data[i]["Date"])){
+        let tempSess = this.tool.initTempSess(this.data[i],this.data[i]["Date"]);
+
+        tempSess.Date = this.tool.switchDate(new Date(tempSess.Date));
+        tempSess.Person = this.tool.initListPersDetail(this.data[i]["idInscription"]);
+        this.listSession.push(tempSess);
+      }
+
     }
 
     this.dataSource = new MatTableDataSource(this.listSession);
@@ -176,9 +182,11 @@ export class MonthComponent implements OnInit, AfterViewInit {
       this.listYear.push(i);}
   }
 
+
+
   checkIfDisable(element) : boolean{
     return element.Cancel || element.Bike == 0 || (this.user.abonnement == 0 && !this.checkIfSub(element))
-      || (element.Date === this.today.toDateString() && this.checkIfSub(element))
+      || (element.Date === this.tool.switchDate(this.today) && this.checkIfSub(element))
   }
 
   checkIfSub(element) : boolean{

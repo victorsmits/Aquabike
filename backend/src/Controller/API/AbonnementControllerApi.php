@@ -75,17 +75,14 @@ class AbonnementControllerApi extends AbstractController
                 ->getRepository('App:Person')
                 ->find($data["Id"]);
 
-
-            $types = $em->getRepository('App:LienPersonTypeSession')
-                ->findBy(['IdPerson'=>$user]);
-
             $user->setAbonnement($user->getAboType());
+
             $em->persist($user);
             $em->flush();
 
-            $Sessions = $em
-                ->getRepository('App:Session')
-                ->getALlSessionListFromToday(new DateTime());
+            $types = $em
+                ->getRepository('App:LienPersonTypeSession')
+                ->findBy(['IdPerson'=>$user]);
 
             $listIdType = [];
 
@@ -94,6 +91,9 @@ class AbonnementControllerApi extends AbstractController
             }
 
             $sub->autoSub($listIdType,$user);
+
+            $em->persist($user);
+            $em->flush();
 
             return new JsonResponse(['result'=>true]);
 

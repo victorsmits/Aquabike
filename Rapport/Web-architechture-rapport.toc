@@ -1,0 +1,25 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Sp\IeC {\'e}cification}{2}{section.0.1}
+\contentsline {subsection}{\numberline {1.1}Objectif du site}{2}{subsection.0.1.1}
+\contentsline {paragraph}{}{2}{paragraph*.2}
+\contentsline {subsection}{\numberline {1.2}Acteur}{2}{subsection.0.1.2}
+\contentsline {paragraph}{}{2}{paragraph*.3}
+\contentsline {subsection}{\numberline {1.3}User Stories}{2}{subsection.0.1.3}
+\contentsline {subsection}{\numberline {1.4}Mockup}{4}{subsection.0.1.4}
+\contentsline {subsubsection}{Login}{4}{subsubsection*.4}
+\contentsline {subsubsection}{Accueil}{4}{subsubsection*.5}
+\contentsline {subsubsection}{Inscription}{5}{subsubsection*.6}
+\contentsline {subsubsection}{Month}{6}{subsubsection*.7}
+\contentsline {subsubsection}{Admin - Session}{6}{subsubsection*.8}
+\contentsline {subsubsection}{Admin - Nouvelle session}{7}{subsubsection*.9}
+\contentsline {subsubsection}{Admin - Abonnement}{7}{subsubsection*.10}
+\contentsline {subsubsection}{Admin - Type Session}{8}{subsubsection*.11}
+\contentsline {section}{\numberline {2}Base de donn\IeC {\'e}e}{9}{section.0.2}
+\contentsline {subsection}{\numberline {2.1}Diagramme Entit\IeC {\'e} relation}{9}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {2.2}Diagramme Relationnel}{9}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {2.3}Description des tables et des relations entre tables}{10}{subsection.0.2.3}
+\contentsline {paragraph}{}{10}{paragraph*.12}
+\contentsline {section}{\numberline {3}MVC}{10}{section.0.3}
+\contentsline {section}{\numberline {4}API}{10}{section.0.4}
+\contentsline {section}{\numberline {5}S\IeC {\'e}paration backend frontend}{10}{section.0.5}
+\contentsline {section}{\numberline {6}Conclusion}{10}{section.0.6}

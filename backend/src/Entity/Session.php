@@ -52,7 +52,7 @@ class Session
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\TypeSession", inversedBy="Sessions")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $IdTypeSession;
 

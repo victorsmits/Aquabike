@@ -3,6 +3,10 @@ import {AuthService} from "./service/auth.service";
 import {AfterViewInit} from "@mobiscroll/angular-lite/src/js/frameworks/angular";
 import {User} from "./Interface/Interface.module";
 import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {map, shareReplay} from 'rxjs/operators';
+import {ToolService} from './service/tool.service';
 
 //TODO graphical responsive for devices
 
@@ -15,9 +19,11 @@ export class AppComponent implements OnInit,AfterViewInit {
   title = 'Aquabike';
   public user: User;
   public isAuth: boolean;
+  public isHandset$ = this.tool.isHandset$;
 
   constructor(private auth : AuthService,
-              private router : Router) {}
+              private router : Router,
+              private tool : ToolService) {}
 
   ngOnInit(){
     this.auth.getAuthStatusListener().subscribe(
