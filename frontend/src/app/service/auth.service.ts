@@ -44,7 +44,7 @@ export class AuthService {
   }
 
   createUser(authData : AuthSignupData) {
-    return this.http.post(this.ip + '/api/register', authData).pipe(
+    return this.http.put(this.ip + '/api/register', authData).pipe(
       catchError(
         (err : any) => {
           if(err instanceof HttpErrorResponse){

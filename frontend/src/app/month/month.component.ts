@@ -129,7 +129,7 @@ export class MonthComponent implements OnInit, AfterViewInit {
       Id: id
     };
 
-    this.api.deleteInscription(tempInscription).subscribe(urldata=>{
+    this.api.delInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngOnInit();
       }

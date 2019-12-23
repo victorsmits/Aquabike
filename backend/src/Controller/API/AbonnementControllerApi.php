@@ -57,7 +57,7 @@ class AbonnementControllerApi extends AbstractController
 
 
     /**
-     * @Route("/renewAbo", name="api_renew", methods={"POST","HEAD","OPTIONS","GET"})
+     * @Route("/renewAbo", name="api_renew", methods={"POST","OPTIONS"})
      * @param Request $request
      * @param RegistrationControllerApi $sub
      * @return JsonResponse
@@ -129,11 +129,12 @@ class AbonnementControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/delAbo", name="api_delAbo", methods={"POST","HEAD"})
+     * @Route("/user/{id?}", name="api_delAbo", methods={"DELETE","OPTIONS"})
      * @param Request $request
+     * @param $id
      * @return JsonResponse
      */
-    public function delAbo(Request $request){
+    public function delAbo(Request $request,$id){
         try{
 
             /**
@@ -142,8 +143,7 @@ class AbonnementControllerApi extends AbstractController
              * @var $session Session
              */
             $em = $this->getDoctrine()->getManager();
-            $data = json_decode($request->getContent(), true);
-            $user = $em->getRepository('App:Person')->find($data["id"]);
+            $user = $em->getRepository('App:Person')->find($id);
 
             $Inscriptions = $user->getIdInscription()->toArray();
 

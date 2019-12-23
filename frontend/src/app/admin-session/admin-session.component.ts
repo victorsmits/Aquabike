@@ -143,7 +143,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   }
 
   Delete(id: any) {
-    this.api.postDeleteSess(id).subscribe(urldata=>{
+    this.api.deleteSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
       }

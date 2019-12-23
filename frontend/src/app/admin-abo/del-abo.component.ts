@@ -27,7 +27,7 @@ export class DelAboComponent implements OnInit{
   }
 
   Delete(id: any) {
-    this.api.postDelUser(id).subscribe(urldata=>{
+    this.api.delUser(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.dialogRef.close();
       }

@@ -24,14 +24,14 @@ export class ApiService {
   }
 
   getMonthJson(month,year){
-    let url = this.ip + "/api/month";
-    return this.http.post(url,{month:month,year:year}).pipe(
+    let url = this.ip + "/api/month/" + month + "/" + year;
+    return this.http.get(url).pipe(
       catchError(this.handelError));
   }
 
   getProfileJson(username){
-    let url = this.ip + "/api/profile/";
-    return this.http.post(url,{Username:username}).pipe(
+    let url = this.ip + "/api/profile/" + username;
+    return this.http.get(url).pipe(
       catchError(this.handelError));
   }
 
@@ -64,72 +64,74 @@ export class ApiService {
       catchError(this.handelError));
   }
 
-  postDeleteSess(id){
-    let url = this.ip + "/api/admin/Delete";
-    return this.http.post(url,{Id:id}).pipe(
+  deleteSess(id){
+    let url = this.ip + "/api/admin/session/" + id ;
+    return this.http.delete(url).pipe(
       catchError(this.handelError));
   }
 
   createNewSess(newSess : Sessions){
     let url = this.ip + "/api/admin/session";
-    return this.http.post(url,newSess).pipe(catchError(this.handelError));
-  }
-
-  createInscription(newInscription : Inscription){
-    let url = this.ip + "/api/Inscription";
-    return this.http.post(url,newInscription).pipe(
-      catchError(this.handelError));
-  }
-
-  deleteInscription(newInscription : Inscription){
-    let url = this.ip + "/api/Desinscription";
-    return this.http.post(url,newInscription).pipe(
-      catchError(this.handelError));
-  }
-
-  postLogin(authData : AuthLoginData){
-   return this.http.post<{result: boolean}>(this.ip +'/api/login', authData).pipe(
-     catchError(this.handelError));
-  }
-
-  postEditProfile(editProfile){
-    return this.http.post<{result : boolean}>(this.ip + '/api/editProfile', editProfile).pipe(
-      catchError(this.handelError));
+    return this.http.put(url,newSess).pipe(catchError(this.handelError));
   }
 
   postGenerateSessionAuto(year,bike){
-    let url = this.ip + "/api/admin/createsession";
+    let url = this.ip + "/api/admin/autocreate";
     return this.http.post(url,{year:year,bike:bike}).pipe(
       catchError(this.handelError));
   }
 
+  createInscription(newInscription : Inscription){
+    let url = this.ip + "/api/Inscription";
+    return this.http.put(url,newInscription).pipe(
+      catchError(this.handelError));
+  }
+
+  delInscription(newInscription : Inscription){
+    let url = this.ip + "/api/Desinscription/" + newInscription.Username + "/" + newInscription.Id;
+    return this.http.delete(url).pipe(
+      catchError(this.handelError));
+  }
+
+  postLogin(authData : AuthLoginData){
+    let url = this.ip +'/api/login';
+    return this.http.post<{result: boolean}>(url, authData).pipe(
+     catchError(this.handelError));
+  }
+
+  postEditProfile(editProfile){
+    let url = this.ip + '/api/editProfile';
+    return this.http.post<{result : boolean}>(url, editProfile).pipe(
+      catchError(this.handelError));
+  }
+
   getTypeSession(){
-    let url = this.ip + "/api/TypeSession/get";
+    let url = this.ip + "/api/TypeSession";
     return this.http.get(url).pipe(
       catchError(this.handelError));
   }
 
   delTypeSession(Id : number){
-    let url = this.ip + "/api/TypeSession/del";
-    return this.http.post(url,{Id : Id}).pipe(
+    let url = this.ip + "/api/TypeSession/" + Id;
+    return this.http.delete(url).pipe(
       catchError(this.handelError));
   }
 
   addTypeSession(typeSession : TypeSession){
-    let url = this.ip + "/api/TypeSession/add";
-    return this.http.post(url,typeSession).pipe(
+    let url = this.ip + "/api/TypeSession";
+    return this.http.put(url,typeSession).pipe(
       catchError(this.handelError));
   }
 
   editTypeSession(typeSession : TypeSession){
-    let url = this.ip + "/api/TypeSession/edit";
+    let url = this.ip + "/api/TypeSession";
     return this.http.post(url,typeSession).pipe(
       catchError(this.handelError));
   }
 
-  postDelUser(Id:number){
-    let url = this.ip + "/api/admin/delAbo";
-    return this.http.post(url,{id:Id}).pipe(
+  delUser(Id:number){
+    let url = this.ip + "/api/admin/user/" + Id;
+    return this.http.delete(url).pipe(
       catchError(this.handelError));
   }
 

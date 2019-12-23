@@ -22,17 +22,15 @@ use Symfony\Component\Serializer\Serializer;
 class MonthControllerApi extends AbstractController
 {
     /**
-     * @Route("/month/{month?}/{year?}/{error?}", name="api_month", methods={"POST"})
+     * @Route("/month/{month?}/{year?}", name="api_month", methods={"OPTIONS","GET"})
      * @param Request $request
+     * @param $month
+     * @param $year
      * @return Response
      */
 
-    public function index(Request $request)
+    public function index(Request $request,$month , $year)
     {
-        $data = json_decode($request->getContent(),true);
-        $month = $data["month"];
-        $year = $data["year"];
-
         $em = $this->getDoctrine()->getManager();
         $listSession = $em
             ->getRepository('App:Session')
@@ -63,7 +61,7 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Inscription", name="api_Inscription", methods={"POST"})
+     * @Route("/Inscription", name="api_Inscription", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @return JsonResponse
      */
@@ -117,11 +115,13 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Desinscription", name="api_Unsub", methods={"POST"})
+     * @Route("/Desinscription/{username?}/{id?}", name="api_Unsub", methods={"DELETE","OPTIONS"})
      * @param Request $request
+     * @param $username
+     * @param $id
      * @return JsonResponse
      */
-    public function removeInscription(Request $request){
+    public function removeInscription(Request $request,$username,$id){
         $entityManager = $this->getDoctrine()->getManager();
 
         $data = json_decode($request->getContent(), true);
@@ -135,11 +135,11 @@ class MonthControllerApi extends AbstractController
         try{
             $user = $entityManager
                 ->getRepository('App:Person')
-                ->getPersonFromUsername($data["Username"]);
+                ->getPersonFromUsername($username);
 
             $session = $entityManager
                 ->getRepository('App:Session')
-                ->getSessionFromId($data["Id"]);
+                ->getSessionFromId($id);
 
             $inscription = $entityManager
                 ->getRepository('App:Inscription')

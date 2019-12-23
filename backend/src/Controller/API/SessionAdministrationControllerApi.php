@@ -155,17 +155,17 @@ class SessionAdministrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Delete", name="api_Delete", methods={"POST","OPTIONS","GET"})
+     * @Route("/session/{id?}", name="api_Delete", methods={"OPTIONS","DELETE"})
      * @param Request $request
+     * @param $id
      * @return JsonResponse
      */
-    public function deleteSession(Request $request){
+    public function deleteSession(Request $request,$id){
         $errors = [];
         try{
-            $data = json_decode($request->getContent(), true);
 
             $entityManager = $this->getDoctrine()->getManager();
-            $session = $entityManager->getRepository('App:Session')->find($data["Id"]);
+            $session = $entityManager->getRepository('App:Session')->find($id);
             $entityManager->remove($session);
             $entityManager->flush();
 

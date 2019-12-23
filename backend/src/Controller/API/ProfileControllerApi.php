@@ -21,24 +21,25 @@ use DateTime;
 class ProfileControllerApi extends AbstractController
 {
     /**
-     * @Route("/profile/", name="api_profile", methods={"POST"})
+     * @Route("/profile/{username}", name="api_profile", methods={"OPTIONS","GET"})
      * @param Request $request
+     * @param $username
      * @return JsonResponse
      */
-    public function index(Request $request)
+    public function index(Request $request,$username)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
         $data = json_decode($request->getContent(),true);
 
-        if(filter_var($data["Username"], FILTER_VALIDATE_EMAIL)){
+        if(filter_var($username, FILTER_VALIDATE_EMAIL)){
             $userInfo = $entityManager
                 ->getRepository('App:Person')
-                ->getPersonFromEmail($data["Username"]);
+                ->getPersonFromEmail($username);
         }else{
             $userInfo = $entityManager
                 ->getRepository('App:Person')
-                ->getPersonFromUsername($data["Username"]);
+                ->getPersonFromUsername($username);
         }
 
         $defaultContext = [

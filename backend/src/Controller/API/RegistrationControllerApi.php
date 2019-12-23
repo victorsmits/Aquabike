@@ -30,7 +30,7 @@ use Symfony\Component\Serializer\Serializer;
 class RegistrationControllerApi extends AbstractController
 {
     /**
-     * @Route("/register", name="api_user_registration", methods={"POST","OPTIONS","GET"})
+     * @Route("/register", name="api_user_registration", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return Response
@@ -116,7 +116,7 @@ class RegistrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/TypeSession/get", name="api_Type_Session", methods={"POST","OPTIONS","GET"})
+     * @Route("/TypeSession/", name="api_Type_Session", methods={"OPTIONS","GET"})
      * @return Response
      * @throws Exception
      */
@@ -150,7 +150,7 @@ class RegistrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/TypeSession/add", name="api_Add_Type_Session", methods={"POST","OPTIONS","GET"})
+     * @Route("/TypeSession", name="api_Add_Type_Session", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @return Response
      */
@@ -160,21 +160,30 @@ class RegistrationControllerApi extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         try{
-            $typeSession->setDay($data['Day']);
-            $typeSession->setTime(new DateTime($data['Time']));
+            $ts = $em->getRepository('App:TypeSession')
+                ->findBy([
+                    "Day" => $data['Day'],
+                    "Time" => new DateTime($data['Time'])
+                ]);
+            if(empty($ts)){
+                $typeSession->setDay($data['Day']);
+                $typeSession->setTime(new DateTime($data['Time']));
 
-            $em->persist($typeSession);
-            $em->flush();
+                $em->persist($typeSession);
+                $em->flush();
+                return new JsonResponse(['result'=>true],200);
+            }else{
+                throw new Exception('Le type de session est existant');
+            }
 
-            return new JsonResponse(['result'=>true]);
         }catch(\Exception $e){
-            return new JsonResponse(['error'=>$e->getMessage()]);
+            return new JsonResponse(['error'=>$e->getMessage()],400);
         }
 
     }
 
     /**
-     * @Route("/TypeSession/edit", name="api_Edit_Type_Session", methods={"POST","OPTIONS","GET"})
+     * @Route("/TypeSession", name="api_Edit_Type_Session", methods={"POST","OPTIONS"})
      * @param Request $request
      * @return Response
      */
@@ -184,30 +193,39 @@ class RegistrationControllerApi extends AbstractController
         try{
             $typeSession = $em->getRepository('App:TypeSession')->find($data['Id']);
 
-            $typeSession->setDay($data['Day']);
-            $typeSession->setTime(new DateTime($data['Time']));
+            $ts = $em->getRepository('App:TypeSession')
+                ->findBy([
+                    "Day" => $data['Day'],
+                    "Time" => new DateTime($data['Time'])
+                ]);
 
-            $em->persist($typeSession);
-            $em->flush();
+            if(empty($ts)){
+                $typeSession->setDay($data['Day']);
+                $typeSession->setTime(new DateTime($data['Time']));
 
-            return new JsonResponse(['result'=>true]);
+                $em->persist($typeSession);
+                $em->flush();
+                return new JsonResponse(['result'=>true],200);
+            }else{
+                throw new Exception('Le type de session est existant');
+            }
         }catch(\Exception $e){
-            return new JsonResponse(['error'=>$e->getMessage()]);
+            return new JsonResponse(['error'=>$e->getMessage()],400);
         }
 
     }
 
     /**
-     * @Route("/TypeSession/del", name="api_Set_Type_Session", methods={"POST","OPTIONS","GET"})
+     * @Route("/TypeSession/{id?}", name="api_Set_Type_Session", methods={"DELETE","OPTIONS"})
      * @param Request $request
+     * @param $id
      * @return Response
      */
-    public function DeleteTypeSession(Request $request){
-        $data = json_decode($request->getContent(),true);
+    public function DeleteTypeSession(Request $request,$id){
 
         $em = $this->getDoctrine()->getManager();
         try{
-           $typesession = $em->getRepository('App:TypeSession')->find($data["Id"]);
+           $typesession = $em->getRepository('App:TypeSession')->find($id);
 
             $ltp = $typesession->getIdTypeSession();
             for($i = 0;$i < count($ltp);$i++){
@@ -217,9 +235,9 @@ class RegistrationControllerApi extends AbstractController
             $em->remove($typesession);
             $em->flush();
 
-            return new JsonResponse(['result'=>true]);
+            return new JsonResponse(['result'=>true],200);
         }catch(\Exception $e){
-            return new JsonResponse(['error'=>$e->getMessage()]);
+            return new JsonResponse(['error'=>$e->getMessage()],400);
         }
     }
 

@@ -159,7 +159,6 @@ export class ToolService {
     str = str.replace(/"day"/gi, "\"Day\"");
     str = str.replace(/"time"/gi, "\"Time\"");
     let data = JSON.parse(str);
-
     let typeSession : TypeSession[] = [];
     for(let type of data){
       let TypeSess;

@@ -16,12 +16,15 @@
 \usepackage{minted}
 \usepackage{float}
 \usepackage[breaklinks=true,hidelinks]{hyperref}
+\usepackage[Lenny]{fncychap}
+\usepackage{titlesec, blindtext, color}
 \usemintedstyle{manni}
 
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{section}.\arabic{figure}}
 
 %%%% TabularX settings %%%%%%%%%%%%%%
 
@@ -30,12 +33,14 @@
 \setlength\cellspacetoplimit{12pt}
 \setlength\cellspacebottomlimit{12pt}
 \newcolumntype{T}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{S}[1]{>{\centering\arraybackslash\footnotesize}m{#1}}
+\newcolumntype{R}[1]{>{\small\arraybackslash}m{#1}}
 
 %%%% Footer and Header %%%%%%%%%%%%%%
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{\footnotesize{\rightmark}}
+\fancyfoot[C]{}
 \fancyfoot[R]{Page -- \thepage}
 \renewcommand{\footrulewidth}{0.5pt}
 \renewcommand{\headrulewidth}{0pt}
@@ -68,21 +73,7 @@
 %---title format---
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titleformat{\chapter}[display]
-{\normalfont\Large\bfseries}
-{} % label
-{0.5ex} % sep
-{
-	\rule{\textwidth}{1pt}
-	\vspace{1ex}
-	\centering
-} % before-code
-[
-\vspace{-0.5ex}%
-\rule{\textwidth}{0.3pt}
-] % after-code
-
-\titlespacing*{\chapter} {0pt}{0mm}{2mm}   
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{section/FrontPage.tex}
@@ -91,24 +82,34 @@
 \tableofcontents
 
 %%%%% Documents %%%%%%
-\newpage
-\section{Spécification}
+\chapter{Spécification}
+
+	\vspace{\baselineskip}
 	\input{section/specification}
 
-\newpage
-\section{Base de donnée}
+\chapter{Base de donnée}
+
+	\vspace{\baselineskip}
 	\input{section/base_de_donnee}
-    
-\section{MVC}
+
+\chapter{MVC}
+
+	\vspace{\baselineskip}
 	\input{section/mvc}
 
-\section{API}
+\chapter{API}
+
+	\vspace{\baselineskip}
 	\input{section/api}
 
-\section{Séparation backend frontend}
+\chapter{Séparation backend frontend}
+
+	\vspace{\baselineskip}
 	\input{section/separation_backend_frontend}
 
-\section{Conclusion}
+\chapter{Conclusion}
+
+	\vspace{\baselineskip}
 	\input{section/conclusion}
 	
 \end{document}

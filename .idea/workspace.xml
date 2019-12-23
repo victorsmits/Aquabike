@@ -2,42 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Server config/stub_status.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Migrations/Version20191215134148.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/menu/menu.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/menu/menu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/menu/menu.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/menu/menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us10-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us10-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us11-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us11-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us11-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us2-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us3-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us4-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us5-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us6-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us6-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us7-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us7-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us8-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us8-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us9-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Requete/api.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US10.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US12.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US13.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US14.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US4.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US5.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US6.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US7.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US8.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US9.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/us-addtypesession.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex (Copie en conflit de victorsmitsMac.local 2019-12-22).gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Symfony-Twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Symfony-Twig/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/section/api.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/api.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/section/base_de_donnee.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/base_de_donnee.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/section/mvc.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/mvc.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/section/specification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/specification.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server config/default" beforeDir="false" afterPath="$PROJECT_DIR$/Server config/default" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/packages/nelmio_cors.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/.idea/AquaBike_Session.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/.idea/AquaBike_Session.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/src/Controller/API/MonthControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/src/Entity/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Repository/PersonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/PersonRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/admin-abo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SecurityControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SecurityControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/del-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/del-abo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/add-type-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/add-type-session.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +136,7 @@
         <entry key="$PROJECT_DIR$" value="43167d4806df03ae5029a923dcfb1d1af6097881" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Symfony-Twig" />
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
@@ -422,6 +465,9 @@
       <workItem from="1576583499728" duration="3297000" />
       <workItem from="1576653285677" duration="233000" />
       <workItem from="1576653600788" duration="181000" />
+      <workItem from="1577021453299" duration="4000" />
+      <workItem from="1577021473782" duration="7565000" />
+      <workItem from="1577082981208" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -674,6 +720,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -924,11 +980,12 @@
     <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1574508674808" />
     <state x="749" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576428469896" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/0.0.1440.900@0.0.1440.900" timestamp="1572555213728" />
-    <state x="566" y="181" width="816" height="550" key="find.popup" timestamp="1576406219377">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2486" y="181" width="816" height="550" key="find.popup" timestamp="1577029936687">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="470" y="252" width="778" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1574599442644" />
-    <state x="566" y="181" width="816" height="550" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576406219377" />
+    <state x="566" y="181" width="816" height="550" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1577025288473" />
+    <state x="2486" y="181" width="816" height="550" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577029936687" />
     <state x="412" y="321" key="git4idea.rebase.GitRebaseDialog" timestamp="1572556024119">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -941,12 +998,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="832" y="475" width="350" height="300" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573914527384" />
-    <state x="609" y="274" width="700" height="530" key="recent.locations.popup" timestamp="1576414665075">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2529" y="274" width="700" height="530" key="recent.locations.popup" timestamp="1577028259791">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="457" y="228" width="598" height="448" key="recent.locations.popup/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573641670513" />
     <state x="457" y="228" width="600" height="450" key="recent.locations.popup/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1574849069263" />
     <state x="609" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576414665075" />
+    <state x="2529" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577028259791" />
     <state x="320" y="115" key="scopes" timestamp="1573833078972">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

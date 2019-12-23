@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  22 DEC 2019 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  23 DEC 2019 09:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -587,46 +587,81 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip61
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/fncychap/fncychap.sty
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip62
+\mylen=\skip63
+\myhi=\skip64
+\px=\skip65
+\py=\skip66
+\pyy=\skip67
+\pxx=\skip68
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
+\c@blindtext=\count137
+\c@Blindtext=\count138
+\c@blind@countparstart=\count139
+\blind@countxx=\count140
+\blindtext@numBlindtext=\count141
+\blind@countyy=\count142
+\c@blindlist=\count143
+\c@blindlistlevel=\count144
+\c@blindlist@level=\count145
+\blind@listitem=\count146
+\c@blind@listcount=\count147
+\c@blind@levelcount=\count148
+\blind@mathformula=\count149
+\blind@Mathformula=\count150
+\c@blind@randomcount=\count151
+\c@blind@randommax=\count152
+\c@blind@pangramcount=\count153
+\c@blind@pangrammax=\count154
+)
+
+Package array Warning: Column S is already defined on input line 36.
+
 runsystem(which pygmentize && touch Web-architechture-rapport.aex)...executed.
 
 runsystem(rm Web-architechture-rapport.aex)...executed.
 
- (./Web-architechture-rapport.aux)
+(./Web-architechture-rapport.aux)
 \openout1 = `Web-architechture-rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 58.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
  (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
+\scratchcounter=\count155
 \scratchdimen=\dimen165
 \scratchbox=\box41
-\nofMPsegments=\count138
-\nofMParguments=\count139
+\nofMPsegments=\count156
+\nofMParguments=\count157
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count140
+\MPscratchCnt=\count158
 \MPscratchDim=\dimen166
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
 \everyMPtoPDFconversion=\toks28
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -641,23 +676,23 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring OFF on input line 53.
+Package hyperref Info: Link coloring OFF on input line 58.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count143
+\c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 53.
-LaTeX Info: Redefining \pageref on input line 53.
-LaTeX Info: Redefining \nameref on input line 53.
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
  (./Web-architechture-rapport.out) (./Web-architechture-rapport.out)
 \@outlinefile=\write6
 \openout6 = `Web-architechture-rapport.out'.
 
  (./section/FrontPage.tex
-<Figures/Logo_ECAM.jpg, id=56, 1778.14313pt x 1350.54562pt>
+<Figures/Logo_ECAM.jpg, id=200, 1778.14313pt x 1350.54562pt>
 File: Figures/Logo_ECAM.jpg Graphic file (type jpg)
 <use Figures/Logo_ECAM.jpg>
 Package pdftex.def Info: Figures/Logo_ECAM.jpg  used on input line 6.
@@ -666,100 +701,395 @@ Package pdftex.def Info: Figures/Logo_ECAM.jpg  used on input line 6.
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figures/Logo_ECAM.jpg>]) (./Web-architechture-rapport.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 2.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 2.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 2.
-)
-\tf@toc=\write7
-\openout7 = `Web-architechture-rapport.toc'.
-
+(Font)              <6> on input line 3.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 \newpage
-              [1
+l.43 ...t \IeC {\`a} une session}{18}{section.3.4}
+                                                   [1
 
-] (./section/specification.tex [2] [3]
-<Mockup/Login.png, id=97, 305.14pt x 296.10625pt>
+])
+\tf@toc=\write7
+\openout7 = `Web-architechture-rapport.toc'.
+
+ [2]
+Chapter 1.
+(./section/specification.tex [3
+
+] [4]
+<Mockup/Login.png, id=293, 305.14pt x 296.10625pt>
 File: Mockup/Login.png Graphic file (type png)
 <use Mockup/Login.png>
-Package pdftex.def Info: Mockup/Login.png  used on input line 76.
+Package pdftex.def Info: Mockup/Login.png  used on input line 79.
 (pdftex.def)             Requested size: 213.71576pt x 207.39494pt.
-<Mockup/Accueil.png, id=99, 1922.18124pt x 969.6225pt>
+<Mockup/Accueil.png, id=295, 1922.18124pt x 969.6225pt>
 File: Mockup/Accueil.png Graphic file (type png)
 <use Mockup/Accueil.png>
-Package pdftex.def Info: Mockup/Accueil.png  used on input line 83.
+Package pdftex.def Info: Mockup/Accueil.png  used on input line 86.
 (pdftex.def)             Requested size: 341.94652pt x 172.48277pt.
- [4 <./Mockup/Login.png> <./Mockup/Accueil.png>]
-<Mockup/Inscription.png, id=111, 435.6275pt x 728.7225pt>
+ [5 <./Mockup/Login.png> <./Mockup/Accueil.png>]
+<Mockup/Inscription.png, id=305, 435.6275pt x 728.7225pt>
 File: Mockup/Inscription.png Graphic file (type png)
 <use Mockup/Inscription.png>
-Package pdftex.def Info: Mockup/Inscription.png  used on input line 91.
+Package pdftex.def Info: Mockup/Inscription.png  used on input line 94.
 (pdftex.def)             Requested size: 213.71576pt x 357.49968pt.
- [5 <./Mockup/Inscription.png>]
-<Mockup/Month.png, id=119, 1906.12125pt x 961.5925pt>
+ [6 <./Mockup/Inscription.png>]
+<Mockup/Month.png, id=313, 1906.12125pt x 961.5925pt>
 File: Mockup/Month.png Graphic file (type png)
 <use Mockup/Month.png>
-Package pdftex.def Info: Mockup/Month.png  used on input line 100.
+Package pdftex.def Info: Mockup/Month.png  used on input line 103.
 (pdftex.def)             Requested size: 341.94652pt x 172.49226pt.
-<Mockup/Admin-Session.png, id=120, 1904.11375pt x 969.6225pt>
+<Mockup/Admin-Session.png, id=314, 1904.11375pt x 969.6225pt>
 File: Mockup/Admin-Session.png Graphic file (type png)
 <use Mockup/Admin-Session.png>
-Package pdftex.def Info: Mockup/Admin-Session.png  used on input line 108.
+Package pdftex.def Info: Mockup/Admin-Session.png  used on input line 111.
 (pdftex.def)             Requested size: 341.94652pt x 174.12505pt.
- [6 <./Mockup/Month.png> <./Mockup/Admin-Session.png>]
-<Mockup/Admin-Nouvelle-Session.png, id=132, 559.08875pt x 441.65pt>
+ [7 <./Mockup/Month.png> <./Mockup/Admin-Session.png>]
+<Mockup/Admin-Nouvelle-Session.png, id=324, 559.08875pt x 441.65pt>
 File: Mockup/Admin-Nouvelle-Session.png Graphic file (type png)
 <use Mockup/Admin-Nouvelle-Session.png>
-Package pdftex.def Info: Mockup/Admin-Nouvelle-Session.png  used on input line 115.
+Package pdftex.def Info: Mockup/Admin-Nouvelle-Session.png  used on input line 118.
 (pdftex.def)             Requested size: 341.94652pt x 270.12717pt.
-<Mockup/Admin-Abonnement.png, id=133, 1907.125pt x 484.81125pt>
+<Mockup/Admin-Abonnement.png, id=325, 1907.125pt x 484.81125pt>
 File: Mockup/Admin-Abonnement.png Graphic file (type png)
 <use Mockup/Admin-Abonnement.png>
-Package pdftex.def Info: Mockup/Admin-Abonnement.png  used on input line 122.
+Package pdftex.def Info: Mockup/Admin-Abonnement.png  used on input line 125.
 (pdftex.def)             Requested size: 341.94652pt x 86.92197pt.
- [7 <./Mockup/Admin-Nouvelle-Session.png> <./Mockup/Admin-Abonnement.png>]
-<Mockup/Admin-Type-Session.png, id=144, 1903.11pt x 678.535pt>
+ [8 <./Mockup/Admin-Nouvelle-Session.png> <./Mockup/Admin-Abonnement.png>]
+<Mockup/Admin-Type-Session.png, id=334, 1903.11pt x 678.535pt>
 File: Mockup/Admin-Type-Session.png Graphic file (type png)
 <use Mockup/Admin-Type-Session.png>
-Package pdftex.def Info: Mockup/Admin-Type-Session.png  used on input line 130.
+Package pdftex.def Info: Mockup/Admin-Type-Session.png  used on input line 133.
 (pdftex.def)             Requested size: 341.94652pt x 121.9136pt.
-) [8 <./Mockup/Admin-Type-Session.png>] (./section/base_de_donnee.tex
-<Figures/Entite-relation.png, id=152, 402.50375pt x 241.90375pt>
+) [9 <./Mockup/Admin-Type-Session.png>]
+Chapter 2.
+(./section/base_de_donnee.tex
+<Figures/Entite-relation.png, id=341, 402.50375pt x 241.90375pt>
 File: Figures/Entite-relation.png Graphic file (type png)
 <use Figures/Entite-relation.png>
 Package pdftex.def Info: Figures/Entite-relation.png  used on input line 3.
 (pdftex.def)             Requested size: 341.94652pt x 205.5084pt.
-<Figures/Diagramme-Relationnel.png, id=153, 901.3675pt x 473.77pt>
+ [10
+
+ <./Figures/Entite-relation.png>]
+<Figures/Diagramme-Relationnel.png, id=348, 901.3675pt x 473.77pt>
 File: Figures/Diagramme-Relationnel.png Graphic file (type png)
 <use Figures/Diagramme-Relationnel.png>
-Package pdftex.def Info: Figures/Diagramme-Relationnel.png  used on input line 9.
+Package pdftex.def Info: Figures/Diagramme-Relationnel.png  used on input line 10.
 (pdftex.def)             Requested size: 427.43153pt x 224.66718pt.
-) [9 <./Figures/Entite-relation.png> <./Figures/Diagramme-Relationnel.png>] (./section/mvc.tex) (./section/api.tex) (./section/separation_backend_frontend.tex) (./section/conclusion.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 114.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
+
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 31--32
+[] [][] [] 
+ []
+
+
+Overfull \hbox (2.18208pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 Commentaire| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (2.81123pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 abonnement| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (6.49577pt too wide) in paragraph at lines 59--59
+ \T1/cmr/m/n/12 d'utilisateur| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (7.0832pt too wide) in paragraph at lines 59--59
+ []|\T1/cmr/m/n/12 obonnement 
+ []
+
+
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 59--60
+[] [][] [] 
+ []
+
+[11 <./Figures/Diagramme-Relationnel.png>]
+Overfull \hbox (2.18208pt too wide) in paragraph at lines 80--80
+ []|\T1/cmr/m/n/12 Commentaire| 
+ []
+
+
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 80--81
+[] [][] [] 
+ []
+
+
+Overfull \hbox (2.18208pt too wide) in paragraph at lines 96--96
+ []|\T1/cmr/m/n/12 Commentaire| 
+ []
+
+
+Overfull \hbox (3.16743pt too wide) in paragraph at lines 96--96
+ []|\T1/cmr/m/n/12 varchar(45)| 
+ []
+
+
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 96--97
+[] [][] [] 
+ []
+
+[12]
+Overfull \hbox (2.18208pt too wide) in paragraph at lines 112--112
+ []|\T1/cmr/m/n/12 Commentaire| 
+ []
+
+
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 112--113
+[] [][] [] 
+ []
+
+
+Overfull \hbox (0.7862pt too wide) in paragraph at lines 128--128
+ []|\T1/cmr/m/n/12 Type| 
+ []
+
+
+Overfull \hbox (2.17555pt too wide) in paragraph at lines 128--128
+ []|\T1/cmr/m/n/12 Commentaire| 
+ []
+
+
+Overfull \hbox (2.32437pt too wide) in paragraph at lines 128--128
+ \T1/cmr/m/n/12 type_session| 
+ []
+
+)
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 128--94
+[] [][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--94
+
+ []
+
+[13]
+Chapter 3.
+(./section/mvc.tex (./UserStories/US1.tex
+File: Mockup/Inscription.png Graphic file (type png)
+<use Mockup/Inscription.png>
+Package pdftex.def Info: Mockup/Inscription.png  used on input line 2.
+(pdftex.def)             Requested size: 212.35025pt x 355.22021pt.
+ [14
+
+]
+<Diagramme/sequence-us1.png, id=375, 814.04124pt x 583.17876pt>
+File: Diagramme/sequence-us1.png Graphic file (type png)
+<use Diagramme/sequence-us1.png>
+Package pdftex.def Info: Diagramme/sequence-us1.png  used on input line 23.
+(pdftex.def)             Requested size: 339.7617pt x 243.40285pt.
+ [15 <./Diagramme/sequence-us1.png>]) (./UserStories/US2.tex
+<Figures/us2-1.png, id=389, 1917.1625pt x 578.16pt>
+File: Figures/us2-1.png Graphic file (type png)
+<use Figures/us2-1.png>
+Package pdftex.def Info: Figures/us2-1.png  used on input line 2.
+(pdftex.def)             Requested size: 339.7617pt x 102.4587pt.
+) [16 <./Figures/us2-1.png>] (./UserStories/US3.tex
+<Figures/us3-1.png, id=398, 317.185pt x 384.43625pt>
+File: Figures/us3-1.png Graphic file (type png)
+<use Figures/us3-1.png>
+Package pdftex.def Info: Figures/us3-1.png  used on input line 2.
+(pdftex.def)             Requested size: 212.35025pt x 257.38322pt.
+) [17 <./Figures/us3-1.png>] (./UserStories/US4.tex
+<Figures/us4-1.png, id=407, 507.8975pt x 417.56pt>
+File: Figures/us4-1.png Graphic file (type png)
+<use Figures/us4-1.png>
+Package pdftex.def Info: Figures/us4-1.png  used on input line 2.
+(pdftex.def)             Requested size: 212.35025pt x 174.57756pt.
+) [18 <./Figures/us4-1.png>] (./UserStories/US5.tex
+<Figures/us5-1.png, id=420, 319.1925pt x 295.1025pt>
+File: Figures/us5-1.png Graphic file (type png)
+<use Figures/us5-1.png>
+Package pdftex.def Info: Figures/us5-1.png  used on input line 2.
+(pdftex.def)             Requested size: 212.35025pt x 196.32623pt.
+) [19 <./Figures/us5-1.png>] (./UserStories/US6.tex
+<Figures/us6-1.png, id=429, 1766.6pt x 130.4875pt>
+File: Figures/us6-1.png Graphic file (type png)
+<use Figures/us6-1.png>
+Package pdftex.def Info: Figures/us6-1.png  used on input line 3.
+(pdftex.def)             Requested size: 382.22786pt x 28.23146pt.
+<Figures/us6-2.png, id=430, 383.4325pt x 285.065pt>
+File: Figures/us6-2.png Graphic file (type png)
+<use Figures/us6-2.png>
+Package pdftex.def Info: Figures/us6-2.png  used on input line 8.
+(pdftex.def)             Requested size: 212.35025pt x 157.87366pt.
+) (./UserStories/US7.tex [20 <./Figures/us6-1.png> <./Figures/us6-2.png>]
+<Figures/us7-1.png, id=446, 290.08376pt x 263.98625pt>
+File: Figures/us7-1.png Graphic file (type png)
+<use Figures/us7-1.png>
+Package pdftex.def Info: Figures/us7-1.png  used on input line 9.
+(pdftex.def)             Requested size: 212.35025pt x 193.24811pt.
+<Figures/us7-2.png, id=447, 659.46375pt x 516.93124pt>
+File: Figures/us7-2.png Graphic file (type png)
+<use Figures/us7-2.png>
+Package pdftex.def Info: Figures/us7-2.png  used on input line 15.
+(pdftex.def)             Requested size: 212.35025pt x 166.45467pt.
+) [21 <./Figures/us7-1.png> <./Figures/us7-2.png>] (./UserStories/US8.tex
+File: Figures/us7-1.png Graphic file (type png)
+<use Figures/us7-1.png>
+Package pdftex.def Info: Figures/us7-1.png  used on input line 12.
+(pdftex.def)             Requested size: 169.87761pt x 154.59447pt.
+<Figures/us8-1.png, id=456, 734.745pt x 653.44125pt>
+File: Figures/us8-1.png Graphic file (type png)
+<use Figures/us8-1.png>
+Package pdftex.def Info: Figures/us8-1.png  used on input line 17.
+(pdftex.def)             Requested size: 169.87761pt x 151.076pt.
+ [22 <./Figures/us8-1.png>]
+<Figures/us8-2.png, id=470, 378.41376pt x 723.70375pt>
+File: Figures/us8-2.png Graphic file (type png)
+<use Figures/us8-2.png>
+Package pdftex.def Info: Figures/us8-2.png  used on input line 23.
+(pdftex.def)             Requested size: 169.87761pt x 324.89067pt.
+) [23 <./Figures/us8-2.png>] (./UserStories/US9.tex
+File: Figures/us3-1.png Graphic file (type png)
+<use Figures/us3-1.png>
+Package pdftex.def Info: Figures/us3-1.png  used on input line 9.
+(pdftex.def)             Requested size: 212.35025pt x 257.38322pt.
+ [24]
+<Figures/us9-1.png, id=486, 208.78pt x 258.9675pt>
+File: Figures/us9-1.png Graphic file (type png)
+<use Figures/us9-1.png>
+Package pdftex.def Info: Figures/us9-1.png  used on input line 15.
+(pdftex.def)             Requested size: 169.87761pt x 210.72667pt.
+) (./UserStories/US10.tex [25 <./Figures/us9-1.png>]
+<Figures/us10-1.png, id=499, 229.85875pt x 303.1325pt>
+File: Figures/us10-1.png Graphic file (type png)
+<use Figures/us10-1.png>
+Package pdftex.def Info: Figures/us10-1.png  used on input line 12.
+(pdftex.def)             Requested size: 169.87761pt x 224.04164pt.
+<Figures/us10-2.png, id=500, 1864.9675pt x 303.1325pt>
+File: Figures/us10-2.png Graphic file (type png)
+<use Figures/us10-2.png>
+Package pdftex.def Info: Figures/us10-2.png  used on input line 19.
+(pdftex.def)             Requested size: 424.70052pt x 69.02982pt.
+) (./UserStories/US11.tex) (./UserStories/US12.tex) (./UserStories/US13.tex)
+Overfull \hbox (11.24101pt too wide) in paragraph at lines 48--48
+|[]\T1/cmr/bx/n/17.28 En tant qu'administrateur, je dois pou-voir générer
+ []
+
+(./UserStories/US14.tex)) [26 <./Figures/us10-1.png> <./Figures/us10-2.png>]
+Chapter 4.
+(./section/api.tex
+Overfull \hbox (2.92708pt too wide) in paragraph at lines 33--33
+ []|\T1/cmr/m/n/10 getTypeSession| 
+ []
+
+
+Overfull \hbox (43.9863pt too wide) in paragraph at lines 33--34
+ [] 
+ []
+
+[27
+
+]
+Overfull \hbox (5.82913pt too wide) in paragraph at lines 68--68
+ []|\T1/cmr/m/n/10 editTypeSession| 
+ []
+
+
+Overfull \hbox (1.7551pt too wide) in paragraph at lines 68--68
+ []|\T1/cmr/m/n/12 DELETE| 
+ []
+
+
+Overfull \hbox (1.7551pt too wide) in paragraph at lines 68--68
+ []|\T1/cmr/m/n/12 DELETE| 
+ []
+
+
+Overfull \hbox (1.7551pt too wide) in paragraph at lines 68--68
+ []|\T1/cmr/m/n/12 DELETE| 
+ []
+
+
+Overfull \hbox (1.7551pt too wide) in paragraph at lines 68--68
+ []|\T1/cmr/m/n/12 DELETE| 
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 68--68
+[][][][][] 
+ []
+
+
+Overfull \hbox (43.9863pt too wide) in paragraph at lines 68--69
+ [] 
+ []
+
+(./Requete/api.tex)) [28]
+Chapter 5.
+
+Overfull \hbox (18.0574pt too wide) in paragraph at lines 105--105
+|[]\T1/cmr/bx/n/29.86 Séparation back-end fron-tend| 
+ []
+
+(./section/separation_backend_frontend.tex) [29
+
+]
+Chapter 6.
+(./section/conclusion.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
+ [30
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
  (./Web-architechture-rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `Web-architechture-rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 8C122C30442F257CBE0F81D43AFF5B8C;817.
+(rerunfilecheck)             Checksum: B3A6CD52C5E0E62FB697A190E6A118BE;4242.
  ) 
 Here is how much of TeX's memory you used:
- 11420 strings out of 492649
- 183556 string characters out of 6129622
- 339992 words of memory out of 5000000
- 14997 multiletter control sequences out of 15000+600000
- 13642 words of font info for 33 fonts, out of 8000000 for 9000
+ 11952 strings out of 492649
+ 191114 string characters out of 6129622
+ 363621 words of memory out of 5000000
+ 15344 multiletter control sequences out of 15000+600000
+ 15875 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,43p,858b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm3583.pfb>
-Output written on Web-architechture-rapport.pdf (11 pages, 639470 bytes).
+ 39i,12n,51p,858b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm3583.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on Web-architechture-rapport.pdf (31 pages, 944382 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 518 words of extra memory for PDF output out of 10000 (max. 10000000)
 

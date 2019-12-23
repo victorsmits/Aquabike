@@ -1,0 +1,77 @@
+\section{Tableau recapitulatif}
+		\begin{center}
+			\begin{tabularx}{1.11\textwidth}{| T{0.11\linewidth} | S{0.22\linewidth} | S{0.3\linewidth} | S{0.15\linewidth} | S{0.177\linewidth} |}
+				\hline
+					\footnotesize{Méthode HTTP} & \centering{Requête} & Contrôleur & \footnotesize{Méthode} & Action \\
+				\hline
+					GET & /api & HomeControllerAPI & index & renvoie les informations des sessions d'aujourd'hui. \\
+				\hline
+					GET & /api/month /\{month?\}/\{year?\} & MonthControllerAPI & index & renvoie la liste des sessions du mois. \\
+				\hline
+					GET & /api/profile/ \{username?\} & ProfileControllerAPI & index & Renvoie le profile de l'utilisateur. \\
+				\hline
+					GET & /api/admin /abonnement & AbonnementControllerAPI & index & renvoie la liste des utilisateurs. \\
+				\hline
+					GET & /api/TypeSession & RegistrationControllerApi & getTypeSession & Renvoie la liste des types de session. \\
+				\hline
+			
+				\hline
+			
+				\hline
+					POST & /api/admin /renewAbo & AbonnementControllerAPI & RenewAbo & renouvelle l'abonnement de l'utilisateurs et l'inscrit à ses sessions. \\
+				\hline
+					POST & /api/admin/editAbo & AbonnementControllerAPI & editAbo & Change l'abonnement de l'utilisateur. \\
+				\hline
+					POST & /api/admin/Cancel & SessionAdministration- ControllerApi & cancel- Session & Annule la session et désinscrit les utilisateurs. \\
+				\hline
+					POST & /api/admin/recreate & SessionAdministration- ControllerApi & recreate- Session & Recrée la session. \\
+				\hline
+					POST & /api/admin /autocreate & CreateSessionControllerApi & createSession & Génère des sessions pour x années.\\
+				\hline
+					POST & /api/login & SecurityControllerApi & login & Authentifie l'utilisateur. \\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
+		\newpage
+			\begin{center}
+				\begin{tabularx}{1.11\textwidth}{| T{0.11\linewidth} | S{0.22\linewidth} | S{0.3\linewidth} | S{0.151\linewidth} | S{0.175\linewidth} |}
+					\hline
+						POST & /api/editProfile & ProfileControllerApi & editProfile & Modifie les données de l'utilisateurs. \\
+					\hline
+						POST & /api/TypeSession & RegistrationControllerApi & editTypeSession & Modifie les données du type de session. \\
+					\hline
+					
+					\hline
+					
+					\hline
+						DELETE & /api/admin/session /\{id?\} & SessionAdministration- ControllerApi & deleteSession & Supprime la session. \\
+					\hline
+						DELETE & /api/Desinscription /\{username?\}/\{id?\} & MonthControllerAPI & remove- Inscription & Désinscrit l'utilisateur de la session. \\
+					\hline
+						DELETE & /api/TypeSession /\{id?\} & RegistrationControllerApi & Delete- TypeSession & Supprime le type de session. \\
+					\hline
+						DELETE & /api/admin/user /\{id?\} & AbonnementControllerApi & delAbo & Supprime l'utilisateur et ses références. \\
+					\hline
+			
+					\hline
+			
+					\hline
+						PUT & /api/admin/session & CreateSessionControllerApi & index & Créer une nouvelle session. \\
+					\hline
+						PUT & /api/Inscription & MonthControllerAPI & create- Inscription & Inscrit l'utilisateur à la session. \\
+					\hline
+						PUT & /api/TypeSession & RegistrationControllerApi & setType- Session & Créer un nouveau type de session. \\
+					\hline
+						PUT & /api/register & RegistrationControllerApi & register & Créer un nouvelle utilisateur et l'inscrit a ses sessions. \\
+					\hline
+				\end{tabularx}
+			\end{center}
+
+
+\vspace{\baselineskip}
+\section{/api}
+	\input{Requete/api}
+	
+
+

@@ -35,6 +35,7 @@ export class EditProfileComponent implements OnInit{
   ngOnInit(): void {
     this.api.getTypeSession().subscribe(urldata=>{
       let data = JSON.stringify(urldata);
+      data = data.replace(/"idTypeSession"/gi, "\"idPerson\"");
       this.listTypeSession = this.tool.initTypeSession(data);
     })
   }
@@ -160,7 +161,7 @@ export class ProfileComponent implements OnInit {
       Id: Id
     };
 
-    this.api.deleteInscription(tempInscription).subscribe(urldata=>{
+    this.api.delInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngOnInit();
       }
