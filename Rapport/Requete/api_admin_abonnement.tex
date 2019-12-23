@@ -1,0 +1,82 @@
+\paragraph{}
+	Renvoie une liste de JSON contenant toute les informations des l'utilisateurs.
+
+\subsection{Requête}
+	\subsubsection{paramètre du path}
+		\paragraph{}
+			Pas de Paramètre pour le path.
+	
+	\subsubsection{Content type}
+		\paragraph{}
+			text/plain
+			
+	\subsubsection{Body}
+		\paragraph{}
+			Pas de body pour la requête.
+
+\subsection{Réponse}
+	\subsubsection{Réussite}
+		\paragraph{}
+			Retourne code 200
+			
+	\subsubsection{Content-type}
+		\paragraph{}
+			application/json
+	
+	\subsubsection{Body}
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				id & int & O & Id de l'utilisateur. \\
+				\hline
+				lastName & String & O & Nom du participant. \\
+				\hline
+				firstName & String & O & Prénom du participant. \\
+				\hline
+				Abonnement & int & O & Nombre de session restante dans l'abonnement. \\
+				\hline
+				UserName & String & O & Nom d'utilisateur. \\
+				\hline
+				Email & String & O & Email de l'utilisateur. \\
+				\hline
+				AboType & int & O & Type d'abonnement de l'utilisateur. \\
+				\hline
+				Role & String & O & Role donnant les accès a l'utilisateur. \\ 
+				\hline
+				idTypeSession & List<LienPerson- TypeSession> & O & Liste des session auquel l'utilisateur est inscrit. \\
+				\hline
+				
+				\hline
+				
+				\hline
+				id & int & O & Id du lien entre la person et le type de session. \\ 
+				\hline
+				idPerson & int & O & Id de la person. \\
+				\hline
+				IdTypeSession & JSON<TypeSession> & O & Type de session. \\
+				\hline
+				
+				\hline
+				
+				\hline
+				id & int & O & Id du type de session. \\
+				\hline
+				day & String & O & Jour du type de session. \\
+				\hline
+				Time & DateTime & O & Heure du type de session. \\
+				\hline
+
+			\end{tabularx}
+		\end{center}
+		
+	\newpage
+		\paragraph{Exemple JSON}
+			\paragraph{}
+			\input{JSON/json-admin-abonnement}
+			
+			
+	\subsubsection{Code}
+		\paragraph{}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/AbonnementControllerApi.php}{AbonnementControllerApi.php}

@@ -6,6 +6,7 @@ import { MatDialog} from '@angular/material';
 import {AddTypeSessionComponent} from './add-type-session.component';
 import {EditTypeSessionComponent} from './edit-type-session.component';
 import {listAboSession} from './list-abo-session.component';
+import {DelTypeSessionComponent} from './del-type-session.component';
 
 
 @Component({
@@ -73,11 +74,12 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
     });
   }
 
-  Delete(Id: any) {
-    this.api.delTypeSession(Id).subscribe(result=>{
-      if(result['result']){
-        this.ngOnInit();
-      }
-    })
+  openDeleteDialog(Id : any){
+    const dialogRef = this.dialog.open(DelTypeSessionComponent, {
+      width : '550px',
+      data : this.listTypeSession[Id]
+    });
   }
+
+
 }

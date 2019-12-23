@@ -23,30 +23,47 @@
 \BOOKMARK [2][-]{subsection.2.4.4}{Table : inscription}{section.2.4}% 23
 \BOOKMARK [2][-]{subsection.2.4.5}{Table : lien\137person\137type\137session}{section.2.4}% 24
 \BOOKMARK [0][-]{chapter.3}{MVC}{}% 25
-\BOOKMARK [1][-]{section.3.1}{En tant qu\220utilisateur, je dois pouvoir me cr\351er un compte sur le site}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.1.1}{Gestion des erreurs et s\351curit\351}{section.3.1}% 27
-\BOOKMARK [2][-]{subsection.3.1.2}{Diagramme de s\351quence}{section.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.1.3}{Script concern\351s}{section.3.1}% 29
-\BOOKMARK [1][-]{section.3.2}{En tant qu'utilisateur, je dois pouvoir s\351lectionner le mois et l'ann\351e pour afficher les sessions qui m'int\351resse}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.3}{En tant qu\220utilisateur, je dois pouvoir m\220inscrire \340 une session un certain jour}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.4}{En tant qu\220utilisateur, je dois pouvoir \352tre inscrit automatiquement \340 une session}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.4.1}{Gestion des erreurs}{section.3.4}% 33
-\BOOKMARK [1][-]{section.3.5}{En tant qu\220utilisateur, je dois pouvoir me d\351sinscrire \340 une session}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.6}{En tant qu\220utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.7}{En tant qu\220utilisateur, je veux pouvoir voir dynamiquement le nombre de s\351ance qui reste dans mon abonnement}{chapter.3}% 36
-\BOOKMARK [1][-]{section.3.8}{En tant qu'utilisateur, je veux pouvoir modifier mon profile}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.9}{En tant qu'utilisateur, je veux pouvoir m'inscrire a une session uniquement si il me reste des abonnements a disposition}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.10}{En tant qu\220administrateur, je dois pouvoir annuler une session}{chapter.3}% 39
-\BOOKMARK [1][-]{section.3.11}{En tant qu'administrateur, je dois pouvoir cr\351er une nouvelle session peut importe la date}{chapter.3}% 40
-\BOOKMARK [2][-]{subsection.3.11.1}{Gestion des erreurs}{section.3.11}% 41
-\BOOKMARK [2][-]{subsection.3.11.2}{Diagramme de s\351quence}{section.3.11}% 42
-\BOOKMARK [2][-]{subsection.3.11.3}{Script concern\351}{section.3.11}% 43
-\BOOKMARK [1][-]{section.3.12}{En tant qu'administrateur, je dois pouvoir g\351rer les abonnement des utilisateurs}{chapter.3}% 44
-\BOOKMARK [1][-]{section.3.13}{En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\350me}{chapter.3}% 45
-\BOOKMARK [1][-]{section.3.14}{En tant qu'administrateur, je dois pouvoir g\351n\351rer les sessions pour un nombre d'ann\351e}{chapter.3}% 46
-\BOOKMARK [0][-]{chapter.4}{API}{}% 47
-\BOOKMARK [1][-]{section.4.1}{Tableau recapitulatif}{chapter.4}% 48
-\BOOKMARK [1][-]{section.4.2}{/api}{chapter.4}% 49
-\BOOKMARK [2][-]{subsection.4.2.1}{R\351ponse}{section.4.2}% 50
-\BOOKMARK [0][-]{chapter.5}{S\351paration backend frontend}{}% 51
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 52
+\BOOKMARK [1][-]{section.3.1}{User Stories compatible Angular - Twig}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.1.1}{En tant qu\220utilisateur, je dois pouvoir me cr\351er un compte sur le site}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.2}{Script concern\351s}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.3}{En tant qu'utilisateur, je dois pouvoir s\351lectionner le mois et l'ann\351e pour afficher les sessions qui m'int\351resse}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.4}{En tant qu\220utilisateur, je dois pouvoir m\220inscrire \340 une session un certain jour}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.5}{En tant qu\220utilisateur, je dois pouvoir \352tre inscrit automatiquement \340 une session}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.6}{En tant qu\220utilisateur, je dois pouvoir me d\351sinscrire \340 une session}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.7}{En tant qu\220utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{section.3.1}% 33
+\BOOKMARK [2][-]{subsection.3.1.8}{En tant qu\220utilisateur, je veux pouvoir voir dynamiquement le nombre de s\351ance qui reste dans mon abonnement}{section.3.1}% 34
+\BOOKMARK [2][-]{subsection.3.1.9}{En tant qu'utilisateur, je veux pouvoir modifier mon profile}{section.3.1}% 35
+\BOOKMARK [2][-]{subsection.3.1.10}{En tant qu\220administrateur, je dois pouvoir annuler une session}{section.3.1}% 36
+\BOOKMARK [2][-]{subsection.3.1.11}{En tant qu'administrateur, je dois pouvoir cr\351er une nouvelle session peut importe la date}{section.3.1}% 37
+\BOOKMARK [2][-]{subsection.3.1.12}{Gestion des erreurs}{section.3.1}% 38
+\BOOKMARK [2][-]{subsection.3.1.13}{Diagramme de s\351quence}{section.3.1}% 39
+\BOOKMARK [2][-]{subsection.3.1.14}{Script concern\351}{section.3.1}% 40
+\BOOKMARK [2][-]{subsection.3.1.15}{En tant qu'administrateur, je dois pouvoir g\351rer les abonnement des utilisateurs}{section.3.1}% 41
+\BOOKMARK [1][-]{section.3.2}{User Stories compatible Angular}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.2.1}{En tant qu'administrateur, je dois pouvoir cr\351er un type de session}{section.3.2}% 43
+\BOOKMARK [2][-]{subsection.3.2.2}{En tant qu'administrateur, je veux pouvoir modifier un type de session}{section.3.2}% 44
+\BOOKMARK [2][-]{subsection.3.2.3}{En tant qu'administrateur, je veux pouvoir supprimer un type de session}{section.3.2}% 45
+\BOOKMARK [2][-]{subsection.3.2.4}{En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\350me}{section.3.2}% 46
+\BOOKMARK [2][-]{subsection.3.2.5}{En tant qu'administrateur, je dois pouvoir g\351n\351rer les sessions pour un nombre d'ann\351e}{section.3.2}% 47
+\BOOKMARK [0][-]{chapter.4}{API}{}% 48
+\BOOKMARK [1][-]{section.4.1}{Tableau recapitulatif}{chapter.4}% 49
+\BOOKMARK [1][-]{section.4.2}{/api}{chapter.4}% 50
+\BOOKMARK [2][-]{subsection.4.2.1}{Requ\352te}{section.4.2}% 51
+\BOOKMARK [2][-]{subsection.4.2.2}{R\351ponse}{section.4.2}% 52
+\BOOKMARK [1][-]{section.4.3}{/api/month}{chapter.4}% 53
+\BOOKMARK [2][-]{subsection.4.3.1}{Requ\352te}{section.4.3}% 54
+\BOOKMARK [2][-]{subsection.4.3.2}{R\351ponse}{section.4.3}% 55
+\BOOKMARK [1][-]{section.4.4}{/api/profile}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.4.1}{Requ\352te}{section.4.4}% 57
+\BOOKMARK [2][-]{subsection.4.4.2}{R\351ponse}{section.4.4}% 58
+\BOOKMARK [1][-]{section.4.5}{/api/admin/abonnement}{chapter.4}% 59
+\BOOKMARK [2][-]{subsection.4.5.1}{Requ\352te}{section.4.5}% 60
+\BOOKMARK [2][-]{subsection.4.5.2}{R\351ponse}{section.4.5}% 61
+\BOOKMARK [1][-]{section.4.6}{/api/TypeSession}{chapter.4}% 62
+\BOOKMARK [2][-]{subsection.4.6.1}{Requ\352te}{section.4.6}% 63
+\BOOKMARK [2][-]{subsection.4.6.2}{R\351ponse}{section.4.6}% 64
+\BOOKMARK [1][-]{section.4.7}{/api/TypeSession}{chapter.4}% 65
+\BOOKMARK [2][-]{subsection.4.7.1}{Requ\352te}{section.4.7}% 66
+\BOOKMARK [2][-]{subsection.4.7.2}{R\351ponse}{section.4.7}% 67
+\BOOKMARK [0][-]{chapter.5}{S\351paration backend frontend}{}% 68
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 69

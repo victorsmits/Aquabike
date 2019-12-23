@@ -1,0 +1,84 @@
+\paragraph{}
+	Renvoie un de JSON contenant toute les informations de l'utilisateurs
+
+\subsection{Requête}
+	\subsubsection{paramètre du path}
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				Username & String & O & Nom d'utilisateur à afficher. \\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
+	\subsubsection{Content type}
+		\paragraph{}
+			text/plain
+			
+	\subsubsection{Body}
+		\paragraph{}
+			Pas de body pour la requête.
+
+\newpage
+\subsection{Réponse}
+	\subsubsection{Réussite}
+		\paragraph{}
+			Retourne code 200
+			
+	\subsubsection{Content-type}
+		\paragraph{}
+			application/json
+	
+	\subsubsection{Body}
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				id & int & O & Id de l'utilisateur. \\
+				\hline
+				lastName & String & O & Nom du participant. \\
+				\hline
+				firstName & String & O & Prénom du participant. \\
+				\hline
+				Abonnement & int & O & Nombre de session restante dans l'abonnement. \\
+				\hline
+				UserName & String & O & Nom d'utilisateur. \\
+				\hline
+				Email & String & O & Email de l'utilisateur. \\
+				\hline
+				AboType & int & O & Type d'abonnement de l'utilisateur. \\
+				\hline
+				Role & String & O & Role donnant les accès a l'utilisateur. \\ 
+				\hline
+				idInscription & List<Session> & O & Liste des session auquel l'utilisateur est inscrit. \\
+				\hline
+				
+				\hline
+				
+				\hline
+				id & int & O & Id de la session. \\
+				\hline
+				Date & DateTime & O & Date de la session. \\
+				\hline
+				Time & DateTime & O & Heure de la session. \\
+				\hline
+				Bike & int & O & Nombre de vélo disponible pour la session. \\
+				\hline
+				Cancel & Boolean & O & Etats de la session. \\
+				\hline
+
+			\end{tabularx}
+		\end{center}
+		
+	\newpage
+		\paragraph{Exemple JSON}
+			\paragraph{}
+			\input{JSON/json-profile}
+			
+			
+	\subsubsection{Code}
+		\paragraph{}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/ProfileControllerApi.php}{ProfileControllerApi.php}

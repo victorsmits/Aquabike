@@ -187,7 +187,7 @@ class RegistrationControllerApi extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function editTypeSession(Request $request){
+    public function editTypeSession(Request $request, SessionAdministrationControllerApi $sessionadmin){
         $data = json_decode($request->getContent(),true);
         $em = $this->getDoctrine()->getManager();
         try{
@@ -200,6 +200,15 @@ class RegistrationControllerApi extends AbstractController
                 ]);
 
             if(empty($ts)){
+
+                $sessions = $em
+                    ->getRepository('App:Session')
+                    ->findBy(['IdTypeSession'=>$data["Id"]]);
+
+                foreach ($sessions as $session) {
+                    $sessionadmin->deleteSession($session->getId());
+                }
+
                 $typeSession->setDay($data['Day']);
                 $typeSession->setTime(new DateTime($data['Time']));
 
@@ -221,7 +230,7 @@ class RegistrationControllerApi extends AbstractController
      * @param $id
      * @return Response
      */
-    public function DeleteTypeSession(Request $request,$id){
+    public function DeleteTypeSession(Request $request,$id,SessionAdministrationControllerApi $sessionadmin){
 
         $em = $this->getDoctrine()->getManager();
         try{
@@ -232,6 +241,16 @@ class RegistrationControllerApi extends AbstractController
                 $em->remove($ltp[$i]);
                 $em->flush();
             }
+
+            $sessions = $em->getRepository('App:Session')->findBy(["IdTypeSession"=>$id]);
+            /**
+             * @var $session Session
+             */
+            foreach($sessions as $session)
+            {
+                $sessionadmin->deleteSession($session->getId());
+            }
+
             $em->remove($typesession);
             $em->flush();
 

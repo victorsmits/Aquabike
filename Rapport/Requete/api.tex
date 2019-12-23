@@ -1,6 +1,19 @@
 \paragraph{}
 	Renvoie un JSON contenant toute les sessions du jours ainsi que les insciptions.
+
+\subsection{Requête}
+	\subsubsection{paramètre du path}
+		\paragraph{}
+			Pas de Paramètre pour le path.
 	
+	\subsubsection{Content type}
+		\paragraph{}
+			text/plain
+			
+	\subsubsection{Body}
+		\paragraph{}
+			Pas de body pour la requête.
+
 \subsection{Réponse}
 	\subsubsection{Réussite}
 		\paragraph{}
@@ -11,4 +24,40 @@
 			application/json
 	
 	\subsubsection{Body}
-	
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				id & int & O & Id de la session. \\
+				\hline
+				Date & DateTime & O & Date de la session. \\
+				\hline
+				Time & DateTime & O & Heure de la session. \\
+				\hline
+				Bike & int & O & Nombre de vélo disponible pour la session. \\
+				\hline
+				Cancel & Boolean & O & Etats de la session. \\
+				\hline
+				IdTypeSession & int & O & id du type de session correspondant. \\
+				\hline
+				idInscription & List & O & Liste des participants. \\
+				\hline
+				idPerson & Person & O & Identité du participant. \\
+				\hline
+				lastName & String & O & Nom du participant. \\
+				\hline
+				firstName & String & O & Prénom du participant. \\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
+		\newpage
+		\paragraph{Exemple JSON}
+			\paragraph{}
+			\input{JSON/json-api}
+			
+			
+	\subsubsection{Code}
+		\paragraph{}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/HomeControllerApi.php}{HomeControllerApi.php}

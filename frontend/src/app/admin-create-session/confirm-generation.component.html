@@ -1,6 +1,17 @@
+<mat-error *ngIf="error">{{error}}</mat-error>
 <div *ngIf="!isLoading ; else loading">
   <h3>Génération automatique de sessions</h3>
+
   <form #form="ngForm">
+
+    <ng-container>
+      <ul *ngFor="let session of listTypeSession" >
+        <mat-checkbox (change)="addTypeSession(session.Id)">
+          {{session.Day}} {{session.Time}}
+        </mat-checkbox>
+      </ul>
+    </ng-container>
+
     <mat-form-field>
       <label>
         <input matInput placeholder="nombre d'année" type="number" ngModel value="5" name="year">

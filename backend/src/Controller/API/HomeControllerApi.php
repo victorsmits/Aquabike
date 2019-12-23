@@ -34,7 +34,7 @@ class HomeControllerApi extends AbstractController
             ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
             AbstractNormalizer::IGNORED_ATTRIBUTES =>['abonnement','day','id_Inscription',
                 'password','roles','role','email','aboType',
-                'plainpassword','plainPassword',
+                'plainpassword','plainPassword','idTypeSession','idSession',
                 'username','salt','__cloner__','__initializer__','__isInitialized__'],
 //            ObjectNormalizer::GROUPS => ["Home"],
 //            ObjectNormalizer::ENABLE_MAX_DEPTH => true,

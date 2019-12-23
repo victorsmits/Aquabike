@@ -60,6 +60,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {DelTypeSessionComponent} from './type-session/del-type-session.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     DelAboComponent,
     listAboSession,
     MenuComponent,
+    DelTypeSessionComponent,
   ],
   imports: [
     BrowserModule,
@@ -129,7 +131,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     ConfimGenerationComponent,
     EditTypeSessionComponent,
     DelAboComponent,
-    listAboSession
+    listAboSession,
+    DelTypeSessionComponent
   ],
   providers: [
     AuthService,

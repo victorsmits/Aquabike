@@ -73,19 +73,22 @@ class CreateSessionControllerApi extends AbstractController
 
         try
         {
+            $typeSession = $entityManager
+                ->getRepository('App:TypeSession')
+                ->findby(['id'=>$data["idTypeSession"]]);
+
+            if(empty($typeSession)){
+                throw new Exception('Aucun type de session à été trouvé');
+            }
+
             while ($date < $end){
                 if ($date->format('m') != "7" && $date->format('m') != "8" ){
-                    $typeSession = $entityManager
-                        ->getRepository('App:TypeSession')
-                        ->findAll();
-
                     /**
                      * @var $type TypeSession
                      * @var $session Session
                      */
                     foreach($typeSession as $type){
                         if($type->getDay() == $date->format("D") ){
-                            echo($date->format('D') . "  ");
                             $session = new Session();
 
                             $session->setDate(new DateTime($date->format("Y/m/d")));
@@ -97,7 +100,7 @@ class CreateSessionControllerApi extends AbstractController
                                 $entityManager->persist($session);
                                 $entityManager->flush();
                             }else{
-                                throw new Exception('Session generation fail');
+                                throw new Exception('Session already exist');
                             }
 
                         }
@@ -125,10 +128,10 @@ class CreateSessionControllerApi extends AbstractController
             ]);
 
         if(!empty($listSessions)){
-            return true;
+            return false;
         }
         else{
-            return false;
+            return true;
         }
     }
 }

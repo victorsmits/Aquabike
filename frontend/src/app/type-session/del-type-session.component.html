@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>
+    <div>
+      Etes vous sur de vouloir supprimer
+    </div>
+
+    <div>
+      {{data.Day}} {{data.Time}}
+    </div>
+  </mat-card-title>
+  <div class="del-button">
+    <button mat-flat-button color="warn" (click)="Delete(data.Id)"> OUI! </button>
+    <button mat-flat-button color="primary" style="margin-left: 5%" (click)="onNoClick()">Annuler</button>
+  </div>
+</mat-card>
