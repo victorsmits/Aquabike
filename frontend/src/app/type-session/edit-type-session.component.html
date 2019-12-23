@@ -1,3 +1,4 @@
+<mat-error *ngIf="error">{{error}}</mat-error>
 <form #form="ngForm">
   <mat-form-field>
     <mat-select placeholder="Choisi le Jour" #daySelect [(value)]="selectDay">

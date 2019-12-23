@@ -75,9 +75,9 @@ export class ApiService {
     return this.http.put(url,newSess).pipe(catchError(this.handelError));
   }
 
-  postGenerateSessionAuto(year,bike){
+  postGenerateSessionAuto(year,list,bike){
     let url = this.ip + "/api/admin/autocreate";
-    return this.http.post(url,{year:year,bike:bike}).pipe(
+    return this.http.put(url,{year:year,bike:bike,idTypeSession:list}).pipe(
       catchError(this.handelError));
   }
 

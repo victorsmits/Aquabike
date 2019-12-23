@@ -40,7 +40,7 @@ class CreateSessionControllerApi extends AbstractController
 
         try
         {
-            if($this->checkIfExist($session)){
+            if(!$this->checkIfExist($session)){
                 throw new Exception("La session existe déjà");
             }
 

@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête PUT permettant l'ajout d'une nouvelle session dans le système.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -19,13 +19,20 @@
 					\hline
 					id & int & O & Id de l'utilisateur. \\
 					\hline
+					Date & String & O & Date de la session. \\
+					\hline
+					Time & String & O & Heure de la session. \\
+					\hline
+					Bike & int & O & Nombre de vélos disponible. \\
+					\hline
+					Cancel & Boolean & O & Etats de la session. \\
+					\hline
 				\end{tabularx}
 			\end{center}
 			
-	\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			\input{JSON/json-admin-session-put}
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -54,4 +61,4 @@
 			
 	\subsubsection{Code}
 		\paragraph{}
-			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/AbonnementControllerApi.php}{AbonnementControllerApi.php}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/CreateSessionControllerApi.php}{CreateSessionControllerApi.php}

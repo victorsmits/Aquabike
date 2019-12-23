@@ -47,23 +47,68 @@
 \BOOKMARK [2][-]{subsection.3.2.5}{En tant qu'administrateur, je dois pouvoir g\351n\351rer les sessions pour un nombre d'ann\351e}{section.3.2}% 47
 \BOOKMARK [0][-]{chapter.4}{API}{}% 48
 \BOOKMARK [1][-]{section.4.1}{Tableau recapitulatif}{chapter.4}% 49
-\BOOKMARK [1][-]{section.4.2}{/api}{chapter.4}% 50
+\BOOKMARK [1][-]{section.4.2}{GET : /api}{chapter.4}% 50
 \BOOKMARK [2][-]{subsection.4.2.1}{Requ\352te}{section.4.2}% 51
 \BOOKMARK [2][-]{subsection.4.2.2}{R\351ponse}{section.4.2}% 52
-\BOOKMARK [1][-]{section.4.3}{/api/month}{chapter.4}% 53
+\BOOKMARK [1][-]{section.4.3}{GET : /api/month}{chapter.4}% 53
 \BOOKMARK [2][-]{subsection.4.3.1}{Requ\352te}{section.4.3}% 54
 \BOOKMARK [2][-]{subsection.4.3.2}{R\351ponse}{section.4.3}% 55
-\BOOKMARK [1][-]{section.4.4}{/api/profile}{chapter.4}% 56
+\BOOKMARK [1][-]{section.4.4}{GET : /api/profile}{chapter.4}% 56
 \BOOKMARK [2][-]{subsection.4.4.1}{Requ\352te}{section.4.4}% 57
 \BOOKMARK [2][-]{subsection.4.4.2}{R\351ponse}{section.4.4}% 58
-\BOOKMARK [1][-]{section.4.5}{/api/admin/abonnement}{chapter.4}% 59
+\BOOKMARK [1][-]{section.4.5}{GET : /api/admin/abonnement}{chapter.4}% 59
 \BOOKMARK [2][-]{subsection.4.5.1}{Requ\352te}{section.4.5}% 60
 \BOOKMARK [2][-]{subsection.4.5.2}{R\351ponse}{section.4.5}% 61
-\BOOKMARK [1][-]{section.4.6}{/api/TypeSession}{chapter.4}% 62
+\BOOKMARK [1][-]{section.4.6}{GET : /api/TypeSession}{chapter.4}% 62
 \BOOKMARK [2][-]{subsection.4.6.1}{Requ\352te}{section.4.6}% 63
 \BOOKMARK [2][-]{subsection.4.6.2}{R\351ponse}{section.4.6}% 64
-\BOOKMARK [1][-]{section.4.7}{/api/TypeSession}{chapter.4}% 65
+\BOOKMARK [1][-]{section.4.7}{POST : /api/admin/renewAbo}{chapter.4}% 65
 \BOOKMARK [2][-]{subsection.4.7.1}{Requ\352te}{section.4.7}% 66
 \BOOKMARK [2][-]{subsection.4.7.2}{R\351ponse}{section.4.7}% 67
-\BOOKMARK [0][-]{chapter.5}{S\351paration backend frontend}{}% 68
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 69
+\BOOKMARK [1][-]{section.4.8}{POST : /api/admin/editAbo}{chapter.4}% 68
+\BOOKMARK [2][-]{subsection.4.8.1}{Requ\352te}{section.4.8}% 69
+\BOOKMARK [2][-]{subsection.4.8.2}{R\351ponse}{section.4.8}% 70
+\BOOKMARK [1][-]{section.4.9}{POST : /api/admin/cancel}{chapter.4}% 71
+\BOOKMARK [2][-]{subsection.4.9.1}{Requ\352te}{section.4.9}% 72
+\BOOKMARK [2][-]{subsection.4.9.2}{R\351ponse}{section.4.9}% 73
+\BOOKMARK [1][-]{section.4.10}{POST : /api/admin/recreate}{chapter.4}% 74
+\BOOKMARK [2][-]{subsection.4.10.1}{Requ\352te}{section.4.10}% 75
+\BOOKMARK [2][-]{subsection.4.10.2}{R\351ponse}{section.4.10}% 76
+\BOOKMARK [1][-]{section.4.11}{POST : /api/admin/autocreate}{chapter.4}% 77
+\BOOKMARK [2][-]{subsection.4.11.1}{Requ\352te}{section.4.11}% 78
+\BOOKMARK [2][-]{subsection.4.11.2}{R\351ponse}{section.4.11}% 79
+\BOOKMARK [1][-]{section.4.12}{POST : /api/login}{chapter.4}% 80
+\BOOKMARK [2][-]{subsection.4.12.1}{Requ\352te}{section.4.12}% 81
+\BOOKMARK [2][-]{subsection.4.12.2}{R\351ponse}{section.4.12}% 82
+\BOOKMARK [1][-]{section.4.13}{POST : /api/editProfile}{chapter.4}% 83
+\BOOKMARK [2][-]{subsection.4.13.1}{Requ\352te}{section.4.13}% 84
+\BOOKMARK [2][-]{subsection.4.13.2}{R\351ponse}{section.4.13}% 85
+\BOOKMARK [1][-]{section.4.14}{POST : /api/TypeSession}{chapter.4}% 86
+\BOOKMARK [2][-]{subsection.4.14.1}{Requ\352te}{section.4.14}% 87
+\BOOKMARK [2][-]{subsection.4.14.2}{R\351ponse}{section.4.14}% 88
+\BOOKMARK [1][-]{section.4.15}{DELETE : /api/admin/session}{chapter.4}% 89
+\BOOKMARK [2][-]{subsection.4.15.1}{Requ\352te}{section.4.15}% 90
+\BOOKMARK [2][-]{subsection.4.15.2}{R\351ponse}{section.4.15}% 91
+\BOOKMARK [1][-]{section.4.16}{DELETE : /api/Desinscription}{chapter.4}% 92
+\BOOKMARK [2][-]{subsection.4.16.1}{Requ\352te}{section.4.16}% 93
+\BOOKMARK [2][-]{subsection.4.16.2}{R\351ponse}{section.4.16}% 94
+\BOOKMARK [1][-]{section.4.17}{DELETE : /api/TypeSession}{chapter.4}% 95
+\BOOKMARK [2][-]{subsection.4.17.1}{Requ\352te}{section.4.17}% 96
+\BOOKMARK [2][-]{subsection.4.17.2}{R\351ponse}{section.4.17}% 97
+\BOOKMARK [1][-]{section.4.18}{DELETE : /api/admin/user}{chapter.4}% 98
+\BOOKMARK [2][-]{subsection.4.18.1}{Requ\352te}{section.4.18}% 99
+\BOOKMARK [2][-]{subsection.4.18.2}{R\351ponse}{section.4.18}% 100
+\BOOKMARK [1][-]{section.4.19}{PUT : /api/admin/session}{chapter.4}% 101
+\BOOKMARK [2][-]{subsection.4.19.1}{Requ\352te}{section.4.19}% 102
+\BOOKMARK [2][-]{subsection.4.19.2}{R\351ponse}{section.4.19}% 103
+\BOOKMARK [1][-]{section.4.20}{PUT : /api/Inscription}{chapter.4}% 104
+\BOOKMARK [2][-]{subsection.4.20.1}{Requ\352te}{section.4.20}% 105
+\BOOKMARK [2][-]{subsection.4.20.2}{R\351ponse}{section.4.20}% 106
+\BOOKMARK [1][-]{section.4.21}{PUT : /api/TypeSession}{chapter.4}% 107
+\BOOKMARK [2][-]{subsection.4.21.1}{Requ\352te}{section.4.21}% 108
+\BOOKMARK [2][-]{subsection.4.21.2}{R\351ponse}{section.4.21}% 109
+\BOOKMARK [1][-]{section.4.22}{PUT : /api/register}{chapter.4}% 110
+\BOOKMARK [2][-]{subsection.4.22.1}{Requ\352te}{section.4.22}% 111
+\BOOKMARK [2][-]{subsection.4.22.2}{R\351ponse}{section.4.22}% 112
+\BOOKMARK [0][-]{chapter.5}{S\351paration backend frontend}{}% 113
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 114

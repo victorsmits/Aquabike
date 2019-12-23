@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête POST pour annuler une Session et automatiquement désinscrire toute les personnes etant inscrite.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -17,16 +17,16 @@
 					\hline
 					Propriété & Type & Obligatoire & Description \\
 					\hline
-					id & int & O & Id de l'utilisateur. \\
+					id & int & O & Id de la session. \\
 					\hline
 				\end{tabularx}
 			\end{center}
 			
-	\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
 			\input{JSON/json-admin-renewAbo}
 
+\newpage
 \subsection{Réponse}
 	\subsubsection{Réussite}
 		\paragraph{}

@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête POST pour modifier l'abonnement d'un utilisateur.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -8,7 +8,7 @@
 	
 	\subsubsection{Content type}
 		\paragraph{}
-			application/json
+			text/plain
 			
 	\subsubsection{Body}
 		\paragraph{}
@@ -19,13 +19,18 @@
 					\hline
 					id & int & O & Id de l'utilisateur. \\
 					\hline
+					FirstName & String & N & Prénom de l'utilisateur. \\
+					\hline
+					LastName & String & N & Nom de l'utilisateur. \\
+					\hline
+					aboType & int & O & Type d'abonnement de l'utilisateur. \\
+					\hline
 				\end{tabularx}
 			\end{center}
 			
-	\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			\input{JSON/json-admin-editAbo}
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -47,6 +52,7 @@
 			\end{tabularx}
 		\end{center}
 		
+		\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
 			\input{JSON/json-result}

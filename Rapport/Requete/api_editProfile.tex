@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête POST permettant à un utilisateur modifier son profil.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -19,13 +19,30 @@
 					\hline
 					id & int & O & Id de l'utilisateur. \\
 					\hline
+					lastName & String & O & Nom de l'utilisateur. \\
+					\hline
+					firstName & String & O & Prénom de l'utilisateur. \\
+					\hline
+					password & String & O & Nouveau mot de passe de l'utilisateur. \\
+					\hline
+					typeSessions & List<TypeSession> & O & Liste des types de sessions auquel l'utilisateur est inscrit. \\
+					\hline
+					
+					\hline
+					
+					\hline
+					id & int & O & Id du type de session. \\
+					\hline 
+					Day & String & O & Jour du type de session. \\
+					\hline
+					Time & String & O & Heure du type de session. \\
+					\hline
 				\end{tabularx}
 			\end{center}
 			
-	\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			\input{JSON/json-editProfile}
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -47,6 +64,7 @@
 			\end{tabularx}
 		\end{center}
 		
+		\vspace{\baselineskip}
 		\paragraph{Exemple JSON}
 			\paragraph{}
 			\input{JSON/json-result}
@@ -54,4 +72,4 @@
 			
 	\subsubsection{Code}
 		\paragraph{}
-			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/AbonnementControllerApi.php}{AbonnementControllerApi.php}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/EditProfileControllerApi.php}{EditProfileControllerApi.php}

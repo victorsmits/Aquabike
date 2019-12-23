@@ -1,31 +1,27 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête permettant de désinscrire un utilisateur d'une session.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
-		\paragraph{}
-			Pas de Paramètre pour le path.
-	
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				username & String & O & Nom d'utilisateur. \\
+				\hline
+				id & int & O & Id de la session. \\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
 	\subsubsection{Content type}
 		\paragraph{}
-			application/json
+			text/plain
 			
 	\subsubsection{Body}
 		\paragraph{}
-			\begin{center}
-				\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
-					\hline
-					Propriété & Type & Obligatoire & Description \\
-					\hline
-					id & int & O & Id de l'utilisateur. \\
-					\hline
-				\end{tabularx}
-			\end{center}
-			
-	\newpage
-		\paragraph{Exemple JSON}
-			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			Pas de body pour la requête.
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -51,7 +47,6 @@
 			\paragraph{}
 			\input{JSON/json-result}
 			
-			
 	\subsubsection{Code}
 		\paragraph{}
-			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/AbonnementControllerApi.php}{AbonnementControllerApi.php}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/MonthControllerApi.php}{MonthControllerApi.php}

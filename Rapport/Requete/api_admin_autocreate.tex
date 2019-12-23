@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête POST pour générer automatiquement les sessions, correspondante au type de session sélectionné, sur x année .
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -17,15 +17,18 @@
 					\hline
 					Propriété & Type & Obligatoire & Description \\
 					\hline
-					id & int & O & Id de l'utilisateur. \\
+					year & int & O & Nombre d'année pour la génération automatique. \\
+					\hline
+					bike & int & O & Nombre de vélo dans la session. \\
+					\hline
+					idTypeSession & List<int> & O & Liste des id des type de sessions à générer.\\
 					\hline
 				\end{tabularx}
 			\end{center}
 			
-	\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			\input{JSON/json-admin-autocreate}
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -54,4 +57,4 @@
 			
 	\subsubsection{Code}
 		\paragraph{}
-			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/AbonnementControllerApi.php}{AbonnementControllerApi.php}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/CreateSessionControllerApi.php}{CreateSessionControllerApi.php}

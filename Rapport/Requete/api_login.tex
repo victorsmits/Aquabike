@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête POST permettant à un utilisateur de se connecter au site.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -17,15 +17,16 @@
 					\hline
 					Propriété & Type & Obligatoire & Description \\
 					\hline
-					id & int & O & Id de l'utilisateur. \\
+					Username & String & O & Nom d'utilisateur servant à la connection. \\
+					\hline
+					password & String & O & Mot de passe de l'utilisateur. \\
 					\hline
 				\end{tabularx}
 			\end{center}
 			
-	\newpage
 		\paragraph{Exemple JSON}
 			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			\input{JSON/json-login}
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -47,6 +48,7 @@
 			\end{tabularx}
 		\end{center}
 		
+		\vspace{\baselineskip}
 		\paragraph{Exemple JSON}
 			\paragraph{}
 			\input{JSON/json-result}
@@ -54,4 +56,4 @@
 			
 	\subsubsection{Code}
 		\paragraph{}
-			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/AbonnementControllerApi.php}{AbonnementControllerApi.php}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/SecurityControllerApi.php}{SecurityControllerApi.php}

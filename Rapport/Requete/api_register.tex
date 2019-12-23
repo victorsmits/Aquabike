@@ -1,0 +1,81 @@
+\paragraph{}
+	Requête PUT permettant l'enregistrement d'un nouvelle utilisateur dans le systeme.
+
+\subsection{Requête}
+	\subsubsection{paramètre du path}
+		\paragraph{}
+			Pas de Paramètre pour le path.
+	
+	\subsubsection{Content type}
+		\paragraph{}
+			application/json
+			
+	\subsubsection{Body}
+		\paragraph{}
+			\begin{center}
+				\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+					\hline
+					Propriété & Type & Obligatoire & Description \\
+					\hline
+					email & String & O & Email de l'utilisateur. \\
+					\hline
+					username & String & O & Nom d'utilisateur. \\
+					\hline
+					lastName & String & O & Nom de l'utilisateur. \\
+					\hline
+					firstName & String & O & Prénom de l'utilisateur. \\
+					\hline
+					Abonnement & int & O & Nombre de session disponible dans son abonnement. \\
+					\hline
+					password & String & O & mot de passe de l'utilisateur. \\
+					\hline
+					passwordConfirmation & String & O & vérification du mot de passe de l'utilisateur. \\
+					\hline
+					typeSession & List<TypeSession> & O & Liste des type de session auquel l'utilisateur s'est inscrit.\\
+					\hline
+					
+					\hline
+					
+					\hline
+					id & int & O & Id du type de session. \\
+					\hline
+					Day & String & O & Jour du type de session. \\
+					\hline
+					Time & String & O & Heure du type de session. \\
+					\hline
+				\end{tabularx}
+			\end{center}
+		
+		\newpage
+		\paragraph{Exemple JSON}
+			\paragraph{}
+			\input{JSON/json-register}
+
+\subsection{Réponse}
+	\subsubsection{Réussite}
+		\paragraph{}
+			Retourne code 200
+			
+	\subsubsection{Content-type}
+		\paragraph{}
+			application/json
+	
+	\subsubsection{Body}
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				result & Boolean & O & Status de la requête. \\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
+		\paragraph{Exemple JSON}
+			\paragraph{}
+			\input{JSON/json-result}
+			
+			
+	\subsubsection{Code}
+		\paragraph{}
+			\href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/RegistrationControllerApi.php}{RegistrationControllerApi.php}

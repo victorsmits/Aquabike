@@ -4,9 +4,7 @@ import {NgxMaterialTimepickerTheme} from "ngx-material-timepicker";
 import {Sessions, TypeSession} from '../Interface/Interface.module';
 import {ApiService} from "../service/api.service";
 import {Router} from '@angular/router';
-import {delay} from 'rxjs/operators';
 import {MatDialog, MatDialogRef} from '@angular/material';
-import {MatSelect} from '@angular/material/select';
 import {ToolService} from '../service/tool.service';
 
 //todo display create error
@@ -19,6 +17,8 @@ import {ToolService} from '../service/tool.service';
 export class ConfimGenerationComponent implements OnInit{
   public error : string;
   public isLoading: boolean = false;
+  listTypeSession: TypeSession[]=[];
+  private listTypeSessionId: number[]=[];
 
   constructor(
     public dialogRef: MatDialogRef<ConfimGenerationComponent>,
@@ -28,6 +28,25 @@ export class ConfimGenerationComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.api.getTypeSession().subscribe(urldata=>{
+      let data = JSON.parse(JSON.stringify(urldata));
+      this.listTypeSession = [];
+      for(let type of data){
+        this.listTypeSession .push({
+          Id : type["id"],
+          Day : this.tool.daySwith(type["Day"]),
+          Time : type["Time"].split(' ')[1]
+        });
+      }
+    })
+  }
+
+  addTypeSession(Id: number) {
+    if (this.listTypeSessionId.indexOf(Id) != -1){
+      this.listTypeSessionId.splice(this.listTypeSessionId.indexOf(Id),1);
+    }else{
+      this.listTypeSessionId.push(Id);
+    }
   }
 
   onNoClick(): void {
@@ -36,7 +55,7 @@ export class ConfimGenerationComponent implements OnInit{
 
   generateSession(form : NgForm){
     this.isLoading = true;
-    this.api.postGenerateSessionAuto(form.value.year,9).subscribe(urldata=>{
+    this.api.postGenerateSessionAuto(form.value.year,this.listTypeSessionId,9).subscribe(urldata=>{
       if(urldata['result']){
         this.dialogRef.close();
       }

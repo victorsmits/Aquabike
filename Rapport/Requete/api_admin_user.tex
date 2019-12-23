@@ -1,31 +1,25 @@
 \paragraph{}
-	Requête POST pour le renouvellement de l'abonnement d'un utilisateur.
+	Requête permettant de supprimer un utilisateur ainsi qu'automatiquement le désinscrire des sessions qui lui sont liées.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
-		\paragraph{}
-			Pas de Paramètre pour le path.
-	
+		\begin{center}
+			\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
+				\hline
+				Propriété & Type & Obligatoire & Description \\
+				\hline
+				id & int & O & Id de l'utilisateur. \\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
 	\subsubsection{Content type}
 		\paragraph{}
-			application/json
+			text/plain
 			
 	\subsubsection{Body}
 		\paragraph{}
-			\begin{center}
-				\begin{tabularx}{\textwidth}{| T{0.2122\textwidth} | S{0.22\textwidth} | S{0.15\textwidth} | S{0.3\textwidth} |}
-					\hline
-					Propriété & Type & Obligatoire & Description \\
-					\hline
-					id & int & O & Id de l'utilisateur. \\
-					\hline
-				\end{tabularx}
-			\end{center}
-			
-	\newpage
-		\paragraph{Exemple JSON}
-			\paragraph{}
-			\input{JSON/json-admin-renewAbo}
+			Pas de body pour la requête.
 
 \subsection{Réponse}
 	\subsubsection{Réussite}
@@ -50,7 +44,6 @@
 		\paragraph{Exemple JSON}
 			\paragraph{}
 			\input{JSON/json-result}
-			
 			
 	\subsubsection{Code}
 		\paragraph{}
