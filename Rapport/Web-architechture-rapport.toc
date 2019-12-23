@@ -50,18 +50,21 @@
 \contentsline {section}{\numberline {9}En tant qu'utilisateur, je veux pouvoir m'inscrire a une session uniquement si il me reste des abonnements a disposition}{24}{section.3.9}
 \contentsline {section}{\numberline {10}En tant qu\IeC {\textquoteright }administrateur, je dois pouvoir annuler une session}{25}{section.3.10}
 \contentsline {section}{\numberline {11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{26}{section.3.11}
-\contentsline {section}{\numberline {12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{26}{section.3.12}
-\contentsline {section}{\numberline {13}En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\IeC {\`e}me}{26}{section.3.13}
-\contentsline {section}{\numberline {14}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}n\IeC {\'e}rer les sessions pour un nombre d'ann\IeC {\'e}e}{26}{section.3.14}
-\contentsline {chapter}{\numberline {4}API}{27}{chapter.4}
-\contentsline {section}{\numberline {1}Tableau recapitulatif}{27}{section.4.1}
-\contentsline {section}{\numberline {2}/api}{28}{section.4.2}
-\contentsline {paragraph}{}{28}{paragraph*.12}
-\contentsline {subsection}{\numberline {2.1}R\IeC {\'e}ponse}{28}{subsection.4.2.1}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{28}{subsubsection*.13}
-\contentsline {paragraph}{}{28}{paragraph*.14}
-\contentsline {subsubsection}{Content-type}{28}{subsubsection*.15}
-\contentsline {paragraph}{}{28}{paragraph*.16}
-\contentsline {subsubsection}{Body}{28}{subsubsection*.17}
-\contentsline {chapter}{\numberline {5}S\IeC {\'e}paration backend frontend}{29}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{30}{chapter.6}
+\contentsline {subsection}{\numberline {11.1}Gestion des erreurs}{27}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {11.2}Diagramme de s\IeC {\'e}quence}{28}{subsection.3.11.2}
+\contentsline {subsection}{\numberline {11.3}Script concern\IeC {\'e}}{28}{subsection.3.11.3}
+\contentsline {section}{\numberline {12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{28}{section.3.12}
+\contentsline {section}{\numberline {13}En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\IeC {\`e}me}{28}{section.3.13}
+\contentsline {section}{\numberline {14}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}n\IeC {\'e}rer les sessions pour un nombre d'ann\IeC {\'e}e}{28}{section.3.14}
+\contentsline {chapter}{\numberline {4}API}{29}{chapter.4}
+\contentsline {section}{\numberline {1}Tableau recapitulatif}{29}{section.4.1}
+\contentsline {section}{\numberline {2}/api}{30}{section.4.2}
+\contentsline {paragraph}{}{30}{paragraph*.12}
+\contentsline {subsection}{\numberline {2.1}R\IeC {\'e}ponse}{30}{subsection.4.2.1}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{30}{subsubsection*.13}
+\contentsline {paragraph}{}{30}{paragraph*.14}
+\contentsline {subsubsection}{Content-type}{30}{subsubsection*.15}
+\contentsline {paragraph}{}{30}{paragraph*.16}
+\contentsline {subsubsection}{Body}{30}{subsubsection*.17}
+\contentsline {chapter}{\numberline {5}S\IeC {\'e}paration backend frontend}{31}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{32}{chapter.6}

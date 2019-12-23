@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="login-page">
+    <div class="form">
+        {% if error %}
+            <span class="error">{{ error.messageKey| replace({"Invalid credentials." : "Invalid username or password."}) }}</span>
+        {% endif %}
+        <form action="{{ path('login') }}" method="POST">
+            <input class = 'input' type="text" name="_username" value="{{ last_username }}" placeholder="username"/>
+            <input type="password" name="_password" placeholder="password"/>
+            <button class="submit">login</button>
+            <p class="message">Not registered? <a href="register">Create an account</a></p>
+        </form>
+    </div>
+</div>
+{% endblock %}

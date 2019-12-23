@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="Table">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="cell inscription">
+                    <div class="Table ListPerson">
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+                                {# Heading Table #}
+                                <div class="Table Month">
+                                    <div class="divTableBody">
+                                        <div class="divTableRow">
+                                            <div class="cell Info"> Day</div>
+                                            <div class="cell Info"> Date</div>
+                                            <div class="cell Info"> Time</div>
+                                            <div class="cell Info"> Bike Free</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% for Session in listSession %}
+
+                            <div class="divTableRow">
+                                {# Info Cell #}
+                                <div class="cell Profile">
+                                    {# Info Table #}
+                                    <div class="Table Month">
+                                        <div class="divTableBody">
+                                            {#  Info row #}
+                                            <div class="divTableRow">
+                                                <div class="cell Info"> {{ Session[0] }} </div>
+                                                <div class="cell Info"> {{ Session[1] }} </div>
+                                                <div class="cell Info"> {{ Session[2] }} </div>
+                                                <div class="cell Info"> {{ Session[3] }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {# Button Cell #}
+                                <div class="cell Profile">
+                                    {#  Button Table #}
+                                    <div class="Table button">
+                                        <div class="divTableBody">
+                                            <div class="divTableRow">
+                                                <div class="cell">
+                                                    {# Button Desinscription #}
+                                                    <a href="{{ path('Unsub',{id : Session[4]}) }}"
+                                                       class="BtnStyle UnsubBtn">
+                                                        X Desinscription
+                                                    </a>
+                                                </div>
+
+                                                {# Button Inscription #}
+                                                <div class="cell">
+                                                    <a href="{{ path('more_info',{id : Session[4]}) }}"
+                                                       class="BtnStyle ShowMorBtn">
+                                                        Show More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cell Profile" style="">
+                    <div class="Table" >
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+                                <div class="cell">Nom</div>
+                                <div class="cell">{{ userInfo[0] }}</div>
+                            </div>
+                            <div class="divTableRow">
+                                <div class="cell">Prenom</div>
+                                <div class="cell">{{ userInfo[1] }}</div>
+                            </div>
+                            <div class="divTableRow">
+                                <div class="cell">Email</div>
+                                <div class="cell">{{ userInfo[2] }}</div>
+                            </div>
+                            <div class="divTableRow">
+                                <div class="cell">Abonnement</div>
+                                <div class="cell">{{ userInfo[3] }}</div>
+                            </div>
+                            <div class="divTableRow">
+                                <div class="cell">Jour</div>
+                                <div class="cell">{{ userInfo[4] }}</div>
+                            </div>
+                            <div class="divTableRow">
+                                <div class="cell">
+                                    <a href="{{ path('edit_profile') }}"
+                                       class="BtnStyle ShowMorBtn">
+                                        Edit Profile
+                                    </a>
+                                </div>
+                                {% if is_granted('ROLE_ADMIN')  %}
+                                <div class="cell">
+                                    <a href="{{ path('admin') }}"
+                                       class="BtnStyle ShowMorBtn">
+                                        Admin
+                                    </a>
+                                </div>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

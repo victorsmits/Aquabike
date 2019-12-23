@@ -1,0 +1,40 @@
+security:
+    access_denied_url: /login
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    role_hierarchy:
+        ROLE_ADMIN : [ROLE_USER]
+        ROLE_USER: [IS_AUTHENTICATED_ANONYMOUSLY]
+
+    encoders:
+        App\Entity\Person:
+            algorithm: auto
+
+    providers:
+        my_provider:
+            entity:
+                class: App\Entity\Person
+                property: Username
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            provider: my_provider
+            form_login:
+                login_path: login
+                check_path: login
+                default_target_path: /
+
+            logout:
+                path: /logout
+                target: /
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/admin/*, roles: ROLE_ADMIN }
+        - { path: ^/(register|login|apiww), roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(month|profile), roles: ROLE_USER }

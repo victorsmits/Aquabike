@@ -2,59 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us10-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us10-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us11-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us11-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us11-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us3-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us4-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us5-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us6-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us6-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us7-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us7-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us8-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us8-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us9-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Requete/api.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US10.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US12.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US13.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US14.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US3.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US4.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US5.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US6.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US7.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US8.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US9.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/us-addtypesession.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex (Copie en conflit de victorsmitsMac.local 2019-12-22).gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony-Twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us-addtypeession.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us-addtypeession.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us-addtypesession-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us-addtypesession-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us-addtypesession-3.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Symfony-Twig/config/packages/nelmio_cors.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Figures/us11-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Figures/us11-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Figures/us11-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Figures/us11-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Figures/us11-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/api.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/api.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/base_de_donnee.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/base_de_donnee.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/mvc.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/mvc.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/specification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/specification.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server config/default" beforeDir="false" afterPath="$PROJECT_DIR$/Server config/default" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony-Twig" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony-Twig/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony-Twig/.idea/AquaBike_Session.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/.idea/AquaBike_Session.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony-Twig/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/.idea/php.xml" afterDir="false" />
@@ -66,21 +33,6 @@
       <change beforePath="$PROJECT_DIR$/Symfony-Twig/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony-Twig/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/src/Entity/Session.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony-Twig/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony-Twig/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SecurityControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SecurityControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-abo/del-abo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-abo/del-abo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/tool.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/add-type-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/add-type-session.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +88,7 @@
         <entry key="$PROJECT_DIR$" value="43167d4806df03ae5029a923dcfb1d1af6097881" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Symfony-Twig" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
@@ -467,7 +419,7 @@
       <workItem from="1576653600788" duration="181000" />
       <workItem from="1577021453299" duration="4000" />
       <workItem from="1577021473782" duration="7565000" />
-      <workItem from="1577082981208" duration="1386000" />
+      <workItem from="1577082981208" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>

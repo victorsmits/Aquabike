@@ -1,0 +1,152 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="Table">
+        <div class="divTableBody">
+
+            <div class="divTableRow">
+                {# Heading Table #}
+                <div class="cell">
+                    <div class="Table Month">
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+                                <div class = "cell Info"> Day </div>
+                                <div class = "cell Info"> Date </div>
+                                <div class = "cell Info"> Time </div>
+                                <div class = "cell Info"> Bike Free </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell">
+                    <div class="Table">
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+                                <div class="cell" style="width: 200px">
+                                    <h4>Month: </h4>
+                                </div>
+                                {# Month selection #}
+                                <form action="{{ path('month')}}" method="get">
+                                    <div class = "cell" style="width: 100px; float: left; padding: 5px 5px 0 5px;">
+                                        <div class="">
+                                            <select name="month" onchange="this.form.submit()">
+                                                {% set month = [[01,'Janvier'],
+                                                                [02,'Févrié'],
+                                                                [03,'Mars'],
+                                                                [04,'Avril'],
+                                                                [05,'Mai'],
+                                                                [06,'Juin'],
+                                                                [07,'Juillet'],
+                                                                [08,'Aout'],
+                                                                [09,'Septembre'],
+                                                                [10,'Octrobre'],
+                                                                [11,'Novembre'],
+                                                                [12,'Decembre']] %}
+                                                {% for m in month %}
+                                                    {% if Selected == m[0] %}
+                                                        <option value={{  m[0] }} selected>{{  m[1] }}</option>
+                                                        {% else %}
+                                                        <option value={{  m[0] }} >{{  m[1] }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        {% for Session in listSession %}
+            <div class="divTableRow">
+                {# Info Cell #}
+
+                <div class="cell">
+                    {% if errormessage is not null %}
+                        <div class="Table">
+                            <div class="divTableBody">
+                                <div class="divTableRow">
+                                    <div class="cell" >
+                                        <span class="error">{{ errormessage }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {# Info Table #}
+                    <div class="Table Month">
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+                                <div class = "cell Info"> {{ Session[1] }} </div>
+                                <div class = "cell Info"> {{ Session[2] }} </div>
+                                <div class = "cell Info"> {{ Session[3] }} </div>
+                                {% if Session[6] == 0 %}
+                                    <div class = "cell Info"> {{ Session[4] }}</div>
+                                    {% else %}
+                                        <div class = "cell Info"> CANCEL </div>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="cell">
+
+                    {#  Button Table #}
+                    <div class="Table button">
+                        <div class="divTableBody">
+                            <div class="divTableRow">
+
+                                <div class="cell">
+                                    {% if Session[0] %}
+
+                                        {# Button Desinscription #}
+                                        <a href="{{ path('Unsub',{id : Session[5]}) }}"
+                                           class="BtnStyle UnsubBtn">
+                                            X Desinscription
+                                        </a>
+
+                                    {% elseif Session[6] == 1 %}
+                                        <div class="BtnStyle UnsubBtn">
+                                            CANCEL
+                                        </div>
+
+                                    {% elseif Session[4] == 0 and Session[6] == 0 %}
+                                        <div class="CompleteTag">
+                                            Complete
+                                        </div>
+
+                                    {% else %}
+                                        <a href="{{ path('Inscription',{id : Session[5]}) }}"
+                                           class="BtnStyle InscriptionBtn">
+                                            + Inscription
+                                        </a>
+                                    {% endif %}
+
+                                </div>
+
+                                {# Button Inscription #}
+                                <div class="cell">
+                                    <a href="{{ path('more_info',{id : Session[5]}) }}" class="BtnStyle ShowMorBtn">
+                                        Show More
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

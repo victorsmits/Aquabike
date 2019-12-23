@@ -38,12 +38,15 @@
 \BOOKMARK [1][-]{section.3.9}{En tant qu'utilisateur, je veux pouvoir m'inscrire a une session uniquement si il me reste des abonnements a disposition}{chapter.3}% 38
 \BOOKMARK [1][-]{section.3.10}{En tant qu\220administrateur, je dois pouvoir annuler une session}{chapter.3}% 39
 \BOOKMARK [1][-]{section.3.11}{En tant qu'administrateur, je dois pouvoir cr\351er une nouvelle session peut importe la date}{chapter.3}% 40
-\BOOKMARK [1][-]{section.3.12}{En tant qu'administrateur, je dois pouvoir g\351rer les abonnement des utilisateurs}{chapter.3}% 41
-\BOOKMARK [1][-]{section.3.13}{En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\350me}{chapter.3}% 42
-\BOOKMARK [1][-]{section.3.14}{En tant qu'administrateur, je dois pouvoir g\351n\351rer les sessions pour un nombre d'ann\351e}{chapter.3}% 43
-\BOOKMARK [0][-]{chapter.4}{API}{}% 44
-\BOOKMARK [1][-]{section.4.1}{Tableau recapitulatif}{chapter.4}% 45
-\BOOKMARK [1][-]{section.4.2}{/api}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.2.1}{R\351ponse}{section.4.2}% 47
-\BOOKMARK [0][-]{chapter.5}{S\351paration backend frontend}{}% 48
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 49
+\BOOKMARK [2][-]{subsection.3.11.1}{Gestion des erreurs}{section.3.11}% 41
+\BOOKMARK [2][-]{subsection.3.11.2}{Diagramme de s\351quence}{section.3.11}% 42
+\BOOKMARK [2][-]{subsection.3.11.3}{Script concern\351}{section.3.11}% 43
+\BOOKMARK [1][-]{section.3.12}{En tant qu'administrateur, je dois pouvoir g\351rer les abonnement des utilisateurs}{chapter.3}% 44
+\BOOKMARK [1][-]{section.3.13}{En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\350me}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.14}{En tant qu'administrateur, je dois pouvoir g\351n\351rer les sessions pour un nombre d'ann\351e}{chapter.3}% 46
+\BOOKMARK [0][-]{chapter.4}{API}{}% 47
+\BOOKMARK [1][-]{section.4.1}{Tableau recapitulatif}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.2}{/api}{chapter.4}% 49
+\BOOKMARK [2][-]{subsection.4.2.1}{R\351ponse}{section.4.2}% 50
+\BOOKMARK [0][-]{chapter.5}{S\351paration backend frontend}{}% 51
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 52
