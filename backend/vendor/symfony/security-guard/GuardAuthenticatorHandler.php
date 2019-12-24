@@ -46,7 +46,13 @@ class GuardAuthenticatorHandler
     public function __construct(TokenStorageInterface $tokenStorage, EventDispatcherInterface $eventDispatcher = null, array $statelessProviderKeys = [])
     {
         $this->tokenStorage = $tokenStorage;
-        $this->dispatcher = LegacyEventDispatcherProxy::decorate($eventDispatcher);
+
+        if (null !== $eventDispatcher && class_exists(LegacyEventDispatcherProxy::class)) {
+            $this->dispatcher = LegacyEventDispatcherProxy::decorate($eventDispatcher);
+        } else {
+            $this->dispatcher = $eventDispatcher;
+        }
+
         $this->statelessProviderKeys = $statelessProviderKeys;
     }
 
@@ -119,7 +125,7 @@ class GuardAuthenticatorHandler
         $this->sessionStrategy = $sessionStrategy;
     }
 
-    private function migrateSession(Request $request, TokenInterface $token, $providerKey)
+    private function migrateSession(Request $request, TokenInterface $token, ?string $providerKey)
     {
         if (!$this->sessionStrategy || !$request->hasSession() || !$request->hasPreviousSession() || \in_array($providerKey, $this->statelessProviderKeys, true)) {
             return;

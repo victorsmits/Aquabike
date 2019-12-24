@@ -128,7 +128,7 @@ class Translator extends BaseTranslator implements WarmableInterface
     /**
      * @internal
      */
-    protected function doLoadCatalogue($locale): void
+    protected function doLoadCatalogue(string $locale): void
     {
         parent::doLoadCatalogue($locale);
 
@@ -164,7 +164,10 @@ class Translator extends BaseTranslator implements WarmableInterface
         foreach ($filesByLocale as $locale => $files) {
             foreach ($files as $key => $file) {
                 // filename is domain.locale.format
-                list($domain, $locale, $format) = explode('.', basename($file), 3);
+                $fileNameParts = explode('.', basename($file));
+                $format = array_pop($fileNameParts);
+                $locale = array_pop($fileNameParts);
+                $domain = implode('.', $fileNameParts);
                 $this->addResource($format, $file, $locale, $domain);
             }
         }

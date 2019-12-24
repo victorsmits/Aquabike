@@ -75,6 +75,7 @@ class ComposerStaticInit6f4a22d1eafb48ee61ead8dd72ef0af2
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\ExpressionLanguage\\' => 37,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\Dotenv\\' => 25,
             'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\DependencyInjection\\' => 38,
@@ -116,10 +117,6 @@ class ComposerStaticInit6f4a22d1eafb48ee61ead8dd72ef0af2
         'M' => 
         array (
             'Monolog\\' => 8,
-        ),
-        'F' => 
-        array (
-            'Fig\\Link\\' => 9,
         ),
         'E' => 
         array (
@@ -326,6 +323,10 @@ class ComposerStaticInit6f4a22d1eafb48ee61ead8dd72ef0af2
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
         ),
+        'Symfony\\Component\\ErrorHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/error-handler',
+        ),
         'Symfony\\Component\\Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/dotenv',
@@ -454,10 +455,6 @@ class ComposerStaticInit6f4a22d1eafb48ee61ead8dd72ef0af2
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'Fig\\Link\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fig/link-util/src',
-        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -540,13 +537,6 @@ class ComposerStaticInit6f4a22d1eafb48ee61ead8dd72ef0af2
     );
 
     public static $prefixesPsr0 = array (
-        'T' => 
-        array (
-            'Twig_' => 
-            array (
-                0 => __DIR__ . '/..' . '/twig/twig/lib',
-            ),
-        ),
         'P' => 
         array (
             'ProxyManager\\' => 

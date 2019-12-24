@@ -50,7 +50,7 @@ final class WrappedListener implements ListenerInterface
         if (\is_callable($this->listener)) {
             ($this->listener)($event);
         } else {
-            @trigger_error(sprintf('Calling the "%s::handle()" method from the firewall is deprecated since Symfony 4.3, implement "__invoke()" instead.', \get_class($this->listener)), E_USER_DEPRECATED);
+            @trigger_error(sprintf('Calling the "%s::handle()" method from the firewall is deprecated since Symfony 4.3, extend "%s" instead.', \get_class($this->listener), AbstractListener::class), E_USER_DEPRECATED);
             $this->listener->handle($event);
         }
         $this->time = microtime(true) - $startTime;
@@ -60,7 +60,7 @@ final class WrappedListener implements ListenerInterface
     /**
      * Proxies all method calls to the original listener.
      */
-    public function __call($method, $arguments)
+    public function __call(string $method, array $arguments)
     {
         return $this->listener->{$method}(...$arguments);
     }

@@ -68,7 +68,7 @@
 \contentsline {subsection}{\numberline {2.3}En tant qu'administrateur, je veux pouvoir supprimer un type de session}{32}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {2.4}En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\IeC {\`e}me}{34}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {2.5}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}n\IeC {\'e}rer les sessions pour un nombre d'ann\IeC {\'e}e}{36}{subsection.3.2.5}
-\contentsline {subsubsection}{Gestion des erreurs}{38}{subsubsection*.23}
+\contentsline {subsubsection}{Gestion des erreurs}{37}{subsubsection*.23}
 \contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{38}{subsubsection*.24}
 \contentsline {subsubsection}{Script concern\IeC {\'e}s}{38}{subsubsection*.25}
 \contentsline {chapter}{\numberline {4}API}{39}{chapter.4}

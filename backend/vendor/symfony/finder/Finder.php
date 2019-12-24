@@ -794,12 +794,8 @@ class Finder implements \IteratorAggregate, \Countable
      * Normalizes given directory names by removing trailing slashes.
      *
      * Excluding: (s)ftp:// or ssh2.(s)ftp:// wrapper
-     *
-     * @param string $dir
-     *
-     * @return string
      */
-    private function normalizeDir($dir)
+    private function normalizeDir(string $dir): string
     {
         $dir = rtrim($dir, '/'.\DIRECTORY_SEPARATOR);
 

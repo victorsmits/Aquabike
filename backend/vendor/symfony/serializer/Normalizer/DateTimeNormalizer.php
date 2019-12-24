@@ -106,13 +106,7 @@ class DateTimeNormalizer implements NormalizerInterface, DenormalizerInterface, 
 
             $dateTimeErrors = \DateTime::class === $type ? \DateTime::getLastErrors() : \DateTimeImmutable::getLastErrors();
 
-            throw new NotNormalizableValueException(sprintf(
-                'Parsing datetime string "%s" using format "%s" resulted in %d errors:'."\n".'%s',
-                $data,
-                $dateTimeFormat,
-                $dateTimeErrors['error_count'],
-                implode("\n", $this->formatDateTimeErrors($dateTimeErrors['errors']))
-            ));
+            throw new NotNormalizableValueException(sprintf('Parsing datetime string "%s" using format "%s" resulted in %d errors:'."\n".'%s', $data, $dateTimeFormat, $dateTimeErrors['error_count'], implode("\n", $this->formatDateTimeErrors($dateTimeErrors['errors']))));
         }
 
         try {
@@ -143,7 +137,7 @@ class DateTimeNormalizer implements NormalizerInterface, DenormalizerInterface, 
      *
      * @return string[]
      */
-    private function formatDateTimeErrors(array $errors)
+    private function formatDateTimeErrors(array $errors): array
     {
         $formattedErrors = [];
 
@@ -154,7 +148,7 @@ class DateTimeNormalizer implements NormalizerInterface, DenormalizerInterface, 
         return $formattedErrors;
     }
 
-    private function getTimezone(array $context)
+    private function getTimezone(array $context): ?\DateTimeZone
     {
         $dateTimeZone = $context[self::TIMEZONE_KEY] ?? $this->defaultContext[self::TIMEZONE_KEY];
 

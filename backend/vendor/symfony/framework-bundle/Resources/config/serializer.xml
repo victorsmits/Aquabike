@@ -64,6 +64,12 @@
             <tag name="serializer.normalizer" priority="-900" />
         </service>
 
+        <service id="serializer.normalizer.problem" class="Symfony\Component\Serializer\Normalizer\ProblemNormalizer">
+            <argument>%kernel.debug%</argument>
+            <!-- Run before serializer.normalizer.object -->
+            <tag name="serializer.normalizer" priority="-890" />
+        </service>
+
         <service id="serializer.normalizer.object" class="Symfony\Component\Serializer\Normalizer\ObjectNormalizer">
             <argument type="service" id="serializer.mapping.class_metadata_factory" />
             <argument type="service" id="serializer.name_converter.metadata_aware" />
@@ -143,6 +149,27 @@
             <argument type="service" id="serializer.mapping.class_metadata_factory" />
 
             <tag name="property_info.list_extractor" priority="-999" />
+        </service>
+
+        <!-- ErrorRenderer integration -->
+        <service id="error_renderer" alias="error_renderer.serializer" />
+        <service id="error_renderer.serializer" alias="error_handler.error_renderer.serializer" />
+        <service id="error_handler.error_renderer.serializer" class="Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer">
+            <argument type="service" id="serializer" />
+            <argument type="service">
+                <service>
+                    <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer" method="getPreferredFormat" />
+                    <argument type="service" id="request_stack" />
+                </service>
+            </argument>
+            <argument type="service" id="error_renderer.html" />
+            <argument type="service">
+                <service>
+                    <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="isDebug" />
+                    <argument type="service" id="request_stack" />
+                    <argument>%kernel.debug%</argument>
+                </service>
+            </argument>
         </service>
     </services>
 </container>
