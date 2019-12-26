@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  23 DEC 2019 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  26 DEC 2019 17:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -715,7 +715,7 @@ LaTeX Info: Redefining \nameref on input line 95.
 
 \c@lstlisting=\count170
  (./section/FrontPage.tex
-<Figures/Logo_ECAM.jpg, id=462, 1778.14313pt x 1350.54562pt>
+<Figures/Logo_ECAM.jpg, id=534, 1778.14313pt x 1350.54562pt>
 File: Figures/Logo_ECAM.jpg Graphic file (type jpg)
 <use Figures/Logo_ECAM.jpg>
 Package pdftex.def Info: Figures/Logo_ECAM.jpg  used on input line 6.
@@ -732,7 +732,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.46 ...C {\`a} une session}{19}{subsection.3.1.5}
+l.51 ...ion un certain jour}{20}{subsection.3.1.4}
                                                    [1
 
 ] [2] [3])
@@ -744,54 +744,54 @@ Chapter 1.
 (./section/specification.tex [5
 
 ] [6]
-<Mockup/Login.png, id=633, 305.14pt x 296.10625pt>
+<Mockup/Login.png, id=734, 305.14pt x 296.10625pt>
 File: Mockup/Login.png Graphic file (type png)
 <use Mockup/Login.png>
-Package pdftex.def Info: Mockup/Login.png  used on input line 79.
+Package pdftex.def Info: Mockup/Login.png  used on input line 87.
 (pdftex.def)             Requested size: 213.71576pt x 207.39494pt.
-<Mockup/Accueil.png, id=635, 1922.18124pt x 969.6225pt>
+<Mockup/Accueil.png, id=736, 1922.18124pt x 969.6225pt>
 File: Mockup/Accueil.png Graphic file (type png)
 <use Mockup/Accueil.png>
-Package pdftex.def Info: Mockup/Accueil.png  used on input line 86.
+Package pdftex.def Info: Mockup/Accueil.png  used on input line 94.
 (pdftex.def)             Requested size: 341.94652pt x 172.48277pt.
  [7 <./Mockup/Login.png> <./Mockup/Accueil.png>]
-<Mockup/Inscription.png, id=645, 435.6275pt x 728.7225pt>
+<Mockup/Inscription.png, id=745, 435.6275pt x 728.7225pt>
 File: Mockup/Inscription.png Graphic file (type png)
 <use Mockup/Inscription.png>
-Package pdftex.def Info: Mockup/Inscription.png  used on input line 94.
+Package pdftex.def Info: Mockup/Inscription.png  used on input line 102.
 (pdftex.def)             Requested size: 213.71576pt x 357.49968pt.
  [8 <./Mockup/Inscription.png>]
-<Mockup/Month.png, id=652, 1906.12125pt x 961.5925pt>
+<Mockup/Month.png, id=752, 1906.12125pt x 961.5925pt>
 File: Mockup/Month.png Graphic file (type png)
 <use Mockup/Month.png>
-Package pdftex.def Info: Mockup/Month.png  used on input line 103.
+Package pdftex.def Info: Mockup/Month.png  used on input line 111.
 (pdftex.def)             Requested size: 341.94652pt x 172.49226pt.
-<Mockup/Admin-Session.png, id=653, 1904.11375pt x 969.6225pt>
+<Mockup/Admin-Session.png, id=753, 1904.11375pt x 969.6225pt>
 File: Mockup/Admin-Session.png Graphic file (type png)
 <use Mockup/Admin-Session.png>
-Package pdftex.def Info: Mockup/Admin-Session.png  used on input line 111.
+Package pdftex.def Info: Mockup/Admin-Session.png  used on input line 119.
 (pdftex.def)             Requested size: 341.94652pt x 174.12505pt.
  [9 <./Mockup/Month.png> <./Mockup/Admin-Session.png>]
-<Mockup/Admin-Nouvelle-Session.png, id=663, 559.08875pt x 441.65pt>
+<Mockup/Admin-Nouvelle-Session.png, id=762, 559.08875pt x 441.65pt>
 File: Mockup/Admin-Nouvelle-Session.png Graphic file (type png)
 <use Mockup/Admin-Nouvelle-Session.png>
-Package pdftex.def Info: Mockup/Admin-Nouvelle-Session.png  used on input line 118.
+Package pdftex.def Info: Mockup/Admin-Nouvelle-Session.png  used on input line 126.
 (pdftex.def)             Requested size: 341.94652pt x 270.12717pt.
-<Mockup/Admin-Abonnement.png, id=664, 1907.125pt x 484.81125pt>
+<Mockup/Admin-Abonnement.png, id=763, 1907.125pt x 484.81125pt>
 File: Mockup/Admin-Abonnement.png Graphic file (type png)
 <use Mockup/Admin-Abonnement.png>
-Package pdftex.def Info: Mockup/Admin-Abonnement.png  used on input line 125.
+Package pdftex.def Info: Mockup/Admin-Abonnement.png  used on input line 133.
 (pdftex.def)             Requested size: 341.94652pt x 86.92197pt.
  [10 <./Mockup/Admin-Nouvelle-Session.png> <./Mockup/Admin-Abonnement.png>]
-<Mockup/Admin-Type-Session.png, id=673, 1903.11pt x 678.535pt>
+<Mockup/Admin-Type-Session.png, id=772, 1903.11pt x 678.535pt>
 File: Mockup/Admin-Type-Session.png Graphic file (type png)
 <use Mockup/Admin-Type-Session.png>
-Package pdftex.def Info: Mockup/Admin-Type-Session.png  used on input line 133.
+Package pdftex.def Info: Mockup/Admin-Type-Session.png  used on input line 141.
 (pdftex.def)             Requested size: 341.94652pt x 121.9136pt.
 ) [11 <./Mockup/Admin-Type-Session.png>]
 Chapter 2.
 (./section/base_de_donnee.tex
-<Figures/Entite-relation.png, id=680, 402.50375pt x 241.90375pt>
+<Figures/Entite-relation.png, id=779, 402.50375pt x 241.90375pt>
 File: Figures/Entite-relation.png Graphic file (type png)
 <use Figures/Entite-relation.png>
 Package pdftex.def Info: Figures/Entite-relation.png  used on input line 3.
@@ -799,7 +799,7 @@ Package pdftex.def Info: Figures/Entite-relation.png  used on input line 3.
  [12
 
  <./Figures/Entite-relation.png>]
-<Figures/Diagramme-Relationnel.png, id=688, 901.3675pt x 473.77pt>
+<Figures/Diagramme-Relationnel.png, id=787, 901.3675pt x 473.77pt>
 File: Figures/Diagramme-Relationnel.png Graphic file (type png)
 <use Figures/Diagramme-Relationnel.png>
 Package pdftex.def Info: Figures/Diagramme-Relationnel.png  used on input line 10.
@@ -915,112 +915,131 @@ Overfull \hbox (2.32437pt too wide) in paragraph at lines 128--128
  []
 
 )
-Overfull \hbox (11.74713pt too wide) in paragraph at lines 128--131
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 128--133
 [] [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--131
+Underfull \hbox (badness 10000) in paragraph at lines 128--133
 
  []
 
 [15]
 Chapter 3.
-(./section/mvc.tex (./UserStories/US1.tex
-<Figures/us1-1.png, id=709, 670.505pt x 840.13875pt>
+(./section/mvc.tex (./UserStories/US0.tex
+<Figures/us0-1.png, id=810, 178.6675pt x 141.52875pt>
+File: Figures/us0-1.png Graphic file (type png)
+<use Figures/us0-1.png>
+Package pdftex.def Info: Figures/us0-1.png  used on input line 8.
+(pdftex.def)             Requested size: 212.35025pt x 168.21829pt.
+<Figures/us0-2.png, id=811, 475.7775pt x 468.75125pt>
+File: Figures/us0-2.png Graphic file (type png)
+<use Figures/us0-2.png>
+Package pdftex.def Info: Figures/us0-2.png  used on input line 13.
+(pdftex.def)             Requested size: 212.35025pt x 209.21234pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Diagramme/sequence-us0.png, id=812, 814.04124pt x 583.17876pt>
+File: Diagramme/sequence-us0.png Graphic file (type png)
+<use Diagramme/sequence-us0.png>
+Package pdftex.def Info: Diagramme/sequence-us0.png  used on input line 24.
+(pdftex.def)             Requested size: 424.70052pt x 304.25134pt.
+[16
+
+ <./Figures/us0-1.png>] [17 <./Figures/us0-2.png> <./Diagramme/sequence-us0.png>]) (./UserStories/US1.tex
+<Figures/us1-1.png, id=838, 670.505pt x 840.13875pt>
 File: Figures/us1-1.png Graphic file (type png)
 <use Figures/us1-1.png>
 Package pdftex.def Info: Figures/us1-1.png  used on input line 2.
 (pdftex.def)             Requested size: 212.35025pt x 266.06807pt.
- [16
-
- <./Figures/us1-1.png>]
-<Diagramme/sequence-us1.png, id=719, 814.04124pt x 583.17876pt>
+ [18 <./Figures/us1-1.png>]
+<Diagramme/sequence-us1.png, id=850, 814.04124pt x 583.17876pt>
 File: Diagramme/sequence-us1.png Graphic file (type png)
 <use Diagramme/sequence-us1.png>
-Package pdftex.def Info: Diagramme/sequence-us1.png  used on input line 23.
+Package pdftex.def Info: Diagramme/sequence-us1.png  used on input line 24.
 (pdftex.def)             Requested size: 339.7617pt x 243.40285pt.
 ) (./UserStories/US2.tex
-<Figures/us2-1.png, id=723, 1543.7675pt x 309.155pt>
+<Figures/us2-1.png, id=854, 1543.7675pt x 309.155pt>
 File: Figures/us2-1.png Graphic file (type png)
 <use Figures/us2-1.png>
 Package pdftex.def Info: Figures/us2-1.png  used on input line 2.
 (pdftex.def)             Requested size: 339.7617pt x 68.03789pt.
- [17 <./Diagramme/sequence-us1.png>]) (./UserStories/US3.tex
-<Figures/us3-1.png, id=735, 524.96124pt x 405.515pt>
+ [19 <./Diagramme/sequence-us1.png>]) (./UserStories/US3.tex
+<Figures/us3-1.png, id=865, 524.96124pt x 405.515pt>
 File: Figures/us3-1.png Graphic file (type png)
 <use Figures/us3-1.png>
 Package pdftex.def Info: Figures/us3-1.png  used on input line 2.
 (pdftex.def)             Requested size: 212.35025pt x 164.03465pt.
-) [18 <./Figures/us2-1.png> <./Figures/us3-1.png>] (./UserStories/US4.tex
-<Figures/us4-1.png, id=750, 457.71pt x 444.66125pt>
+ [20 <./Figures/us2-1.png> <./Figures/us3-1.png>]) (./UserStories/US4.tex
+<Figures/us4-1.png, id=882, 457.71pt x 444.66125pt>
 File: Figures/us4-1.png Graphic file (type png)
 <use Figures/us4-1.png>
 Package pdftex.def Info: Figures/us4-1.png  used on input line 2.
 (pdftex.def)             Requested size: 212.35025pt x 206.29718pt.
-) [19 <./Figures/us4-1.png>] (./UserStories/US5.tex
-<Figures/us5-1.png, id=762, 542.025pt x 329.23pt>
+ [21 <./Figures/us4-1.png>]) (./UserStories/US5.tex
+<Figures/us5-1.png, id=899, 542.025pt x 329.23pt>
 File: Figures/us5-1.png Graphic file (type png)
 <use Figures/us5-1.png>
 Package pdftex.def Info: Figures/us5-1.png  used on input line 2.
 (pdftex.def)             Requested size: 212.35025pt x 128.98192pt.
-) (./UserStories/US6.tex
-<Figures/us6-1.png, id=763, 1578.89874pt x 157.58875pt>
+) (./UserStories/US6.tex [22 <./Figures/us5-1.png>]
+<Figures/us6-1.png, id=916, 1578.89874pt x 157.58875pt>
 File: Figures/us6-1.png Graphic file (type png)
 <use Figures/us6-1.png>
 Package pdftex.def Info: Figures/us6-1.png  used on input line 9.
 (pdftex.def)             Requested size: 382.22786pt x 38.1491pt.
- [20 <./Figures/us5-1.png> <./Figures/us6-1.png>]
-<Figures/us6-2.png, id=779, 1584.92125pt x 250.9375pt>
+<Figures/us6-2.png, id=917, 1584.92125pt x 250.9375pt>
 File: Figures/us6-2.png Graphic file (type png)
 <use Figures/us6-2.png>
 Package pdftex.def Info: Figures/us6-2.png  used on input line 15.
 (pdftex.def)             Requested size: 382.22786pt x 60.51723pt.
-) (./UserStories/US7.tex
-<Figures/us7-1.png, id=780, 291.0875pt x 190.7125pt>
+) [23 <./Figures/us6-1.png> <./Figures/us6-2.png>] (./UserStories/US7.tex
+<Figures/us7-1.png, id=934, 291.0875pt x 190.7125pt>
 File: Figures/us7-1.png Graphic file (type png)
 <use Figures/us7-1.png>
 Package pdftex.def Info: Figures/us7-1.png  used on input line 9.
 (pdftex.def)             Requested size: 212.35025pt x 139.12874pt.
-<Figures/us7-2.png, id=781, 1910.13625pt x 463.7325pt>
+<Figures/us7-2.png, id=935, 1910.13625pt x 463.7325pt>
 File: Figures/us7-2.png Graphic file (type png)
 <use Figures/us7-2.png>
 Package pdftex.def Info: Figures/us7-2.png  used on input line 15.
 (pdftex.def)             Requested size: 382.22786pt x 92.79437pt.
-) (./UserStories/US8.tex [21 <./Figures/us6-2.png> <./Figures/us7-1.png> <./Figures/us7-2.png>]
+) (./UserStories/US8.tex [24 <./Figures/us7-1.png> <./Figures/us7-2.png>]
 File: Figures/us7-1.png Graphic file (type png)
 <use Figures/us7-1.png>
 Package pdftex.def Info: Figures/us7-1.png  used on input line 11.
 (pdftex.def)             Requested size: 169.87761pt x 111.30008pt.
-<Figures/us8-1.png, id=795, 515.9275pt x 359.3425pt>
+<Figures/us8-1.png, id=952, 515.9275pt x 359.3425pt>
 File: Figures/us8-1.png Graphic file (type png)
 <use Figures/us8-1.png>
 Package pdftex.def Info: Figures/us8-1.png  used on input line 17.
 (pdftex.def)             Requested size: 169.87761pt x 118.32019pt.
- [22 <./Figures/us8-1.png>]
-<Figures/us8-2.png, id=808, 763.85374pt x 765.86125pt>
+ [25 <./Figures/us8-1.png>]
+<Figures/us8-2.png, id=965, 763.85374pt x 765.86125pt>
 File: Figures/us8-2.png Graphic file (type png)
 <use Figures/us8-2.png>
 Package pdftex.def Info: Figures/us8-2.png  used on input line 23.
 (pdftex.def)             Requested size: 169.87761pt x 170.3247pt.
-) (./UserStories/US9.tex [23 <./Figures/us8-2.png>]
-<Figures/us9-1.png, id=821, 334.24875pt x 352.31625pt>
+) (./UserStories/US9.tex [26 <./Figures/us8-2.png>]
+<Figures/us9-1.png, id=982, 334.24875pt x 352.31625pt>
 File: Figures/us9-1.png Graphic file (type png)
 <use Figures/us9-1.png>
 Package pdftex.def Info: Figures/us9-1.png  used on input line 12.
 (pdftex.def)             Requested size: 169.87761pt x 179.06606pt.
-<Figures/us9-2.png, id=822, 756.8275pt x 326.21875pt>
+<Figures/us9-2.png, id=983, 756.8275pt x 326.21875pt>
 File: Figures/us9-2.png Graphic file (type png)
 <use Figures/us9-2.png>
 Package pdftex.def Info: Figures/us9-2.png  used on input line 18.
 (pdftex.def)             Requested size: 339.7617pt x 146.44864pt.
-) [24 <./Figures/us9-1.png> <./Figures/us9-2.png>] (./UserStories/US10.tex
-<Figures/us10-1.png, id=832, 334.24875pt x 352.31625pt>
+) [27 <./Figures/us9-1.png> <./Figures/us9-2.png>] (./UserStories/US10.tex
+<Figures/us10-1.png, id=996, 334.24875pt x 352.31625pt>
 File: Figures/us10-1.png Graphic file (type png)
 <use Figures/us10-1.png>
 Package pdftex.def Info: Figures/us10-1.png  used on input line 13.
 (pdftex.def)             Requested size: 169.87761pt x 179.06606pt.
-<Figures/us10-2.png, id=833, 718.685pt x 498.86375pt>
+<Figures/us10-2.png, id=997, 718.685pt x 498.86375pt>
 File: Figures/us10-2.png Graphic file (type png)
 <use Figures/us10-2.png>
 Package pdftex.def Info: Figures/us10-2.png  used on input line 19.
@@ -1029,140 +1048,41 @@ Package pdftex.def Info: Figures/us10-2.png  used on input line 19.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25 <./Figures/us10-1.png>]
-<Diagramme/sequence-us11.png, id=847, 814.04124pt x 583.17876pt>
+[28 <./Figures/us10-1.png>]
+<Diagramme/sequence-us11.png, id=1011, 814.04124pt x 583.17876pt>
 File: Diagramme/sequence-us11.png Graphic file (type png)
 <use Diagramme/sequence-us11.png>
 Package pdftex.def Info: Diagramme/sequence-us11.png  used on input line 32.
 (pdftex.def)             Requested size: 339.7617pt x 243.40285pt.
- [26 <./Figures/us10-2.png> <./Diagramme/sequence-us11.png>])
-Overfull \hbox (5.83006pt too wide) in paragraph at lines 47--47
+ [29 <./Figures/us10-2.png> <./Diagramme/sequence-us11.png>])
+Overfull \hbox (5.83006pt too wide) in paragraph at lines 51--51
 |[]\T1/cmr/bx/n/14.4 En tant qu'administrateur, je dois pou-voir gérer les abon-
  []
 
 (./UserStories/US11.tex
-<Figures/us11-1.png, id=859, 334.24875pt x 352.31625pt>
+<Figures/us11-1.png, id=1025, 334.24875pt x 352.31625pt>
 File: Figures/us11-1.png Graphic file (type png)
 <use Figures/us11-1.png>
 Package pdftex.def Info: Figures/us11-1.png  used on input line 9.
 (pdftex.def)             Requested size: 169.87761pt x 179.06606pt.
-<Figures/us11-2.png, id=860, 1494.58376pt x 361.35pt>
+<Figures/us11-2.png, id=1026, 1494.58376pt x 361.35pt>
 File: Figures/us11-2.png Graphic file (type png)
 <use Figures/us11-2.png>
 Package pdftex.def Info: Figures/us11-2.png  used on input line 16.
 (pdftex.def)             Requested size: 212.35025pt x 51.33852pt.
-) [27 <./Figures/us11-1.png> <./Figures/us11-2.png>] (./UserStories/US12.tex
-<Figures/us12-1.png, id=873, 197.73875pt x 284.06125pt>
-File: Figures/us12-1.png Graphic file (type png)
-<use Figures/us12-1.png>
-Package pdftex.def Info: Figures/us12-1.png  used on input line 13.
-(pdftex.def)             Requested size: 127.41144pt x 183.03387pt.
-<Figures/us12-2.png, id=874, 344.28625pt x 145.54375pt>
-File: Figures/us12-2.png Graphic file (type png)
-<use Figures/us12-2.png>
-Package pdftex.def Info: Figures/us12-2.png  used on input line 20.
-(pdftex.def)             Requested size: 212.35025pt x 89.7698pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[28 <./Figures/us12-1.png>]
-<Figures/us12-3.png, id=890, 407.5225pt x 326.21875pt>
-File: Figures/us12-3.png Graphic file (type png)
-<use Figures/us12-3.png>
-Package pdftex.def Info: Figures/us12-3.png  used on input line 26.
-(pdftex.def)             Requested size: 212.35025pt x 169.98315pt.
- [29 <./Figures/us12-2.png> <./Figures/us12-3.png>]
-<Diagramme/sequence-us12.png, id=900, 864.22874pt x 583.17876pt>
-File: Diagramme/sequence-us12.png Graphic file (type png)
-<use Diagramme/sequence-us12.png>
-Package pdftex.def Info: Diagramme/sequence-us12.png  used on input line 40.
-(pdftex.def)             Requested size: 382.22786pt x 257.92534pt.
-) [30 <./Diagramme/sequence-us12.png>] (./UserStories/US13.tex
-<Figures/us13-1.png, id=915, 197.73875pt x 284.06125pt>
-File: Figures/us13-1.png Graphic file (type png)
-<use Figures/us13-1.png>
-Package pdftex.def Info: Figures/us13-1.png  used on input line 14.
-(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
- [31 <./Figures/us13-1.png>]
-<Figures/us13-2.png, id=930, 1498.59875pt x 163.61125pt>
-File: Figures/us13-2.png Graphic file (type png)
-<use Figures/us13-2.png>
-Package pdftex.def Info: Figures/us13-2.png  used on input line 20.
-(pdftex.def)             Requested size: 382.22786pt x 41.72905pt.
-<Figures/us13-3.png, id=931, 321.2pt x 277.035pt>
-File: Figures/us13-3.png Graphic file (type png)
-<use Figures/us13-3.png>
-Package pdftex.def Info: Figures/us13-3.png  used on input line 26.
-(pdftex.def)             Requested size: 169.87761pt x 146.52348pt.
-) (./UserStories/US14.tex [32 <./Figures/us13-2.png> <./Figures/us13-3.png>]
-File: Figures/us13-1.png Graphic file (type png)
-<use Figures/us13-1.png>
-Package pdftex.def Info: Figures/us13-1.png  used on input line 14.
-(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
-<Figures/us14-1.png, id=950, 1547.7825pt x 169.63374pt>
-File: Figures/us14-1.png Graphic file (type png)
-<use Figures/us14-1.png>
-Package pdftex.def Info: Figures/us14-1.png  used on input line 20.
-(pdftex.def)             Requested size: 382.22786pt x 41.89064pt.
- [33 <./Figures/us14-1.png>]
-<Figures/us14-2.png, id=958, 277.035pt x 242.9075pt>
-File: Figures/us14-2.png Graphic file (type png)
-<use Figures/us14-2.png>
-Package pdftex.def Info: Figures/us14-2.png  used on input line 26.
-(pdftex.def)             Requested size: 169.87761pt x 148.9517pt.
-) (./UserStories/US15.tex [34 <./Figures/us14-2.png>]
-<Figures/us15-1.png, id=973, 197.73875pt x 284.06125pt>
-File: Figures/us15-1.png Graphic file (type png)
-<use Figures/us15-1.png>
-Package pdftex.def Info: Figures/us15-1.png  used on input line 14.
-(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
-<Figures/us15-2.png, id=974, 1675.25874pt x 196.735pt>
-File: Figures/us15-2.png Graphic file (type png)
-<use Figures/us15-2.png>
-Package pdftex.def Info: Figures/us15-2.png  used on input line 20.
-(pdftex.def)             Requested size: 424.70052pt x 49.87405pt.
-<Figures/us15-3.png, id=975, 651.43375pt x 231.86626pt>
-File: Figures/us15-3.png Graphic file (type png)
-<use Figures/us15-3.png>
-Package pdftex.def Info: Figures/us15-3.png  used on input line 26.
-(pdftex.def)             Requested size: 212.35025pt x 75.58206pt.
-) [35 <./Figures/us15-1.png> <./Figures/us15-2.png> <./Figures/us15-3.png>] (./UserStories/US16.tex
-<Figures/us16-1.png, id=986, 197.73875pt x 284.06125pt>
-File: Figures/us16-1.png Graphic file (type png)
-<use Figures/us16-1.png>
-Package pdftex.def Info: Figures/us16-1.png  used on input line 16.
-(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
- [36 <./Figures/us16-1.png>]
-<Figures/us16-2.png, id=1004, 542.025pt x 406.51875pt>
-File: Figures/us16-2.png Graphic file (type png)
-<use Figures/us16-2.png>
-Package pdftex.def Info: Figures/us16-2.png  used on input line 22.
-(pdftex.def)             Requested size: 169.87761pt x 127.40897pt.
-<Figures/us16-3.png, id=1005, 313.17pt x 690.58pt>
-File: Figures/us16-3.png Graphic file (type png)
-<use Figures/us16-3.png>
-Package pdftex.def Info: Figures/us16-3.png  used on input line 28.
-(pdftex.def)             Requested size: 127.41144pt x 280.95839pt.
- [37 <./Figures/us16-2.png> <./Figures/us16-3.png>]
-<Diagramme/sequence-us16.png, id=1015, 894.34125pt x 583.17876pt>
-File: Diagramme/sequence-us16.png Graphic file (type png)
-<use Diagramme/sequence-us16.png>
-Package pdftex.def Info: Diagramme/sequence-us16.png  used on input line 42.
-(pdftex.def)             Requested size: 424.70052pt x 276.9416pt.
-)) [38 <./Diagramme/sequence-us16.png>]
+ [30 <./Figures/us11-1.png> <./Figures/us11-2.png>])) [31]
 Chapter 4.
 (./section/api.tex
-Overfull \hbox (2.92708pt too wide) in paragraph at lines 33--33
+Overfull \hbox (2.92708pt too wide) in paragraph at lines 31--31
  []|\T1/cmr/m/n/10 getTypeSession| 
  []
 
 
-Overfull \hbox (43.9863pt too wide) in paragraph at lines 33--34
+Overfull \hbox (43.9863pt too wide) in paragraph at lines 31--32
  [] 
  []
 
-[39
+[32
 
 ]
 Overfull \hbox (5.82913pt too wide) in paragraph at lines 68--68
@@ -1199,12 +1119,12 @@ Overfull \hbox (43.9863pt too wide) in paragraph at lines 68--69
  [] 
  []
 
-[40] (./Requete/api.tex
+[33] (./Requete/api.tex
 Underfull \hbox (badness 10000) in alignment at lines 52--52
 [][][][] 
  []
 
-[41] (./JSON/json-api.tex
+[34] (./JSON/json-api.tex
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1213,22 +1133,22 @@ Underfull \hbox (badness 10000) in alignment at lines 15--15
 [][][][] 
  []
 
-[42]
+[35]
 Underfull \hbox (badness 10000) in alignment at lines 59--59
 [][][][] 
  []
 
-[43] (./JSON/json-month.tex)) (./Requete/api_profile.tex
+[36] (./JSON/json-month.tex)) (./Requete/api_profile.tex
 Underfull \hbox (badness 10000) in alignment at lines 13--13
 [][][][] 
  []
 
-[44]
+[37]
 Underfull \hbox (badness 10000) in alignment at lines 73--73
 [][][][] 
  []
 
-[45] (./JSON/json-profile.tex)) [46] (./Requete/api_admin_abonnement.tex
+[38] (./JSON/json-profile.tex)) [39] (./Requete/api_admin_abonnement.tex
 Overfull \hbox (1.79211pt too wide) in paragraph at lines 71--71
  []|\T1/cmr/m/n/10 JSON<TypeSession>| 
  []
@@ -1238,22 +1158,22 @@ Underfull \hbox (badness 10000) in alignment at lines 71--71
 [][][][] 
  []
 
-[47] [48] (./JSON/json-admin-abonnement.tex)) [49] (./Requete/api_type_session.tex
+[40] [41] (./JSON/json-admin-abonnement.tex)) [42] (./Requete/api_type_session.tex
 Underfull \hbox (badness 10000) in alignment at lines 60--60
 [][][][] 
  []
 
-[50] (./JSON/json-type-session.tex)) (./Requete/api_admin_renewAbo.tex
+[43] (./JSON/json-type-session.tex)) (./Requete/api_admin_renewAbo.tex
 Underfull \hbox (badness 10000) in alignment at lines 22--22
 [][][][] 
  []
 
-[51] (./JSON/json-admin-renewAbo.tex)
+[44] (./JSON/json-admin-renewAbo.tex)
 Underfull \hbox (badness 10000) in alignment at lines 47--47
 [][][][] 
  []
 
-(./JSON/json-result.tex)) (./Requete/api_admin_editAbo.tex [52]
+(./JSON/json-result.tex)) (./Requete/api_admin_editAbo.tex [45]
 Underfull \hbox (badness 10000) in alignment at lines 28--28
 [][][][] 
  []
@@ -1263,12 +1183,12 @@ Underfull \hbox (badness 10000) in alignment at lines 52--52
 [][][][] 
  []
 
-[53] (./JSON/json-result.tex)) (./Requete/api_admin_cancel.tex
+[46] (./JSON/json-result.tex)) (./Requete/api_admin_cancel.tex
 Underfull \hbox (badness 10000) in alignment at lines 22--22
 [][][][] 
  []
 
-(./JSON/json-admin-renewAbo.tex) [54]
+(./JSON/json-admin-renewAbo.tex) [47]
 Underfull \hbox (badness 10000) in alignment at lines 47--47
 [][][][] 
  []
@@ -1278,12 +1198,12 @@ Underfull \hbox (badness 10000) in alignment at lines 24--24
 [][][][] 
  []
 
-[55] (./JSON/json-admin-recreate.tex)
+[48] (./JSON/json-admin-recreate.tex)
 Underfull \hbox (badness 10000) in alignment at lines 48--48
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [56] (./Requete/api_admin_autocreate.tex
+(./JSON/json-result.tex)) [49] (./Requete/api_admin_autocreate.tex
 Underfull \hbox (badness 10000) in alignment at lines 26--26
 [][][][] 
  []
@@ -1293,37 +1213,27 @@ Underfull \hbox (badness 10000) in alignment at lines 50--50
 [][][][] 
  []
 
-[57] (./JSON/json-result.tex)) (./Requete/api_login.tex
-Underfull \hbox (badness 10000) in alignment at lines 24--24
-[][][][] 
- []
-
-(./JSON/json-login.tex) [58]
-Underfull \hbox (badness 10000) in alignment at lines 48--48
-[][][][] 
- []
-
-(./JSON/json-result.tex)) (./Requete/api_editProfile.tex
+[50] (./JSON/json-result.tex)) (./Requete/api_editProfile.tex
 Underfull \hbox (badness 10000) in alignment at lines 40--40
 [][][][] 
  []
 
-[59] (./JSON/json-editProfile.tex)
+[51] (./JSON/json-editProfile.tex)
 Underfull \hbox (badness 10000) in alignment at lines 64--64
 [][][][] 
  []
 
-[60] (./JSON/json-result.tex)) (./Requete/api_type_session_post.tex
+(./JSON/json-result.tex)) (./Requete/api_type_session_post.tex [52]
 Underfull \hbox (badness 10000) in alignment at lines 26--26
 [][][][] 
  []
 
-[61] (./JSON/json-type-session-post.tex)
+[53] (./JSON/json-type-session-post.tex)
 Underfull \hbox (badness 10000) in alignment at lines 51--51
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [62] (./Requete/api_admin_session_delete.tex
+(./JSON/json-result.tex)) [54] (./Requete/api_admin_session_delete.tex
 Underfull \hbox (badness 10000) in alignment at lines 13--13
 [][][][] 
  []
@@ -1333,7 +1243,7 @@ Underfull \hbox (badness 10000) in alignment at lines 41--41
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [63] (./Requete/api_desinscription.tex
+(./JSON/json-result.tex)) [55] (./Requete/api_desinscription.tex
 Underfull \hbox (badness 10000) in alignment at lines 15--15
 [][][][] 
  []
@@ -1343,7 +1253,7 @@ Underfull \hbox (badness 10000) in alignment at lines 43--43
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [64] (./Requete/api_type_session_delete.tex
+(./JSON/json-result.tex)) [56] (./Requete/api_type_session_delete.tex
 Underfull \hbox (badness 10000) in alignment at lines 13--13
 [][][][] 
  []
@@ -1353,7 +1263,7 @@ Underfull \hbox (badness 10000) in alignment at lines 41--41
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [65] (./Requete/api_admin_user.tex
+(./JSON/json-result.tex)) [57] (./Requete/api_admin_user.tex
 Underfull \hbox (badness 10000) in alignment at lines 13--13
 [][][][] 
  []
@@ -1363,7 +1273,17 @@ Underfull \hbox (badness 10000) in alignment at lines 41--41
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [66] (./Requete/api_admin_session_put.tex
+(./JSON/json-result.tex)) (./Requete/api_login.tex [58]
+Underfull \hbox (badness 10000) in alignment at lines 24--24
+[][][][] 
+ []
+
+(./JSON/json-login.tex)
+Underfull \hbox (badness 10000) in alignment at lines 48--48
+[][][][] 
+ []
+
+[59] (./JSON/json-result.tex)) [60] (./Requete/api_admin_session_put.tex
 Underfull \hbox (badness 10000) in alignment at lines 30--30
 [][][][] 
  []
@@ -1373,12 +1293,12 @@ Underfull \hbox (badness 10000) in alignment at lines 54--54
 [][][][] 
  []
 
-[67] (./JSON/json-result.tex)) (./Requete/api_Inscription.tex
+[61] (./JSON/json-result.tex)) (./Requete/api_Inscription.tex
 Underfull \hbox (badness 10000) in alignment at lines 24--24
 [][][][] 
  []
 
-(./JSON/json-Inscription.tex) [68]
+(./JSON/json-Inscription.tex) [62]
 Underfull \hbox (badness 10000) in alignment at lines 48--48
 [][][][] 
  []
@@ -1388,12 +1308,12 @@ Underfull \hbox (badness 10000) in alignment at lines 26--26
 [][][][] 
  []
 
-[69] (./JSON/json-type-session-post.tex)
+[63] (./JSON/json-type-session-post.tex)
 Underfull \hbox (badness 10000) in alignment at lines 50--50
 [][][][] 
  []
 
-(./JSON/json-result.tex)) [70] (./Requete/api_register.tex
+(./JSON/json-result.tex)) [64] (./Requete/api_register.tex
 Overfull \hbox (24.54187pt too wide) in paragraph at lines 46--46
  []|\T1/cmr/m/n/12 passwordConfirmation| 
  []
@@ -1403,47 +1323,184 @@ Underfull \hbox (badness 10000) in alignment at lines 46--46
 [][][][] 
  []
 
-[71] (./JSON/json-register.tex)
+[65] (./JSON/json-register.tex)
 Underfull \hbox (badness 10000) in alignment at lines 71--71
 [][][][] 
  []
 
-(./JSON/json-result.tex))) [72]
+(./JSON/json-result.tex))) [66]
 Chapter 5.
 
-Overfull \hbox (18.0574pt too wide) in paragraph at lines 142--142
+Overfull \hbox (18.0574pt too wide) in paragraph at lines 147--147
 |[]\T1/cmr/bx/n/29.86 Séparation back-end fron-tend| 
  []
 
-(./section/separation_backend_frontend.tex) [73
+(./section/separation_backend_frontend.tex [67
 
-]
+] (./UserStoriesAngular/US12.tex
+<Figures/us12-1.png, id=1839, 197.73875pt x 284.06125pt>
+File: Figures/us12-1.png Graphic file (type png)
+<use Figures/us12-1.png>
+Package pdftex.def Info: Figures/us12-1.png  used on input line 14.
+(pdftex.def)             Requested size: 127.41144pt x 183.03387pt.
+ [68 <./Figures/us12-1.png>]
+<Figures/us12-2.png, id=1855, 344.28625pt x 145.54375pt>
+File: Figures/us12-2.png Graphic file (type png)
+<use Figures/us12-2.png>
+Package pdftex.def Info: Figures/us12-2.png  used on input line 20.
+(pdftex.def)             Requested size: 212.35025pt x 89.7698pt.
+<Figures/us12-3.png, id=1856, 407.5225pt x 326.21875pt>
+File: Figures/us12-3.png Graphic file (type png)
+<use Figures/us12-3.png>
+Package pdftex.def Info: Figures/us12-3.png  used on input line 26.
+(pdftex.def)             Requested size: 212.35025pt x 169.98315pt.
+ [69 <./Figures/us12-2.png> <./Figures/us12-3.png>]
+<Diagramme/sequence-us12.png, id=1866, 864.22874pt x 583.17876pt>
+File: Diagramme/sequence-us12.png Graphic file (type png)
+<use Diagramme/sequence-us12.png>
+Package pdftex.def Info: Diagramme/sequence-us12.png  used on input line 40.
+(pdftex.def)             Requested size: 382.22786pt x 257.92534pt.
+) [70 <./Diagramme/sequence-us12.png>] (./UserStoriesAngular/US13.tex
+<Figures/us13-1.png, id=1879, 197.73875pt x 284.06125pt>
+File: Figures/us13-1.png Graphic file (type png)
+<use Figures/us13-1.png>
+Package pdftex.def Info: Figures/us13-1.png  used on input line 14.
+(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
+ [71 <./Figures/us13-1.png>]
+<Figures/us13-2.png, id=1894, 1498.59875pt x 163.61125pt>
+File: Figures/us13-2.png Graphic file (type png)
+<use Figures/us13-2.png>
+Package pdftex.def Info: Figures/us13-2.png  used on input line 20.
+(pdftex.def)             Requested size: 382.22786pt x 41.72905pt.
+<Figures/us13-3.png, id=1895, 321.2pt x 277.035pt>
+File: Figures/us13-3.png Graphic file (type png)
+<use Figures/us13-3.png>
+Package pdftex.def Info: Figures/us13-3.png  used on input line 26.
+(pdftex.def)             Requested size: 169.87761pt x 146.52348pt.
+) [72 <./Figures/us13-2.png> <./Figures/us13-3.png>] (./UserStoriesAngular/US14.tex
+File: Figures/us13-1.png Graphic file (type png)
+<use Figures/us13-1.png>
+Package pdftex.def Info: Figures/us13-1.png  used on input line 14.
+(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
+<Figures/us14-1.png, id=1912, 1547.7825pt x 169.63374pt>
+File: Figures/us14-1.png Graphic file (type png)
+<use Figures/us14-1.png>
+Package pdftex.def Info: Figures/us14-1.png  used on input line 20.
+(pdftex.def)             Requested size: 382.22786pt x 41.89064pt.
+ [73 <./Figures/us14-1.png>]
+<Figures/us14-2.png, id=1928, 277.035pt x 242.9075pt>
+File: Figures/us14-2.png Graphic file (type png)
+<use Figures/us14-2.png>
+Package pdftex.def Info: Figures/us14-2.png  used on input line 26.
+(pdftex.def)             Requested size: 169.87761pt x 148.9517pt.
+) (./UserStoriesAngular/US15.tex [74 <./Figures/us14-2.png>]
+<Figures/us15-1.png, id=1948, 197.73875pt x 284.06125pt>
+File: Figures/us15-1.png Graphic file (type png)
+<use Figures/us15-1.png>
+Package pdftex.def Info: Figures/us15-1.png  used on input line 14.
+(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
+<Figures/us15-2.png, id=1949, 1675.25874pt x 196.735pt>
+File: Figures/us15-2.png Graphic file (type png)
+<use Figures/us15-2.png>
+Package pdftex.def Info: Figures/us15-2.png  used on input line 20.
+(pdftex.def)             Requested size: 424.70052pt x 49.87405pt.
+<Figures/us15-3.png, id=1950, 651.43375pt x 231.86626pt>
+File: Figures/us15-3.png Graphic file (type png)
+<use Figures/us15-3.png>
+Package pdftex.def Info: Figures/us15-3.png  used on input line 26.
+(pdftex.def)             Requested size: 212.35025pt x 75.58206pt.
+) [75 <./Figures/us15-1.png> <./Figures/us15-2.png> <./Figures/us15-3.png>] (./UserStoriesAngular/US16.tex
+<Figures/us16-1.png, id=1967, 197.73875pt x 284.06125pt>
+File: Figures/us16-1.png Graphic file (type png)
+<use Figures/us16-1.png>
+Package pdftex.def Info: Figures/us16-1.png  used on input line 16.
+(pdftex.def)             Requested size: 169.87761pt x 244.04083pt.
+ [76 <./Figures/us16-1.png>]
+<Figures/us16-2.png, id=1984, 542.025pt x 406.51875pt>
+File: Figures/us16-2.png Graphic file (type png)
+<use Figures/us16-2.png>
+Package pdftex.def Info: Figures/us16-2.png  used on input line 22.
+(pdftex.def)             Requested size: 169.87761pt x 127.40897pt.
+<Figures/us16-3.png, id=1985, 313.17pt x 690.58pt>
+File: Figures/us16-3.png Graphic file (type png)
+<use Figures/us16-3.png>
+Package pdftex.def Info: Figures/us16-3.png  used on input line 28.
+(pdftex.def)             Requested size: 127.41144pt x 280.95839pt.
+ [77 <./Figures/us16-2.png> <./Figures/us16-3.png>]
+<Diagramme/sequence-us16.png, id=1995, 894.34125pt x 583.17876pt>
+File: Diagramme/sequence-us16.png Graphic file (type png)
+<use Diagramme/sequence-us16.png>
+Package pdftex.def Info: Diagramme/sequence-us16.png  used on input line 42.
+(pdftex.def)             Requested size: 424.70052pt x 276.9416pt.
+) [78 <./Diagramme/sequence-us16.png>] (./UserStoriesAngular/US0.tex
+Overfull \hbox (47.08322pt too wide) in paragraph at lines 3--4
+[]\T1/cmr/m/n/12 Réalisation d'une re-quête POST via l'api REST per-me-t-tant d'effectuer l'authentification
+ []
+
+<Diagramme/sequence-us0-angular.png, id=2009, 824.07875pt x 583.17876pt>
+File: Diagramme/sequence-us0-angular.png Graphic file (type png)
+<use Diagramme/sequence-us0-angular.png>
+Package pdftex.def Info: Diagramme/sequence-us0-angular.png  used on input line 13.
+(pdftex.def)             Requested size: 339.7617pt x 240.43962pt.
+[79 <./Diagramme/sequence-us0-angular.png>]) [80] (./UserStoriesAngular/US1.tex
+<Diagramme/sequence-us1-angular.png, id=2030, 509.905pt x 362.35374pt>
+File: Diagramme/sequence-us1-angular.png Graphic file (type png)
+<use Diagramme/sequence-us1-angular.png>
+Package pdftex.def Info: Diagramme/sequence-us1-angular.png  used on input line 11.
+(pdftex.def)             Requested size: 339.7617pt x 241.4543pt.
+) (./UserStoriesAngular/US2.tex [81 <./Diagramme/sequence-us1-angular.png>]) (./UserStoriesAngular/US3.tex) (./UserStoriesAngular/US4.tex [82]
+<Figures/us4-1-angular.png, id=2063, 356.33125pt x 660.4675pt>
+File: Figures/us4-1-angular.png Graphic file (type png)
+<use Figures/us4-1-angular.png>
+Package pdftex.def Info: Figures/us4-1-angular.png  used on input line 10.
+(pdftex.def)             Requested size: 212.35025pt x 393.59274pt.
+ [83 <./Figures/us4-1-angular.png>]
+<Diagramme/sequence-us4-angular.png, id=2071, 582.175pt x 362.35374pt>
+File: Diagramme/sequence-us4-angular.png Graphic file (type png)
+<use Diagramme/sequence-us4-angular.png>
+Package pdftex.def Info: Diagramme/sequence-us4-angular.png  used on input line 18.
+(pdftex.def)             Requested size: 339.7617pt x 211.47571pt.
+) [84 <./Diagramme/sequence-us4-angular.png>] (./UserStoriesAngular/US5.tex) (./UserStoriesAngular/US6.tex) [85] (./UserStoriesAngular/US7.tex) [86] (./UserStoriesAngular/US8.tex
+<Figures/us8-1-angular.png, id=2119, 233.87375pt x 508.90125pt>
+File: Figures/us8-1-angular.png Graphic file (type png)
+<use Figures/us8-1-angular.png>
+Package pdftex.def Info: Figures/us8-1-angular.png  used on input line 8.
+(pdftex.def)             Requested size: 169.87761pt x 369.66223pt.
+) [87 <./Figures/us8-1-angular.png>] (./UserStoriesAngular/US9.tex) (./UserStoriesAngular/US10.tex)
+Overfull \hbox (5.83006pt too wide) in paragraph at lines 81--81
+|[]\T1/cmr/bx/n/14.4 En tant qu'administrateur, je dois pou-voir gérer les abon-
+ []
+
+(./UserStoriesAngular/US11.tex [88])) [89]
 Chapter 6.
-(./section/conclusion.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
- [74
+(./section/conclusion.tex [90
+
+] [91] [92]) [93]
+Chapter 7.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
+[94
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
  (./Web-architechture-rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `Web-architechture-rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 47CEEB0CAD3F8778DAE5B0A095B79A12;8800.
+(rerunfilecheck)             Checksum: EE5CBC92EF85C632825DD2B86365A29B;11030.
  ) 
 Here is how much of TeX's memory you used:
- 14678 strings out of 492649
- 230715 string characters out of 6129622
- 402157 words of memory out of 5000000
- 17091 multiletter control sequences out of 15000+600000
+ 14870 strings out of 492649
+ 234443 string characters out of 6129622
+ 403423 words of memory out of 5000000
+ 17149 multiletter control sequences out of 15000+600000
  16952 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,66p,858b,1174s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm3583.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Web-architechture-rapport.pdf (75 pages, 1457032 bytes).
+Output written on Web-architechture-rapport.pdf (95 pages, 1663807 bytes).
 PDF statistics:
- 2057 PDF objects out of 2073 (max. 8388607)
- 1858 compressed objects within 19 object streams
- 949 named destinations out of 1000 (max. 500000)
- 1143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2446 PDF objects out of 2487 (max. 8388607)
+ 2207 compressed objects within 23 object streams
+ 1047 named destinations out of 1200 (max. 500000)
+ 1327 words of extra memory for PDF output out of 10000 (max. 10000000)
 

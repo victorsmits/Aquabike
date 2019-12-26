@@ -18,17 +18,15 @@
 				\hline
 			
 				\hline
-					POST & /api/admin /renewAbo & AbonnementControllerAPI & RenewAbo & renouvelle l'abonnement de l'utilisateurs et l'inscrit à ses sessions. \\
+					PUT & /api/admin /renewAbo & AbonnementControllerAPI & RenewAbo & renouvelle l'abonnement de l'utilisateurs et l'inscrit à ses sessions. \\
 				\hline
-					POST & /api/admin/editAbo & AbonnementControllerAPI & editAbo & Change l'abonnement de l'utilisateur. \\
+					PUT & /api/admin/editAbo & AbonnementControllerAPI & editAbo & Change l'abonnement de l'utilisateur. \\
 				\hline
-					POST & /api/admin/Cancel & SessionAdministration- ControllerApi & cancel- Session & Annule la session et désinscrit les utilisateurs. \\
+					PUT & /api/admin/Cancel & SessionAdministration- ControllerApi & cancel- Session & Annule la session et désinscrit les utilisateurs. \\
 				\hline
-					POST & /api/admin/recreate & SessionAdministration- ControllerApi & recreate- Session & Recrée la session. \\
+					PUT & /api/admin/recreate & SessionAdministration- ControllerApi & recreate- Session & Recrée la session. \\
 				\hline
-					POST & /api/admin /autocreate & CreateSessionControllerApi & createSession & Génère des sessions pour x années.\\
-				\hline
-					POST & /api/login & SecurityControllerApi & login & Authentifie l'utilisateur. \\
+					PUT & /api/admin /autocreate & CreateSessionControllerApi & createSession & Génère des sessions pour x années.\\
 				\hline
 			\end{tabularx}
 		\end{center}
@@ -37,9 +35,9 @@
 			\begin{center}
 				\begin{tabularx}{1.11\textwidth}{| T{0.11\linewidth} | S{0.22\linewidth} | S{0.3\linewidth} | S{0.151\linewidth} | S{0.175\linewidth} |}
 					\hline
-						POST & /api/editProfile & ProfileControllerApi & editProfile & Modifie les données de l'utilisateurs. \\
+						PUT & /api/editProfile & ProfileControllerApi & editProfile & Modifie les données de l'utilisateurs. \\
 					\hline
-						POST & /api/TypeSession & RegistrationControllerApi & editTypeSession & Modifie les données du type de session. \\
+						PUT & /api/TypeSession & RegistrationControllerApi & editTypeSession & Modifie les données du type de session. \\
 					\hline
 					
 					\hline
@@ -55,15 +53,17 @@
 					\hline
 			
 					\hline
-			
+					
 					\hline
-						PUT & /api/admin/session & CreateSessionControllerApi & index & Créer une nouvelle session. \\
+						POST & /api/login & SecurityControllerApi & login & Authentifie l'utilisateur. \\
 					\hline
-						PUT & /api/Inscription & MonthControllerAPI & create- Inscription & Inscrit l'utilisateur à la session. \\
+						POST & /api/admin/session & CreateSessionControllerApi & index & Créer une nouvelle session. \\
 					\hline
-						PUT & /api/TypeSession & RegistrationControllerApi & setType- Session & Créer un nouveau type de session. \\
+						POST & /api/Inscription & MonthControllerAPI & create- Inscription & Inscrit l'utilisateur à la session. \\
 					\hline
-						PUT & /api/register & RegistrationControllerApi & register & Créer un nouvelle utilisateur et l'inscrit a ses sessions. \\
+						POST & /api/TypeSession & RegistrationControllerApi & setType- Session & Créer un nouveau type de session. \\
+					\hline
+						POST & /api/register & RegistrationControllerApi & register & Créer un nouvelle utilisateur et l'inscrit a ses sessions. \\
 					\hline
 				\end{tabularx}
 			\end{center}
@@ -94,42 +94,37 @@
 
 
 \vspace{\baselineskip}
-\section{POST : /api/admin/renewAbo}
+\section{PUT : /api/admin/renewAbo}
 	\input{Requete/api_admin_renewAbo}
 	
 	
 \vspace{\baselineskip}
-\section{POST : /api/admin/editAbo}
+\section{PUT : /api/admin/editAbo}
 	\input{Requete/api_admin_editAbo}
 	
 
 \vspace{\baselineskip}
-\section{POST : /api/admin/cancel}
+\section{PUT : /api/admin/cancel}
 	\input{Requete/api_admin_cancel}
 	
 	
 \vspace{\baselineskip}
-\section{POST : /api/admin/recreate}
+\section{PUT : /api/admin/recreate}
 	\input{Requete/api_admin_recreate}
 	
 	
 \newpage
-\section{POST : /api/admin/autocreate}
+\section{PUT : /api/admin/autocreate}
 	\input{Requete/api_admin_autocreate}
 	
 	
 \vspace{\baselineskip}
-\section{POST : /api/login}
-	\input{Requete/api_login}
-	
-	
-\vspace{\baselineskip}
-\section{POST : /api/editProfile}
+\section{PUT : /api/editProfile}
 	\input{Requete/api_editProfile}
 	
 	
 \vspace{\baselineskip}
-\section{POST : /api/TypeSession}
+\section{PUT : /api/TypeSession}
 	\input{Requete/api_type_session_post}
 
 
@@ -148,22 +143,25 @@
 \newpage
 \section{DELETE : /api/admin/user}
 	\input{Requete/api_admin_user}
-	
+
+\vspace{\baselineskip}
+\section{POST : /api/login}
+	\input{Requete/api_login}
 	
 \newpage
-\section{PUT : /api/admin/session}
+\section{POST : /api/admin/session}
 	\input{Requete/api_admin_session_put}
 	
 	
 \vspace{\baselineskip}
-\section{PUT : /api/Inscription}
+\section{POST : /api/Inscription}
 	\input{Requete/api_Inscription}
 	
 	
 \vspace{\baselineskip}
-\section{PUT : /api/TypeSession}
+\section{POST : /api/TypeSession}
 	\input{Requete/api_type_session_put}
 	
 \newpage
-\section{PUT : /api/register}
+\section{POST : /api/register}
 	\input{Requete/api_register}

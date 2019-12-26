@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CreateSessionControllerApi extends AbstractController
 {
     /**
-     * @Route("/admin/session", name="api_create_session", methods={"PUT","OPTIONS"})
+     * @Route("/admin/session", name="api_create_session", methods={"POST","OPTIONS"})
      * @param Request $request
      * @return Response
      * @throws Exception
@@ -57,7 +57,7 @@ class CreateSessionControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/admin/autocreate", name="api_auto_create_session", methods={"PUT","OPTIONS"})
+     * @Route("/admin/autocreate", name="api_auto_create_session", methods={"POST","OPTIONS"})
      * @param Request $request
      * @return JsonResponse
      * @throws Exception

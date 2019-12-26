@@ -61,7 +61,7 @@ class MonthControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/Inscription", name="api_Inscription", methods={"PUT","OPTIONS"})
+     * @Route("/Inscription", name="api_Inscription", methods={"POST","OPTIONS"})
      * @param Request $request
      * @return JsonResponse
      */

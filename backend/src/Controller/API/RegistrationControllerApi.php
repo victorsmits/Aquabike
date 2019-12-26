@@ -150,7 +150,7 @@ class RegistrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/TypeSession", name="api_Add_Type_Session", methods={"PUT","OPTIONS"})
+     * @Route("/TypeSession", name="api_Add_Type_Session", methods={"POST","OPTIONS"})
      * @param Request $request
      * @return Response
      */
@@ -183,7 +183,7 @@ class RegistrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/TypeSession", name="api_Edit_Type_Session", methods={"POST","OPTIONS"})
+     * @Route("/TypeSession", name="api_Edit_Type_Session", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @return Response
      */

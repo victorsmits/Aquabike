@@ -1,0 +1,73 @@
+\section{Objectif atteints et non atteints}
+	\subsection{Compatible Symfony-Twig et Symfony-Angular}
+		\begin{center}
+			\begin{tabularx}{\textwidth}{|Y|T{0.1\textwidth}|T{0.15\textwidth}|Y|}
+				\hline
+				User Stories & Priorité & Réalisation & Reste à faire \\
+				\hline	
+				En tant qu’utilisateur, je dois pouvoir me créer un compte sur le site & 2 & 100\% & \\
+				\hline
+				En tant qu'utilisateur, je dois pouvoir sélectionner le mois et l'année pour afficher les sessions qui m'intéresse & 2 & 80\% & Sélection de l'année dans la partie symfony-twig et affichage des message d'erreur sur le site Angular. \\
+				\hline
+				En tant qu’utilisateur, je dois pouvoir m’inscrire à une session un certain jour & 1 & 90\% & Afficher le message d'erreur sur le site Angular.\\
+				\hline
+				En tant qu’utilisateur, je dois pouvoir être inscrit automatiquement à une session & 1 & 80\% & Effectuer la boucle d'inscription pour la partie Symfony-Twig.  \\
+				\hline
+				En tant qu’utilisateur, je dois pouvoir me désinscrire à une session & 1 & 90\% & Afficher le message d'erreur sur le site Angular.\\
+				\hline
+				En tant qu’utilisateur, je dois pouvoir voir qui est inscrit pour chaque session & 2 & 100\% & \\
+				\hline
+			\end{tabularx}
+		\end{center}
+	
+	\newpage
+	\begin{center}
+		\begin{tabularx}{\linewidth}{|Y|T{0.1\textwidth}|T{0.15\textwidth}|Y|}
+			\hline
+			En tant qu’utilisateur, je veux pouvoir voir dynamiquement le nombre de séance qui reste dans mon abonnement & 2 & 100\% &\\
+			\hline
+			En tant qu'utilisateur, je veux pouvoir modifier mon profile & 1 & 100\% &\\
+			\hline
+			En tant qu'utilisateur, je veux pouvoir m'inscrire a une session uniquement si il me reste des abonnements a disposition. & 2 & 100\% &\\
+			\hline
+			En tant qu’administrateur, je dois pouvoir annuler une session & 2 & 90\% & Afficher les messages d'erreur sur le site Angular. \\
+			\hline
+			En tant qu'administrateur, je dois pouvoir gérer les abonnement des utilisateurs & 2 & 100\% & \\
+			\hline
+			En tant qu'administrateur, je dois pouvoir créer une nouvelle session peut importe la date & 2 & 100\% &\\
+			\hline
+
+		\end{tabularx}
+	\end{center}
+	
+	\newpage
+	\subsection{Compatible Symfony-Angular uniquement}
+		\begin{center}
+			\begin{tabularx}{\linewidth}{|Y|T{0.1\textwidth}|T{0.15\textwidth}|Y|}
+				\hline
+				En tant qu'administrateur, je dois pouvoir générer les sessions pour un nombre d'année & 1 & 100\% & \\
+				\hline
+				En tant qu'administrateur, je dois pouvoir créer un type de session & 2 & 100\% & \\
+				\hline
+				En tant qu'administrateur, je veux pouvoir gérer les types de sessions disponible pour l'inscription automatique & 2 & 100\% &\\
+				\hline
+				En tant qu'administrateur, je veux pouvoir modifier un type de session & 1 & 100\% &\\
+				\hline
+				En tant qu'administrateur, je veux pouvoir supprimer un type de session & 1 & 90\% & Afficher le message d'erreur sur le site Angular.\\
+				\hline
+				En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du système & 1 & 90\% & Afficher le message d'erreur sur le site Angular.\\
+				\hline
+			\end{tabularx}
+		\end{center}
+		
+\section{Piste d'amélioration}
+	\begin{itemize}
+		\item Optimisation des requêtes de base de donnée.
+		\item Nettoyage du code source (duplication, réorganisation, …).
+		\item Amélioration/Finissions de la responsivité du site.
+		\item Triage des sessions reçus dans angular pour un affichage trié en fonction du jour et de l'heure.
+		\item Renomage des clés des json envoyer au frontend.
+		\item Renomage de certain champs de la base de donnée.
+		\item Utilisation d'une base de donnée orienté graph.
+		\item Lors de la creation d'une session, trouver un type de session compatible si existant sinon mettre le paramètre à NULL. 
+	\end{itemize}

@@ -42,25 +42,25 @@ export class ApiService {
 
   postAboRenew(id){
     let url = this.ip + "/api/admin/renewAbo";
-    return this.http.post(url,{Id:id}).pipe(
+    return this.http.put(url,{Id:id}).pipe(
       catchError(this.handelError));
   }
 
   editAboType(newAboType : editAbo){
     let url = this.ip + "/api/admin/editAbo";
-    return this.http.post(url,newAboType).pipe(
+    return this.http.put(url,newAboType).pipe(
       catchError(this.handelError));
   }
 
   postCancelSess(id){
     let url = this.ip + "/api/admin/Cancel";
-    return this.http.post(url,{Id:id}).pipe(
+    return this.http.put(url,{Id:id}).pipe(
       catchError(this.handelError));
   }
 
   postRenewSess(id,bike){
     let url = this.ip + "/api/admin/recreate";
-    return this.http.post(url,{Id:id,Bike:bike}).pipe(
+    return this.http.put(url,{Id:id,Bike:bike}).pipe(
       catchError(this.handelError));
   }
 
@@ -72,18 +72,18 @@ export class ApiService {
 
   createNewSess(newSess : Sessions){
     let url = this.ip + "/api/admin/session";
-    return this.http.put(url,newSess).pipe(catchError(this.handelError));
+    return this.http.post(url,newSess).pipe(catchError(this.handelError));
   }
 
   postGenerateSessionAuto(year,list,bike){
     let url = this.ip + "/api/admin/autocreate";
-    return this.http.put(url,{year:year,bike:bike,idTypeSession:list}).pipe(
+    return this.http.post(url,{year:year,bike:bike,idTypeSession:list}).pipe(
       catchError(this.handelError));
   }
 
   createInscription(newInscription : Inscription){
     let url = this.ip + "/api/Inscription";
-    return this.http.put(url,newInscription).pipe(
+    return this.http.post(url,newInscription).pipe(
       catchError(this.handelError));
   }
 
@@ -101,7 +101,7 @@ export class ApiService {
 
   postEditProfile(editProfile){
     let url = this.ip + '/api/editProfile';
-    return this.http.post<{result : boolean}>(url, editProfile).pipe(
+    return this.http.put<{result : boolean}>(url, editProfile).pipe(
       catchError(this.handelError));
   }
 
@@ -119,13 +119,13 @@ export class ApiService {
 
   addTypeSession(typeSession : TypeSession){
     let url = this.ip + "/api/TypeSession";
-    return this.http.put(url,typeSession).pipe(
+    return this.http.post(url,typeSession).pipe(
       catchError(this.handelError));
   }
 
   editTypeSession(typeSession : TypeSession){
     let url = this.ip + "/api/TypeSession";
-    return this.http.post(url,typeSession).pipe(
+    return this.http.put(url,typeSession).pipe(
       catchError(this.handelError));
   }
 

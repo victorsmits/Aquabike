@@ -27,7 +27,7 @@ use Symfony\Component\Serializer\Serializer;
 class SessionAdministrationControllerApi extends AbstractController
 {
     /**
-     * @Route("/month/{month?}", name="api_session_administration", methods={"POST","OPTIONS","GET"})
+     * @Route("/month/{month?}", name="api_session_administration", methods={"OPTIONS","GET"})
      * @param $month
      * @return Response
      */
@@ -67,7 +67,7 @@ class SessionAdministrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/recreate", name="api_recreate", methods={"POST","OPTIONS","GET"})
+     * @Route("/recreate", name="api_recreate", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @return JsonResponse
      */
@@ -97,7 +97,7 @@ class SessionAdministrationControllerApi extends AbstractController
     //todo email config
 
     /**
-     * @Route("/Cancel", name="api_Cancel", methods={"POST","OPTIONS","GET"})
+     * @Route("/Cancel", name="api_Cancel", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @param Swift_Mailer $mailer
      * @return JsonResponse

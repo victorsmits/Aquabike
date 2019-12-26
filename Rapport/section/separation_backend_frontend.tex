@@ -1,0 +1,82 @@
+\paragraph{}
+	Pour la séparation backend-frontend nous avons utiliser l'api REST qui nous permet de séparer les action sur la base de donnée et l'interface de l'application web tout en permettant la transmission des donnée grâce au format JSON.
+	L'ensemble des requête réaliser si dessous ainsi que leur explication est expliqué dans le chapitre \ref{chap:API}. 
+	
+\paragraph{}
+	La majorité des User Stories sont comparable et applicable au 2 architectures, cependant certaine de c'est User Stories ne sont implémenté qu'uniquement dans la partie Angular. C'est User Stories sont expliqués et illustrer ci-dessous. 
+
+\newpage
+\section{User Stories compatible Angular uniquement}
+	\paragraph{}
+		C'est User Stories on été ajouter part après la création du twig, soit pour faciliter l'exécution d'élément, soit dans le but d'ajouter de nouvelle fonctionnalité. 
+	
+	\subsection{En tant qu'administrateur, je dois pouvoir créer un type de session}
+		\input{UserStoriesAngular/US12}
+	
+	\newpage
+	\subsection{En tant qu'administrateur, je veux pouvoir modifier un type de session}
+		\input{UserStoriesAngular/US13}
+	
+	\newpage
+	\subsection{En tant qu'administrateur, je veux pouvoir supprimer un type de session}
+		\input{UserStoriesAngular/US14}
+	
+	\vspace{\baselineskip}
+	\vspace{\baselineskip}
+	\subsection{En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du système}
+		\input{UserStoriesAngular/US15}
+	
+	\newpage
+	\subsection{En tant qu'administrateur, je dois pouvoir générer les sessions pour un nombre d'année}
+		\input{UserStoriesAngular/US16}
+
+\newpage
+\section{User Stories compatible Symfony-Angular}
+	
+	\subsection{En tant qu’utilisateur, je dois pouvoir me connecter sur le site}
+		\input{UserStoriesAngular/US0}
+	
+	\newpage
+	\subsection{En tant qu’utilisateur, je dois pouvoir me créer un compte sur le site}
+		\input{UserStoriesAngular/US1}
+
+	\vspace{\baselineskip}
+	\subsection{En tant qu'utilisateur, je dois pouvoir sélectionner le mois et l'année pour afficher les sessions qui m'intéresse}
+		\input{UserStoriesAngular/US2}
+	
+	\vspace{\baselineskip}
+	\subsection{En tant qu’utilisateur, je dois pouvoir m’inscrire à une session un certain jour}
+		\input{UserStoriesAngular/US3}
+
+	\vspace{\baselineskip}
+	\subsection{En tant qu’utilisateur, je dois pouvoir être inscrit automatiquement à une session}
+		\input{UserStoriesAngular/US4}
+	
+	\newpage
+	\subsection{En tant qu’utilisateur, je dois pouvoir me désinscrire à une session}
+		\input{UserStoriesAngular/US5}
+
+	\vspace{\baselineskip}
+	\subsection{En tant qu’utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}
+		\input{UserStoriesAngular/US6}
+	
+	\newpage
+	\subsection{En tant qu’utilisateur, je veux pouvoir voir dynamiquement le nombre de séance qui reste dans mon abonnement}
+		\input{UserStoriesAngular/US7}
+
+	\newpage
+	\subsection{En tant qu'utilisateur, je veux pouvoir modifier mon profile}
+		\input{UserStoriesAngular/US8}
+
+	\newpage
+	\subsection{En tant qu’administrateur, je dois pouvoir annuler une session}
+		\input{UserStoriesAngular/US9}
+
+	\vspace{\baselineskip}
+	\subsection{En tant qu'administrateur, je dois pouvoir créer une nouvelle session peut importe la date}
+		\input{UserStoriesAngular/US10}
+
+	\vspace{\baselineskip}
+	\vspace{\baselineskip}
+	\subsection{En tant qu'administrateur, je dois pouvoir gérer les abonnement des utilisateurs}
+		\input{UserStoriesAngular/US11}

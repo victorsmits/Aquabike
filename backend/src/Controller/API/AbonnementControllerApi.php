@@ -57,7 +57,7 @@ class AbonnementControllerApi extends AbstractController
 
 
     /**
-     * @Route("/renewAbo", name="api_renew", methods={"POST","OPTIONS"})
+     * @Route("/renewAbo", name="api_renew", methods={"PUT","OPTIONS"})
      * @param Request $request
      * @param RegistrationControllerApi $sub
      * @return JsonResponse
@@ -104,7 +104,7 @@ class AbonnementControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/editAbo", name="api_editAbo", methods={"POST","HEAD"})
+     * @Route("/editAbo", name="api_editAbo", methods={"PUT","HEAD"})
      * @param Request $request
      * @return JsonResponse
      */

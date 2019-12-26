@@ -66,7 +66,7 @@ class ProfileControllerApi extends AbstractController
 
 
     /**
-     * @Route("/editProfile", name="api_edit_profile", methods={"POST"})
+     * @Route("/editProfile", name="api_edit_profile", methods={"PUT"})
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return JsonResponse

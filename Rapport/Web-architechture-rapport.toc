@@ -5,6 +5,8 @@
 \contentsline {section}{\numberline {2}Acteur}{5}{section.1.2}
 \contentsline {paragraph}{}{5}{paragraph*.2}
 \contentsline {section}{\numberline {3}User Stories}{5}{section.1.3}
+\contentsline {subsection}{\numberline {3.1}Compatible Symfony-Twig et Symfony-Angular}{5}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {3.2}Compatible Symfony-Angular uniquement}{6}{subsection.1.3.2}
 \contentsline {section}{\numberline {4}Contrainte non fonctionnelles}{6}{section.1.4}
 \contentsline {paragraph}{}{6}{paragraph*.3}
 \contentsline {section}{\numberline {5}Mockup}{7}{section.1.5}
@@ -35,460 +37,525 @@
 \contentsline {chapter}{\numberline {3}MVC}{16}{chapter.3}
 \contentsline {section}{\numberline {1}User Stories compatible Angular - Twig}{16}{section.3.1}
 \contentsline {paragraph}{}{16}{paragraph*.10}
-\contentsline {subsection}{\numberline {1.1}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me cr\IeC {\'e}er un compte sur le site}{16}{subsection.3.1.1}
-\contentsline {subsubsection}{Gestion des erreurs et s\IeC {\'e}curit\IeC {\'e}}{17}{subsubsection*.11}
-\contentsline {paragraph}{}{17}{paragraph*.12}
+\contentsline {subsection}{\numberline {1.1}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me connecter sur le site}{16}{subsection.3.1.1}
+\contentsline {subsubsection}{Gestion des erreurs et des risques}{16}{subsubsection*.11}
+\contentsline {paragraph}{}{16}{paragraph*.12}
 \contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{17}{subsubsection*.13}
-\contentsline {subsection}{\numberline {1.2}Script concern\IeC {\'e}s}{17}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {1.3}En tant qu'utilisateur, je dois pouvoir s\IeC {\'e}lectionner le mois et l'ann\IeC {\'e}e pour afficher les sessions qui m'int\IeC {\'e}resse}{18}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {1.4}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir m\IeC {\textquoteright }inscrire \IeC {\`a} une session un certain jour}{18}{subsection.3.1.4}
-\contentsline {subsubsection}{Gestion des erreurs}{18}{subsubsection*.14}
-\contentsline {subsection}{\numberline {1.5}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir \IeC {\^e}tre inscrit automatiquement \IeC {\`a} une session}{19}{subsection.3.1.5}
-\contentsline {subsubsection}{Gestion des erreurs}{19}{subsubsection*.15}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{18}{subsubsection*.14}
+\contentsline {subsection}{\numberline {1.2}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me cr\IeC {\'e}er un compte sur le site}{18}{subsection.3.1.2}
+\contentsline {subsubsection}{Gestion des erreurs et s\IeC {\'e}curit\IeC {\'e}}{19}{subsubsection*.15}
 \contentsline {paragraph}{}{19}{paragraph*.16}
-\contentsline {subsection}{\numberline {1.6}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me d\IeC {\'e}sinscrire \IeC {\`a} une session}{20}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {1.7}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{20}{subsection.3.1.7}
-\contentsline {subsection}{\numberline {1.8}En tant qu\IeC {\textquoteright }utilisateur, je veux pouvoir voir dynamiquement le nombre de s\IeC {\'e}ance qui reste dans mon abonnement}{21}{subsection.3.1.8}
-\contentsline {subsection}{\numberline {1.9}En tant qu'utilisateur, je veux pouvoir modifier mon profile}{22}{subsection.3.1.9}
-\contentsline {subsection}{\numberline {1.10}En tant qu\IeC {\textquoteright }administrateur, je dois pouvoir annuler une session}{23}{subsection.3.1.10}
-\contentsline {subsection}{\numberline {1.11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{25}{subsection.3.1.11}
-\contentsline {subsection}{\numberline {1.12}Gestion des erreurs}{26}{subsection.3.1.12}
-\contentsline {subsection}{\numberline {1.13}Diagramme de s\IeC {\'e}quence}{26}{subsection.3.1.13}
-\contentsline {subsection}{\numberline {1.14}Script concern\IeC {\'e}}{27}{subsection.3.1.14}
-\contentsline {subsection}{\numberline {1.15}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{27}{subsection.3.1.15}
-\contentsline {section}{\numberline {2}User Stories compatible Angular}{28}{section.3.2}
-\contentsline {paragraph}{}{28}{paragraph*.17}
-\contentsline {subsection}{\numberline {2.1}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er un type de session}{28}{subsection.3.2.1}
-\contentsline {subsubsection}{Gestion des erreurs}{29}{subsubsection*.18}
-\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{30}{subsubsection*.19}
-\contentsline {subsubsection}{Script concern\IeC {\'e}}{30}{subsubsection*.20}
-\contentsline {subsection}{\numberline {2.2}En tant qu'administrateur, je veux pouvoir modifier un type de session}{31}{subsection.3.2.2}
-\contentsline {subsubsection}{Gestion des erreurs}{32}{subsubsection*.21}
-\contentsline {paragraph}{}{32}{paragraph*.22}
-\contentsline {subsection}{\numberline {2.3}En tant qu'administrateur, je veux pouvoir supprimer un type de session}{32}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {2.4}En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\IeC {\`e}me}{34}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {2.5}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}n\IeC {\'e}rer les sessions pour un nombre d'ann\IeC {\'e}e}{36}{subsection.3.2.5}
-\contentsline {subsubsection}{Gestion des erreurs}{37}{subsubsection*.23}
-\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{38}{subsubsection*.24}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{38}{subsubsection*.25}
-\contentsline {chapter}{\numberline {4}API}{39}{chapter.4}
-\contentsline {section}{\numberline {1}Tableau recapitulatif}{39}{section.4.1}
-\contentsline {section}{\numberline {2}GET : /api}{41}{section.4.2}
-\contentsline {paragraph}{}{41}{paragraph*.26}
-\contentsline {subsection}{\numberline {2.1}Requ\IeC {\^e}te}{41}{subsection.4.2.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{41}{subsubsection*.27}
-\contentsline {paragraph}{}{41}{paragraph*.28}
-\contentsline {subsubsection}{Content type}{41}{subsubsection*.29}
-\contentsline {paragraph}{}{41}{paragraph*.30}
-\contentsline {subsubsection}{Body}{41}{subsubsection*.31}
-\contentsline {paragraph}{}{41}{paragraph*.32}
-\contentsline {subsection}{\numberline {2.2}R\IeC {\'e}ponse}{41}{subsection.4.2.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{41}{subsubsection*.33}
-\contentsline {paragraph}{}{41}{paragraph*.34}
-\contentsline {subsubsection}{Content-type}{41}{subsubsection*.35}
-\contentsline {paragraph}{}{41}{paragraph*.36}
-\contentsline {subsubsection}{Body}{41}{subsubsection*.37}
-\contentsline {paragraph}{Exemple JSON}{42}{paragraph*.38}
-\contentsline {paragraph}{}{42}{paragraph*.39}
-\contentsline {subsubsection}{Code}{42}{subsubsection*.40}
-\contentsline {paragraph}{}{42}{paragraph*.41}
-\contentsline {section}{\numberline {3}GET : /api/month}{42}{section.4.3}
-\contentsline {paragraph}{}{42}{paragraph*.42}
-\contentsline {subsection}{\numberline {3.1}Requ\IeC {\^e}te}{42}{subsection.4.3.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{42}{subsubsection*.43}
-\contentsline {subsubsection}{Content type}{42}{subsubsection*.44}
-\contentsline {paragraph}{}{42}{paragraph*.45}
-\contentsline {subsubsection}{Body}{43}{subsubsection*.46}
-\contentsline {paragraph}{}{43}{paragraph*.47}
-\contentsline {subsection}{\numberline {3.2}R\IeC {\'e}ponse}{43}{subsection.4.3.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{43}{subsubsection*.48}
-\contentsline {paragraph}{}{43}{paragraph*.49}
-\contentsline {subsubsection}{Content-type}{43}{subsubsection*.50}
-\contentsline {paragraph}{}{43}{paragraph*.51}
-\contentsline {subsubsection}{Body}{43}{subsubsection*.52}
-\contentsline {paragraph}{Exemple JSON}{44}{paragraph*.53}
-\contentsline {paragraph}{}{44}{paragraph*.54}
-\contentsline {subsubsection}{Code}{44}{subsubsection*.55}
-\contentsline {paragraph}{}{44}{paragraph*.56}
-\contentsline {section}{\numberline {4}GET : /api/profile}{44}{section.4.4}
-\contentsline {paragraph}{}{44}{paragraph*.57}
-\contentsline {subsection}{\numberline {4.1}Requ\IeC {\^e}te}{44}{subsection.4.4.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{44}{subsubsection*.58}
-\contentsline {subsubsection}{Content type}{44}{subsubsection*.59}
-\contentsline {paragraph}{}{44}{paragraph*.60}
-\contentsline {subsubsection}{Body}{44}{subsubsection*.61}
-\contentsline {paragraph}{}{44}{paragraph*.62}
-\contentsline {subsection}{\numberline {4.2}R\IeC {\'e}ponse}{45}{subsection.4.4.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{45}{subsubsection*.63}
-\contentsline {paragraph}{}{45}{paragraph*.64}
-\contentsline {subsubsection}{Content-type}{45}{subsubsection*.65}
-\contentsline {paragraph}{}{45}{paragraph*.66}
-\contentsline {subsubsection}{Body}{45}{subsubsection*.67}
-\contentsline {paragraph}{Exemple JSON}{46}{paragraph*.68}
-\contentsline {paragraph}{}{46}{paragraph*.69}
-\contentsline {subsubsection}{Code}{46}{subsubsection*.70}
-\contentsline {paragraph}{}{46}{paragraph*.71}
-\contentsline {section}{\numberline {5}GET : /api/admin/abonnement}{47}{section.4.5}
-\contentsline {paragraph}{}{47}{paragraph*.72}
-\contentsline {subsection}{\numberline {5.1}Requ\IeC {\^e}te}{47}{subsection.4.5.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{47}{subsubsection*.73}
-\contentsline {paragraph}{}{47}{paragraph*.74}
-\contentsline {subsubsection}{Content type}{47}{subsubsection*.75}
-\contentsline {paragraph}{}{47}{paragraph*.76}
-\contentsline {subsubsection}{Body}{47}{subsubsection*.77}
-\contentsline {paragraph}{}{47}{paragraph*.78}
-\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}ponse}{47}{subsection.4.5.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{47}{subsubsection*.79}
-\contentsline {paragraph}{}{47}{paragraph*.80}
-\contentsline {subsubsection}{Content-type}{47}{subsubsection*.81}
-\contentsline {paragraph}{}{47}{paragraph*.82}
-\contentsline {subsubsection}{Body}{48}{subsubsection*.83}
-\contentsline {paragraph}{Exemple JSON}{49}{paragraph*.84}
-\contentsline {paragraph}{}{49}{paragraph*.85}
-\contentsline {subsubsection}{Code}{49}{subsubsection*.86}
-\contentsline {paragraph}{}{49}{paragraph*.87}
-\contentsline {section}{\numberline {6}GET : /api/TypeSession}{50}{section.4.6}
-\contentsline {paragraph}{}{50}{paragraph*.88}
-\contentsline {subsection}{\numberline {6.1}Requ\IeC {\^e}te}{50}{subsection.4.6.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{50}{subsubsection*.89}
-\contentsline {paragraph}{}{50}{paragraph*.90}
-\contentsline {subsubsection}{Content type}{50}{subsubsection*.91}
-\contentsline {paragraph}{}{50}{paragraph*.92}
-\contentsline {subsubsection}{Body}{50}{subsubsection*.93}
-\contentsline {paragraph}{}{50}{paragraph*.94}
-\contentsline {subsection}{\numberline {6.2}R\IeC {\'e}ponse}{50}{subsection.4.6.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{50}{subsubsection*.95}
-\contentsline {paragraph}{}{50}{paragraph*.96}
-\contentsline {subsubsection}{Content-type}{50}{subsubsection*.97}
-\contentsline {paragraph}{}{50}{paragraph*.98}
-\contentsline {subsubsection}{Body}{50}{subsubsection*.99}
-\contentsline {paragraph}{Exemple JSON}{51}{paragraph*.100}
-\contentsline {paragraph}{}{51}{paragraph*.101}
-\contentsline {subsubsection}{Code}{51}{subsubsection*.102}
-\contentsline {paragraph}{}{51}{paragraph*.103}
-\contentsline {section}{\numberline {7}POST : /api/admin/renewAbo}{51}{section.4.7}
-\contentsline {paragraph}{}{51}{paragraph*.104}
-\contentsline {subsection}{\numberline {7.1}Requ\IeC {\^e}te}{51}{subsection.4.7.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{51}{subsubsection*.105}
-\contentsline {paragraph}{}{51}{paragraph*.106}
-\contentsline {subsubsection}{Content type}{51}{subsubsection*.107}
-\contentsline {paragraph}{}{51}{paragraph*.108}
-\contentsline {subsubsection}{Body}{51}{subsubsection*.109}
-\contentsline {paragraph}{}{51}{paragraph*.110}
-\contentsline {paragraph}{Exemple JSON}{52}{paragraph*.111}
-\contentsline {paragraph}{}{52}{paragraph*.112}
-\contentsline {subsection}{\numberline {7.2}R\IeC {\'e}ponse}{52}{subsection.4.7.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{52}{subsubsection*.113}
-\contentsline {paragraph}{}{52}{paragraph*.114}
-\contentsline {subsubsection}{Content-type}{52}{subsubsection*.115}
-\contentsline {paragraph}{}{52}{paragraph*.116}
-\contentsline {subsubsection}{Body}{52}{subsubsection*.117}
-\contentsline {paragraph}{Exemple JSON}{52}{paragraph*.118}
-\contentsline {paragraph}{}{52}{paragraph*.119}
-\contentsline {subsubsection}{Code}{52}{subsubsection*.120}
-\contentsline {paragraph}{}{52}{paragraph*.121}
-\contentsline {section}{\numberline {8}POST : /api/admin/editAbo}{52}{section.4.8}
-\contentsline {paragraph}{}{52}{paragraph*.122}
-\contentsline {subsection}{\numberline {8.1}Requ\IeC {\^e}te}{52}{subsection.4.8.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{52}{subsubsection*.123}
-\contentsline {paragraph}{}{52}{paragraph*.124}
-\contentsline {subsubsection}{Content type}{53}{subsubsection*.125}
-\contentsline {paragraph}{}{53}{paragraph*.126}
-\contentsline {subsubsection}{Body}{53}{subsubsection*.127}
-\contentsline {paragraph}{}{53}{paragraph*.128}
-\contentsline {paragraph}{Exemple JSON}{53}{paragraph*.129}
-\contentsline {paragraph}{}{53}{paragraph*.130}
-\contentsline {subsection}{\numberline {8.2}R\IeC {\'e}ponse}{53}{subsection.4.8.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{53}{subsubsection*.131}
-\contentsline {paragraph}{}{53}{paragraph*.132}
-\contentsline {subsubsection}{Content-type}{53}{subsubsection*.133}
-\contentsline {paragraph}{}{53}{paragraph*.134}
-\contentsline {subsubsection}{Body}{53}{subsubsection*.135}
-\contentsline {paragraph}{Exemple JSON}{54}{paragraph*.136}
-\contentsline {paragraph}{}{54}{paragraph*.137}
-\contentsline {subsubsection}{Code}{54}{subsubsection*.138}
-\contentsline {paragraph}{}{54}{paragraph*.139}
-\contentsline {section}{\numberline {9}POST : /api/admin/cancel}{54}{section.4.9}
-\contentsline {paragraph}{}{54}{paragraph*.140}
-\contentsline {subsection}{\numberline {9.1}Requ\IeC {\^e}te}{54}{subsection.4.9.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{54}{subsubsection*.141}
-\contentsline {paragraph}{}{54}{paragraph*.142}
-\contentsline {subsubsection}{Content type}{54}{subsubsection*.143}
-\contentsline {paragraph}{}{54}{paragraph*.144}
-\contentsline {subsubsection}{Body}{54}{subsubsection*.145}
-\contentsline {paragraph}{}{54}{paragraph*.146}
-\contentsline {paragraph}{Exemple JSON}{54}{paragraph*.147}
-\contentsline {paragraph}{}{54}{paragraph*.148}
-\contentsline {subsection}{\numberline {9.2}R\IeC {\'e}ponse}{55}{subsection.4.9.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{55}{subsubsection*.149}
-\contentsline {paragraph}{}{55}{paragraph*.150}
-\contentsline {subsubsection}{Content-type}{55}{subsubsection*.151}
-\contentsline {paragraph}{}{55}{paragraph*.152}
-\contentsline {subsubsection}{Body}{55}{subsubsection*.153}
-\contentsline {paragraph}{Exemple JSON}{55}{paragraph*.154}
-\contentsline {paragraph}{}{55}{paragraph*.155}
-\contentsline {subsubsection}{Code}{55}{subsubsection*.156}
-\contentsline {paragraph}{}{55}{paragraph*.157}
-\contentsline {section}{\numberline {10}POST : /api/admin/recreate}{55}{section.4.10}
-\contentsline {paragraph}{}{55}{paragraph*.158}
-\contentsline {subsection}{\numberline {10.1}Requ\IeC {\^e}te}{55}{subsection.4.10.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{55}{subsubsection*.159}
-\contentsline {paragraph}{}{55}{paragraph*.160}
-\contentsline {subsubsection}{Content type}{55}{subsubsection*.161}
-\contentsline {paragraph}{}{55}{paragraph*.162}
-\contentsline {subsubsection}{Body}{56}{subsubsection*.163}
-\contentsline {paragraph}{}{56}{paragraph*.164}
-\contentsline {paragraph}{Exemple JSON}{56}{paragraph*.165}
-\contentsline {paragraph}{}{56}{paragraph*.166}
-\contentsline {subsection}{\numberline {10.2}R\IeC {\'e}ponse}{56}{subsection.4.10.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{56}{subsubsection*.167}
-\contentsline {paragraph}{}{56}{paragraph*.168}
-\contentsline {subsubsection}{Content-type}{56}{subsubsection*.169}
-\contentsline {paragraph}{}{56}{paragraph*.170}
-\contentsline {subsubsection}{Body}{56}{subsubsection*.171}
-\contentsline {paragraph}{Exemple JSON}{56}{paragraph*.172}
-\contentsline {paragraph}{}{56}{paragraph*.173}
-\contentsline {subsubsection}{Code}{56}{subsubsection*.174}
-\contentsline {paragraph}{}{56}{paragraph*.175}
-\contentsline {section}{\numberline {11}POST : /api/admin/autocreate}{57}{section.4.11}
-\contentsline {paragraph}{}{57}{paragraph*.176}
-\contentsline {subsection}{\numberline {11.1}Requ\IeC {\^e}te}{57}{subsection.4.11.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{57}{subsubsection*.177}
-\contentsline {paragraph}{}{57}{paragraph*.178}
-\contentsline {subsubsection}{Content type}{57}{subsubsection*.179}
-\contentsline {paragraph}{}{57}{paragraph*.180}
-\contentsline {subsubsection}{Body}{57}{subsubsection*.181}
-\contentsline {paragraph}{}{57}{paragraph*.182}
-\contentsline {paragraph}{Exemple JSON}{57}{paragraph*.183}
-\contentsline {paragraph}{}{57}{paragraph*.184}
-\contentsline {subsection}{\numberline {11.2}R\IeC {\'e}ponse}{57}{subsection.4.11.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{57}{subsubsection*.185}
-\contentsline {paragraph}{}{57}{paragraph*.186}
-\contentsline {subsubsection}{Content-type}{57}{subsubsection*.187}
-\contentsline {paragraph}{}{57}{paragraph*.188}
-\contentsline {subsubsection}{Body}{58}{subsubsection*.189}
-\contentsline {paragraph}{Exemple JSON}{58}{paragraph*.190}
-\contentsline {paragraph}{}{58}{paragraph*.191}
-\contentsline {subsubsection}{Code}{58}{subsubsection*.192}
-\contentsline {paragraph}{}{58}{paragraph*.193}
-\contentsline {section}{\numberline {12}POST : /api/login}{58}{section.4.12}
-\contentsline {paragraph}{}{58}{paragraph*.194}
-\contentsline {subsection}{\numberline {12.1}Requ\IeC {\^e}te}{58}{subsection.4.12.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{58}{subsubsection*.195}
-\contentsline {paragraph}{}{58}{paragraph*.196}
-\contentsline {subsubsection}{Content type}{58}{subsubsection*.197}
-\contentsline {paragraph}{}{58}{paragraph*.198}
-\contentsline {subsubsection}{Body}{58}{subsubsection*.199}
-\contentsline {paragraph}{}{58}{paragraph*.200}
-\contentsline {paragraph}{Exemple JSON}{58}{paragraph*.201}
-\contentsline {paragraph}{}{58}{paragraph*.202}
-\contentsline {subsection}{\numberline {12.2}R\IeC {\'e}ponse}{59}{subsection.4.12.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{59}{subsubsection*.203}
-\contentsline {paragraph}{}{59}{paragraph*.204}
-\contentsline {subsubsection}{Content-type}{59}{subsubsection*.205}
-\contentsline {paragraph}{}{59}{paragraph*.206}
-\contentsline {subsubsection}{Body}{59}{subsubsection*.207}
-\contentsline {paragraph}{Exemple JSON}{59}{paragraph*.208}
-\contentsline {paragraph}{}{59}{paragraph*.209}
-\contentsline {subsubsection}{Code}{59}{subsubsection*.210}
-\contentsline {paragraph}{}{59}{paragraph*.211}
-\contentsline {section}{\numberline {13}POST : /api/editProfile}{59}{section.4.13}
-\contentsline {paragraph}{}{59}{paragraph*.212}
-\contentsline {subsection}{\numberline {13.1}Requ\IeC {\^e}te}{59}{subsection.4.13.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{59}{subsubsection*.213}
-\contentsline {paragraph}{}{59}{paragraph*.214}
-\contentsline {subsubsection}{Content type}{59}{subsubsection*.215}
-\contentsline {paragraph}{}{59}{paragraph*.216}
-\contentsline {subsubsection}{Body}{60}{subsubsection*.217}
-\contentsline {paragraph}{}{60}{paragraph*.218}
-\contentsline {paragraph}{Exemple JSON}{60}{paragraph*.219}
-\contentsline {paragraph}{}{60}{paragraph*.220}
-\contentsline {subsection}{\numberline {13.2}R\IeC {\'e}ponse}{60}{subsection.4.13.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{60}{subsubsection*.221}
-\contentsline {paragraph}{}{60}{paragraph*.222}
-\contentsline {subsubsection}{Content-type}{60}{subsubsection*.223}
-\contentsline {paragraph}{}{60}{paragraph*.224}
-\contentsline {subsubsection}{Body}{61}{subsubsection*.225}
-\contentsline {paragraph}{Exemple JSON}{61}{paragraph*.226}
-\contentsline {paragraph}{}{61}{paragraph*.227}
-\contentsline {subsubsection}{Code}{61}{subsubsection*.228}
-\contentsline {paragraph}{}{61}{paragraph*.229}
-\contentsline {section}{\numberline {14}POST : /api/TypeSession}{61}{section.4.14}
-\contentsline {paragraph}{}{61}{paragraph*.230}
-\contentsline {subsection}{\numberline {14.1}Requ\IeC {\^e}te}{61}{subsection.4.14.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{61}{subsubsection*.231}
-\contentsline {paragraph}{}{61}{paragraph*.232}
-\contentsline {subsubsection}{Content type}{61}{subsubsection*.233}
-\contentsline {paragraph}{}{61}{paragraph*.234}
-\contentsline {subsubsection}{Body}{61}{subsubsection*.235}
-\contentsline {paragraph}{}{61}{paragraph*.236}
-\contentsline {paragraph}{Exemple JSON}{62}{paragraph*.237}
-\contentsline {paragraph}{}{62}{paragraph*.238}
-\contentsline {subsection}{\numberline {14.2}R\IeC {\'e}ponse}{62}{subsection.4.14.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{62}{subsubsection*.239}
-\contentsline {paragraph}{}{62}{paragraph*.240}
-\contentsline {subsubsection}{Content-type}{62}{subsubsection*.241}
-\contentsline {paragraph}{}{62}{paragraph*.242}
-\contentsline {subsubsection}{Body}{62}{subsubsection*.243}
-\contentsline {paragraph}{Exemple JSON}{62}{paragraph*.244}
-\contentsline {paragraph}{}{62}{paragraph*.245}
-\contentsline {subsubsection}{Code}{62}{subsubsection*.246}
-\contentsline {paragraph}{}{62}{paragraph*.247}
-\contentsline {section}{\numberline {15}DELETE : /api/admin/session}{63}{section.4.15}
-\contentsline {paragraph}{}{63}{paragraph*.248}
-\contentsline {subsection}{\numberline {15.1}Requ\IeC {\^e}te}{63}{subsection.4.15.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{63}{subsubsection*.249}
-\contentsline {subsubsection}{Content type}{63}{subsubsection*.250}
-\contentsline {paragraph}{}{63}{paragraph*.251}
-\contentsline {subsubsection}{Body}{63}{subsubsection*.252}
-\contentsline {paragraph}{}{63}{paragraph*.253}
-\contentsline {subsection}{\numberline {15.2}R\IeC {\'e}ponse}{63}{subsection.4.15.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{63}{subsubsection*.254}
-\contentsline {paragraph}{}{63}{paragraph*.255}
-\contentsline {subsubsection}{Content-type}{63}{subsubsection*.256}
-\contentsline {paragraph}{}{63}{paragraph*.257}
-\contentsline {subsubsection}{Body}{63}{subsubsection*.258}
-\contentsline {paragraph}{Exemple JSON}{63}{paragraph*.259}
-\contentsline {paragraph}{}{63}{paragraph*.260}
-\contentsline {subsubsection}{Code}{63}{subsubsection*.261}
-\contentsline {paragraph}{}{63}{paragraph*.262}
-\contentsline {section}{\numberline {16}DELETE : /api/Desinscription}{64}{section.4.16}
-\contentsline {paragraph}{}{64}{paragraph*.263}
-\contentsline {subsection}{\numberline {16.1}Requ\IeC {\^e}te}{64}{subsection.4.16.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{64}{subsubsection*.264}
-\contentsline {subsubsection}{Content type}{64}{subsubsection*.265}
-\contentsline {paragraph}{}{64}{paragraph*.266}
-\contentsline {subsubsection}{Body}{64}{subsubsection*.267}
-\contentsline {paragraph}{}{64}{paragraph*.268}
-\contentsline {subsection}{\numberline {16.2}R\IeC {\'e}ponse}{64}{subsection.4.16.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{64}{subsubsection*.269}
-\contentsline {paragraph}{}{64}{paragraph*.270}
-\contentsline {subsubsection}{Content-type}{64}{subsubsection*.271}
-\contentsline {paragraph}{}{64}{paragraph*.272}
-\contentsline {subsubsection}{Body}{64}{subsubsection*.273}
-\contentsline {paragraph}{Exemple JSON}{64}{paragraph*.274}
-\contentsline {paragraph}{}{64}{paragraph*.275}
-\contentsline {subsubsection}{Code}{64}{subsubsection*.276}
-\contentsline {paragraph}{}{64}{paragraph*.277}
-\contentsline {section}{\numberline {17}DELETE : /api/TypeSession}{65}{section.4.17}
-\contentsline {paragraph}{}{65}{paragraph*.278}
-\contentsline {subsection}{\numberline {17.1}Requ\IeC {\^e}te}{65}{subsection.4.17.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{65}{subsubsection*.279}
-\contentsline {subsubsection}{Content type}{65}{subsubsection*.280}
-\contentsline {paragraph}{}{65}{paragraph*.281}
-\contentsline {subsubsection}{Body}{65}{subsubsection*.282}
-\contentsline {paragraph}{}{65}{paragraph*.283}
-\contentsline {subsection}{\numberline {17.2}R\IeC {\'e}ponse}{65}{subsection.4.17.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{65}{subsubsection*.284}
-\contentsline {paragraph}{}{65}{paragraph*.285}
-\contentsline {subsubsection}{Content-type}{65}{subsubsection*.286}
-\contentsline {paragraph}{}{65}{paragraph*.287}
-\contentsline {subsubsection}{Body}{65}{subsubsection*.288}
-\contentsline {paragraph}{Exemple JSON}{65}{paragraph*.289}
-\contentsline {paragraph}{}{65}{paragraph*.290}
-\contentsline {subsubsection}{Code}{65}{subsubsection*.291}
-\contentsline {paragraph}{}{65}{paragraph*.292}
-\contentsline {section}{\numberline {18}DELETE : /api/admin/user}{66}{section.4.18}
-\contentsline {paragraph}{}{66}{paragraph*.293}
-\contentsline {subsection}{\numberline {18.1}Requ\IeC {\^e}te}{66}{subsection.4.18.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{66}{subsubsection*.294}
-\contentsline {subsubsection}{Content type}{66}{subsubsection*.295}
-\contentsline {paragraph}{}{66}{paragraph*.296}
-\contentsline {subsubsection}{Body}{66}{subsubsection*.297}
-\contentsline {paragraph}{}{66}{paragraph*.298}
-\contentsline {subsection}{\numberline {18.2}R\IeC {\'e}ponse}{66}{subsection.4.18.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{66}{subsubsection*.299}
-\contentsline {paragraph}{}{66}{paragraph*.300}
-\contentsline {subsubsection}{Content-type}{66}{subsubsection*.301}
-\contentsline {paragraph}{}{66}{paragraph*.302}
-\contentsline {subsubsection}{Body}{66}{subsubsection*.303}
-\contentsline {paragraph}{Exemple JSON}{66}{paragraph*.304}
-\contentsline {paragraph}{}{66}{paragraph*.305}
-\contentsline {subsubsection}{Code}{66}{subsubsection*.306}
-\contentsline {paragraph}{}{66}{paragraph*.307}
-\contentsline {section}{\numberline {19}PUT : /api/admin/session}{67}{section.4.19}
-\contentsline {paragraph}{}{67}{paragraph*.308}
-\contentsline {subsection}{\numberline {19.1}Requ\IeC {\^e}te}{67}{subsection.4.19.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{67}{subsubsection*.309}
-\contentsline {paragraph}{}{67}{paragraph*.310}
-\contentsline {subsubsection}{Content type}{67}{subsubsection*.311}
-\contentsline {paragraph}{}{67}{paragraph*.312}
-\contentsline {subsubsection}{Body}{67}{subsubsection*.313}
-\contentsline {paragraph}{}{67}{paragraph*.314}
-\contentsline {paragraph}{Exemple JSON}{67}{paragraph*.315}
-\contentsline {paragraph}{}{67}{paragraph*.316}
-\contentsline {subsection}{\numberline {19.2}R\IeC {\'e}ponse}{67}{subsection.4.19.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{67}{subsubsection*.317}
-\contentsline {paragraph}{}{67}{paragraph*.318}
-\contentsline {subsubsection}{Content-type}{67}{subsubsection*.319}
-\contentsline {paragraph}{}{67}{paragraph*.320}
-\contentsline {subsubsection}{Body}{68}{subsubsection*.321}
-\contentsline {paragraph}{Exemple JSON}{68}{paragraph*.322}
-\contentsline {paragraph}{}{68}{paragraph*.323}
-\contentsline {subsubsection}{Code}{68}{subsubsection*.324}
-\contentsline {paragraph}{}{68}{paragraph*.325}
-\contentsline {section}{\numberline {20}PUT : /api/Inscription}{68}{section.4.20}
-\contentsline {paragraph}{}{68}{paragraph*.326}
-\contentsline {subsection}{\numberline {20.1}Requ\IeC {\^e}te}{68}{subsection.4.20.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{68}{subsubsection*.327}
-\contentsline {paragraph}{}{68}{paragraph*.328}
-\contentsline {subsubsection}{Content type}{68}{subsubsection*.329}
-\contentsline {paragraph}{}{68}{paragraph*.330}
-\contentsline {subsubsection}{Body}{68}{subsubsection*.331}
-\contentsline {paragraph}{}{68}{paragraph*.332}
-\contentsline {paragraph}{Exemple JSON}{68}{paragraph*.333}
-\contentsline {paragraph}{}{68}{paragraph*.334}
-\contentsline {subsection}{\numberline {20.2}R\IeC {\'e}ponse}{69}{subsection.4.20.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{69}{subsubsection*.335}
-\contentsline {paragraph}{}{69}{paragraph*.336}
-\contentsline {subsubsection}{Content-type}{69}{subsubsection*.337}
-\contentsline {paragraph}{}{69}{paragraph*.338}
-\contentsline {subsubsection}{Body}{69}{subsubsection*.339}
-\contentsline {paragraph}{Exemple JSON}{69}{paragraph*.340}
-\contentsline {paragraph}{}{69}{paragraph*.341}
-\contentsline {subsubsection}{Code}{69}{subsubsection*.342}
-\contentsline {paragraph}{}{69}{paragraph*.343}
-\contentsline {section}{\numberline {21}PUT : /api/TypeSession}{69}{section.4.21}
-\contentsline {paragraph}{}{69}{paragraph*.344}
-\contentsline {subsection}{\numberline {21.1}Requ\IeC {\^e}te}{69}{subsection.4.21.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{69}{subsubsection*.345}
-\contentsline {paragraph}{}{69}{paragraph*.346}
-\contentsline {subsubsection}{Content type}{69}{subsubsection*.347}
-\contentsline {paragraph}{}{69}{paragraph*.348}
-\contentsline {subsubsection}{Body}{70}{subsubsection*.349}
-\contentsline {paragraph}{}{70}{paragraph*.350}
-\contentsline {paragraph}{Exemple JSON}{70}{paragraph*.351}
-\contentsline {paragraph}{}{70}{paragraph*.352}
-\contentsline {subsection}{\numberline {21.2}R\IeC {\'e}ponse}{70}{subsection.4.21.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{70}{subsubsection*.353}
-\contentsline {paragraph}{}{70}{paragraph*.354}
-\contentsline {subsubsection}{Content-type}{70}{subsubsection*.355}
-\contentsline {paragraph}{}{70}{paragraph*.356}
-\contentsline {subsubsection}{Body}{70}{subsubsection*.357}
-\contentsline {paragraph}{Exemple JSON}{70}{paragraph*.358}
-\contentsline {paragraph}{}{70}{paragraph*.359}
-\contentsline {subsubsection}{Code}{70}{subsubsection*.360}
-\contentsline {paragraph}{}{70}{paragraph*.361}
-\contentsline {section}{\numberline {22}PUT : /api/register}{71}{section.4.22}
-\contentsline {paragraph}{}{71}{paragraph*.362}
-\contentsline {subsection}{\numberline {22.1}Requ\IeC {\^e}te}{71}{subsection.4.22.1}
-\contentsline {subsubsection}{param\IeC {\`e}tre du path}{71}{subsubsection*.363}
-\contentsline {paragraph}{}{71}{paragraph*.364}
-\contentsline {subsubsection}{Content type}{71}{subsubsection*.365}
-\contentsline {paragraph}{}{71}{paragraph*.366}
-\contentsline {subsubsection}{Body}{71}{subsubsection*.367}
-\contentsline {paragraph}{}{71}{paragraph*.368}
-\contentsline {paragraph}{Exemple JSON}{72}{paragraph*.369}
-\contentsline {paragraph}{}{72}{paragraph*.370}
-\contentsline {subsection}{\numberline {22.2}R\IeC {\'e}ponse}{72}{subsection.4.22.2}
-\contentsline {subsubsection}{R\IeC {\'e}ussite}{72}{subsubsection*.371}
-\contentsline {paragraph}{}{72}{paragraph*.372}
-\contentsline {subsubsection}{Content-type}{72}{subsubsection*.373}
-\contentsline {paragraph}{}{72}{paragraph*.374}
-\contentsline {subsubsection}{Body}{72}{subsubsection*.375}
-\contentsline {paragraph}{Exemple JSON}{72}{paragraph*.376}
-\contentsline {paragraph}{}{72}{paragraph*.377}
-\contentsline {subsubsection}{Code}{72}{subsubsection*.378}
-\contentsline {paragraph}{}{72}{paragraph*.379}
-\contentsline {chapter}{\numberline {5}S\IeC {\'e}paration backend frontend}{73}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{74}{chapter.6}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{19}{subsubsection*.17}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{19}{subsubsection*.18}
+\contentsline {subsection}{\numberline {1.3}En tant qu'utilisateur, je dois pouvoir s\IeC {\'e}lectionner le mois et l'ann\IeC {\'e}e pour afficher les sessions qui m'int\IeC {\'e}resse}{20}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {1.4}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir m\IeC {\textquoteright }inscrire \IeC {\`a} une session un certain jour}{20}{subsection.3.1.4}
+\contentsline {subsubsection}{Gestion des erreurs}{20}{subsubsection*.19}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{21}{subsubsection*.20}
+\contentsline {subsection}{\numberline {1.5}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir \IeC {\^e}tre inscrit automatiquement \IeC {\`a} une session}{21}{subsection.3.1.5}
+\contentsline {subsubsection}{Gestion des erreurs}{21}{subsubsection*.21}
+\contentsline {paragraph}{}{21}{paragraph*.22}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{22}{subsubsection*.23}
+\contentsline {subsection}{\numberline {1.6}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me d\IeC {\'e}sinscrire \IeC {\`a} une session}{22}{subsection.3.1.6}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{22}{subsubsection*.24}
+\contentsline {subsection}{\numberline {1.7}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{23}{subsection.3.1.7}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{23}{subsubsection*.25}
+\contentsline {subsection}{\numberline {1.8}En tant qu\IeC {\textquoteright }utilisateur, je veux pouvoir voir dynamiquement le nombre de s\IeC {\'e}ance qui reste dans mon abonnement}{24}{subsection.3.1.8}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{24}{subsubsection*.26}
+\contentsline {subsection}{\numberline {1.9}En tant qu'utilisateur, je veux pouvoir modifier mon profile}{25}{subsection.3.1.9}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{26}{subsubsection*.27}
+\contentsline {subsection}{\numberline {1.10}En tant qu\IeC {\textquoteright }administrateur, je dois pouvoir annuler une session}{26}{subsection.3.1.10}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{27}{subsubsection*.28}
+\contentsline {subsection}{\numberline {1.11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{28}{subsection.3.1.11}
+\contentsline {subsubsection}{Gestion des erreurs}{29}{subsubsection*.29}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{29}{subsubsection*.30}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{30}{subsubsection*.31}
+\contentsline {subsection}{\numberline {1.12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{30}{subsection.3.1.12}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{31}{subsubsection*.32}
+\contentsline {chapter}{\numberline {4}API}{32}{chapter.4}
+\contentsline {section}{\numberline {1}Tableau recapitulatif}{32}{section.4.1}
+\contentsline {section}{\numberline {2}GET : /api}{34}{section.4.2}
+\contentsline {paragraph}{}{34}{paragraph*.33}
+\contentsline {subsection}{\numberline {2.1}Requ\IeC {\^e}te}{34}{subsection.4.2.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{34}{subsubsection*.34}
+\contentsline {paragraph}{}{34}{paragraph*.35}
+\contentsline {subsubsection}{Content type}{34}{subsubsection*.36}
+\contentsline {paragraph}{}{34}{paragraph*.37}
+\contentsline {subsubsection}{Body}{34}{subsubsection*.38}
+\contentsline {paragraph}{}{34}{paragraph*.39}
+\contentsline {subsection}{\numberline {2.2}R\IeC {\'e}ponse}{34}{subsection.4.2.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{34}{subsubsection*.40}
+\contentsline {paragraph}{}{34}{paragraph*.41}
+\contentsline {subsubsection}{Content-type}{34}{subsubsection*.42}
+\contentsline {paragraph}{}{34}{paragraph*.43}
+\contentsline {subsubsection}{Body}{34}{subsubsection*.44}
+\contentsline {paragraph}{Exemple JSON}{35}{paragraph*.45}
+\contentsline {paragraph}{}{35}{paragraph*.46}
+\contentsline {subsubsection}{Code}{35}{subsubsection*.47}
+\contentsline {paragraph}{}{35}{paragraph*.48}
+\contentsline {section}{\numberline {3}GET : /api/month}{35}{section.4.3}
+\contentsline {paragraph}{}{35}{paragraph*.49}
+\contentsline {subsection}{\numberline {3.1}Requ\IeC {\^e}te}{35}{subsection.4.3.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{35}{subsubsection*.50}
+\contentsline {subsubsection}{Content type}{35}{subsubsection*.51}
+\contentsline {paragraph}{}{35}{paragraph*.52}
+\contentsline {subsubsection}{Body}{36}{subsubsection*.53}
+\contentsline {paragraph}{}{36}{paragraph*.54}
+\contentsline {subsection}{\numberline {3.2}R\IeC {\'e}ponse}{36}{subsection.4.3.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{36}{subsubsection*.55}
+\contentsline {paragraph}{}{36}{paragraph*.56}
+\contentsline {subsubsection}{Content-type}{36}{subsubsection*.57}
+\contentsline {paragraph}{}{36}{paragraph*.58}
+\contentsline {subsubsection}{Body}{36}{subsubsection*.59}
+\contentsline {paragraph}{Exemple JSON}{37}{paragraph*.60}
+\contentsline {paragraph}{}{37}{paragraph*.61}
+\contentsline {subsubsection}{Code}{37}{subsubsection*.62}
+\contentsline {paragraph}{}{37}{paragraph*.63}
+\contentsline {section}{\numberline {4}GET : /api/profile}{37}{section.4.4}
+\contentsline {paragraph}{}{37}{paragraph*.64}
+\contentsline {subsection}{\numberline {4.1}Requ\IeC {\^e}te}{37}{subsection.4.4.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{37}{subsubsection*.65}
+\contentsline {subsubsection}{Content type}{37}{subsubsection*.66}
+\contentsline {paragraph}{}{37}{paragraph*.67}
+\contentsline {subsubsection}{Body}{37}{subsubsection*.68}
+\contentsline {paragraph}{}{37}{paragraph*.69}
+\contentsline {subsection}{\numberline {4.2}R\IeC {\'e}ponse}{38}{subsection.4.4.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{38}{subsubsection*.70}
+\contentsline {paragraph}{}{38}{paragraph*.71}
+\contentsline {subsubsection}{Content-type}{38}{subsubsection*.72}
+\contentsline {paragraph}{}{38}{paragraph*.73}
+\contentsline {subsubsection}{Body}{38}{subsubsection*.74}
+\contentsline {paragraph}{Exemple JSON}{39}{paragraph*.75}
+\contentsline {paragraph}{}{39}{paragraph*.76}
+\contentsline {subsubsection}{Code}{39}{subsubsection*.77}
+\contentsline {paragraph}{}{39}{paragraph*.78}
+\contentsline {section}{\numberline {5}GET : /api/admin/abonnement}{40}{section.4.5}
+\contentsline {paragraph}{}{40}{paragraph*.79}
+\contentsline {subsection}{\numberline {5.1}Requ\IeC {\^e}te}{40}{subsection.4.5.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{40}{subsubsection*.80}
+\contentsline {paragraph}{}{40}{paragraph*.81}
+\contentsline {subsubsection}{Content type}{40}{subsubsection*.82}
+\contentsline {paragraph}{}{40}{paragraph*.83}
+\contentsline {subsubsection}{Body}{40}{subsubsection*.84}
+\contentsline {paragraph}{}{40}{paragraph*.85}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}ponse}{40}{subsection.4.5.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{40}{subsubsection*.86}
+\contentsline {paragraph}{}{40}{paragraph*.87}
+\contentsline {subsubsection}{Content-type}{40}{subsubsection*.88}
+\contentsline {paragraph}{}{40}{paragraph*.89}
+\contentsline {subsubsection}{Body}{41}{subsubsection*.90}
+\contentsline {paragraph}{Exemple JSON}{42}{paragraph*.91}
+\contentsline {paragraph}{}{42}{paragraph*.92}
+\contentsline {subsubsection}{Code}{42}{subsubsection*.93}
+\contentsline {paragraph}{}{42}{paragraph*.94}
+\contentsline {section}{\numberline {6}GET : /api/TypeSession}{43}{section.4.6}
+\contentsline {paragraph}{}{43}{paragraph*.95}
+\contentsline {subsection}{\numberline {6.1}Requ\IeC {\^e}te}{43}{subsection.4.6.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{43}{subsubsection*.96}
+\contentsline {paragraph}{}{43}{paragraph*.97}
+\contentsline {subsubsection}{Content type}{43}{subsubsection*.98}
+\contentsline {paragraph}{}{43}{paragraph*.99}
+\contentsline {subsubsection}{Body}{43}{subsubsection*.100}
+\contentsline {paragraph}{}{43}{paragraph*.101}
+\contentsline {subsection}{\numberline {6.2}R\IeC {\'e}ponse}{43}{subsection.4.6.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{43}{subsubsection*.102}
+\contentsline {paragraph}{}{43}{paragraph*.103}
+\contentsline {subsubsection}{Content-type}{43}{subsubsection*.104}
+\contentsline {paragraph}{}{43}{paragraph*.105}
+\contentsline {subsubsection}{Body}{43}{subsubsection*.106}
+\contentsline {paragraph}{Exemple JSON}{44}{paragraph*.107}
+\contentsline {paragraph}{}{44}{paragraph*.108}
+\contentsline {subsubsection}{Code}{44}{subsubsection*.109}
+\contentsline {paragraph}{}{44}{paragraph*.110}
+\contentsline {section}{\numberline {7}PUT : /api/admin/renewAbo}{44}{section.4.7}
+\contentsline {paragraph}{}{44}{paragraph*.111}
+\contentsline {subsection}{\numberline {7.1}Requ\IeC {\^e}te}{44}{subsection.4.7.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{44}{subsubsection*.112}
+\contentsline {paragraph}{}{44}{paragraph*.113}
+\contentsline {subsubsection}{Content type}{44}{subsubsection*.114}
+\contentsline {paragraph}{}{44}{paragraph*.115}
+\contentsline {subsubsection}{Body}{44}{subsubsection*.116}
+\contentsline {paragraph}{}{44}{paragraph*.117}
+\contentsline {paragraph}{Exemple JSON}{45}{paragraph*.118}
+\contentsline {paragraph}{}{45}{paragraph*.119}
+\contentsline {subsection}{\numberline {7.2}R\IeC {\'e}ponse}{45}{subsection.4.7.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{45}{subsubsection*.120}
+\contentsline {paragraph}{}{45}{paragraph*.121}
+\contentsline {subsubsection}{Content-type}{45}{subsubsection*.122}
+\contentsline {paragraph}{}{45}{paragraph*.123}
+\contentsline {subsubsection}{Body}{45}{subsubsection*.124}
+\contentsline {paragraph}{Exemple JSON}{45}{paragraph*.125}
+\contentsline {paragraph}{}{45}{paragraph*.126}
+\contentsline {subsubsection}{Code}{45}{subsubsection*.127}
+\contentsline {paragraph}{}{45}{paragraph*.128}
+\contentsline {section}{\numberline {8}PUT : /api/admin/editAbo}{45}{section.4.8}
+\contentsline {paragraph}{}{45}{paragraph*.129}
+\contentsline {subsection}{\numberline {8.1}Requ\IeC {\^e}te}{45}{subsection.4.8.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{45}{subsubsection*.130}
+\contentsline {paragraph}{}{45}{paragraph*.131}
+\contentsline {subsubsection}{Content type}{46}{subsubsection*.132}
+\contentsline {paragraph}{}{46}{paragraph*.133}
+\contentsline {subsubsection}{Body}{46}{subsubsection*.134}
+\contentsline {paragraph}{}{46}{paragraph*.135}
+\contentsline {paragraph}{Exemple JSON}{46}{paragraph*.136}
+\contentsline {paragraph}{}{46}{paragraph*.137}
+\contentsline {subsection}{\numberline {8.2}R\IeC {\'e}ponse}{46}{subsection.4.8.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{46}{subsubsection*.138}
+\contentsline {paragraph}{}{46}{paragraph*.139}
+\contentsline {subsubsection}{Content-type}{46}{subsubsection*.140}
+\contentsline {paragraph}{}{46}{paragraph*.141}
+\contentsline {subsubsection}{Body}{46}{subsubsection*.142}
+\contentsline {paragraph}{Exemple JSON}{47}{paragraph*.143}
+\contentsline {paragraph}{}{47}{paragraph*.144}
+\contentsline {subsubsection}{Code}{47}{subsubsection*.145}
+\contentsline {paragraph}{}{47}{paragraph*.146}
+\contentsline {section}{\numberline {9}PUT : /api/admin/cancel}{47}{section.4.9}
+\contentsline {paragraph}{}{47}{paragraph*.147}
+\contentsline {subsection}{\numberline {9.1}Requ\IeC {\^e}te}{47}{subsection.4.9.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{47}{subsubsection*.148}
+\contentsline {paragraph}{}{47}{paragraph*.149}
+\contentsline {subsubsection}{Content type}{47}{subsubsection*.150}
+\contentsline {paragraph}{}{47}{paragraph*.151}
+\contentsline {subsubsection}{Body}{47}{subsubsection*.152}
+\contentsline {paragraph}{}{47}{paragraph*.153}
+\contentsline {paragraph}{Exemple JSON}{47}{paragraph*.154}
+\contentsline {paragraph}{}{47}{paragraph*.155}
+\contentsline {subsection}{\numberline {9.2}R\IeC {\'e}ponse}{48}{subsection.4.9.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{48}{subsubsection*.156}
+\contentsline {paragraph}{}{48}{paragraph*.157}
+\contentsline {subsubsection}{Content-type}{48}{subsubsection*.158}
+\contentsline {paragraph}{}{48}{paragraph*.159}
+\contentsline {subsubsection}{Body}{48}{subsubsection*.160}
+\contentsline {paragraph}{Exemple JSON}{48}{paragraph*.161}
+\contentsline {paragraph}{}{48}{paragraph*.162}
+\contentsline {subsubsection}{Code}{48}{subsubsection*.163}
+\contentsline {paragraph}{}{48}{paragraph*.164}
+\contentsline {section}{\numberline {10}PUT : /api/admin/recreate}{48}{section.4.10}
+\contentsline {paragraph}{}{48}{paragraph*.165}
+\contentsline {subsection}{\numberline {10.1}Requ\IeC {\^e}te}{48}{subsection.4.10.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{48}{subsubsection*.166}
+\contentsline {paragraph}{}{48}{paragraph*.167}
+\contentsline {subsubsection}{Content type}{48}{subsubsection*.168}
+\contentsline {paragraph}{}{48}{paragraph*.169}
+\contentsline {subsubsection}{Body}{49}{subsubsection*.170}
+\contentsline {paragraph}{}{49}{paragraph*.171}
+\contentsline {paragraph}{Exemple JSON}{49}{paragraph*.172}
+\contentsline {paragraph}{}{49}{paragraph*.173}
+\contentsline {subsection}{\numberline {10.2}R\IeC {\'e}ponse}{49}{subsection.4.10.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{49}{subsubsection*.174}
+\contentsline {paragraph}{}{49}{paragraph*.175}
+\contentsline {subsubsection}{Content-type}{49}{subsubsection*.176}
+\contentsline {paragraph}{}{49}{paragraph*.177}
+\contentsline {subsubsection}{Body}{49}{subsubsection*.178}
+\contentsline {paragraph}{Exemple JSON}{49}{paragraph*.179}
+\contentsline {paragraph}{}{49}{paragraph*.180}
+\contentsline {subsubsection}{Code}{49}{subsubsection*.181}
+\contentsline {paragraph}{}{49}{paragraph*.182}
+\contentsline {section}{\numberline {11}PUT : /api/admin/autocreate}{50}{section.4.11}
+\contentsline {paragraph}{}{50}{paragraph*.183}
+\contentsline {subsection}{\numberline {11.1}Requ\IeC {\^e}te}{50}{subsection.4.11.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{50}{subsubsection*.184}
+\contentsline {paragraph}{}{50}{paragraph*.185}
+\contentsline {subsubsection}{Content type}{50}{subsubsection*.186}
+\contentsline {paragraph}{}{50}{paragraph*.187}
+\contentsline {subsubsection}{Body}{50}{subsubsection*.188}
+\contentsline {paragraph}{}{50}{paragraph*.189}
+\contentsline {paragraph}{Exemple JSON}{50}{paragraph*.190}
+\contentsline {paragraph}{}{50}{paragraph*.191}
+\contentsline {subsection}{\numberline {11.2}R\IeC {\'e}ponse}{50}{subsection.4.11.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{50}{subsubsection*.192}
+\contentsline {paragraph}{}{50}{paragraph*.193}
+\contentsline {subsubsection}{Content-type}{50}{subsubsection*.194}
+\contentsline {paragraph}{}{50}{paragraph*.195}
+\contentsline {subsubsection}{Body}{51}{subsubsection*.196}
+\contentsline {paragraph}{Exemple JSON}{51}{paragraph*.197}
+\contentsline {paragraph}{}{51}{paragraph*.198}
+\contentsline {subsubsection}{Code}{51}{subsubsection*.199}
+\contentsline {paragraph}{}{51}{paragraph*.200}
+\contentsline {section}{\numberline {12}PUT : /api/editProfile}{51}{section.4.12}
+\contentsline {paragraph}{}{51}{paragraph*.201}
+\contentsline {subsection}{\numberline {12.1}Requ\IeC {\^e}te}{51}{subsection.4.12.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{51}{subsubsection*.202}
+\contentsline {paragraph}{}{51}{paragraph*.203}
+\contentsline {subsubsection}{Content type}{51}{subsubsection*.204}
+\contentsline {paragraph}{}{51}{paragraph*.205}
+\contentsline {subsubsection}{Body}{51}{subsubsection*.206}
+\contentsline {paragraph}{}{51}{paragraph*.207}
+\contentsline {paragraph}{Exemple JSON}{52}{paragraph*.208}
+\contentsline {paragraph}{}{52}{paragraph*.209}
+\contentsline {subsection}{\numberline {12.2}R\IeC {\'e}ponse}{52}{subsection.4.12.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{52}{subsubsection*.210}
+\contentsline {paragraph}{}{52}{paragraph*.211}
+\contentsline {subsubsection}{Content-type}{52}{subsubsection*.212}
+\contentsline {paragraph}{}{52}{paragraph*.213}
+\contentsline {subsubsection}{Body}{52}{subsubsection*.214}
+\contentsline {paragraph}{Exemple JSON}{52}{paragraph*.215}
+\contentsline {paragraph}{}{52}{paragraph*.216}
+\contentsline {subsubsection}{Code}{52}{subsubsection*.217}
+\contentsline {paragraph}{}{52}{paragraph*.218}
+\contentsline {section}{\numberline {13}PUT : /api/TypeSession}{53}{section.4.13}
+\contentsline {paragraph}{}{53}{paragraph*.219}
+\contentsline {subsection}{\numberline {13.1}Requ\IeC {\^e}te}{53}{subsection.4.13.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{53}{subsubsection*.220}
+\contentsline {paragraph}{}{53}{paragraph*.221}
+\contentsline {subsubsection}{Content type}{53}{subsubsection*.222}
+\contentsline {paragraph}{}{53}{paragraph*.223}
+\contentsline {subsubsection}{Body}{53}{subsubsection*.224}
+\contentsline {paragraph}{}{53}{paragraph*.225}
+\contentsline {paragraph}{Exemple JSON}{54}{paragraph*.226}
+\contentsline {paragraph}{}{54}{paragraph*.227}
+\contentsline {subsection}{\numberline {13.2}R\IeC {\'e}ponse}{54}{subsection.4.13.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{54}{subsubsection*.228}
+\contentsline {paragraph}{}{54}{paragraph*.229}
+\contentsline {subsubsection}{Content-type}{54}{subsubsection*.230}
+\contentsline {paragraph}{}{54}{paragraph*.231}
+\contentsline {subsubsection}{Body}{54}{subsubsection*.232}
+\contentsline {paragraph}{Exemple JSON}{54}{paragraph*.233}
+\contentsline {paragraph}{}{54}{paragraph*.234}
+\contentsline {subsubsection}{Code}{54}{subsubsection*.235}
+\contentsline {paragraph}{}{54}{paragraph*.236}
+\contentsline {section}{\numberline {14}DELETE : /api/admin/session}{55}{section.4.14}
+\contentsline {paragraph}{}{55}{paragraph*.237}
+\contentsline {subsection}{\numberline {14.1}Requ\IeC {\^e}te}{55}{subsection.4.14.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{55}{subsubsection*.238}
+\contentsline {subsubsection}{Content type}{55}{subsubsection*.239}
+\contentsline {paragraph}{}{55}{paragraph*.240}
+\contentsline {subsubsection}{Body}{55}{subsubsection*.241}
+\contentsline {paragraph}{}{55}{paragraph*.242}
+\contentsline {subsection}{\numberline {14.2}R\IeC {\'e}ponse}{55}{subsection.4.14.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{55}{subsubsection*.243}
+\contentsline {paragraph}{}{55}{paragraph*.244}
+\contentsline {subsubsection}{Content-type}{55}{subsubsection*.245}
+\contentsline {paragraph}{}{55}{paragraph*.246}
+\contentsline {subsubsection}{Body}{55}{subsubsection*.247}
+\contentsline {paragraph}{Exemple JSON}{55}{paragraph*.248}
+\contentsline {paragraph}{}{55}{paragraph*.249}
+\contentsline {subsubsection}{Code}{55}{subsubsection*.250}
+\contentsline {paragraph}{}{55}{paragraph*.251}
+\contentsline {section}{\numberline {15}DELETE : /api/Desinscription}{56}{section.4.15}
+\contentsline {paragraph}{}{56}{paragraph*.252}
+\contentsline {subsection}{\numberline {15.1}Requ\IeC {\^e}te}{56}{subsection.4.15.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{56}{subsubsection*.253}
+\contentsline {subsubsection}{Content type}{56}{subsubsection*.254}
+\contentsline {paragraph}{}{56}{paragraph*.255}
+\contentsline {subsubsection}{Body}{56}{subsubsection*.256}
+\contentsline {paragraph}{}{56}{paragraph*.257}
+\contentsline {subsection}{\numberline {15.2}R\IeC {\'e}ponse}{56}{subsection.4.15.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{56}{subsubsection*.258}
+\contentsline {paragraph}{}{56}{paragraph*.259}
+\contentsline {subsubsection}{Content-type}{56}{subsubsection*.260}
+\contentsline {paragraph}{}{56}{paragraph*.261}
+\contentsline {subsubsection}{Body}{56}{subsubsection*.262}
+\contentsline {paragraph}{Exemple JSON}{56}{paragraph*.263}
+\contentsline {paragraph}{}{56}{paragraph*.264}
+\contentsline {subsubsection}{Code}{56}{subsubsection*.265}
+\contentsline {paragraph}{}{56}{paragraph*.266}
+\contentsline {section}{\numberline {16}DELETE : /api/TypeSession}{57}{section.4.16}
+\contentsline {paragraph}{}{57}{paragraph*.267}
+\contentsline {subsection}{\numberline {16.1}Requ\IeC {\^e}te}{57}{subsection.4.16.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{57}{subsubsection*.268}
+\contentsline {subsubsection}{Content type}{57}{subsubsection*.269}
+\contentsline {paragraph}{}{57}{paragraph*.270}
+\contentsline {subsubsection}{Body}{57}{subsubsection*.271}
+\contentsline {paragraph}{}{57}{paragraph*.272}
+\contentsline {subsection}{\numberline {16.2}R\IeC {\'e}ponse}{57}{subsection.4.16.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{57}{subsubsection*.273}
+\contentsline {paragraph}{}{57}{paragraph*.274}
+\contentsline {subsubsection}{Content-type}{57}{subsubsection*.275}
+\contentsline {paragraph}{}{57}{paragraph*.276}
+\contentsline {subsubsection}{Body}{57}{subsubsection*.277}
+\contentsline {paragraph}{Exemple JSON}{57}{paragraph*.278}
+\contentsline {paragraph}{}{57}{paragraph*.279}
+\contentsline {subsubsection}{Code}{57}{subsubsection*.280}
+\contentsline {paragraph}{}{57}{paragraph*.281}
+\contentsline {section}{\numberline {17}DELETE : /api/admin/user}{58}{section.4.17}
+\contentsline {paragraph}{}{58}{paragraph*.282}
+\contentsline {subsection}{\numberline {17.1}Requ\IeC {\^e}te}{58}{subsection.4.17.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{58}{subsubsection*.283}
+\contentsline {subsubsection}{Content type}{58}{subsubsection*.284}
+\contentsline {paragraph}{}{58}{paragraph*.285}
+\contentsline {subsubsection}{Body}{58}{subsubsection*.286}
+\contentsline {paragraph}{}{58}{paragraph*.287}
+\contentsline {subsection}{\numberline {17.2}R\IeC {\'e}ponse}{58}{subsection.4.17.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{58}{subsubsection*.288}
+\contentsline {paragraph}{}{58}{paragraph*.289}
+\contentsline {subsubsection}{Content-type}{58}{subsubsection*.290}
+\contentsline {paragraph}{}{58}{paragraph*.291}
+\contentsline {subsubsection}{Body}{58}{subsubsection*.292}
+\contentsline {paragraph}{Exemple JSON}{58}{paragraph*.293}
+\contentsline {paragraph}{}{58}{paragraph*.294}
+\contentsline {subsubsection}{Code}{58}{subsubsection*.295}
+\contentsline {paragraph}{}{58}{paragraph*.296}
+\contentsline {section}{\numberline {18}POST : /api/login}{59}{section.4.18}
+\contentsline {paragraph}{}{59}{paragraph*.297}
+\contentsline {subsection}{\numberline {18.1}Requ\IeC {\^e}te}{59}{subsection.4.18.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{59}{subsubsection*.298}
+\contentsline {paragraph}{}{59}{paragraph*.299}
+\contentsline {subsubsection}{Content type}{59}{subsubsection*.300}
+\contentsline {paragraph}{}{59}{paragraph*.301}
+\contentsline {subsubsection}{Body}{59}{subsubsection*.302}
+\contentsline {paragraph}{}{59}{paragraph*.303}
+\contentsline {paragraph}{Exemple JSON}{59}{paragraph*.304}
+\contentsline {paragraph}{}{59}{paragraph*.305}
+\contentsline {subsection}{\numberline {18.2}R\IeC {\'e}ponse}{59}{subsection.4.18.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{59}{subsubsection*.306}
+\contentsline {paragraph}{}{59}{paragraph*.307}
+\contentsline {subsubsection}{Content-type}{59}{subsubsection*.308}
+\contentsline {paragraph}{}{59}{paragraph*.309}
+\contentsline {subsubsection}{Body}{59}{subsubsection*.310}
+\contentsline {paragraph}{Exemple JSON}{60}{paragraph*.311}
+\contentsline {paragraph}{}{60}{paragraph*.312}
+\contentsline {subsubsection}{Code}{60}{subsubsection*.313}
+\contentsline {paragraph}{}{60}{paragraph*.314}
+\contentsline {section}{\numberline {19}POST : /api/admin/session}{61}{section.4.19}
+\contentsline {paragraph}{}{61}{paragraph*.315}
+\contentsline {subsection}{\numberline {19.1}Requ\IeC {\^e}te}{61}{subsection.4.19.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{61}{subsubsection*.316}
+\contentsline {paragraph}{}{61}{paragraph*.317}
+\contentsline {subsubsection}{Content type}{61}{subsubsection*.318}
+\contentsline {paragraph}{}{61}{paragraph*.319}
+\contentsline {subsubsection}{Body}{61}{subsubsection*.320}
+\contentsline {paragraph}{}{61}{paragraph*.321}
+\contentsline {paragraph}{Exemple JSON}{61}{paragraph*.322}
+\contentsline {paragraph}{}{61}{paragraph*.323}
+\contentsline {subsection}{\numberline {19.2}R\IeC {\'e}ponse}{61}{subsection.4.19.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{61}{subsubsection*.324}
+\contentsline {paragraph}{}{61}{paragraph*.325}
+\contentsline {subsubsection}{Content-type}{61}{subsubsection*.326}
+\contentsline {paragraph}{}{61}{paragraph*.327}
+\contentsline {subsubsection}{Body}{62}{subsubsection*.328}
+\contentsline {paragraph}{Exemple JSON}{62}{paragraph*.329}
+\contentsline {paragraph}{}{62}{paragraph*.330}
+\contentsline {subsubsection}{Code}{62}{subsubsection*.331}
+\contentsline {paragraph}{}{62}{paragraph*.332}
+\contentsline {section}{\numberline {20}POST : /api/Inscription}{62}{section.4.20}
+\contentsline {paragraph}{}{62}{paragraph*.333}
+\contentsline {subsection}{\numberline {20.1}Requ\IeC {\^e}te}{62}{subsection.4.20.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{62}{subsubsection*.334}
+\contentsline {paragraph}{}{62}{paragraph*.335}
+\contentsline {subsubsection}{Content type}{62}{subsubsection*.336}
+\contentsline {paragraph}{}{62}{paragraph*.337}
+\contentsline {subsubsection}{Body}{62}{subsubsection*.338}
+\contentsline {paragraph}{}{62}{paragraph*.339}
+\contentsline {paragraph}{Exemple JSON}{62}{paragraph*.340}
+\contentsline {paragraph}{}{62}{paragraph*.341}
+\contentsline {subsection}{\numberline {20.2}R\IeC {\'e}ponse}{63}{subsection.4.20.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{63}{subsubsection*.342}
+\contentsline {paragraph}{}{63}{paragraph*.343}
+\contentsline {subsubsection}{Content-type}{63}{subsubsection*.344}
+\contentsline {paragraph}{}{63}{paragraph*.345}
+\contentsline {subsubsection}{Body}{63}{subsubsection*.346}
+\contentsline {paragraph}{Exemple JSON}{63}{paragraph*.347}
+\contentsline {paragraph}{}{63}{paragraph*.348}
+\contentsline {subsubsection}{Code}{63}{subsubsection*.349}
+\contentsline {paragraph}{}{63}{paragraph*.350}
+\contentsline {section}{\numberline {21}POST : /api/TypeSession}{63}{section.4.21}
+\contentsline {paragraph}{}{63}{paragraph*.351}
+\contentsline {subsection}{\numberline {21.1}Requ\IeC {\^e}te}{63}{subsection.4.21.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{63}{subsubsection*.352}
+\contentsline {paragraph}{}{63}{paragraph*.353}
+\contentsline {subsubsection}{Content type}{63}{subsubsection*.354}
+\contentsline {paragraph}{}{63}{paragraph*.355}
+\contentsline {subsubsection}{Body}{64}{subsubsection*.356}
+\contentsline {paragraph}{}{64}{paragraph*.357}
+\contentsline {paragraph}{Exemple JSON}{64}{paragraph*.358}
+\contentsline {paragraph}{}{64}{paragraph*.359}
+\contentsline {subsection}{\numberline {21.2}R\IeC {\'e}ponse}{64}{subsection.4.21.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{64}{subsubsection*.360}
+\contentsline {paragraph}{}{64}{paragraph*.361}
+\contentsline {subsubsection}{Content-type}{64}{subsubsection*.362}
+\contentsline {paragraph}{}{64}{paragraph*.363}
+\contentsline {subsubsection}{Body}{64}{subsubsection*.364}
+\contentsline {paragraph}{Exemple JSON}{64}{paragraph*.365}
+\contentsline {paragraph}{}{64}{paragraph*.366}
+\contentsline {subsubsection}{Code}{64}{subsubsection*.367}
+\contentsline {paragraph}{}{64}{paragraph*.368}
+\contentsline {section}{\numberline {22}POST : /api/register}{65}{section.4.22}
+\contentsline {paragraph}{}{65}{paragraph*.369}
+\contentsline {subsection}{\numberline {22.1}Requ\IeC {\^e}te}{65}{subsection.4.22.1}
+\contentsline {subsubsection}{param\IeC {\`e}tre du path}{65}{subsubsection*.370}
+\contentsline {paragraph}{}{65}{paragraph*.371}
+\contentsline {subsubsection}{Content type}{65}{subsubsection*.372}
+\contentsline {paragraph}{}{65}{paragraph*.373}
+\contentsline {subsubsection}{Body}{65}{subsubsection*.374}
+\contentsline {paragraph}{}{65}{paragraph*.375}
+\contentsline {paragraph}{Exemple JSON}{66}{paragraph*.376}
+\contentsline {paragraph}{}{66}{paragraph*.377}
+\contentsline {subsection}{\numberline {22.2}R\IeC {\'e}ponse}{66}{subsection.4.22.2}
+\contentsline {subsubsection}{R\IeC {\'e}ussite}{66}{subsubsection*.378}
+\contentsline {paragraph}{}{66}{paragraph*.379}
+\contentsline {subsubsection}{Content-type}{66}{subsubsection*.380}
+\contentsline {paragraph}{}{66}{paragraph*.381}
+\contentsline {subsubsection}{Body}{66}{subsubsection*.382}
+\contentsline {paragraph}{Exemple JSON}{66}{paragraph*.383}
+\contentsline {paragraph}{}{66}{paragraph*.384}
+\contentsline {subsubsection}{Code}{66}{subsubsection*.385}
+\contentsline {paragraph}{}{66}{paragraph*.386}
+\contentsline {chapter}{\numberline {5}S\IeC {\'e}paration backend frontend}{67}{chapter.5}
+\contentsline {paragraph}{}{67}{paragraph*.387}
+\contentsline {paragraph}{}{67}{paragraph*.388}
+\contentsline {section}{\numberline {1}User Stories compatible Angular uniquement}{68}{section.5.1}
+\contentsline {paragraph}{}{68}{paragraph*.389}
+\contentsline {subsection}{\numberline {1.1}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er un type de session}{68}{subsection.5.1.1}
+\contentsline {subsubsection}{Gestion des erreurs}{69}{subsubsection*.390}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{70}{subsubsection*.391}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{70}{subsubsection*.392}
+\contentsline {subsection}{\numberline {1.2}En tant qu'administrateur, je veux pouvoir modifier un type de session}{71}{subsection.5.1.2}
+\contentsline {subsubsection}{Gestion des erreurs}{72}{subsubsection*.393}
+\contentsline {paragraph}{}{72}{paragraph*.394}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{72}{subsubsection*.395}
+\contentsline {subsection}{\numberline {1.3}En tant qu'administrateur, je veux pouvoir supprimer un type de session}{73}{subsection.5.1.3}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{74}{subsubsection*.396}
+\contentsline {subsection}{\numberline {1.4}En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du syst\IeC {\`e}me}{74}{subsection.5.1.4}
+\contentsline {subsubsection}{Script concern\IeC {\'e}}{75}{subsubsection*.397}
+\contentsline {subsection}{\numberline {1.5}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}n\IeC {\'e}rer les sessions pour un nombre d'ann\IeC {\'e}e}{76}{subsection.5.1.5}
+\contentsline {subsubsection}{Gestion des erreurs}{77}{subsubsection*.398}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{78}{subsubsection*.399}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{78}{subsubsection*.400}
+\contentsline {section}{\numberline {2}User Stories compatible Symfony-Angular}{79}{section.5.2}
+\contentsline {subsection}{\numberline {2.1}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me connecter sur le site}{79}{subsection.5.2.1}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{79}{subsubsection*.401}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{79}{subsubsection*.402}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{80}{subsubsection*.403}
+\contentsline {subsection}{\numberline {2.2}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me cr\IeC {\'e}er un compte sur le site}{81}{subsection.5.2.2}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{81}{subsubsection*.404}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{81}{subsubsection*.405}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{81}{subsubsection*.406}
+\contentsline {subsection}{\numberline {2.3}En tant qu'utilisateur, je dois pouvoir s\IeC {\'e}lectionner le mois et l'ann\IeC {\'e}e pour afficher les sessions qui m'int\IeC {\'e}resse}{82}{subsection.5.2.3}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{82}{subsubsection*.407}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{82}{subsubsection*.408}
+\contentsline {subsection}{\numberline {2.4}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir m\IeC {\textquoteright }inscrire \IeC {\`a} une session un certain jour}{82}{subsection.5.2.4}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{82}{subsubsection*.409}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{82}{subsubsection*.410}
+\contentsline {subsection}{\numberline {2.5}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir \IeC {\^e}tre inscrit automatiquement \IeC {\`a} une session}{83}{subsection.5.2.5}
+\contentsline {subsubsection}{Diff\IeC {\'e}rences}{83}{subsubsection*.411}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{84}{subsubsection*.412}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{84}{subsubsection*.413}
+\contentsline {subsection}{\numberline {2.6}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me d\IeC {\'e}sinscrire \IeC {\`a} une session}{85}{subsection.5.2.6}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{85}{subsubsection*.414}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{85}{subsubsection*.415}
+\contentsline {subsection}{\numberline {2.7}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{85}{subsection.5.2.7}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{85}{subsubsection*.416}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{85}{subsubsection*.417}
+\contentsline {subsection}{\numberline {2.8}En tant qu\IeC {\textquoteright }utilisateur, je veux pouvoir voir dynamiquement le nombre de s\IeC {\'e}ance qui reste dans mon abonnement}{86}{subsection.5.2.8}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{86}{subsubsection*.418}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{86}{subsubsection*.419}
+\contentsline {subsection}{\numberline {2.9}En tant qu'utilisateur, je veux pouvoir modifier mon profile}{87}{subsection.5.2.9}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{87}{subsubsection*.420}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{87}{subsubsection*.421}
+\contentsline {subsection}{\numberline {2.10}En tant qu\IeC {\textquoteright }administrateur, je dois pouvoir annuler une session}{88}{subsection.5.2.10}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{88}{subsubsection*.422}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{88}{subsubsection*.423}
+\contentsline {subsection}{\numberline {2.11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{88}{subsection.5.2.11}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{88}{subsubsection*.424}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{88}{subsubsection*.425}
+\contentsline {subsection}{\numberline {2.12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{89}{subsection.5.2.12}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{89}{subsubsection*.426}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{89}{subsubsection*.427}
+\contentsline {chapter}{\numberline {6}Conclusion}{90}{chapter.6}
+\contentsline {section}{\numberline {1}Objectif atteints et non atteints}{90}{section.6.1}
+\contentsline {subsection}{\numberline {1.1}Compatible Symfony-Twig et Symfony-Angular}{90}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {1.2}Compatible Symfony-Angular uniquement}{92}{subsection.6.1.2}
+\contentsline {section}{\numberline {2}Piste d'am\IeC {\'e}lioration}{92}{section.6.2}
+\contentsline {chapter}{\numberline {7}Annexe}{94}{chapter.7}
+\contentsline {section}{\numberline {1}Code source}{94}{section.7.1}
+\contentsline {paragraph}{}{94}{paragraph*.428}
