@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  26 DEC 2019 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.22)  28 DEC 2019 11:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -643,7 +643,12 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 
-Package array Warning: Column S is already defined on input line 73.
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 39.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 39.
+
+Package array Warning: Column S is already defined on input line 83.
 
 runsystem(which pygmentize && touch Web-architechture-rapport.aex)...executed.
 
@@ -652,26 +657,26 @@ runsystem(rm Web-architechture-rapport.aex)...executed.
 (./Web-architechture-rapport.aux)
 \openout1 = `Web-architechture-rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 105.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
  (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count163
@@ -698,7 +703,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 95.
+Package hyperref Info: Link coloring ON on input line 105.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -706,9 +711,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count169
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
  (./Web-architechture-rapport.out) (./Web-architechture-rapport.out)
 \@outlinefile=\write6
 \openout6 = `Web-architechture-rapport.out'.
@@ -915,12 +920,12 @@ Overfull \hbox (2.32437pt too wide) in paragraph at lines 128--128
  []
 
 )
-Overfull \hbox (11.74713pt too wide) in paragraph at lines 128--133
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 128--143
 [] [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--133
+Underfull \hbox (badness 10000) in paragraph at lines 128--143
 
  []
 
@@ -941,11 +946,11 @@ Package pdftex.def Info: Figures/us0-2.png  used on input line 13.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Diagramme/sequence-us0.png, id=812, 814.04124pt x 583.17876pt>
+<Diagramme/sequence-us0.png, id=812, 796.32506pt x 614.295pt>
 File: Diagramme/sequence-us0.png Graphic file (type png)
 <use Diagramme/sequence-us0.png>
 Package pdftex.def Info: Diagramme/sequence-us0.png  used on input line 24.
-(pdftex.def)             Requested size: 424.70052pt x 304.25134pt.
+(pdftex.def)             Requested size: 424.70052pt x 327.61818pt.
 [16
 
  <./Figures/us0-1.png>] [17 <./Figures/us0-2.png> <./Diagramme/sequence-us0.png>]) (./UserStories/US1.tex
@@ -955,11 +960,11 @@ File: Figures/us1-1.png Graphic file (type png)
 Package pdftex.def Info: Figures/us1-1.png  used on input line 2.
 (pdftex.def)             Requested size: 212.35025pt x 266.06807pt.
  [18 <./Figures/us1-1.png>]
-<Diagramme/sequence-us1.png, id=850, 814.04124pt x 583.17876pt>
+<Diagramme/sequence-us1.png, id=850, 796.32506pt x 614.295pt>
 File: Diagramme/sequence-us1.png Graphic file (type png)
 <use Diagramme/sequence-us1.png>
 Package pdftex.def Info: Diagramme/sequence-us1.png  used on input line 24.
-(pdftex.def)             Requested size: 339.7617pt x 243.40285pt.
+(pdftex.def)             Requested size: 339.7617pt x 262.0983pt.
 ) (./UserStories/US2.tex
 <Figures/us2-1.png, id=854, 1543.7675pt x 309.155pt>
 File: Figures/us2-1.png Graphic file (type png)
@@ -1048,29 +1053,29 @@ Package pdftex.def Info: Figures/us10-2.png  used on input line 19.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28 <./Figures/us10-1.png>]
-<Diagramme/sequence-us11.png, id=1011, 814.04124pt x 583.17876pt>
+[28 <./Figures/us10-1.png>] [29 <./Figures/us10-2.png>]
+<Diagramme/sequence-us11.png, id=1018, 796.32506pt x 614.295pt>
 File: Diagramme/sequence-us11.png Graphic file (type png)
 <use Diagramme/sequence-us11.png>
 Package pdftex.def Info: Diagramme/sequence-us11.png  used on input line 32.
-(pdftex.def)             Requested size: 339.7617pt x 243.40285pt.
- [29 <./Figures/us10-2.png> <./Diagramme/sequence-us11.png>])
-Overfull \hbox (5.83006pt too wide) in paragraph at lines 51--51
+(pdftex.def)             Requested size: 424.70052pt x 327.61818pt.
+) [30 <./Diagramme/sequence-us11.png>]
+Overfull \hbox (5.83006pt too wide) in paragraph at lines 50--50
 |[]\T1/cmr/bx/n/14.4 En tant qu'administrateur, je dois pou-voir gérer les abon-
  []
 
 (./UserStories/US11.tex
-<Figures/us11-1.png, id=1025, 334.24875pt x 352.31625pt>
+<Figures/us11-1.png, id=1031, 334.24875pt x 352.31625pt>
 File: Figures/us11-1.png Graphic file (type png)
 <use Figures/us11-1.png>
 Package pdftex.def Info: Figures/us11-1.png  used on input line 9.
 (pdftex.def)             Requested size: 169.87761pt x 179.06606pt.
-<Figures/us11-2.png, id=1026, 1494.58376pt x 361.35pt>
+<Figures/us11-2.png, id=1032, 1494.58376pt x 361.35pt>
 File: Figures/us11-2.png Graphic file (type png)
 <use Figures/us11-2.png>
 Package pdftex.def Info: Figures/us11-2.png  used on input line 16.
 (pdftex.def)             Requested size: 212.35025pt x 51.33852pt.
- [30 <./Figures/us11-1.png> <./Figures/us11-2.png>])) [31]
+)) [31 <./Figures/us11-1.png> <./Figures/us11-2.png>]
 Chapter 4.
 (./section/api.tex
 Overfull \hbox (2.92708pt too wide) in paragraph at lines 31--31
@@ -1331,7 +1336,7 @@ Underfull \hbox (badness 10000) in alignment at lines 71--71
 (./JSON/json-result.tex))) [66]
 Chapter 5.
 
-Overfull \hbox (18.0574pt too wide) in paragraph at lines 147--147
+Overfull \hbox (18.0574pt too wide) in paragraph at lines 157--157
 |[]\T1/cmr/bx/n/29.86 Séparation back-end fron-tend| 
  []
 
@@ -1355,11 +1360,11 @@ File: Figures/us12-3.png Graphic file (type png)
 Package pdftex.def Info: Figures/us12-3.png  used on input line 26.
 (pdftex.def)             Requested size: 212.35025pt x 169.98315pt.
  [69 <./Figures/us12-2.png> <./Figures/us12-3.png>]
-<Diagramme/sequence-us12.png, id=1866, 864.22874pt x 583.17876pt>
+<Diagramme/sequence-us12.png, id=1866, 796.32506pt x 614.295pt>
 File: Diagramme/sequence-us12.png Graphic file (type png)
 <use Diagramme/sequence-us12.png>
 Package pdftex.def Info: Diagramme/sequence-us12.png  used on input line 40.
-(pdftex.def)             Requested size: 382.22786pt x 257.92534pt.
+(pdftex.def)             Requested size: 424.70052pt x 327.61818pt.
 ) [70 <./Diagramme/sequence-us12.png>] (./UserStoriesAngular/US13.tex
 <Figures/us13-1.png, id=1879, 197.73875pt x 284.06125pt>
 File: Figures/us13-1.png Graphic file (type png)
@@ -1427,80 +1432,88 @@ File: Figures/us16-3.png Graphic file (type png)
 Package pdftex.def Info: Figures/us16-3.png  used on input line 28.
 (pdftex.def)             Requested size: 127.41144pt x 280.95839pt.
  [77 <./Figures/us16-2.png> <./Figures/us16-3.png>]
-<Diagramme/sequence-us16.png, id=1995, 894.34125pt x 583.17876pt>
+<Diagramme/sequence-us16.png, id=1995, 912.40875pt x 701.92238pt>
 File: Diagramme/sequence-us16.png Graphic file (type png)
 <use Diagramme/sequence-us16.png>
 Package pdftex.def Info: Diagramme/sequence-us16.png  used on input line 42.
-(pdftex.def)             Requested size: 424.70052pt x 276.9416pt.
+(pdftex.def)             Requested size: 424.70052pt x 326.72256pt.
 ) [78 <./Diagramme/sequence-us16.png>] (./UserStoriesAngular/US0.tex
 Overfull \hbox (47.08322pt too wide) in paragraph at lines 3--4
 []\T1/cmr/m/n/12 Réalisation d'une re-quête POST via l'api REST per-me-t-tant d'effectuer l'authentification
  []
 
-<Diagramme/sequence-us0-angular.png, id=2009, 824.07875pt x 583.17876pt>
+[79]
+<Diagramme/sequence-us0-angular.png, id=2014, 778.70924pt x 771.93394pt>
 File: Diagramme/sequence-us0-angular.png Graphic file (type png)
 <use Diagramme/sequence-us0-angular.png>
-Package pdftex.def Info: Diagramme/sequence-us0-angular.png  used on input line 13.
-(pdftex.def)             Requested size: 339.7617pt x 240.43962pt.
-[79 <./Diagramme/sequence-us0-angular.png>]) [80] (./UserStoriesAngular/US1.tex
-<Diagramme/sequence-us1-angular.png, id=2030, 509.905pt x 362.35374pt>
+Package pdftex.def Info: Diagramme/sequence-us0-angular.png  used on input line 14.
+(pdftex.def)             Requested size: 424.70052pt x 421.0078pt.
+ [80 <./Diagramme/sequence-us0-angular.png>]) [81] (./UserStoriesAngular/US1.tex
+<Diagramme/sequence-us1-angular.png, id=2034, 986.03381pt x 771.93394pt>
 File: Diagramme/sequence-us1-angular.png Graphic file (type png)
 <use Diagramme/sequence-us1-angular.png>
 Package pdftex.def Info: Diagramme/sequence-us1-angular.png  used on input line 11.
-(pdftex.def)             Requested size: 339.7617pt x 241.4543pt.
-) (./UserStoriesAngular/US2.tex [81 <./Diagramme/sequence-us1-angular.png>]) (./UserStoriesAngular/US3.tex) (./UserStoriesAngular/US4.tex [82]
-<Figures/us4-1-angular.png, id=2063, 356.33125pt x 660.4675pt>
+(pdftex.def)             Requested size: 424.70052pt x 332.47873pt.
+ [82 <./Diagramme/sequence-us1-angular.png>]) (./UserStoriesAngular/US2.tex) (./UserStoriesAngular/US3.tex [83]) (./UserStoriesAngular/US4.tex
+<Figures/us4-1-angular.png, id=2066, 356.33125pt x 660.4675pt>
 File: Figures/us4-1-angular.png Graphic file (type png)
 <use Figures/us4-1-angular.png>
 Package pdftex.def Info: Figures/us4-1-angular.png  used on input line 10.
 (pdftex.def)             Requested size: 212.35025pt x 393.59274pt.
- [83 <./Figures/us4-1-angular.png>]
-<Diagramme/sequence-us4-angular.png, id=2071, 582.175pt x 362.35374pt>
-File: Diagramme/sequence-us4-angular.png Graphic file (type png)
-<use Diagramme/sequence-us4-angular.png>
-Package pdftex.def Info: Diagramme/sequence-us4-angular.png  used on input line 18.
-(pdftex.def)             Requested size: 339.7617pt x 211.47571pt.
-) [84 <./Diagramme/sequence-us4-angular.png>] (./UserStoriesAngular/US5.tex) (./UserStoriesAngular/US6.tex) [85] (./UserStoriesAngular/US7.tex) [86] (./UserStoriesAngular/US8.tex
-<Figures/us8-1-angular.png, id=2119, 233.87375pt x 508.90125pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[84]
+File: Diagramme/sequence-us1-angular.png Graphic file (type png)
+<use Diagramme/sequence-us1-angular.png>
+Package pdftex.def Info: Diagramme/sequence-us1-angular.png  used on input line 18.
+(pdftex.def)             Requested size: 424.70052pt x 332.47873pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[85 <./Figures/us4-1-angular.png>]) [86] (./UserStoriesAngular/US5.tex) (./UserStoriesAngular/US6.tex) [87] (./UserStoriesAngular/US7.tex) [88] (./UserStoriesAngular/US8.tex
+<Figures/us8-1-angular.png, id=2125, 233.87375pt x 508.90125pt>
 File: Figures/us8-1-angular.png Graphic file (type png)
 <use Figures/us8-1-angular.png>
 Package pdftex.def Info: Figures/us8-1-angular.png  used on input line 8.
 (pdftex.def)             Requested size: 169.87761pt x 369.66223pt.
-) [87 <./Figures/us8-1-angular.png>] (./UserStoriesAngular/US9.tex) (./UserStoriesAngular/US10.tex)
+) [89 <./Figures/us8-1-angular.png>] (./UserStoriesAngular/US9.tex) (./UserStoriesAngular/US10.tex)
 Overfull \hbox (5.83006pt too wide) in paragraph at lines 81--81
 |[]\T1/cmr/bx/n/14.4 En tant qu'administrateur, je dois pou-voir gérer les abon-
  []
 
-(./UserStoriesAngular/US11.tex [88])) [89]
+(./UserStoriesAngular/US11.tex [90])) [91]
 Chapter 6.
-(./section/conclusion.tex [90
+(./section/conclusion.tex [92
 
-] [91] [92]) [93]
+] [93] [94]) [95]
 Chapter 7.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
-[94
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
+[96
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
  (./Web-architechture-rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
 Package rerunfilecheck Info: File `Web-architechture-rapport.out' has not changed.
-(rerunfilecheck)             Checksum: EE5CBC92EF85C632825DD2B86365A29B;11030.
+(rerunfilecheck)             Checksum: 990B1AB84FA96F3DA4F382CB90275E2C;11030.
  ) 
 Here is how much of TeX's memory you used:
- 14870 strings out of 492649
- 234443 string characters out of 6129622
- 403423 words of memory out of 5000000
- 17149 multiletter control sequences out of 15000+600000
+ 14868 strings out of 492649
+ 234282 string characters out of 6129622
+ 403448 words of memory out of 5000000
+ 17146 multiletter control sequences out of 15000+600000
  16952 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,66p,858b,1174s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm3583.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Web-architechture-rapport.pdf (95 pages, 1663807 bytes).
+Output written on Web-architechture-rapport.pdf (97 pages, 2079550 bytes).
 PDF statistics:
- 2446 PDF objects out of 2487 (max. 8388607)
- 2207 compressed objects within 23 object streams
- 1047 named destinations out of 1200 (max. 500000)
- 1327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2453 PDF objects out of 2487 (max. 8388607)
+ 2214 compressed objects within 23 object streams
+ 1049 named destinations out of 1200 (max. 500000)
+ 1322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

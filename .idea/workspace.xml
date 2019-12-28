@@ -2,72 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0-angular.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0-angular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1-angular.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1-angular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us4-angular.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us4-angular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us0-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us0-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us4-1-angular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/Figures/us8-1-angular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStories/US0.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US0.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US10.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US11.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US12.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US13.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US14.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US15.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US16.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US3.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US4.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US5.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US6.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US7.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US8.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US9.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony-Twig/src/Migrations/Version20191226133035.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Figures/us10-1 (Copie en conflit de victorsmitsMac.local 2019-12-23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0-angular.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0-angular.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0-angular.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1-angular.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1-angular.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1-angular.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us12.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us16.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Diagramme/sequence-us16.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US1.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US10.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US10.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US12.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US12.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US13.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US13.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US14.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US14.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US15.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US15.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US6.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US7.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US8.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US8.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US9.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US9.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US0.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US0.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US12.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US12.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/api.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/api.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/conclusion.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rapport/section/mvc.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/mvc.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/separation_backend_frontend.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/separation_backend_frontend.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/specification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/specification.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/AbonnementControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/CreateSessionControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/MonthControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/SessionAdministrationControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/api.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +255,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.21375" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -366,6 +326,9 @@
       </list>
     </option>
     <option name="showServicesTree" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -487,6 +450,13 @@
       <workItem from="1577266523787" duration="13000" />
       <workItem from="1577366883831" duration="214000" />
       <workItem from="1577372398312" duration="2645000" />
+      <workItem from="1577453928739" duration="19000" />
+      <workItem from="1577453963457" duration="226000" />
+      <workItem from="1577454215218" duration="318000" />
+      <workItem from="1577454582148" duration="54000" />
+      <workItem from="1577454652671" duration="118000" />
+      <workItem from="1577454786488" duration="1559000" />
+      <workItem from="1577523385276" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -937,10 +907,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="558" y="363" key="NewPhpClassDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1574424414626" />
-    <state x="245" y="111" key="SettingsEditor" timestamp="1577373004365">
+    <state x="245" y="111" key="SettingsEditor" timestamp="1577454771035">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="245" y="111" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577373004365" />
+    <state x="245" y="111" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577454771035" />
     <state x="327" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575803751566" />
     <state x="2247" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577187292624" />
     <state x="245" y="63" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1575195162915" />
@@ -1030,6 +1000,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="186" key="git4idea.rebase.GitRebaseEditor/0.0.1440.900@0.0.1440.900" timestamp="1572556026672" />
+    <state x="0" y="0" width="100" height="100" key="net.trustx.simpleuml.components.BirdViewFrame" timestamp="1577454345186">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="0" y="0" width="100" height="100" key="net.trustx.simpleuml.components.BirdViewFrame/0.0.1440.900@0.0.1440.900" timestamp="1577454345186" />
     <state x="832" y="475" width="350" height="300" key="org.angular.cli.generate" timestamp="1573914527384">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

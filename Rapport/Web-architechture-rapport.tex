@@ -15,7 +15,7 @@
 \usepackage{textpos}
 \usepackage{minted}
 \usepackage{float}
-\usepackage[breaklinks=true,hidelinks]{hyperref}
+\usepackage[breaklinks=true]{hyperref}
 \usepackage[Lenny]{fncychap}
 \usepackage{titlesec, blindtext, color}
 \usepackage{listings}
@@ -25,8 +25,18 @@
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
 
+\newcommand{\Href}[2]{\href{#1}{URL: \underline{#2}}}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{section}.\arabic{figure}}
+
+\hypersetup{
+bookmarks=true,
+	pdfborderstyle={/S/U/W 1},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    urlbordercolor=blue,
+}
 
 %%%% JSON settings %%%%%%%%%%%%%%
 \colorlet{punct}{red!60!black}
@@ -163,6 +173,6 @@
 	\vspace{\baselineskip}
 	\section{Code source}
 		\paragraph{}
-			Retrouvez l'entièreté du code source sur le Github suivant : \href{https://github.com/victorsmits/Aquabike}{Aquabike}
+			Retrouvez l'entièreté du code source sur le Github suivant : \Href{https://github.com/victorsmits/Aquabike}{Aquabike}
 			
 \end{document}

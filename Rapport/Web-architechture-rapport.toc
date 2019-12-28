@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {5.3}Inscription}{8}{subsection.1.5.3}
 \contentsline {subsection}{\numberline {5.4}Month}{9}{subsection.1.5.4}
 \contentsline {subsection}{\numberline {5.5}Admin - Session}{9}{subsection.1.5.5}
-\contentsline {subsection}{\numberline {5.6}Admin - Nouvelle session}{10}{subsection.1.5.6}
+\contentsline {subsection}{\numberline {5.6}Admin - NoHrefle session}{10}{subsection.1.5.6}
 \contentsline {subsection}{\numberline {5.7}Admin - Abonnement}{10}{subsection.1.5.7}
 \contentsline {subsection}{\numberline {5.8}Admin - Type Session}{11}{subsection.1.5.8}
 \contentsline {chapter}{\numberline {2}Base de donn\IeC {\'e}e}{12}{chapter.2}
@@ -67,9 +67,9 @@
 \contentsline {subsubsection}{Script concern\IeC {\'e}s}{27}{subsubsection*.28}
 \contentsline {subsection}{\numberline {1.11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{28}{subsection.3.1.11}
 \contentsline {subsubsection}{Gestion des erreurs}{29}{subsubsection*.29}
-\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{29}{subsubsection*.30}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{30}{subsubsection*.30}
 \contentsline {subsubsection}{Script concern\IeC {\'e}}{30}{subsubsection*.31}
-\contentsline {subsection}{\numberline {1.12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{30}{subsection.3.1.12}
+\contentsline {subsection}{\numberline {1.12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{31}{subsection.3.1.12}
 \contentsline {subsubsection}{Script concern\IeC {\'e}}{31}{subsubsection*.32}
 \contentsline {chapter}{\numberline {4}API}{32}{chapter.4}
 \contentsline {section}{\numberline {1}Tableau recapitulatif}{32}{section.4.1}
@@ -514,48 +514,48 @@
 \contentsline {section}{\numberline {2}User Stories compatible Symfony-Angular}{79}{section.5.2}
 \contentsline {subsection}{\numberline {2.1}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me connecter sur le site}{79}{subsection.5.2.1}
 \contentsline {subsubsection}{Diff\IeC {\'e}rence}{79}{subsubsection*.401}
-\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{79}{subsubsection*.402}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{80}{subsubsection*.403}
-\contentsline {subsection}{\numberline {2.2}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me cr\IeC {\'e}er un compte sur le site}{81}{subsection.5.2.2}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{81}{subsubsection*.404}
-\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{81}{subsubsection*.405}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{81}{subsubsection*.406}
-\contentsline {subsection}{\numberline {2.3}En tant qu'utilisateur, je dois pouvoir s\IeC {\'e}lectionner le mois et l'ann\IeC {\'e}e pour afficher les sessions qui m'int\IeC {\'e}resse}{82}{subsection.5.2.3}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{82}{subsubsection*.407}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{82}{subsubsection*.408}
-\contentsline {subsection}{\numberline {2.4}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir m\IeC {\textquoteright }inscrire \IeC {\`a} une session un certain jour}{82}{subsection.5.2.4}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{82}{subsubsection*.409}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{82}{subsubsection*.410}
-\contentsline {subsection}{\numberline {2.5}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir \IeC {\^e}tre inscrit automatiquement \IeC {\`a} une session}{83}{subsection.5.2.5}
-\contentsline {subsubsection}{Diff\IeC {\'e}rences}{83}{subsubsection*.411}
-\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{84}{subsubsection*.412}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{84}{subsubsection*.413}
-\contentsline {subsection}{\numberline {2.6}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me d\IeC {\'e}sinscrire \IeC {\`a} une session}{85}{subsection.5.2.6}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{85}{subsubsection*.414}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{85}{subsubsection*.415}
-\contentsline {subsection}{\numberline {2.7}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{85}{subsection.5.2.7}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{85}{subsubsection*.416}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{85}{subsubsection*.417}
-\contentsline {subsection}{\numberline {2.8}En tant qu\IeC {\textquoteright }utilisateur, je veux pouvoir voir dynamiquement le nombre de s\IeC {\'e}ance qui reste dans mon abonnement}{86}{subsection.5.2.8}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{86}{subsubsection*.418}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{86}{subsubsection*.419}
-\contentsline {subsection}{\numberline {2.9}En tant qu'utilisateur, je veux pouvoir modifier mon profile}{87}{subsection.5.2.9}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{87}{subsubsection*.420}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{87}{subsubsection*.421}
-\contentsline {subsection}{\numberline {2.10}En tant qu\IeC {\textquoteright }administrateur, je dois pouvoir annuler une session}{88}{subsection.5.2.10}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{88}{subsubsection*.422}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{88}{subsubsection*.423}
-\contentsline {subsection}{\numberline {2.11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{88}{subsection.5.2.11}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{88}{subsubsection*.424}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{88}{subsubsection*.425}
-\contentsline {subsection}{\numberline {2.12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{89}{subsection.5.2.12}
-\contentsline {subsubsection}{Diff\IeC {\'e}rence}{89}{subsubsection*.426}
-\contentsline {subsubsection}{Script concern\IeC {\'e}s}{89}{subsubsection*.427}
-\contentsline {chapter}{\numberline {6}Conclusion}{90}{chapter.6}
-\contentsline {section}{\numberline {1}Objectif atteints et non atteints}{90}{section.6.1}
-\contentsline {subsection}{\numberline {1.1}Compatible Symfony-Twig et Symfony-Angular}{90}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {1.2}Compatible Symfony-Angular uniquement}{92}{subsection.6.1.2}
-\contentsline {section}{\numberline {2}Piste d'am\IeC {\'e}lioration}{92}{section.6.2}
-\contentsline {chapter}{\numberline {7}Annexe}{94}{chapter.7}
-\contentsline {section}{\numberline {1}Code source}{94}{section.7.1}
-\contentsline {paragraph}{}{94}{paragraph*.428}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{80}{subsubsection*.402}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{81}{subsubsection*.403}
+\contentsline {subsection}{\numberline {2.2}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me cr\IeC {\'e}er un compte sur le site}{82}{subsection.5.2.2}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{82}{subsubsection*.404}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{82}{subsubsection*.405}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{83}{subsubsection*.406}
+\contentsline {subsection}{\numberline {2.3}En tant qu'utilisateur, je dois pouvoir s\IeC {\'e}lectionner le mois et l'ann\IeC {\'e}e pour afficher les sessions qui m'int\IeC {\'e}resse}{83}{subsection.5.2.3}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{83}{subsubsection*.407}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{83}{subsubsection*.408}
+\contentsline {subsection}{\numberline {2.4}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir m\IeC {\textquoteright }inscrire \IeC {\`a} une session un certain jour}{83}{subsection.5.2.4}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{83}{subsubsection*.409}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{84}{subsubsection*.410}
+\contentsline {subsection}{\numberline {2.5}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir \IeC {\^e}tre inscrit automatiquement \IeC {\`a} une session}{84}{subsection.5.2.5}
+\contentsline {subsubsection}{Diff\IeC {\'e}rences}{84}{subsubsection*.411}
+\contentsline {subsubsection}{Diagramme de s\IeC {\'e}quence}{85}{subsubsection*.412}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{85}{subsubsection*.413}
+\contentsline {subsection}{\numberline {2.6}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir me d\IeC {\'e}sinscrire \IeC {\`a} une session}{87}{subsection.5.2.6}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{87}{subsubsection*.414}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{87}{subsubsection*.415}
+\contentsline {subsection}{\numberline {2.7}En tant qu\IeC {\textquoteright }utilisateur, je dois pouvoir voir qui est inscrit pour chaque session}{87}{subsection.5.2.7}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{87}{subsubsection*.416}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{87}{subsubsection*.417}
+\contentsline {subsection}{\numberline {2.8}En tant qu\IeC {\textquoteright }utilisateur, je veux pouvoir voir dynamiquement le nombre de s\IeC {\'e}ance qui reste dans mon abonnement}{88}{subsection.5.2.8}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{88}{subsubsection*.418}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{88}{subsubsection*.419}
+\contentsline {subsection}{\numberline {2.9}En tant qu'utilisateur, je veux pouvoir modifier mon profile}{89}{subsection.5.2.9}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{89}{subsubsection*.420}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{89}{subsubsection*.421}
+\contentsline {subsection}{\numberline {2.10}En tant qu\IeC {\textquoteright }administrateur, je dois pouvoir annuler une session}{90}{subsection.5.2.10}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{90}{subsubsection*.422}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{90}{subsubsection*.423}
+\contentsline {subsection}{\numberline {2.11}En tant qu'administrateur, je dois pouvoir cr\IeC {\'e}er une nouvelle session peut importe la date}{90}{subsection.5.2.11}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{90}{subsubsection*.424}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{90}{subsubsection*.425}
+\contentsline {subsection}{\numberline {2.12}En tant qu'administrateur, je dois pouvoir g\IeC {\'e}rer les abonnement des utilisateurs}{91}{subsection.5.2.12}
+\contentsline {subsubsection}{Diff\IeC {\'e}rence}{91}{subsubsection*.426}
+\contentsline {subsubsection}{Script concern\IeC {\'e}s}{91}{subsubsection*.427}
+\contentsline {chapter}{\numberline {6}Conclusion}{92}{chapter.6}
+\contentsline {section}{\numberline {1}Objectif atteints et non atteints}{92}{section.6.1}
+\contentsline {subsection}{\numberline {1.1}Compatible Symfony-Twig et Symfony-Angular}{92}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {1.2}Compatible Symfony-Angular uniquement}{94}{subsection.6.1.2}
+\contentsline {section}{\numberline {2}Piste d'am\IeC {\'e}lioration}{94}{section.6.2}
+\contentsline {chapter}{\numberline {7}Annexe}{96}{chapter.7}
+\contentsline {section}{\numberline {1}Code source}{96}{section.7.1}
+\contentsline {paragraph}{}{96}{paragraph*.428}
