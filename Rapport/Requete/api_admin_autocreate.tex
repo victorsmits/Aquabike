@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête POST pour générer automatiquement les sessions, correspondante au type de session sélectionné, sur x année .
+	Requête PUT pour générer automatiquement les sessions, correspondant au type de sessions sélectionnées, sur x années.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -17,11 +17,11 @@
 					\hline
 					Propriété & Type & Obligatoire & Description \\
 					\hline
-					year & int & O & Nombre d'année pour la génération automatique. \\
+					year & int & O & Nombre d'années pour la génération automatique. \\
 					\hline
-					bike & int & O & Nombre de vélo dans la session. \\
+					bike & int & O & Nombre de vélos dans la session. \\
 					\hline
-					idTypeSession & List<int> & O & Liste des id des type de sessions à générer.\\
+					idTypeSession & List<int> & O & Liste des id des types de sessions à générer.\\
 					\hline
 				\end{tabularx}
 			\end{center}

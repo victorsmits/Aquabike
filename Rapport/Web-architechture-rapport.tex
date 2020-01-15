@@ -19,11 +19,14 @@
 \usepackage[Lenny]{fncychap}
 \usepackage{titlesec, blindtext, color}
 \usepackage{listings}
+\usepackage{tocloft}
 \usepackage{xcolor}
 \usemintedstyle{manni}
 
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
+
+\addto\captionsenglish{\renewcommand{\contentsname}{Table des matières}}
 
 \newcommand{\Href}[2]{\href{#1}{URL: \underline{#2}}}
 \renewcommand{\thesection}{\arabic{section}}
@@ -117,15 +120,13 @@ bookmarks=true,
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%
 
-%---title format---
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{section/FrontPage.tex}
 
 %%%%% table of content %%%%%%
+
 \tableofcontents
 
 %%%%% Documents %%%%%%
@@ -135,7 +136,7 @@ bookmarks=true,
 	\vspace{\baselineskip}
 	\input{section/specification}
 
-\chapter{Base de donnée}
+\chapter{Base de données}
 \label{chap:Base de donnée}
 
 	\vspace{\baselineskip}
