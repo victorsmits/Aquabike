@@ -1,0 +1,8 @@
+{
+	"tns-core-modules-widgets": {
+		"/Users/victorsmits/Dropbox/ECAM/MIN 4/Web-Architecture/Aquabike/frontend/node_modules/tns-core-modules-widgets/platforms/android/widgets-release.aar": "0746721bed98e833a85c066a1994200dd8dd111b"
+	},
+	"nativescript-webview-interface": {
+		"/Users/victorsmits/Dropbox/ECAM/MIN 4/Web-Architecture/Aquabike/frontend/node_modules/nativescript-webview-interface/platforms/android/WebViewInterface.jar": "76c82949e18be2e64a13fcf1587898f426846790"
+	}
+}

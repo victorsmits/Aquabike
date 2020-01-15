@@ -1,5 +1,5 @@
 \paragraph{}
-	Requête PUT permettant l'enregistrement d'un nouvelle utilisateur dans le systeme.
+	Requête POST permettant l'enregistrement d'un nouvel utilisateur dans le systeme.
 
 \subsection{Requête}
 	\subsubsection{paramètre du path}
@@ -25,13 +25,13 @@
 					\hline
 					firstName & String & O & Prénom de l'utilisateur. \\
 					\hline
-					Abonnement & int & O & Nombre de session disponible dans son abonnement. \\
+					Abonnement & int & O & Nombre de sessions disponibles dans son abonnement. \\
 					\hline
 					password & String & O & mot de passe de l'utilisateur. \\
 					\hline
 					passwordConfirmation & String & O & vérification du mot de passe de l'utilisateur. \\
 					\hline
-					typeSession & List<TypeSession> & O & Liste des type de session auquel l'utilisateur s'est inscrit.\\
+					typeSession & List<TypeSession> & O & Liste des types de session auxquelles l'utilisateur s'est inscrit.\\
 					\hline
 					
 					\hline
@@ -66,7 +66,7 @@
 				\hline
 				Propriété & Type & Obligatoire & Description \\
 				\hline
-				result & Boolean & O & Status de la requête. \\
+				result & Boolean & O & Statut de la requête. \\
 				\hline
 			\end{tabularx}
 		\end{center}
