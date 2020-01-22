@@ -4,6 +4,7 @@ namespace App\Controller\API;
 
 use App\Entity\Inscription;
 use App\Entity\LienPersonTypeSession;
+use App\Entity\Payement;
 use App\Entity\Person;
 use App\Entity\Session;
 use DateTime;
@@ -170,5 +171,59 @@ class AbonnementControllerApi extends AbstractController
         }catch (ORMException $e){
             return new JsonResponse(['error'=>$e->getMessage()]);
         }
+    }
+
+    /**
+     * @Route("/pay", name="api_pay", methods={"POST","OPTIONS"})
+     * @param Request $request
+     * @param RegistrationControllerApi $sub
+     * @return JsonResponse
+     * @throws \Exception
+     */
+    public function AddPayment(Request $request,RegistrationControllerApi $sub){
+        $today = new DateTime("now");
+        $septembre = new DateTime("09/01/".$today->format("y"));
+        $february = new DateTime("02/01/".$today->format("y"));
+        date_add($february, date_interval_create_from_date_string("1 year"));
+        /**
+         * @var $user Person
+         * @var $type LienPersonTypeSession
+         */
+        try{
+            $em = $this->getDoctrine()->getManager();
+            $data = json_decode($request->getContent(), true);
+            $user = $em
+                ->getRepository('App:Person')
+                ->find($data["person_id"]);
+
+            $user->setAbonnement($user->getAboType());
+
+            $em->persist($user);
+            $em->flush();
+
+            $payment = new Payement();
+            $payment->setAmount($data["amount"]);
+            $payment->setType($data["type"]);
+            $payment->setPerson($user);
+            $payment->setStartDate($today);
+
+            if(($today > $septembre) && ($today < $february) && !($today->format("m") == "1")){
+                $payment->setEndDate($february);
+            }elseif ($today->format("m") == "1"){
+                $payment->setEndDate(new DateTime("02/01/".$today->format("y")));
+            }
+            else{
+                $payment->setEndDate($septembre);
+            }
+
+            $em->persist($payment);
+            $em->flush();
+
+            return new JsonResponse(['result'=>true]);
+
+        }catch (\Exception $e){
+            $error = $e;
+        }
+        return new JsonResponse(['error'=>$error]);
     }
 }

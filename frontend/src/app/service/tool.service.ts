@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Sessions, TypeSession, User} from '../Interface/Interface.module';
+import {Payment, Sessions, TypeSession, User} from '../Interface/Interface.module';
 import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
+import {MatSnackBar} from '@angular/material';
 
 export interface Days {
   code : string,
@@ -58,7 +59,7 @@ export class ToolService {
     {code:"Sun",nom:"Dimanche"},
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private _snackBar: MatSnackBar) { }
 
   daySwith(day){
 
@@ -185,5 +186,29 @@ export class ToolService {
     return typeSession;
   }
 
+  openSnackBar(message: string, action: string,time = 2000) {
+    this._snackBar.open(message, action, {
+      duration: time,
+    });
+  }
 
+  initPayment (data : JSON[]) : Payment {
+    for(let pay of data){
+      if(!pay["Finish"]){
+        return {
+          id: pay["id"],
+          start_date: pay["startDate"],
+          end_date: pay["endDate"],
+          amount: pay["Amount"],
+          type: pay["Type"],
+          person_id: pay["Person"],
+          finish : pay["Finish"]
+        }
+      }
+    }
+    return {
+      amount : 0,
+      type : null,
+    }
+  }
 }

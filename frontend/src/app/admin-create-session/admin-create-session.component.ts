@@ -55,12 +55,13 @@ export class ConfimGenerationComponent implements OnInit{
 
   generateSession(form : NgForm){
     this.isLoading = true;
-    this.api.postGenerateSessionAuto(form.value.year,this.listTypeSessionId,9).subscribe(urldata=>{
+    this.api.postGenerateSessionAuto(form.value.year,this.listTypeSessionId,form.value.bike).subscribe(urldata=>{
       if(urldata['result']){
         this.dialogRef.close();
       }
     },error =>{
-      this.error = error
+      this.error = error;
+      this.isLoading = false;
     } );
   }
 }
@@ -90,7 +91,8 @@ export class AdminCreateSessionComponent implements OnInit {
 
   constructor(private api: ApiService,
               private router : Router,
-              private dialog : MatDialog) { }
+              private dialog : MatDialog,
+              private tool : ToolService) { }
 
   ngOnInit() {
     // this.generateSession(5);
@@ -108,7 +110,7 @@ export class AdminCreateSessionComponent implements OnInit {
 
     this.api.createNewSess(newSess).subscribe(urldata=>{
       if(urldata['result']){
-        this.router.navigate(['admin/session'])
+        this.tool.openSnackBar("Ajout de la nouvelle scéance le",newSess.Date)
       }
     },error =>{
       this.error = error

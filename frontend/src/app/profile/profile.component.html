@@ -94,8 +94,11 @@
 
         <mat-list-item>
           <h3>Abonnement</h3>
-          <p>{{User.abonnement}}</p>
+          <p *ngIf="User.abonnement != 999999 else sansAbo">{{User.abonnement}}</p>
           <mat-divider></mat-divider>
+          <ng-template #sansAbo>
+            <p>Sans Abonnement</p>
+          </ng-template>
         </mat-list-item>
 
         <mat-list-item>
@@ -109,6 +112,7 @@
   </mat-grid-tile>
 
 </mat-grid-list>
+
 
 
 

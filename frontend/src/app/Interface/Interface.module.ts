@@ -63,3 +63,13 @@ export interface editProfileInterface {
   password : string,
   typeSessions : TypeSession[]
 }
+
+export interface Payment {
+  id?: number,
+  person_id?: number,
+  start_date?: string,
+  end_date?: string,
+  amount?: number,
+  type?: string
+  finish?: boolean
+}

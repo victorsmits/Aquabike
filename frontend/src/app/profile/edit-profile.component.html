@@ -18,7 +18,7 @@
 
   <ng-container>
     <ul *ngFor="let session of listTypeSession" >
-      <mat-checkbox (change)="EditTypeSession(session)" [checked] = "checkSession(session) != null">
+      <mat-checkbox (change)="EditTypeSession(session)" [checked] = "checkSession(session)">
         {{session.Day}} {{session.Time}}
       </mat-checkbox>
     </ul>

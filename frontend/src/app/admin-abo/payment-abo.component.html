@@ -1,0 +1,15 @@
+<mat-error *ngIf="error">{{error}}</mat-error>
+
+<mat-form-field>
+  <input matInput name="amount" [(ngModel)]="element.amount" [ngModelOptions]="{standalone: true}">
+</mat-form-field>
+<mat-select placeholder="Type" #payType [(ngModel)]="element.type" name="type"
+            [ngModelOptions]="{standalone: true}" >
+  <mat-option value="Gratuit" > Gratuit </mat-option>
+  <mat-option value="Cash" > Cash </mat-option>
+  <mat-option value="CB" > CB </mat-option>
+</mat-select>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="element" cdkFocusInitial>Ok</button>
+</div>

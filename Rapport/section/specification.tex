@@ -1,14 +1,14 @@
 
 \section{Objectif du site}
 	\paragraph{}
-		Le site doit permettre à des personnes de s’inscrire et/ou se désinscrire de leur groupe à des sessions de sport, en l'occurence des sessions d'aquabike. 
+		Le site doit permettre à des personnes de s’inscrire et se désinscrire de leur groupe à des session de sport. 
 		
 		
-\section{Acteurs}
+\section{Acteur}
 	\paragraph{}
 		\begin{itemize}
-			\item Utilisateur : personne qui utilise le site et s'inscrit à des sessions de sport
-			\item Administrateur : personne administrant le site et ayant tout contrôle sur les sessions de sport organises. 
+			\item Utilisateur : personne qui utilise le site et s'inscrivant à des session de sport
+			\item Administrateur : personne administrant le site et ayant tout contrôle sur les sessions de sport organisé
 		\end{itemize}
 		
 
@@ -23,7 +23,7 @@
 				\hline
 				En tant qu’utilisateur, je dois pouvoir me connecter sur le site & 2 \\
 				\hline
-				En tant qu'utilisateur, je dois pouvoir sélectionner le mois et l'année pour afficher les sessions qui m'intéressent & 2 \\
+				En tant qu'utilisateur, je dois pouvoir sélectionner le mois et l'année pour afficher les sessions qui m'intéresse & 2 \\
 				\hline
 				En tant qu’utilisateur, je dois pouvoir m’inscrire à une session un certain jour & 1 \\
 				\hline
@@ -40,17 +40,15 @@
 		\begin{center}
 			\begin{tabularx}{\linewidth}{| Y | T{0.15\linewidth} |}
 				\hline
-				En tant qu’utilisateur, je veux pouvoir voir le nombre de séances qui restentn dans mon abonnement & 2\\
+				En tant qu’utilisateur, je veux pouvoir voir dynamiquement le nombre de séance qui reste dans mon abonnement & 2\\
 				\hline
-				En tant qu'utilisateur, je veux pouvoir modifier mon profil & 1\\
+				En tant qu'utilisateur, je veux pouvoir modifier mon profile & 1\\
 				\hline
-				En tant qu'utilisateur, je veux pouvoir m'inscrire à une session uniquement si il me reste des scéances à disposition. & 2\\
+				En tant qu'utilisateur, je veux pouvoir m'inscrire a une session uniquement si il me reste des abonnements a disposition. & 2\\
 				\hline
 				En tant qu’administrateur, je dois pouvoir annuler une session & 2 \\
 				\hline
-				En tant qu'administrateur, je dois pouvoir créer une nouvelle session peu importe la date & 2 \\
-				\hline
-				En tant qu'administrateur, je dois pouvoir gérer les abonnements des utilisateurs & 2 \\
+				En tant qu'administrateur, je dois pouvoir gérer les abonnement des utilisateurs & 2 \\
 				\hline
 			\end{tabularx}
 		\end{center}
@@ -61,11 +59,11 @@
 				\hline
 				En tant qu'administrateur, je dois pouvoir créer un type de session & 2 \\
 				\hline
-				En tant qu'administrateur, je dois pouvoir générer les sessions pour un nombre d'années & 1 \\
+				En tant qu'administrateur, je dois pouvoir générer les sessions pour un nombre d'année & 1 \\
 				\hline
 				En tant qu'administrateur, je veux pouvoir supprimer un utilisateur du système & 1\\
 				\hline
-				En tant qu'administrateur, je veux pouvoir gérer les types de sessions disponibles pour l'inscription automatique & 2\\
+				En tant qu'administrateur, je veux pouvoir gérer les types de sessions disponible pour l'inscription automatique & 2\\
 				\hline
 				En tant qu'administrateur, je veux pouvoir modifier un type de session & 1\\
 				\hline
@@ -75,18 +73,18 @@
 		\end{center}
 
 \vspace{\baselineskip}
-\section{Contraintes non fonctionnelles}
+\section{Contrainte non fonctionnelles}
 	\paragraph{}
 		\begin{itemize}
-			\item Le site dois être "user-friendly" pour des personnes non adeptes de la technologie. 
-			\item Le site doit être "responsive" afin de pouvoir l'utiliser sur tous types de d'écran. 
+			\item Le site dois être user-friendly pour des personnes non adepte de la technologie. 
+			\item Le site doit être responsive afin de pouvoir l'utiliser sur tout type de d'écran. 
 		\end{itemize}
 
 \newpage
 \section{Mockup}
 	\subsection{Login}
 		\begin{figure}[!htbp]
-       	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Login.png}
+       	 	\includegraphics[width=0.5\linewidth, center]{Mockup/Login.png}
        	 	\caption{Page de connection}
        	\end{figure}
        	
@@ -101,12 +99,13 @@
 	\newpage
 	\subsection{Inscription}
 		\begin{figure}[!htbp]
-       	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Inscription.png}
+       	 	\includegraphics[width=0.5\linewidth, center]{Mockup/Inscription.png}
        	 	\caption{Page d'inscription au site}
        	\end{figure}
     
        
-      \vspace{\baselineskip}
+       
+	\newpage
 	\subsection{Month}
 		\begin{figure}[h!]
        	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Month.png}
@@ -114,24 +113,32 @@
        	\end{figure}
        	
 
-	\newpage
+	\vspace{\baselineskip}	
 	\subsection{Admin - Session}
 		\begin{figure}[h!]
        	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Admin-Session.png}
        	 	\caption{Page de gestion des sessions du mois pour l'administrateur}
        	\end{figure}
        	
-	\vspace{\baselineskip}
+	\newpage
 	\subsection{Admin - NoHrefle session}
 		\begin{figure}[h!]
        	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Admin-Nouvelle-Session.png}
        	 	\caption{Page de création d'une nouvelle session}
        	\end{figure}
        	
-	\newpage
+	\vspace{\baselineskip}
 	\subsection{Admin - Abonnement}
 		\begin{figure}[h!]
        	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Admin-Abonnement.png}
        	 	\caption{Page de gestion des abonnements des utilisateurs}
        	\end{figure}
        	
+	
+	\newpage
+	\subsection{Admin - Type Session}
+		\begin{figure}[h!]
+       	 	\includegraphics[width=0.8\linewidth, center]{Mockup/Admin-Type-Session.png}
+       	 	\caption{Page de gestion des types de sessions}
+       	\end{figure}
+

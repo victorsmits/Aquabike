@@ -1,14 +1,22 @@
 .edit{
   width: 20px;
 }
+
+mat-form-field{
+  width: 50%;
+  margin-right: 10%;
+  box-sizing: border-box;
+  text-align : center;
+}
+
+input{
+  width: 50%
+}
+
 mat-table{
   margin : auto 5%;
   padding: 2%;
   justify-content: center;
-}
-
-mat-select{
-  margin-top: 5%;
 }
 
 mat-cell{
@@ -25,7 +33,21 @@ mat-header-cell{
   flex: 0 0 20%;
 }
 
+.mat-column-LastName{
+  flex: 0 0 10%;
+}
+
+.mat-column-amount{
+  flex: 0 0 13%;
+  margin-left : 1%
+}
+
 .del-button {
   font-size: large;
   align-content: center;
 }
+
+.actionb-btn{
+  margin-left : 5%
+}
+

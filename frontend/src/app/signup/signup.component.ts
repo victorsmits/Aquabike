@@ -27,6 +27,9 @@ export class SignupComponent implements AfterViewInit, OnInit{
   @ViewChild('timeSelect',{static:false}) timeSelect: MatSelect;
   @ViewChild('timeSelect2',{static:false}) timeSelect2: MatSelect;
   private listTypeSessionId: number[] = [];
+  listTypeClient: String[] = ["Sans abonnement","Avec abonnement"];
+  abo: boolean = false;
+  typeClient: String;
 
 
   constructor(public authService: AuthService,
@@ -35,22 +38,16 @@ export class SignupComponent implements AfterViewInit, OnInit{
               private api : ApiService) { }
 
   onSignup(form: NgForm) {
-    if (form.invalid) {
-      return;
-    }
-
-    this.isLoading = true;
     const authData: AuthSignupData = {
-      email: form.value.email,
-      username: form.value.username,
-      Nom: form.value.Nom,
-      Prenom: form.value.Prenom,
-      Abonnement: Number(form.value.Abonnement),
+      email: form.value.Email,
+      username: form.value.User,
+      Nom: form.value.LN,
+      Prenom: form.value.FN,
+      Abonnement: this.abo? Number(form.value.Abonnement):999999,
       typeSessions : [],
-      password: form.value.password,
+      password: form.value.PWD,
       passwordConfirmation: form.value.passwordConfirmation,
     };
-
 
     for(let session of this.listTypeSession){
       if(this.listTypeSessionId.indexOf(session.Id) != -1){
@@ -58,13 +55,23 @@ export class SignupComponent implements AfterViewInit, OnInit{
       }
     }
 
-    this.authService.createUser(authData).subscribe((next)=>{
-      if(next["result"]){
-        this.router.navigate(['']);
-      }
-    },error1 => {
-      this.error = error1;
-    });
+    console.log(authData);
+
+    if(authData.typeSessions.length == 0 && this.abo){
+      this.isLoading = true;
+      this.error = "Veuillez sélectionner au minimum un horaire";
+      this.isLoading = false;
+    }else{
+      console.log(authData);
+      this.authService.createUser(authData).subscribe((next) => {
+        if(next["result"]){
+          this.router.navigate(['']);
+        }
+      },error1 => {
+        this.error = error1;
+        this.isLoading = false;
+      });
+    }
   }
 
   ngAfterViewInit(): void {
@@ -89,6 +96,18 @@ export class SignupComponent implements AfterViewInit, OnInit{
       this.listTypeSessionId.splice(this.listTypeSessionId.indexOf(Id),1);
     }else{
       this.listTypeSessionId.push(Id);
+    }
+  }
+
+  setTypeClient(client) {
+    switch(client){
+      case "Avec abonnement":
+        this.abo=true;
+        this.ngOnInit();
+        this.tool.openSnackBar("Veuillez sélectionner au minimum un horaire dans la liste!","",10000);
+        break;
+      case "Sans abonnement":
+        this.abo = false;
     }
   }
 }

@@ -8,9 +8,9 @@
 				\hline
 					GET & /api/month /\{month?\}/\{year?\} & MonthControllerAPI & index & renvoie la liste des sessions du mois. \\
 				\hline
-					GET & /api/profile/ \{username?\} & ProfileControllerAPI & index & Renvoie le profil de l'utilisateur. \\
+					GET & /api/profile/ \{username?\} & ProfileControllerAPI & index & Renvoie le profile de l'utilisateur. \\
 				\hline
-					GET & /api/admin /abonnement & AbonnementControllerAPI & index & renvoie la liste des utilisateur. \\
+					GET & /api/admin /abonnement & AbonnementControllerAPI & index & renvoie la liste des utilisateurs. \\
 				\hline
 					GET & /api/TypeSession & RegistrationControllerApi & getTypeSession & Renvoie la liste des types de session. \\
 				\hline
@@ -18,7 +18,7 @@
 				\hline
 			
 				\hline
-					PUT & /api/admin /renewAbo & AbonnementControllerAPI & RenewAbo & renouvelle l'abonnement de l'utilisateur et l'inscrit à ses sessions. \\
+					PUT & /api/admin /renewAbo & AbonnementControllerAPI & RenewAbo & renouvelle l'abonnement de l'utilisateurs et l'inscrit à ses sessions. \\
 				\hline
 					PUT & /api/admin/editAbo & AbonnementControllerAPI & editAbo & Change l'abonnement de l'utilisateur. \\
 				\hline
@@ -35,7 +35,7 @@
 			\begin{center}
 				\begin{tabularx}{1.11\textwidth}{| T{0.11\linewidth} | S{0.22\linewidth} | S{0.3\linewidth} | S{0.151\linewidth} | S{0.175\linewidth} |}
 					\hline
-						PUT & /api/editProfile & ProfileControllerApi & editProfile & Modifie les données de l'utilisateur. \\
+						PUT & /api/editProfile & ProfileControllerApi & editProfile & Modifie les données de l'utilisateurs. \\
 					\hline
 						PUT & /api/TypeSession & RegistrationControllerApi & editTypeSession & Modifie les données du type de session. \\
 					\hline
@@ -63,7 +63,7 @@
 					\hline
 						POST & /api/TypeSession & RegistrationControllerApi & setType- Session & Créer un nouveau type de session. \\
 					\hline
-						POST & /api/register & RegistrationControllerApi & register & Créer un nouvel utilisateur et l'inscrit a ses sessions. \\
+						POST & /api/register & RegistrationControllerApi & register & Créer un nouvelle utilisateur et l'inscrit a ses sessions. \\
 					\hline
 				\end{tabularx}
 			\end{center}

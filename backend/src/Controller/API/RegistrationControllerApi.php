@@ -116,7 +116,7 @@ class RegistrationControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/TypeSession/", name="api_Type_Session", methods={"OPTIONS","GET"})
+     * @Route("/TypeSession", name="api_Type_Session", methods={"OPTIONS","GET"})
      * @return Response
      * @throws Exception
      */
@@ -248,7 +248,10 @@ class RegistrationControllerApi extends AbstractController
              */
             foreach($sessions as $session)
             {
-                $sessionadmin->deleteSession($session->getId());
+                $entityManager = $this->getDoctrine()->getManager();
+                $session = $entityManager->getRepository('App:Session')->find($session->getId());
+                $entityManager->remove($session);
+                $entityManager->flush();
             }
 
             $em->remove($typesession);
@@ -284,27 +287,30 @@ class RegistrationControllerApi extends AbstractController
         /**
          * @var $session Session
          */
-        foreach($Sessions as $session){
+        if(!empty($session)){
+            foreach($Sessions as $session){
 
-            if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions) &
-                !in_array($session->getId(),$listIdSession)){
+                if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions) &
+                    !in_array($session->getId(),$listIdSession)){
 
-                if ($session->getBike() >0 & $user->getAbonnement() > 0) {
-                    $inscription = new Inscription();
+                    if ($session->getBike() >0 & $user->getAbonnement() > 0) {
+                        $inscription = new Inscription();
 
-                    $inscription->setIdPerson($user);
-                    $inscription->setIdSession($session);
+                        $inscription->setIdPerson($user);
+                        $inscription->setIdSession($session);
 
-                    $entityManager->persist($inscription);
-                    $entityManager->flush();
+                        $entityManager->persist($inscription);
+                        $entityManager->flush();
 
-                    $session->setBike($session->getbike() - 1);
-                    $entityManager->persist($session);
-                    $entityManager->flush();
+                        $session->setBike($session->getbike() - 1);
+                        $entityManager->persist($session);
+                        $entityManager->flush();
 
-                    $user->setAbonnement($user->getAbonnement() - 1);
+                        $user->setAbonnement($user->getAbonnement() - 1);
+                    }
                 }
             }
         }
+
     }
 }

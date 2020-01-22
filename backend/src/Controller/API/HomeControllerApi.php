@@ -21,7 +21,7 @@ class HomeControllerApi extends AbstractController
 {
 
     /**
-     * @Route("/", name="api_home", methods={"GET"})
+     * @Route("/home", name="api_home", methods={"GET","OPTIONS"})
      */
     public function index()
     {

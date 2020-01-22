@@ -66,6 +66,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.getYear();
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
+      this.dataSource.sort = this.sort;
     });
   }
 
@@ -95,7 +96,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
 
     this.listPerson = [];
 
-
     this.data = JSON.parse(JSON.stringify(urldata));
 
     for(let i = 0; i < this.data.length; i++){
@@ -108,7 +108,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     }
 
     this.dataSource = new MatTableDataSource(this.listSession);
-    this.dataSource.sort = this.sort;
     this.isLoading = false;
   }
 
@@ -130,6 +129,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
       if(urldata["result"]){
         this.nbrDispBike = this.nbrBike.value;
         this.ngAfterViewInit();
+        this.tool.openSnackBar("Scéance recréee","");
       }
     }, error1 => (this.handelError(error1)));
   }
@@ -138,6 +138,8 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.postCancelSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
+        this.tool.openSnackBar("Scéance annulée","");
+        console.log(urldata)
       }
     }, error1 => (this.handelError(error1)));
   }
@@ -146,6 +148,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.api.deleteSess(id).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngAfterViewInit();
+        this.tool.openSnackBar("Scéance suprimée","");
       }
     }, error1 => (this.handelError(error1)));
   }

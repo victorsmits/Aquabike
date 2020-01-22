@@ -89,7 +89,7 @@
       </div>
 
       <ng-template #cancelBtn>
-        <button mat-flat-button matTooltip="Annuler" disabled >
+        <button mat-flat-button matTooltip="Désinscription" disabled >
           <mat-icon *ngIf="checkIfSub(element);then unsub else sub"></mat-icon>
         </button>
       </ng-template>
@@ -102,17 +102,17 @@
 
       <ng-template #sub>
           <mat-icon color="white" matTooltip="Inscription"
-                    (click)="subscribe(element.Id)">add</mat-icon>
+                    (click)="subscribe(element)">add</mat-icon>
       </ng-template>
 
       <ng-template #unsub>
           <mat-icon color="white" matTooltip="Désinscription"
-                    (click)="unSubscribe(element.Id)">check</mat-icon>
+                    (click)="unSubscribe(element)">check</mat-icon>
       </ng-template>
 
       <ng-template #unsub2>
           <mat-icon [ngStyle]="{color : '#44c344'}" matTooltip="Désinscription"
-                    (click)="unSubscribe(element.Id)">check</mat-icon>
+                    (click)="unSubscribe(element)">check</mat-icon>
       </ng-template>
 
 

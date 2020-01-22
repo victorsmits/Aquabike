@@ -7,6 +7,7 @@ use App\Entity\TypeSession;
 use DateTime;
 use Doctrine\DBAL\Driver\PDOException;
 use Doctrine\ORM\ORMException;
+use Swift_Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -25,7 +26,7 @@ class CreateSessionControllerApi extends AbstractController
      * @return Response
      * @throws Exception
      */
-    public function index(Request $request)
+    public function index(Request $request,Swift_Mailer $mailer)
     {
         $session = new Session();
         $data = json_decode($request->getContent(), true);
@@ -46,6 +47,31 @@ class CreateSessionControllerApi extends AbstractController
 
             $entityManager->persist($session);
             $entityManager->flush();
+
+            $listPerso = $entityManager->getRepository('App:Person')->findAll();
+
+            foreach ($listPerso as $perso){
+                $info = [$perso->getFirstName(),
+                    $perso->getLastName(),
+                    $session->getDate()->format('Y/m/d'),
+                    $session->getTime()->format('H:i')];
+
+                $message = (new \Swift_Message('Scéance de rattrapage le '. $session->getDate()->format('Y/m/d') . " " .$session->getTime()->format('H:i')))
+                    ->setFrom('noreply@aquabikegenval.be')
+                    ->setTo($perso->getEmail())
+                    ->setBody(
+                        "<h1>Scéance de rattrapage !</h1>
+
+Bonjour ". $info[1]." ". $info[0].", une session de rattrapage le ".$info[2]." à ".$info[3]." a été ajouté!
+
+Rendez-vous sur <a href=\"http://www.aquabikegenval.be/month\">http://www.aquabikegenval.be/month</a> pour vous inscrire à une nouvelle session .
+
+Merci!",
+                        'text/html'
+                    );
+                $mailer->send($message);
+            }
+
             return new JsonResponse(['result' => true,'session' => $session], 200);
         }
         catch(Exception $e)
@@ -64,12 +90,21 @@ class CreateSessionControllerApi extends AbstractController
      */
     public function createSession(Request $request){
         $data = json_decode($request->getContent(), true);
-        $year = $data["year"];
         $entityManager = $this->getDoctrine()->getManager();
+
+        $avoid_month = ["1","7","8"];
+
+        $today = new DateTime();
+
+        if(in_array($today->format('m'),$avoid_month)){
+            $year = $data["year"] + 1;
+        }else{
+            $year = $data["year"];
+        }
 
         $date = new DateTime();
         $end = new DateTime();
-        date_add($end, date_interval_create_from_date_string($year . "years"));
+        date_add($end, date_interval_create_from_date_string($year . "months"));
 
         try
         {
@@ -81,14 +116,15 @@ class CreateSessionControllerApi extends AbstractController
                 throw new Exception('Aucun type de session à été trouvé');
             }
 
+
             while ($date < $end){
-                if ($date->format('m') != "7" && $date->format('m') != "8" ){
+                if (!in_array($date->format('m'),$avoid_month)) {
                     /**
                      * @var $type TypeSession
                      * @var $session Session
                      */
-                    foreach($typeSession as $type){
-                        if($type->getDay() == $date->format("D") ){
+                    foreach ($typeSession as $type) {
+                        if ($type->getDay() == $date->format("D")) {
                             $session = new Session();
 
                             $session->setDate(new DateTime($date->format("Y/m/d")));
@@ -96,16 +132,12 @@ class CreateSessionControllerApi extends AbstractController
                             $session->setBike($data["bike"]);
                             $session->setIdTypeSession($type);
 
-                            if($this->checkIfExist($session)){
+                            if ($this->checkIfExist($session)) {
                                 $entityManager->persist($session);
                                 $entityManager->flush();
-                            }else{
-                                throw new Exception('Session already exist');
                             }
-
                         }
                     }
-
                 }
                 date_add($date, date_interval_create_from_date_string("1 day"));
             }

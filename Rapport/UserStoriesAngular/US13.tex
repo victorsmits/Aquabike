@@ -1,11 +1,11 @@
 \begin{enumerate}
-	\item L'administrateur se connecte au site avec ses identifiants. 
-	\item Un nouveau bouton de navigation apparait dans la barre de navigation. 
+	\item L'administrateur se connecte au site avec ses identifiant. 
+	\item Un nouveau bouton de navigation apparait dans la bar de navigation. 
 	\item L'administrateur clique sur le bouton \textit{Admin}
 	\item Il sélectionne \textit{Type Session} dans le menu déroulant. 
-	\item L'administrateur atterrit sur la page de gestion des types de sessions. 
+	\item L'administrateur atterris sur la page de gestion des type de sessions. 
 	\item Il clique sur le bouton edit
-	\item Un formulaire apparait et il le remplit avec les bonnes informations (jour - heure [hh:mm])
+	\item Un formulaire apparait et il le remplis avec les bonne information (jour - heure [hh:mm])
 	\item Il clique sur \textit{ok} 
 \end{enumerate}
 
@@ -29,13 +29,9 @@
 
 \subsubsection{Gestion des erreurs}
 	\paragraph{}
-		Chaque type de session est unique, si l'administrateur rentre des informations correspondant à un type de session deja existant, une erreur apparaitra au dessus du formulaire.
-	
-\subsubsection{Diagramme de séquence}
-	\paragraph{}
-		Le diagramme de séquence de la modification d'un type de session est identique à celui de la création de session. Seule la première méthode appelé dans le backend change pour devenir \textit{editTypeSession}. 
-
-\subsubsection{Scripts concernés}
+		Chaque type de sessions est unique, si l'administrateur rentre des informations correspondant à un type de sessions deja existant, une erreur apparaitra au dessus du formulaire.
+		
+\subsubsection{Script concerné}
 	\begin{itemize}
 		\item \Href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Controller/API/RegistrationControllerApi.php}{RegistrationControllerApi.php}
 		\item \Href{https://github.com/victorsmits/Aquabike/blob/master/backend/src/Entity/TypeSession.php}{TypeSession.php}

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from '@angular/common/http';
-import {AuthLoginData, AuthSignupData, editAbo, Inscription, Sessions, TypeSession} from '../Interface/Interface.module';
+import {AuthLoginData, AuthSignupData, editAbo, Inscription, Payment, Sessions, TypeSession} from '../Interface/Interface.module';
 import {Router} from "@angular/router";
 import {catchError} from 'rxjs/operators';
 import {Observable, Subject, throwError} from 'rxjs';
@@ -13,13 +13,13 @@ import {Observable, Subject, throwError} from 'rxjs';
 
 export class ApiService {
 
-  public ip = "http://51.178.29.162:3000";
+  public ip = "https://www.aquabikegenval.be";
   // public ip = "https://127.0.0.1:8000";
 
   constructor(private http: HttpClient, private router:Router) { }
 
   getHomeJson(){
-    return this.http.get(this.ip + '/api').pipe(
+    return this.http.get(this.ip + '/api/home').pipe(
       catchError(this.handelError));
   }
 
@@ -135,13 +135,23 @@ export class ApiService {
       catchError(this.handelError));
   }
 
+  addPayment(pay : Payment){
+    let url = this.ip + "/api/admin/pay";
+    return this.http.post(url,pay).pipe(
+      catchError(this.handelError));
+  }
+
   handelError(err){
     if(err instanceof HttpErrorResponse){
-      return throwError(err.error.error);
-    }else{
+      let error = new HttpErrorResponse(err);
+      if(error.status == 500){
+        return throwError("Something bad happen, please try again later!");
+      }else{
+        return throwError(err.error.error);
+      }
+    } else{
       return throwError(err.message)
     }
 
   }
-
 }

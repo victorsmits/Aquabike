@@ -66,13 +66,13 @@ export class EditProfileComponent implements OnInit{
   }
 
   EditTypeSession(type : TypeSession) {
-    if(this.checkSession(type) == null){
+    if(this.data.typeSessions.indexOf(type) == -1){
       console.log('add '+ type);
       this.data.typeSessions.push(type);
+      console.log('del '+ type.Day + type.Time);
     }else{
-      console.log('del '+ type);
-
-      this.data.typeSessions.splice(this.checkSession(type),1)
+      this.data.typeSessions.splice(this.data.typeSessions.indexOf(type),1);
+      console.log('del '+ type.Day + type.Time);
     }
   }
 
@@ -81,7 +81,7 @@ export class EditProfileComponent implements OnInit{
     let i =0;
     for(let type of this.data.typeSessions){
       i ++;
-      session.Id == type.Id ? state = i : state = null;
+      session.Id == type.Id ? state = true : state = false;
     }
     return state
   }

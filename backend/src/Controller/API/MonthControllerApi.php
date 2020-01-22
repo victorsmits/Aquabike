@@ -15,6 +15,7 @@ use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  *@Route("/api")
@@ -124,6 +125,8 @@ class MonthControllerApi extends AbstractController
     public function removeInscription(Request $request,$username,$id){
         $entityManager = $this->getDoctrine()->getManager();
 
+        $today = new DateTime();
+
         $data = json_decode($request->getContent(), true);
         $errors = [];
 
@@ -145,20 +148,20 @@ class MonthControllerApi extends AbstractController
                 ->getRepository('App:Inscription')
                 ->findInscription($session,$user);
 
-            if($session->getDate() != date('now')) {
-                $entityManager->remove($inscription);
-                $entityManager->flush();
+            $entityManager->remove($inscription);
+            $entityManager->flush();
 
-                $session->setBike($session->getbike() + 1);
-                $entityManager->persist($session);
-                $entityManager->flush();
+            $session->setBike($session->getbike() + 1);
+            $entityManager->persist($session);
+            $entityManager->flush();
 
+            if($session->getDate()->format('Y-m-d') !== date('Y-m-d')) {
                 $user->setAbonnement($user->getAbonnement() + 1);
                 $entityManager->persist($user);
                 $entityManager->flush();
-
-                return new JsonResponse(['result' => true]);
             }
+
+            return new JsonResponse(['result' => true]);
         }catch (\Exception $e){
             $errors = $e;
 

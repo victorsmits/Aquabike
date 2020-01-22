@@ -80,10 +80,16 @@ class Person implements \Serializable, UserInterface
      */
     private $IdTypeSession;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Payement", mappedBy="Person")
+     */
+    private $payements;
+
     public function __construct()
     {
         $this->Id_Inscription = new ArrayCollection();
         $this->IdPerson = new ArrayCollection();
+        $this->payements = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -334,6 +340,37 @@ class Person implements \Serializable, UserInterface
             // set the owning side to null (unless already changed)
             if ($idPerson->getIdPerson() === $this) {
                 $idPerson->setIdPerson(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Payement[]
+     */
+    public function getPayements(): Collection
+    {
+        return $this->payements;
+    }
+
+    public function addPayement(Payement $payement): self
+    {
+        if (!$this->payements->contains($payement)) {
+            $this->payements[] = $payement;
+            $payement->setPerson($this);
+        }
+
+        return $this;
+    }
+
+    public function removePayement(Payement $payement): self
+    {
+        if ($this->payements->contains($payement)) {
+            $this->payements->removeElement($payement);
+            // set the owning side to null (unless already changed)
+            if ($payement->getPerson() === $this) {
+                $payement->setPerson(null);
             }
         }
 

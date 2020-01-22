@@ -92,7 +92,7 @@ class ProfileControllerApi extends AbstractController
 
             if($data["password"] != null){
                 $encodedPassword = $passwordEncoder->encodePassword($userInfo, $data['password']);
-                $userInfo->setLastName($encodedPassword);
+                $userInfo->setPassword($encodedPassword);
             }
             $ltps = $entityManager
                 ->getRepository('App:LienPersonTypeSession')

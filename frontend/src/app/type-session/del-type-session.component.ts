@@ -5,6 +5,7 @@ import {ApiService} from '../service/api.service';
 import {ToolService} from '../service/tool.service';
 import {NgForm} from '@angular/forms';
 import {TypeSession, User} from '../Interface/Interface.module';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'del-abo',
@@ -16,7 +17,7 @@ export class DelTypeSessionComponent implements OnInit{
   constructor(
     public dialogRef: MatDialogRef<DelTypeSessionComponent>,
     public api : ApiService,
-    @Inject(MAT_DIALOG_DATA) public data: TypeSession,) {
+    @Inject(MAT_DIALOG_DATA) public data: TypeSession) {
   }
 
   ngOnInit(): void {
@@ -29,7 +30,7 @@ export class DelTypeSessionComponent implements OnInit{
   Delete(Id: any) {
     this.api.delTypeSession(Id).subscribe(result=>{
       if(result['result']){
-        this.ngOnInit();
+        this.dialogRef.close();
       }
     })
   }

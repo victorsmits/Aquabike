@@ -1,7 +1,5 @@
-<mat-card *ngIf="isLoading" style="margin: auto">
-  <mat-spinner style="margin: auto"></mat-spinner>
-</mat-card>
 
+<mat-error *ngIf="error">{{error}}</mat-error>
 <mat-table *ngIf="!isLoading" [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <!-- LastName Column -->
@@ -18,40 +16,48 @@
 
   <!-- Abonnement Column -->
   <ng-container matColumnDef="Abonnement">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>Abonnement</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Séances restantes</mat-header-cell>
     <mat-cell *matCellDef="let element">{{element.abonnement}}</mat-cell>
   </ng-container>
 
   <!-- Abonnement Type Column -->
   <ng-container matColumnDef="AboType">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>Type Abonnement</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{element.AboType}}</mat-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Nombre total de séance</mat-header-cell>
+    <mat-cell *matCellDef="let element" >{{element.AboType}}</mat-cell>
   </ng-container>
 
-  <!-- Day Column -->
-  <ng-container matColumnDef="Day">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>Jour</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{element.Day}}</mat-cell>
+  <!-- Prix Column -->
+  <ng-container matColumnDef="amount">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Payement</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <p *ngIf="element.Payments.type != null ; else Pay" > {{element.Payments.amount}} € en {{element.Payments.type}} </p>
+      <ng-template #Pay>
+        <button mat-flat-button  color="primary" matTooltip="Payement" class="actionb-btn" (click)="openPay(element)">
+          <mat-icon>euro</mat-icon>
+        </button>
+      </ng-template>
+    </mat-cell>
   </ng-container>
 
-  <!-- ReSubscribe Column-->
-  <ng-container matColumnDef="Action">
+
+  <!-- Action Column-->
+  <ng-container matColumnDef="Action" class = "action-col">
 
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
 
-    <mat-cell *matCellDef="let element">
+    <mat-cell *matCellDef="let element" >
       <button mat-flat-button  color="primary" matTooltip="Renew">
         <mat-icon [ngStyle]="{'color':'white'}" (click)="reSubcribe(element)">replay</mat-icon>
       </button>
 
-      <button mat-flat-button  color="primary" matTooltip="Edit" style="margin-left: 10%">
+      <button mat-flat-button  color="primary" matTooltip="Edit" class="actionb-btn">
         <mat-icon [ngStyle]="{'color':'white'}" (click)="openDialog(element.firstName,
         element.lastName,element.id,element.AboType)">
           edit
         </mat-icon>
       </button>
 
-      <button mat-flat-button  color="primary" matTooltip="Delete" style="margin-left: 10%">
+      <button mat-flat-button  color="primary" matTooltip="Delete" class="actionb-btn">
         <mat-icon [ngStyle]="{'color':'white'}" (click)="openDeleteDialog(element)">
           delete
         </mat-icon>
@@ -59,7 +65,6 @@
     </mat-cell>
 
   </ng-container>
-
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;">

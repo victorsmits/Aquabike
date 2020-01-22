@@ -7,31 +7,40 @@
   <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
 
       <mat-form-field>
-        <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+        <input matInput name="Email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email >
         <mat-error *ngIf="emailInput.invalid">please enter valid email</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput name="username" ngModel type="text" placeholder="Username" #usernameInput="ngModel" required username>
+        <input matInput name="User" ngModel type="text" placeholder="Username" #usernameInput="ngModel" required>
         <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput name="Nom" ngModel type="text" placeholder="Nom" #usernameInput="ngModel" required>
-        <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
+        <input matInput name="LN" ngModel type="text" placeholder="Nom" #LastnameInput="ngModel" required>
+        <mat-error *ngIf="LastnameInput.invalid">please enter valid Lastname</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput name="Prenom" ngModel type="text" placeholder="Prenom" #usernameInput="ngModel" required>
+        <input matInput name="FN" ngModel type="text" placeholder="Prenom" #FirstnameInput="ngModel" required>
+        <mat-error *ngIf="FirstnameInput.invalid">please enter valid Firstname</mat-error>
+      </mat-form-field>
+
+      <ng-container >
+        <mat-radio-group [(ngModel)]="typeClient" (change)="setTypeClient($event.value)"
+                         [ngModelOptions]="{standalone: true}">
+          <mat-radio-button *ngFor="let client of listTypeClient" [value]="client" class="radio-group">
+            {{client}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </ng-container>
+
+      <mat-form-field *ngIf="abo">
+        <input matInput name="Abonnement" ngModel type="number" placeholder="Abonnement" #usernameInput="ngModel">
         <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
       </mat-form-field>
 
-      <mat-form-field>
-        <input matInput name="Abonnement" ngModel type="number" placeholder="Abonnement" #usernameInput="ngModel" required>
-        <mat-error *ngIf="usernameInput.invalid">please enter valid Username</mat-error>
-      </mat-form-field>
-
-      <ng-container>
+      <ng-container *ngIf="abo">
         <ul *ngFor="let session of listTypeSession" >
           <mat-checkbox (change)="addTypeSession(session.Id)">
             {{session.Day}} {{session.Time}}
@@ -41,14 +50,14 @@
 
       <mat-form-field>
         <label>
-          <input matInput name="password" ngModel type="password" placeholder="Password" #passwordInput="ngModel" required password>
+          <input matInput name="PWD" ngModel type="password" placeholder="Password" #passwordInput="ngModel" required password>
         </label>
         <mat-error *ngIf="passwordInput.invalid">please enter valid password</mat-error>
       </mat-form-field>
 
       <mat-form-field>
         <label>
-          <input matInput name="passwordConfirmation" ngModel type="password" placeholder="Repeat Password" #passwordInput="ngModel" required password>
+          <input matInput name="passwordConfirmation" ngModel type="password" placeholder="Repeat Password" #passwordInput="ngModel" required password >
         </label>
         <mat-error *ngIf="passwordInput.invalid">please enter valid password</mat-error>
       </mat-form-field>

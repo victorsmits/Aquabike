@@ -110,28 +110,30 @@ export class MonthComponent implements OnInit, AfterViewInit {
     });
   }
 
-  subscribe(Id: number) {
+  subscribe(session : Sessions) {
     let tempInscription : Inscription={
       Username:this.user.username,
-      Id: Id
+      Id: session.Id
     };
 
     this.api.createInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngOnInit();
+        this.tool.openSnackBar("Vous vous êtes inscrit(e) le",session.Date)
       }
     });
   }
 
-  unSubscribe(id: number) {
+  unSubscribe(session:Sessions) {
     let tempInscription : Inscription={
       Username:this.user.username,
-      Id: id
+      Id: session.Id
     };
 
     this.api.delInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
         this.ngOnInit();
+        this.tool.openSnackBar("Vous vous êtes désinscrit(e) du",session.Date)
       }
     });
   }
@@ -161,7 +163,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
         tempSess.Person = this.tool.initListPersDetail(this.data[i]["idInscription"]);
         this.listSession.push(tempSess);
       }
-
     }
 
     this.dataSource = new MatTableDataSource(this.listSession);
@@ -186,7 +187,6 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   checkIfDisable(element) : boolean{
     return element.Cancel || element.Bike == 0 || (this.user.abonnement == 0 && !this.checkIfSub(element))
-      || (element.Date === this.tool.switchDate(this.today) && this.checkIfSub(element))
   }
 
   checkIfSub(element) : boolean{

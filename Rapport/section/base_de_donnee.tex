@@ -1,4 +1,4 @@
-\section{Diagramme Entité Relation}
+\section{Diagramme Entité relation}
 	\begin{figure}[h!]
        	\includegraphics[width=0.8\linewidth, center]{Figures/Entite-relation.png}
        	\caption{Diagramme Relationnel}
@@ -16,17 +16,17 @@
 	\paragraph{}
 		\begin{tabularx}{\linewidth}{|T{0.15\linewidth}|T{0.15\linewidth}|T{0.15\linewidth}|Y|}
 			\hline
-			Tables & Tables & Types & Description\\
+			Table & Table & Type & Description\\
 			\hline	
 			Person & Inscription & 1 à N & Une personne possède plusieurs inscriptions. \\
 			\hline
-			Session & Inscription & 1 à N & Une session a plusieurs inscriptions. \\
+			Session & Inscription & 1 à N & Une session à plusieurs inscriptions. \\
 			\hline
-			Session & Type Session & N à 1 & Plusieurs sessions correspondent à un type de sessions, un type de session peut correspondre à plusieurs sessions. \\
+			Session & Type Session & N à 1 & Plusieurs sessions corresponde à un type de sessions, un type de session peut correspondre à plusieurs sessions. \\
 			\hline
 			Person & Lien person type session & 1 à N & Une Personne possède plusieurs liens, plusieurs liens corresponde à une personne. \\
 			\hline
-			Type Session & Lien person type session & 1 à N & Un type de session possède plusieurs liens, plusieurs liens correspondent à un seul type de session. \\
+			Type Session & Lien person type session & 1 à N & Un type de session possède plusieurs liens, plusieurs liens corresponde à un seul type de session. \\
 			\hline
 		\end{tabularx}
 		
@@ -34,7 +34,7 @@
 \section{Description précise des champs}
 	\subsection{Table : Person}
 		\paragraph{}
-			\begin{tabularx}{\linewidth}{|T{0.14\linewidth}|T{0.05\linewidth}|T{0.05\linewidth}|T{0.13\linewidth}|T{0.12\linewidth}|T{0.15\linewidth}|Y|}
+			\begin{tabularx}{\linewidth}{|T{0.14\linewidth}|T{0.05\linewidth}|T{0.05\linewidth}|T{0.13\linewidth}|T{0.14\linewidth}|T{0.13\linewidth}|Y|}
 				\hline
 				Nom & Key & NN & Type & Référence & Intitulé & Commentaire \\
 				\hline
@@ -54,7 +54,7 @@
 				\hline
 				email & & O & varchar(45) & & Adresse Email & Unique \\
 				\hline
-				abo\_type & & O & int & & Abonnement origine & \\
+				abo\_type & & O & int & & obonnement origine & \\
 				\hline
 			\end{tabularx}
 	
@@ -71,9 +71,9 @@
 				\hline
 				time & & O & Time & & heure & \\
 				\hline
-				bike & & O & int & & Nombre de vélos restants & \\
+				bike & & O & int & & Nombre de vélo restante & \\
 				\hline
-				cancel & & O & Boolean & & Statut de la session & Default = Null\\
+				cancel & & O & Boolean & & Status de la session & Default = Null\\
 				\hline
 				id type session & FK & O & int & id / typeSession & Lien avec le type de session & Default = Null\\
 				\hline

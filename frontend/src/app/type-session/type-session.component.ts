@@ -64,6 +64,7 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
 
     dialogRef.afterClosed().subscribe(result => {
       this.ngOnInit();
+      this.tool.openSnackBar("Modification de l'horaire éffectuée","")
     });
   }
 
@@ -72,12 +73,20 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
       width : '250px',
       data : this.listTypeSession[Id].Person
     });
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit();
+    });
   }
 
   openDeleteDialog(Id : any){
+    let sess = this.listTypeSession[Id].Day + " " + this.listTypeSession[Id].Time;
     const dialogRef = this.dialog.open(DelTypeSessionComponent, {
       width : '550px',
       data : this.listTypeSession[Id]
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit();
+      this.tool.openSnackBar("Suppression de l'horaire",sess)
     });
   }
 

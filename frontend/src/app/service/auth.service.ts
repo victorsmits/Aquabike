@@ -17,8 +17,7 @@ export class AuthService {
   public data: JSON[];
   public User: User;
   public errorListener : Subject<String> =  new Subject<String>();
-  public ip = "http://51.178.29.162:3000";
-  // public ip = "https://127.0.0.1:8000";
+  public ip = this.api.ip;
 
   constructor(private http: HttpClient,
               private cookie : CookieService,
@@ -106,8 +105,11 @@ export class AuthService {
     for(let i = 0; i < inscription.length; i++) {
       this.User.Session.push(this.tool.initTempSess(inscription[i]["idSession"],inscription[i]["idSession"]["date"]));
     }
-    this.cookie.set('user',JSON.stringify(this.User));
-    this.cookie.set('connected',"true");
+    var now = new Date(),
+      // this will set the expiration to 12 months
+      exp = new Date(now.getFullYear()+1, now.getMonth(), now.getDate());
+    this.cookie.set('user',JSON.stringify(this.User),exp,"/","aquabikegenval.be",true,"Lax");
+    this.cookie.set('connected',"true",exp,"/","aquabikegenval.be",true,"Lax");
 
   }
 
