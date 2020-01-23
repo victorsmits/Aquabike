@@ -124,7 +124,7 @@ class RegistrationControllerApi extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $listSession = $em
             ->getRepository('App:TypeSession')
-            ->findAll();
+            ->findAllOrdered();
 
         $defaultContext = [
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
@@ -287,7 +287,7 @@ class RegistrationControllerApi extends AbstractController
         /**
          * @var $session Session
          */
-        if(!empty($session)){
+        if(!empty($Sessions)){
             foreach($Sessions as $session){
 
                 if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions) &
@@ -311,6 +311,8 @@ class RegistrationControllerApi extends AbstractController
                 }
             }
         }
-
+        else{
+            throw new \Symfony\Component\Config\Definition\Exception\Exception("session list empty");
+        }
     }
 }

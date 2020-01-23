@@ -107,9 +107,13 @@ export class AuthService {
     }
     var now = new Date(),
       // this will set the expiration to 12 months
-      exp = new Date(now.getFullYear()+1, now.getMonth(), now.getDate());
+    exp = new Date(now.getFullYear()+1, now.getMonth(), now.getDate());
+
     this.cookie.set('user',JSON.stringify(this.User),exp,"/","aquabikegenval.be",true,"Lax");
     this.cookie.set('connected',"true",exp,"/","aquabikegenval.be",true,"Lax");
+
+    // this.cookie.set('user',JSON.stringify(this.User),);
+    // this.cookie.set('connected',"true");
 
   }
 

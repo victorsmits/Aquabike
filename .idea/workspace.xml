@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="uge bug fix. add mail config . add payment feature">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/HomeControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/HomeControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/ProfileControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controller/API/RegistrationControllerApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/AbonnementController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/AdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/CreateSessionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/EditProfileController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/MonthController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/MoreInfoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/ProfileController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/RegistrationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/SecurityController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controller/SessionAdministrationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Form/RegistrationFormType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Form/SessionType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Repository/TypeSessionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Repository/TypeSessionRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/abonnement/abonnement.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/admin/admin.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/create_session/session.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/edit_profile/EditPorfile.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/emails/email.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/home/home.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/month/month.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/more_info/moreinfo.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/profile/Profile.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/registration/register.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/security/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/session_administration/SessionAdmin.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +60,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Aquabike: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Aquabike: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -471,7 +516,7 @@
       <workItem from="1579724020692" duration="576000" />
       <workItem from="1579725337344" duration="1299000" />
       <workItem from="1579727916629" duration="424000" />
-      <workItem from="1579768424751" duration="3362000" />
+      <workItem from="1579768424751" duration="15682000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -725,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579717190807</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update .gitignore">
+      <created>1579782983011</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1579782983028</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,7 +813,6 @@
       <path value="$PROJECT_DIR$/backend" />
       <path value="$PROJECT_DIR$/Symfony-Twig" />
     </ignored-roots>
-    <MESSAGE value="add directive" />
     <MESSAGE value="Last stable version" />
     <MESSAGE value="Add profile page" />
     <MESSAGE value="add admin page for abonnement renew" />
@@ -786,7 +837,8 @@
     <MESSAGE value="working on Type session page&#10;todo -&gt; edit type session" />
     <MESSAGE value="auto generation with session type -&gt; ok&#10;auto subscription -&gt; ok" />
     <MESSAGE value="uge bug fix. add mail config . add payment feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="uge bug fix. add mail config . add payment feature" />
+    <MESSAGE value="update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
@@ -924,10 +976,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1573228739471" />
-    <state width="239" height="457" key="HiddenNamespacesPopup" timestamp="1579727990870">
+    <state width="239" height="457" key="HiddenNamespacesPopup" timestamp="1579783739801">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="239" height="458" key="HiddenNamespacesPopup/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1574848697872" />
+    <state width="239" height="457" key="HiddenNamespacesPopup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1579783739801" />
     <state width="239" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1579727990870" />
     <state width="312" height="549" key="HiddenNamespacesPopup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575805179522" />
     <state width="312" height="549" key="HiddenNamespacesPopup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577180425814" />
@@ -940,6 +993,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="558" y="363" key="NewPhpClassDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1574424414626" />
+    <state x="438" y="168" key="RollbackChangesDialog" timestamp="1579793390021">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="438" y="168" key="RollbackChangesDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1579793390021" />
     <state x="245" y="111" key="SettingsEditor" timestamp="1579719242619">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -995,10 +1052,11 @@
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576318098248" />
     <state x="75" y="66" width="1290" height="750" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.791@0.23.1440.791" timestamp="1573816591952" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1920.1057/1920.23.1920.1057@0.23.1920.1057" timestamp="1573398480671" />
-    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579704406846">
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579796561651">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575455000233" />
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1579796561651" />
     <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1579704406846" />
     <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575719141649" />
     <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576318185438" />

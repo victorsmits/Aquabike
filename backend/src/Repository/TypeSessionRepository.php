@@ -32,6 +32,11 @@ class TypeSessionRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findAllOrdered()
+    {
+        return $this->findBy(array(),['Day' => 'DESC','Time' => 'ASC'] );
+    }
+
 
     /*
     public function findOneBySomeField($value): ?TypeSession

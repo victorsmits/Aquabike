@@ -23,33 +23,39 @@ class Person implements \Serializable, UserInterface
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      * @MaxDepth(1)
+     * @Groups({"Profile"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("Home")
+     * @Groups({"Profile"})
      */
     private $LastName;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("Home")
+     * @Groups({"Profile"})
      */
     private $FirstName;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"Profile"})
      */
     private $Abonnement;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Inscription", mappedBy="Id_Person")
+     * @Groups({"Profile"})
      */
     private $Id_Inscription;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"Profile"})
      */
     private $Password;
 
@@ -57,31 +63,37 @@ class Person implements \Serializable, UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"Profile"})
      */
     private $role = 'ROLE_USER';
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
+     * @Groups({"Profile"})
      */
     private $Username;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
+     * @Groups({"Profile"})
      */
     private $Email;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"Profile"})
      */
     private $AboType;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\LienPersonTypeSession", mappedBy="IdPerson")
+     * @Groups({"Profile"})
      */
     private $IdTypeSession;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Payement", mappedBy="Person")
+     * @Groups({"Profile"})
      */
     private $payements;
 

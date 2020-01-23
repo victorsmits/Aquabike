@@ -17,6 +17,7 @@ class Session
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"Profile"})
      */
     private $id;
 
@@ -42,7 +43,7 @@ class Session
      * @ORM\OneToMany(targetEntity="App\Entity\Inscription", mappedBy="Id_Session")
      * @Groups({"Home"})
      */
-    private $Id_Inscription;
+    private $Inscription;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
@@ -58,7 +59,7 @@ class Session
 
     public function __construct()
     {
-        $this->Id_Inscription = new ArrayCollection();
+        $this->Inscription = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -107,13 +108,13 @@ class Session
      */
     public function getIdInscription(): Collection
     {
-        return $this->Id_Inscription;
+        return $this->Inscription;
     }
 
     public function addIdInscription(Inscription $idInscription): self
     {
-        if (!$this->Id_Inscription->contains($idInscription)) {
-            $this->Id_Inscription[] = $idInscription;
+        if (!$this->Inscription->contains($idInscription)) {
+            $this->Inscription[] = $idInscription;
             $idInscription->setIdSession($this);
         }
 
@@ -122,8 +123,8 @@ class Session
 
     public function removeIdInscription(Inscription $idInscription): self
     {
-        if ($this->Id_Inscription->contains($idInscription)) {
-            $this->Id_Inscription->removeElement($idInscription);
+        if ($this->Inscription->contains($idInscription)) {
+            $this->Inscription->removeElement($idInscription);
             // set the owning side to null (unless already changed)
             if ($idInscription->getIdSession() === $this) {
                 $idInscription->setIdSession(null);

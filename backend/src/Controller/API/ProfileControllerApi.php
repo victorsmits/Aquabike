@@ -46,11 +46,46 @@ class ProfileControllerApi extends AbstractController
             AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
                 return $object->getId();
             },
-            ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
+            ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT => 0,
             AbstractNormalizer::IGNORED_ATTRIBUTES =>['Password','plainPassword','idTypeSession',
-                'sessions'],
+                'sessions','idInscription'=> ['idInscription'],'__cloner__','__isInitialized__','__initializer__'],
+            AbstractNormalizer::ATTRIBUTES => ["id",
+                "LastName",
+                "FirstName",
+                "Abonnement",
+                "role",
+                "roles",
+                "Username",
+                "AboType",
+                "Email",
+                'idInscription' => ['id',
+                    'idSession'=>['id',
+                        'date',
+                        'time',
+                        'bike',
+                        'cancel']
+                ],
+                'IdTypeSession'=>[
+                    'id',
+                    'IdTypeSession'=> [
+                        'id',
+                        'day',
+                        'time'
+                    ]
+                ],
+                'payements' => [
+                    "id",
+                    "startDate",
+                    "endDate",
+                    "Amount",
+                    "Type",
+                    "Person",
+                    "Finish"
+                ]
+            ],
             ObjectNormalizer::ENABLE_MAX_DEPTH => true,
-            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
+            DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i',
+            AbstractNormalizer::GROUPS => "Profile"
         ];
 
         $encoders = array(new JsonEncode());
@@ -129,5 +164,53 @@ class ProfileControllerApi extends AbstractController
 
     }
 
+    /**
+     * @Route("/profile/inscription/{user}", name="api_edit_profile", methods={"GET","OPTIONS"})
+     * @param $user
+     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @return JsonResponse
+     */
+    public function getInscritpion($user){
+        try{
+            $entityManager = $this->getDoctrine()->getManager();
 
+            /**
+             * @var $userInfo Person
+             * @var TypeSession $typeSession
+             * @var TypeSession $type
+             */
+            $userInfo = $entityManager
+                ->getRepository('App:Person')
+                ->getPersonFromUsername($user);
+
+            $inscritpion = $entityManager
+                ->getRepository('App:Inscription')
+                ->findBy(["Id_Person"=>$userInfo->getId()]);
+
+            $defaultContext = [
+                AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
+                    return $object->getId();
+                },
+                ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
+                AbstractNormalizer::IGNORED_ATTRIBUTES =>['__initializer__','idTypeSession','idInscription',
+                    'idPerson','__cloner__','__isInitialized__'],
+                ObjectNormalizer::ENABLE_MAX_DEPTH => true,
+                DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
+            ];
+
+            $encoders = array(new JsonEncode());
+            $normalizers = array(new DateTimeNormalizer(),new ObjectNormalizer());
+            $serializer = new Serializer($normalizers,$encoders);
+
+            $jsonUser = $serializer->serialize($inscritpion, 'json', $defaultContext);
+            $Inscritpion = new JsonResponse();
+            $Inscritpion->setContent($jsonUser);
+
+            return $Inscritpion;
+
+        }catch (\Exception $e){
+            return new JsonResponse(["error"=> $e->getMessage()], 400);
+        }
+
+    }
 }
