@@ -2,11 +2,12 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ApiService} from '../service/api.service';
 import {ToolService} from '../service/tool.service';
 import { TypeSession} from '../Interface/Interface.module';
-import { MatDialog} from '@angular/material';
+import {MatDialog, MatTableDataSource} from '@angular/material';
 import {AddTypeSessionComponent} from './add-type-session.component';
 import {EditTypeSessionComponent} from './edit-type-session.component';
 import {listAboSession} from './list-abo-session.component';
 import {DelTypeSessionComponent} from './del-type-session.component';
+import {MatSort} from '@angular/material/sort';
 
 
 @Component({
@@ -16,9 +17,13 @@ import {DelTypeSessionComponent} from './del-type-session.component';
 })
 export class TypeSessionComponent implements OnInit, AfterViewInit {
   public listTypeSession: TypeSession[] = [];
+  public data : MatTableDataSource<TypeSession>;
   displayedColumns: string[] = ['Day','Time','Action','Add'];
   error: any;
   isLoading: boolean = true;
+
+  // @ts-ignore
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(private api : ApiService,
               private tool : ToolService,
@@ -31,6 +36,8 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
       str = str.replace(/"idTypeSession"/gi, "\"idPerson\"");
 
       this.listTypeSession = this.tool.initTypeSession(str);
+      this.data = new MatTableDataSource<TypeSession>(this.listTypeSession);
+      this.data.sort = this.sort;
       this.isLoading = false
     })
   }
@@ -42,6 +49,8 @@ export class TypeSessionComponent implements OnInit, AfterViewInit {
       str = str.replace(/"idTypeSession"/gi, "\"idPerson\"");
 
       this.listTypeSession = this.tool.initTypeSession(str);
+      this.data = new MatTableDataSource<TypeSession>(this.listTypeSession);
+      this.data.sort = this.sort;
       this.isLoading = false
     })
   }

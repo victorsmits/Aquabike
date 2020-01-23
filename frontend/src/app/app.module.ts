@@ -62,6 +62,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {DelTypeSessionComponent} from './type-session/del-type-session.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {TableModule} from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -123,7 +124,8 @@ import {MatRadioModule} from '@angular/material/radio';
         FlexLayoutModule,
         LayoutModule,
         MatSidenavModule,
-        MatRadioModule
+        MatRadioModule,
+        TableModule
     ],
   entryComponents: [
     MonthComponent,

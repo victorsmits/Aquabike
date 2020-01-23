@@ -10,7 +10,8 @@ mat-select, input{
   font-size: larger;
 }
 mat-tab{
-  width : 100%
+  width : 100%;
+  overflow: scroll;
 }
 form{
   display: flex;

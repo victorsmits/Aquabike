@@ -1,80 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Rapport/Figures/Entite-relation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Figures/Entite-relation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Accueil.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Accueil.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Admin-Abonnement.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Admin-Abonnement.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Admin-Nouvelle-Session.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Admin-Nouvelle-Session.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Admin-Session.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Admin-Session.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Admin-Type-Session.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Inscription.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Inscription.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Login.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Month.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Month.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Mockup/Profil.png" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Mockup/Profil.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_Inscription.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_Inscription.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_abonnement.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_abonnement.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_autocreate.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_autocreate.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_cancel.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_cancel.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_editAbo.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_editAbo.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_recreate.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_recreate.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_renewAbo.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_renewAbo.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_session_delete.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_session_delete.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_session_put.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_session_put.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_admin_user.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_admin_user.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_desinscription.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_desinscription.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_editProfile.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_editProfile.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_login.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_login.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_month.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_month.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_profile.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_profile.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_register.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_register.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_type_session.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_type_session.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_type_session_delete.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_type_session_delete.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_type_session_post.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_type_session_post.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Requete/api_type_session_put.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Requete/api_type_session_put.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US0.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US0.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US10.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US10.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US11.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US6.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US7.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US8.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US8.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStories/US9.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStories/US9.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US0.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US0.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US10.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US10.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US11.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US11.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US12.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US12.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US13.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US13.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US14.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US14.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US15.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US15.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US16.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US16.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US6.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US7.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US8.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US8.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US9.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/UserStoriesAngular/US9.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/Web-architechture-rapport.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/api.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/api.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/base_de_donnee.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/base_de_donnee.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/conclusion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/mvc.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/mvc.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/separation_backend_frontend.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/separation_backend_frontend.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport/section/specification.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport/section/specification.tex" afterDir="false" />
+    <list default="true" id="f81add34-ecbc-4a38-901f-e9bbf3d31526" name="Default Changelist" comment="uge bug fix. add mail config . add payment feature">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-session/admin-session.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/month/month.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/signup.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/type-session/type-session.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,48 +38,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@Aquabike" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Tree: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Tree: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Tree: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="local" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="Tree: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -152,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="43167d4806df03ae5029a923dcfb1d1af6097881" />
+        <entry key="$PROJECT_DIR$" value="Mobile_App" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -275,6 +174,7 @@
       <path value="$PROJECT_DIR$/backend/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/apache-pack" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/mailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Sz55mSFFgzOKZ8YUChVio4roYc" />
@@ -308,7 +208,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.21375" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -366,19 +266,52 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Run NativeScript" type="ns-app-runner" factoryName="NativeScript">
+      <working-dir value="$PROJECT_DIR$" />
+      <node-interpreter value="node" />
+      <nativescript value="$PROJECT_DIR$/frontend/node_modules/nativescript" />
+      <platform value="IOS" />
+      <envs />
+      <is-webpack value="true" />
+      <is-clean-build value="false" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="NativeScript.Run NativeScript" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="npm.start" />
       <item itemvalue="Protractor.E2E Tests (frontend)" />
     </list>
+  </component>
+  <component name="SQLScriptSettings">
+    <option name="matrix">
+      <map>
+        <entry key="MYSQL.CreateComplete" value="CreateOrReplace=1" />
+      </map>
+    </option>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@Aquabike" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@Aquabike" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1ffad5be" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@Aquabike" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@60bc58c1" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -516,6 +449,29 @@
       <workItem from="1577454652671" duration="118000" />
       <workItem from="1577454786488" duration="1559000" />
       <workItem from="1577523385276" duration="758000" />
+      <workItem from="1578908247953" duration="990000" />
+      <workItem from="1578999793341" duration="1834000" />
+      <workItem from="1579010900283" duration="18000" />
+      <workItem from="1579010936107" duration="959000" />
+      <workItem from="1579013322743" duration="58000" />
+      <workItem from="1579014800199" duration="3000" />
+      <workItem from="1579021876745" duration="1915000" />
+      <workItem from="1579039011331" duration="209000" />
+      <workItem from="1579039248389" duration="13000" />
+      <workItem from="1579039397409" duration="1470000" />
+      <workItem from="1579075294729" duration="65000" />
+      <workItem from="1579075428991" duration="6011000" />
+      <workItem from="1579296017681" duration="1053000" />
+      <workItem from="1579337500898" duration="14699000" />
+      <workItem from="1579441753663" duration="7027000" />
+      <workItem from="1579524746797" duration="194000" />
+      <workItem from="1579525660332" duration="32000" />
+      <workItem from="1579688770239" duration="9672000" />
+      <workItem from="1579701696214" duration="13608000" />
+      <workItem from="1579724020692" duration="576000" />
+      <workItem from="1579725337344" duration="1299000" />
+      <workItem from="1579727916629" duration="424000" />
+      <workItem from="1579768424751" duration="3362000" />
     </task>
     <task id="LOCAL-00001" summary="refractor folder">
       <created>1572553521976</created>
@@ -762,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575745659838</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="uge bug fix. add mail config . add payment feature">
+      <created>1579717190807</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1579717190807</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -798,7 +761,6 @@
       <path value="$PROJECT_DIR$/backend" />
       <path value="$PROJECT_DIR$/Symfony-Twig" />
     </ignored-roots>
-    <MESSAGE value="month page display list of subs" />
     <MESSAGE value="add directive" />
     <MESSAGE value="Last stable version" />
     <MESSAGE value="Add profile page" />
@@ -823,13 +785,18 @@
     <MESSAGE value="modification in database for typeSession" />
     <MESSAGE value="working on Type session page&#10;todo -&gt; edit type session" />
     <MESSAGE value="auto generation with session type -&gt; ok&#10;auto subscription -&gt; ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="auto generation with session type -&gt; ok&#10;auto subscription -&gt; ok" />
+    <MESSAGE value="uge bug fix. add mail config . add payment feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="uge bug fix. add mail config . add payment feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="205" key="#Inspections" timestamp="1573475619446">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="205" key="#Inspections/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573475619446" />
+    <state x="320" y="115" key="#Notifications" timestamp="1579719023942">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1579719023942" />
     <state x="320" y="115" key="#Plugins" timestamp="1572694970837">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -844,11 +811,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="425" y="115" key="#TODO/0.0.1440.900@0.0.1440.900" timestamp="1573841030262" />
-    <state x="245" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1573909532412">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2165" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579088893594">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1573836445270" />
     <state x="245" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573909532412" />
+    <state x="2165" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579088893594" />
+    <state x="184" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.791@0.23.1440.791" timestamp="1579039152751" />
     <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1574847063091">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -867,14 +836,19 @@
     <state x="524" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1573575594620" />
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575805111646" />
     <state x="699" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1575727057515" />
-    <state x="513" y="142" width="880" height="791" key="CommitChangelistDialog2" timestamp="1575745656259">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2589" y="233" key="#webpack.config.js" timestamp="1579087832094">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2589" y="233" key="#webpack.config.js/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579087832094" />
+    <state x="101" y="105" width="1339" height="791" key="CommitChangelistDialog2" timestamp="1579782915634">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="105" key="CommitChangelistDialog2/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575458982236" />
-    <state x="385" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1575374487606" />
+    <state x="101" y="105" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1579782915634" />
+    <state x="385" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579719013894" />
     <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575745656259" />
     <state x="513" y="142" key="CommitChangelistDialog2/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1574429114893" />
-    <state x="385" y="23" width="880" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1573832800808" />
+    <state x="101" y="23" width="1339" height="791" key="CommitChangelistDialog2/0.23.1440.791@0.23.1440.791" timestamp="1579717184779" />
     <state x="792" y="460" key="ComposerInitDialogKey" timestamp="1576328858032">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -886,37 +860,37 @@
     <state x="100" y="99" width="1720" height="880" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575808697923" />
     <state x="100" y="99" width="1720" height="880" key="DiffContextDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1575808753385" />
     <state x="75" y="83" width="1290" height="734" key="DiffContextDialog/0.23.1440.791@0.23.1440.791" timestamp="1576430387048" />
-    <state width="1849" height="278" key="GridCell.Tab.0.bottom" timestamp="1577190748558">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1396" height="243" key="GridCell.Tab.0.bottom" timestamp="1579720416409">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1575983054695" />
-    <state width="1849" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576421495301" />
-    <state width="1849" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577190748558" />
-    <state width="1294" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576400876241" />
+    <state width="1396" height="243" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579720416409" />
+    <state width="1849" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1578908263403" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579091984015" />
+    <state width="1849" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1578908247601" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1572769783749" />
-    <state width="1849" height="278" key="GridCell.Tab.0.center" timestamp="1577190748557">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1396" height="243" key="GridCell.Tab.0.center" timestamp="1579720416401">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1575983054693" />
-    <state width="1849" height="278" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576421495300" />
-    <state width="1849" height="278" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577190748557" />
-    <state width="1294" height="304" key="GridCell.Tab.0.center/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576400876240" />
+    <state width="1396" height="243" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579720416401" />
+    <state width="1849" height="278" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1578908263402" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579091984014" />
+    <state width="1849" height="278" key="GridCell.Tab.0.center/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1578908247598" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1572769783747" />
-    <state width="1849" height="278" key="GridCell.Tab.0.left" timestamp="1577190748556">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1396" height="243" key="GridCell.Tab.0.left" timestamp="1579720416398">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1575983054692" />
-    <state width="1849" height="278" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576421495300" />
-    <state width="1849" height="278" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577190748556" />
-    <state width="1294" height="304" key="GridCell.Tab.0.left/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576400876239" />
+    <state width="1396" height="243" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579720416398" />
+    <state width="1849" height="278" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1578908263402" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579091984010" />
+    <state width="1849" height="278" key="GridCell.Tab.0.left/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1578908247598" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1572769783746" />
-    <state width="1849" height="278" key="GridCell.Tab.0.right" timestamp="1577190748558">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1396" height="243" key="GridCell.Tab.0.right" timestamp="1579720416406">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1575983054694" />
-    <state width="1849" height="278" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576421495301" />
-    <state width="1849" height="278" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577190748558" />
-    <state width="1294" height="304" key="GridCell.Tab.0.right/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576400876240" />
+    <state width="1396" height="243" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579720416406" />
+    <state width="1849" height="278" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1578908263403" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579091984014" />
+    <state width="1849" height="278" key="GridCell.Tab.0.right/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1578908247600" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1572769783748" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1573228739470">
       <screen x="0" y="0" width="1440" height="900" />
@@ -950,11 +924,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1573228739471" />
-    <state width="312" height="549" key="HiddenNamespacesPopup" timestamp="1577180425814">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="239" height="457" key="HiddenNamespacesPopup" timestamp="1579727990870">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="239" height="458" key="HiddenNamespacesPopup/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1574848697872" />
-    <state width="239" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1575198441856" />
+    <state width="239" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1579727990870" />
     <state width="312" height="549" key="HiddenNamespacesPopup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575805179522" />
     <state width="312" height="549" key="HiddenNamespacesPopup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577180425814" />
     <state x="411" y="230" width="824" height="508" key="IDE.errors.dialog" timestamp="1573916591062">
@@ -966,28 +940,29 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="558" y="363" key="NewPhpClassDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1574424414626" />
-    <state x="245" y="111" key="SettingsEditor" timestamp="1577454771035">
+    <state x="245" y="111" key="SettingsEditor" timestamp="1579719242619">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="245" y="111" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577454771035" />
-    <state x="327" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575803751566" />
-    <state x="2247" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577187292624" />
+    <state x="245" y="111" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579719242619" />
+    <state x="327" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1579000651556" />
+    <state x="2247" y="133" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579089022088" />
+    <state x="245" y="92" key="SettingsEditor/0.23.1440.791@0.23.1440.791" timestamp="1579039226366" />
     <state x="245" y="63" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1575195162915" />
-    <state width="667" height="534" key="SwitcherDM" timestamp="1575812376765">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1579700280993">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575458164744" />
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1572947722846" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1579700280993" />
     <state width="667" height="534" key="SwitcherDM/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575812376765" />
     <state x="383" y="161" key="VCS.ChangeListViewerDialog" timestamp="1572556023028">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="383" y="161" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1572556023028" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1575745661426">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579719248501">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575458984902" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1575374495401" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579719248501" />
     <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575745661426" />
     <state x="427" y="228" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1574429120396" />
     <state x="723" y="391" key="cloudConfig.SelfSettingsDialog" timestamp="1573910177933">
@@ -1007,9 +982,10 @@
     </state>
     <state x="689" y="230" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575719488561" />
     <state x="2609" y="140" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577180713381" />
-    <state x="2569" y="252" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1577109584685">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="487" y="210" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1579717777824">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="487" y="210" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1440.900@0.0.1440.900" timestamp="1579717777824" />
     <state x="649" y="252" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576421483699" />
     <state x="2569" y="252" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577109584685" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1576318098248">
@@ -1019,11 +995,11 @@
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576318098248" />
     <state x="75" y="66" width="1290" height="750" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.791@0.23.1440.791" timestamp="1573816591952" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1920.1057/1920.23.1920.1057@0.23.1920.1057" timestamp="1573398480671" />
-    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576430387049">
-      <screen x="0" y="23" width="1440" height="791" />
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579704406846">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575455000233" />
-    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1573815609123" />
+    <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1579704406846" />
     <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1575719141649" />
     <state x="100" y="57" width="1720" height="920" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1576318185438" />
     <state x="75" y="48" width="1290" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.791@0.23.1440.791" timestamp="1576430387049" />
@@ -1038,19 +1014,19 @@
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1572555213728">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="749" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576428469896">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579281815388">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1574238327831" />
-    <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1574508674808" />
+    <state x="562" y="387" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1579281815388" />
     <state x="749" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576428469896" />
     <state x="477" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/0.0.1440.900@0.0.1440.900" timestamp="1572555213728" />
-    <state x="2486" y="181" width="816" height="550" key="find.popup" timestamp="1577029936687">
+    <state x="2486" y="181" width="816" height="550" key="find.popup" timestamp="1579088337378">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="470" y="252" width="778" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1574599442644" />
     <state x="566" y="181" width="816" height="550" key="find.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1577025288473" />
-    <state x="2486" y="181" width="816" height="550" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577029936687" />
+    <state x="2486" y="181" width="816" height="550" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579088337378" />
     <state x="412" y="321" key="git4idea.rebase.GitRebaseDialog" timestamp="1572556024119">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -1067,22 +1043,23 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="832" y="475" width="350" height="300" key="org.angular.cli.generate/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1573914527384" />
-    <state x="2529" y="274" width="700" height="530" key="recent.locations.popup" timestamp="1577028259791">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="457" y="228" width="600" height="450" key="recent.locations.popup" timestamp="1579694226255">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="457" y="228" width="598" height="448" key="recent.locations.popup/0.0.1440.900/-1920.-148.1920.1080@0.0.1440.900" timestamp="1573641670513" />
     <state x="457" y="228" width="600" height="450" key="recent.locations.popup/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1574849069263" />
+    <state x="457" y="228" width="600" height="450" key="recent.locations.popup/0.0.1440.900@0.0.1440.900" timestamp="1579694226255" />
     <state x="609" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576414665075" />
     <state x="2529" y="274" width="700" height="530" key="recent.locations.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577028259791" />
     <state x="320" y="115" key="scopes" timestamp="1573833078972">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="scopes/0.0.1440.900@0.0.1440.900" timestamp="1573833078972" />
-    <state x="2433" y="235" width="894" height="812" key="search.everywhere.popup" timestamp="1577180559423">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1579701357916">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="671" height="677" key="search.everywhere.popup/0.0.1440.900/1440.-180.1920.1080@0.0.1440.900" timestamp="1575454602122" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1573814410012" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1579701357916" />
     <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1576328061188" />
     <state x="2433" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1577180559423" />
     <state x="513" y="235" width="894" height="812" key="search.everywhere.popup/0.0.1920.1080/1920.23.1920.1057@0.0.1920.1080" timestamp="1573915953536" />

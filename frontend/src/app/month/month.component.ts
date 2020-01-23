@@ -51,7 +51,8 @@ export class MonthComponent implements OnInit, AfterViewInit {
 
   @ViewChild('matSelect',{static:false})matSelect : MatSelect;
   @ViewChild('matSelect2',{static:false})matSelect2 : MatSelect;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  // @ts-ignore
+  @ViewChild(MatSort) sort: MatSort;
 
   displayedColumns: string[] ;
 

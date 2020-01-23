@@ -2,8 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import {Router} from '@angular/router';
-import {catchError} from 'rxjs/operators';
-import {HttpErrorResponse} from '@angular/common/http';
+import {ToolService} from '../service/tool.service';
 
 //todo display login error
 
@@ -16,9 +15,11 @@ export class LoginComponent implements OnInit, AfterViewInit{
 
   isLoading = false;
   public Error: any;
+  public isHandset$ = this.tool.isHandset$;
 
   constructor(public authService: AuthService,
-              public router : Router) { }
+              public router : Router,
+              private tool : ToolService) { }
 
   ngOnInit(){}
 

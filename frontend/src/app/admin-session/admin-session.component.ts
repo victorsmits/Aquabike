@@ -35,7 +35,8 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   @ViewChild('matSelect',{static:false}) matSelect : MatSelect;
   @ViewChild(MatInput,{static:false}) nbrBike : MatInput;
   @ViewChild('matSelect2',{static:false}) matSelect2 : MatSelect;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  // @ts-ignore
+  @ViewChild(MatSort) sort: MatSort;
 
   months = [
     {name : "janvier", num : 1},
@@ -53,8 +54,6 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
   ];
   isLoading: boolean = true;
 
-
-
   constructor(public api: ApiService,
               public dialog: MatDialog,
               public tool : ToolService) { }
@@ -66,7 +65,7 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
     this.getYear();
     this.api.getMonthJson(this.value,this.year.toString()).subscribe(urldata => {
       this.initSession(urldata);
-      this.dataSource.sort = this.sort;
+
     });
   }
 
@@ -106,9 +105,9 @@ export class AdminSessionComponent implements OnInit, AfterViewInit {
         user : this.data[i]["idInscription"]
       });
     }
-
     this.dataSource = new MatTableDataSource(this.listSession);
     this.isLoading = false;
+    this.dataSource.sort = this.sort;
   }
 
   openDialog(id): void {

@@ -66,7 +66,7 @@ export class EditProfileComponent implements OnInit{
   }
 
   EditTypeSession(type : TypeSession) {
-    if(this.data.typeSessions.indexOf(type) == -1){
+    if(!this.checkSession(type)){
       console.log('add '+ type);
       this.data.typeSessions.push(type);
       console.log('del '+ type.Day + type.Time);
