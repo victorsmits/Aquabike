@@ -31,6 +31,7 @@ export class ToolService {
   get days(): Days[] {
     return this._days;
   }
+
   get darkTheme(): NgxMaterialTimepickerTheme {
     return this._darkTheme;
   }
@@ -49,6 +50,7 @@ export class ToolService {
       clockFaceTimeInactiveColor: '#fff'
     }
   };
+
   private _days : Days[] =[
     {code:"Mon",nom:"Lundi"},
     {code:"Tue",nom:"Mardi"},

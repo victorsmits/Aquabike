@@ -165,7 +165,7 @@ class ProfileControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/profile/inscription/{user}", name="api_edit_profile", methods={"GET","OPTIONS"})
+     * @Route("/profile/inscription/{user}", name="api_profile_inscription", methods={"GET","OPTIONS"})
      * @param $user
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return JsonResponse

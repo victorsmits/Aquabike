@@ -26,6 +26,21 @@
     <mat-cell *matCellDef="let element" >{{element.AboType}}</mat-cell>
   </ng-container>
 
+  <!-- Link Horaire Column -->
+  <ng-container matColumnDef="Link">
+    <mat-header-cell *matHeaderCellDef>
+      Relié(e) à un horaire
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-icon *ngIf="element.typeSessions.length != 0 || element.AboType === 999999; else cancel"
+                [ngStyle]="{'color':'green'}"
+                matTooltip="Relié(e)">check</mat-icon>
+      <ng-template #cancel>
+        <mat-icon [ngStyle]="{'color':'red'}" matTooltip="Non relié(e)">cancel</mat-icon>
+      </ng-template>
+    </mat-cell>
+  </ng-container>
+
   <!-- Prix Column -->
   <ng-container matColumnDef="amount">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Payement</mat-header-cell>
@@ -38,7 +53,6 @@
       </ng-template>
     </mat-cell>
   </ng-container>
-
 
   <!-- Action Column-->
   <ng-container matColumnDef="Action" class = "action-col">

@@ -57,7 +57,7 @@ export class AdminAboComponent implements OnInit,AfterViewInit {
   public Error: string;
   public data: JSON[] = [];
   public listUser: Person[] = [];
-  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType', 'Action','amount'];
+  displayedColumns: string[] = ['LastName', 'FirstName', 'Abonnement', 'AboType','Link', 'Action','amount'];
   public dataSource: MatTableDataSource<Person>;
   private pay : Payment = {
     amount : 0,
@@ -112,14 +112,18 @@ export class AdminAboComponent implements OnInit,AfterViewInit {
     this.isLoading = false
   }
 
-  reSubcribe(user : User) {
-    this.api.postAboRenew(user.id).subscribe(urldata => {
-      if (urldata["result"]) {
-        this.ngOnInit();
-        let action = user.firstName + " " + user.lastName;
-        this.tool.openSnackBar("Abonnement actualiser pour", action)
-      }
-    });
+  reSubcribe(user : Person) {
+    if(user.typeSessions.length === 0 && user.AboType != 999999){
+      this.tool.openSnackBar("L'utilisateur n'est pas relié à un horaire","",5000)
+    }else{
+      this.api.postAboRenew(user.id).subscribe(urldata => {
+        if (urldata["result"]) {
+          this.ngOnInit();
+          let action = user.firstName + " " + user.lastName;
+          this.tool.openSnackBar("Abonnement actualiser pour", action)
+        }
+      },error1 => this.tool.openSnackBar(error1,"",5000));
+    }
   }
 
   openDialog(fname, lname, id, aboType): void {

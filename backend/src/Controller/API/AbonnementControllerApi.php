@@ -10,10 +10,9 @@ use App\Entity\Session;
 use DateTime;
 use Doctrine\ORM\ORMException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Encoder\JsonEncode;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
@@ -96,12 +95,15 @@ class AbonnementControllerApi extends AbstractController
             $em->persist($user);
             $em->flush();
 
-            return new JsonResponse(['result'=>true]);
+            return new JsonResponse(['result'=>true],200);
 
         }catch (\Exception $e){
-            $error = $e;
+            $user->setAbonnement(0);
+            $em->persist($user);
+            $em->flush();
+            return new JsonResponse(['error'=>$e->getMessage()],400);
         }
-        return new JsonResponse(['error'=>$error]);
+
     }
 
     /**

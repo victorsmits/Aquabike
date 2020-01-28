@@ -7,13 +7,11 @@ use App\Entity\LienPersonTypeSession;
 use App\Entity\Person;
 use App\Entity\Session;
 use App\Entity\TypeSession;
-use App\Form\RegistrationFormType;
 use DateTime;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -287,32 +285,38 @@ class RegistrationControllerApi extends AbstractController
         /**
          * @var $session Session
          */
+        $i = 0;
+        $abo = $user->getAbonnement();
         if(!empty($Sessions)){
             foreach($Sessions as $session){
+                if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions)){
+                    if(!in_array($session->getId(),$listIdSession)){
+                        if ($session->getBike() > 0 && $abo > 0) {
+                            $inscription = new Inscription();
 
-                if(in_array($session->getIdTypeSession()->getId(),$IdTypeSessions) &
-                    !in_array($session->getId(),$listIdSession)){
+                            $inscription->setIdPerson($user);
+                            $inscription->setIdSession($session);
 
-                    if ($session->getBike() >0 & $user->getAbonnement() > 0) {
-                        $inscription = new Inscription();
+                            $entityManager->persist($inscription);
+                            $entityManager->flush();
 
-                        $inscription->setIdPerson($user);
-                        $inscription->setIdSession($session);
+                            $session->setBike($session->getbike() - 1);
+                            $entityManager->persist($session);
+                            $entityManager->flush();
 
-                        $entityManager->persist($inscription);
-                        $entityManager->flush();
-
-                        $session->setBike($session->getbike() - 1);
-                        $entityManager->persist($session);
-                        $entityManager->flush();
-
-                        $user->setAbonnement($user->getAbonnement() - 1);
+                            $abo --;
+                        }
+                    }else{
+                        $i ++;
                     }
                 }
             }
-        }
-        else{
-            throw new \Symfony\Component\Config\Definition\Exception\Exception("session list empty");
+            $user->setAbonnement($abo);
+            if($i === $user->getAboType()){
+                throw new \Exception("L'inscription automatique a deja été effectué sur l'utilisateur");
+            }
+        }else{
+            throw new \Exception("session list empty");
         }
     }
 }

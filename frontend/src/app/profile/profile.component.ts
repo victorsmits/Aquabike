@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {ApiService} from "../service/api.service";
 import {MatSelect} from "@angular/material/select";
 import {editProfileInterface, Inscription, Sessions, TypeSession, User} from '../Interface/Interface.module';
@@ -81,9 +81,9 @@ export class EditProfileComponent implements OnInit{
     let i =0;
     for(let type of this.data.typeSessions){
       i ++;
-      session.Id == type.Id ? state = true : state = false;
+      session.Id == type.Id ? state = i : state = null;
     }
-    return state
+    return state !== null
   }
 
 }
@@ -94,7 +94,7 @@ export class EditProfileComponent implements OnInit{
   styleUrls: ['./profile.component.css']
 })
 
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, AfterViewInit {
   public User: User;
   public listSession : Sessions[]=[];
   public listYear: number[]=[];
@@ -146,8 +146,15 @@ export class ProfileComponent implements OnInit {
       }
       this.dataSource = new MatTableDataSource(this.listSession);
       this.dataSource.paginator = this.paginator;
-      this['isLoading'] = false
+      this.isLoading = false
     });
+
+  }
+
+  ngAfterViewInit() {
+    this.dataSource = new MatTableDataSource(this.listSession);
+    this.dataSource.paginator = this.paginator;
+    this.isLoading = false
   }
 
   getYear(){
@@ -163,7 +170,15 @@ export class ProfileComponent implements OnInit {
 
     this.api.delInscription(tempInscription).subscribe(urldata=>{
       if(urldata["result"]){
-        this.ngOnInit();
+        this.User.abonnement ++;
+        for(let sess of this.listSession){
+          if(sess.Id == Id){
+            this.tool.openSnackBar("Vous vous êtes désinscrit(e) du",this.switchDate(sess.Date));
+            this.listSession.splice(this.listSession.indexOf(sess),1);
+            this.isLoading = true;
+          }
+        }
+        this.ngAfterViewInit();
       }
     });
   }

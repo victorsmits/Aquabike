@@ -79,6 +79,11 @@ export class AuthService {
   }
 
   initUser(data){
+    if(this.cookie.check("user")){
+      this.cookie.delete('user');
+      this.cookie.delete('session');
+    }
+
     this.data = JSON.parse(JSON.stringify(data));
     this.User = {
       id: this.data["id"],
