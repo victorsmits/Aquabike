@@ -1,0 +1,9 @@
+<h3>Entrez votre Email</h3>
+<form (submit)="reset(resetpwd)" #resetpwd="ngForm" *ngIf="!isLoading"><!-- don't forget the "!", thus not isLoading-->
+  <span *ngIf="Error" class="mat-error"> {{Error}} </span>
+  <mat-form-field>
+    <input matInput name="Email" ngModel type="text" placeholder="Email"  required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">OK</button>
+  <button mat-raised-button color="primary" type="submit">Cancel</button>
+</form>

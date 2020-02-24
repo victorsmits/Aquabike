@@ -141,6 +141,18 @@ export class ApiService {
       catchError(this.handelError));
   }
 
+  sendResetPwd(user){
+    let url = this.ip + "/api/profile/rpp/"+user;
+    return this.http.get(url).pipe(
+      catchError(this.handelError));
+  }
+
+  resetPwd(user){
+    let url = this.ip + "/api/profile/rpp";
+    return this.http.post(url,user).pipe(
+      catchError(this.handelError));
+  }
+
   handelError(err){
     if(err instanceof HttpErrorResponse){
       let error = new HttpErrorResponse(err);

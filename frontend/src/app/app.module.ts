@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ListPersonDialog, MonthComponent } from './month/month.component';
 import { AuthService } from "./service/auth.service";
-import { LoginComponent } from './login/login.component';
+import {LoginComponent, ResetPwdComponent} from './login/login.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ApiService } from "./service/api.service";
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -63,6 +63,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {DelTypeSessionComponent} from './type-session/del-type-session.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {TableModule} from 'angular-bootstrap-md';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,9 @@ import {TableModule} from 'angular-bootstrap-md';
     listAboSession,
     MenuComponent,
     DelTypeSessionComponent,
-    PaymentDialog
+    PaymentDialog,
+    ResetPasswordComponent,
+    ResetPwdComponent
   ],
     imports: [
         BrowserModule,
@@ -138,7 +141,8 @@ import {TableModule} from 'angular-bootstrap-md';
     DelAboComponent,
     listAboSession,
     DelTypeSessionComponent,
-    PaymentDialog
+    PaymentDialog,
+    ResetPwdComponent
   ],
   providers: [
     AuthService,

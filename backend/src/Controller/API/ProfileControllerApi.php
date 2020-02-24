@@ -4,6 +4,7 @@ namespace App\Controller\API;
 use App\Entity\LienPersonTypeSession;
 use App\Entity\Person;
 use App\Entity\TypeSession;
+use Swift_Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -165,48 +166,82 @@ class ProfileControllerApi extends AbstractController
     }
 
     /**
-     * @Route("/profile/inscription/{user}", name="api_profile_inscription", methods={"GET","OPTIONS"})
+     * @Route("/profile/rpp/{user}", name="api_get_profile_reset_pwd", methods={"GET","OPTIONS"})
      * @param $user
+     * @param Swift_Mailer $mailer
+     * @return JsonResponse
+     */
+    public function getresetPasword($user,Swift_Mailer $mailer){
+        try{
+            $entityManager = $this->getDoctrine()->getManager();
+
+            /**
+             * @var $user Person
+             */
+            $user = $entityManager
+                ->getRepository('App:Person')
+                ->getPersonFromEmail($user);
+
+            if(!empty($user)){
+                $url = "http://www.aquabikegenval.be/rpp/".$user->getId();
+
+                $message = (new \Swift_Message("Récupération de compte"))
+                    ->setFrom('noreply@aquabikegenval.be')
+                    ->setTo($user->getEmail())
+                    ->setBody(
+                        "
+
+Voici le lien de récupération de votre mot de pass.
+
+Rendez-vous sur <a href=$url> $url </a> pour récuperer votre profile .
+
+Merci!",
+                        'text/html'
+                    );
+                $mailer->send($message);
+                return new JsonResponse(["result"=>true], 200);
+            }else{
+                return new JsonResponse(["error"=> "utilisateur introuvable"], 400);
+            }
+
+
+        }catch (\Exception $e){
+            return new JsonResponse(["error"=> $e->getMessage()], 400);
+        }
+
+    }
+
+    /**
+     * @Route("/profile/rpp", name="api_profile_reset_pwd", methods={"POST","OPTIONS"})
+     * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return JsonResponse
      */
-    public function getInscritpion($user){
+    public function resetPasword(Request $request,UserPasswordEncoderInterface $passwordEncoder){
         try{
             $entityManager = $this->getDoctrine()->getManager();
+
+            $data = json_decode($request->getContent(),true);
 
             /**
              * @var $userInfo Person
              * @var TypeSession $typeSession
              * @var TypeSession $type
              */
+
             $userInfo = $entityManager
                 ->getRepository('App:Person')
-                ->getPersonFromUsername($user);
+                ->find($data["id"]);
 
-            $inscritpion = $entityManager
-                ->getRepository('App:Inscription')
-                ->findBy(["Id_Person"=>$userInfo->getId()]);
+            if($data["password"] != null){
+                $encodedPassword = $passwordEncoder->encodePassword($userInfo, $data['password']);
+                $userInfo->setPassword($encodedPassword);
+            }
 
-            $defaultContext = [
-                AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
-                    return $object->getId();
-                },
-                ObjectNormalizer::CIRCULAR_REFERENCE_LIMIT =>0,
-                AbstractNormalizer::IGNORED_ATTRIBUTES =>['__initializer__','idTypeSession','idInscription',
-                    'idPerson','__cloner__','__isInitialized__'],
-                ObjectNormalizer::ENABLE_MAX_DEPTH => true,
-                DateTimeNormalizer::FORMAT_KEY => 'Y/m/d H:i'
-            ];
+            $entityManager->persist($userInfo);
+            $entityManager->flush();
 
-            $encoders = array(new JsonEncode());
-            $normalizers = array(new DateTimeNormalizer(),new ObjectNormalizer());
-            $serializer = new Serializer($normalizers,$encoders);
-
-            $jsonUser = $serializer->serialize($inscritpion, 'json', $defaultContext);
-            $Inscritpion = new JsonResponse();
-            $Inscritpion->setContent($jsonUser);
-
-            return $Inscritpion;
+            return new JsonResponse(["result"=> true], 200);
 
         }catch (\Exception $e){
             return new JsonResponse(["error"=> $e->getMessage()], 400);

@@ -12,6 +12,7 @@ import {AdminCreateSessionComponent} from "./admin-create-session/admin-create-s
 import {AuthGuard} from './guard/auth.guard';
 import {AdminGuard} from './guard/admin.guard';
 import {TypeSessionComponent} from './type-session/type-session.component';
+import {ResetPasswordComponent} from './reset-password/reset-password.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path:'signup',
     component : SignupComponent,
+  },
+  {
+    path:'rpp/:id',
+    component : ResetPasswordComponent,
   },
   {
     path:'month',

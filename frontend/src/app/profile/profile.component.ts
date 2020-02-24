@@ -19,6 +19,7 @@ export class EditProfileComponent implements OnInit{
   public day;
   public error : string;
   public listTypeSession: TypeSession[];
+  public listIdTS : number[] = [];
 
   constructor(
     public dialogRef: MatDialogRef<EditProfileComponent>,
@@ -33,10 +34,14 @@ export class EditProfileComponent implements OnInit{
   @ViewChild('timeSelect2',{static:false}) timeSelect2: MatSelect;
 
   ngOnInit(): void {
+
     this.api.getTypeSession().subscribe(urldata=>{
       let data = JSON.stringify(urldata);
       data = data.replace(/"idTypeSession"/gi, "\"idPerson\"");
       this.listTypeSession = this.tool.initTypeSession(data);
+      for(let ts of this.data.typeSessions){
+        this.listIdTS.push(ts.Id);
+      }
     })
   }
 
@@ -69,21 +74,16 @@ export class EditProfileComponent implements OnInit{
     if(!this.checkSession(type)){
       console.log('add '+ type);
       this.data.typeSessions.push(type);
-      console.log('del '+ type.Day + type.Time);
+      this.listIdTS.push(type.Id);
     }else{
       this.data.typeSessions.splice(this.data.typeSessions.indexOf(type),1);
+      this.listIdTS.splice(this.listIdTS.indexOf(type.Id),1);
       console.log('del '+ type.Day + type.Time);
     }
   }
 
   checkSession(session: TypeSession) {
-    let state;
-    let i =0;
-    for(let type of this.data.typeSessions){
-      i ++;
-      session.Id == type.Id ? state = i : state = null;
-    }
-    return state !== null
+    return this.listIdTS.indexOf(session.Id) !==-1;
   }
 
 }
